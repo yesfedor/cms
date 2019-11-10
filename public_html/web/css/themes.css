@@ -1,0 +1,156 @@
+:root {
+    --theme-duration-change: 1s;
+}
+html, body {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+}
+.theme-link {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-link)!important;
+}
+.theme-link:hover {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-link-hover)!important;
+}
+.theme-primary {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    background-color: var(--theme-primary)!important;
+}
+.theme-primary-text {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-primary)!important;
+}
+.theme-primary-plus {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    background-color: var(--theme-primary-plus)!important;
+}
+.theme-primary-plu-text {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-primary-plus)!important;
+}
+.theme-border-primary {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    border-color: var(--theme-primary)!important;
+}
+.theme-border-primary-plus {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    border-color: var(--theme-primary-plus)!important;
+}
+.theme-title {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-title)!important;
+}
+.theme-white {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    background-color: var(--theme-white)!important;
+}
+.theme-white-text {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-white)!important;
+}
+.theme-black {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    background-color: var(--theme-black)!important;
+}
+.theme-black-text {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-black)!important;
+}
+.theme-logo {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-logo)!important;
+}
+.theme-nav-link {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-nav-link)!important;
+}
+.theme-icon {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-icon)!important;
+}
+.thme-panel {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-panel)!important;
+}
+.theme-panel-dark {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-panel-dark)!important;
+}
+.theme-panel-primary {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-panel-primary)!important;
+}
+
+/* Supported Bootstrap4 */
+h1, h2, h3, h4, h5, h6, b, span, small, big {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-text)!important;
+}
+.display-1, .display-2, .display-3, .display-4 {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-title)!important;
+}
+.text-primary {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-primary)!important;
+}
+.text-info {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-info)!important;
+}
+.text-warning {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-warning)!important;
+}
+.text-danger {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-danger)!important;
+}
+.text-success {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-success)!important;
+}
+
+.text-muted {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    color: var(--theme-muted)!important;
+}
+.white {
+    background-color: var(--theme-primary)!important;
+}
+
+/* Old Style */
+.border-black {
+    border-color: var(--theme-black)!important;
+}
+.border-white {
+    border-color: var(--theme-white)!important;
+}

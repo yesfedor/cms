@@ -1,0 +1,87 @@
+# основные опции
+Options All -ExecCGI -Indexes -Includes +FollowSymLinks
+# сессии на поддоменах
+php_value session.cookie_domain .iny.su
+
+# cross ajax
+Header set Access-Control-Allow-Origin *
+
+# подавить ошибки php
+php_flag display_startup_errors off
+php_flag display_errors off
+php_flag html_errors off
+php_value docref_root 0
+php_value docref_ext 0
+
+# индекс файл
+DirectoryIndex app.php
+# время
+<IfModule mod_setenvif.c>
+	SetEnv TZ Europe/Moscow
+</IfModule>
+ServerSignature Off
+AddDefaultCharset UTF-8
+# сжатие данных
+<ifModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
+
+# Bad Rquest
+ErrorDocument 400 /app.php
+# Authorization Required
+ErrorDocument 401 /app.php
+# Forbidden
+ErrorDocument 403 /app.php
+# Not found
+ErrorDocument 404 /app.php
+# Method Not Allowed
+ErrorDocument 405 /app.php
+# Request Timed Out
+ErrorDocument 408 /app.php
+# Request URI Too Long
+ErrorDocument 414 /app.php
+# Internal Server Error
+ErrorDocument 500 /app.php
+# Not Implemented
+ErrorDocument 501 /app.php
+# Bad Gateway 
+ErrorDocument 502 /app.php
+# Service Unavailable 
+ErrorDocument 503 /app.php
+# Gateway Timeout
+ErrorDocument 504 /app.php
+
+ServerSignature EMail
+SetEnv SERVER_ADMIN fedorvladis@outlook.com
+
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+### PARAM GET ###
+RewriteRule ^([^/]*)$ /?page=$1 [L]
+RewriteRule ^([^/]*)/([^/]*)$ /?page=$1&parameterOne=$2 [L]
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)$ /?page=$1&parameterOne=$2&parameterTwo=$3 [L]
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)$ /?page=$1&parameterOne=$2&parameterTwo=$3&parameterThree=$4 [L]
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)$ /?page=$1&parameterOne=$2&parameterTwo=$3&parameterThree=$4&parameterFour=$5 [L]
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)$ /?page=$1&parameterOne=$2&parameterTwo=$3&parameterThree=$4&parameterFour=$5&parameterFive=$6 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.xml -f
+RewriteRule ^(.*)$ $1.xml
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.mp4 -f
+RewriteRule ^(.*)$ $1.mp4
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.mp3 -f
+RewriteRule ^(.*)$ $1.mp3
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.docx -f
+RewriteRule ^(.*)$ $1.docx

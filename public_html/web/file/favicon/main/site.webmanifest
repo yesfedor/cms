@@ -1,0 +1,20 @@
+{
+    "name": "INY",
+    "short_name": "INY",
+    "icons": [
+        {
+            "src": "/web/file/main/favicon/android-chrome-192x192.png?option=with_brain_v2",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/web/file/main/favicon/android-chrome-512x512.png?option=with_brain_v2",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#4b515d",
+    "background_color": "#4b515d",
+    "start_url": "https://iny.su/?device=android&screen=mobile",
+    "display": "standalone"
+}

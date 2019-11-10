@@ -1,0 +1,32 @@
+:root {
+    --bg-color: white;
+}
+body {
+    color: #212121;
+}
+
+#app {
+    display: none;
+}
+#header {
+    background-color: #00000066;
+}
+.papper {
+    min-height: 100vh;
+}
+.papper-600 {
+    min-height: 600px;
+}
+.papper-color {
+    background-color: #000000aa;
+}
+.black-text-deep {
+    color: #212121 !important;
+}
+.white-text-border {
+    -webkit-text-stroke: 1px #212121;
+    color: #fafafa;
+}
+.square {
+    border: 5px #212121 solid;
+}

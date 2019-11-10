@@ -1,0 +1,26 @@
+html {
+    background-color: var(--theme-background);
+    color: var(--theme-text);
+}
+html, body, main {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: var(--theme-background);
+    color: var(--theme-text);
+    overflow-x: hidden;
+}
+application {
+    display: block;
+    width: 100vw;
+    min-width: 100vw;
+    overflow-x: hidden;
+}
+main {
+    display: block;
+    width: 100vw;
+    min-width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vh;
+}

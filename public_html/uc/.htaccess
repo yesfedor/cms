@@ -1,0 +1,54 @@
+# основные опции
+Options All +ExecCGI -Indexes +Includes +FollowSymLinks
+
+# индекс файл
+DirectoryIndex main.php
+# время
+<IfModule mod_setenvif.c>
+	SetEnv TZ Europe/Moscow
+</IfModule>
+ServerSignature Off
+AddDefaultCharset UTF-8
+
+RewriteEngine on
+RewriteBase /uc/
+
+# Bad Rquest
+ErrorDocument 400 /404.php
+# Authorization Required
+ErrorDocument 401 /404.php
+# Forbidden
+ErrorDocument 403 /404.php
+# Not found
+ErrorDocument 404 /404.php
+# Method Not Allowed
+ErrorDocument 405 /404.php
+# Request Timed Out
+ErrorDocument 408 /404.php
+# Request URI Too Long
+ErrorDocument 414 /404.php
+# Internal Server Error
+ErrorDocument 500 /404.php
+# Not Implemented
+ErrorDocument 501 /404.php
+# Bad Gateway 
+ErrorDocument 502 /404.php
+# Service Unavailable 
+ErrorDocument 503 /404.php
+# Gateway Timeout
+ErrorDocument 504 /404.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.xml -f
+RewriteRule ^(.*)$ $1.xml
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.mp4 -f
+RewriteRule ^(.*)$ $1.mp4
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.mp3 -f
+RewriteRule ^(.*)$ $1.mp3
