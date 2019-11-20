@@ -20,9 +20,8 @@ var test = {
         this.active_question = 0
         this.addQuestionWrapper(this.test_data.question[0])
         
-        if (this.questionCount = 1) {
-            $('#q-board_next').html('Завершить')
-        }
+        if (this.questionCount == 1) $('#q-board_next').html('Завершить')
+        else $('#q-board_next').html('Продолжить')
 
         $('#q-board_next').removeClass('disabled')
     },
@@ -35,19 +34,21 @@ var test = {
         //fst id #q-board_prev
     },
     board_next() {
-       //fst id #q-board_next
+        //fst id #q-board_next
         if (this.timeoutans == true) {
             this.timeoutans = false
             this.pushAns()
         }
-
-        if ((test.active_question+1) == test.questionCount) {
+        if ((test.active_question+1) == this.questionCount) {
             this.testResult()
-        }
-        if ((test.active_question+1) < test.questionCount) {
+        } else {
+            if ((test.active_question+2) == this.questionCount) {
+                $('#q-board_next').html('Завершить')
+            }
             this.addQuestionWrapper(this.test_data.question[test.active_question+1])
         }
-
+        
+        test.active_question = test.active_question + 1
     },
     pushAns() {
         ansStr = ''
@@ -59,7 +60,10 @@ var test = {
                 ansStr = $('[name=q-question__ans]:checked').val()
             break;
             case 'multioption':
-                ansStr = $('[name=q-question__ans]:checkbox:checked').val()
+                ansStr = [];
+                $('[name ^= q-question__ans]:checkbox:checked').each((i, el) => {
+                    ansStr.push($(el).val())
+                })
             break;
         }
         ansObj = {
@@ -69,7 +73,38 @@ var test = {
         if (ansStr) this.ans.push(ansObj)
     },
     testResult() {
-        toastr.error('EpicError: Fatal error callback: not hash error')
+        this.showResult()
+
+        $.ajax({
+            type: "POST",
+            url: "/api.php?_action=tester/step&v=0.1",
+            data: {ans: test.ans, tid: test.test_data.id},
+            dataType: "json",
+            success: function (data) {
+                switch(data.status) {
+                    case 200:
+                        dataAnsTrue = 0
+                        dataAnsFalse = 0
+                        data.dataAns.forEach(element => {
+                            if (element == 'true') dataAnsTrue = dataAnsTrue + 1
+                            else dataAnsFalse = dataAnsFalse + 1
+                        })
+                        
+                        easyText = `
+                        <h3 class="black-text">Ваш результат</h3> <br>
+                        <h4 class="black-text">Вы решили верно <b>` + dataAnsTrue + `</b> из <b>` + data.allAns + `</b> вопросов!</h4>
+                        `
+                        $('#r-info').html(easyText)
+                    break;
+                    case 400:
+                        $('#r-info').html('<h3 class="text-danger">Клиент вернул невалидные данные</h3>')
+                    break;
+                    case 404:
+                        $('#r-info').html('<h3 class="text-danger">Тест не найден в базе, вероятно, он был удален или заблокирован</h3>')
+                    break;
+                }
+            }
+        });
     },
     addQuestionWrapper(data) {
         this.timeoutans = true

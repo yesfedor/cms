@@ -268,7 +268,7 @@ testerCreate = {
                 </div>
                 <div class="col-10 offset-1 md-form md-bg mt-0 mb-3">
                     <input type="text" id="addQuestion-addOption--answer" class="form-control">
-                    <label for="addQuestion-addOption--answer" class="pl-4">Ответ(ы)</label>
+                    <label for="addQuestion-addOption--answer" class="pl-4">Номер(а) ответов через пробел: <span class="text-primary">1 2 3</span></label>
                 </div>
                 `
 

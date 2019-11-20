@@ -125,6 +125,7 @@ testerCreateData = {
 
 $(document).ready(function() {
     $('.mdb-select').materialSelect()
+    init.js.remove('tester-create')
     init.js.add('tester-create', 'module/tester-create.js', 79)
 });
 </script>

@@ -69,13 +69,24 @@ if ($test['explanation']) $test_text_explanation = '<h5><span class="d-block tex
         </div>
     </div>
     <div id="tester-test-result" class="row white border border-primary rounded py-2">
-        <div id="r-info" class="col-12 text-center py-2">Result block loading..</div>
+        <div id="r-info" class="col-12 text-center py-2">loading..</div>
     </div>
 </div>
 
 <script>
 testJson = <?= json_encode($test, JSON_UNESCAPED_UNICODE + JSON_UNESCAPED_SLASHES) ?>
 
-init.js.add('tester-go', 'module/tester-go.js', 'β.0-24')
+init.js.remove('tester-go')
+init.js.add('tester-go', 'module/tester-go.js', 'β.0-28')
+$('#r-info').html(mainTpl.nav.tplLoaderModule)
+window.onbeforeunload = function(e) {
+    e.preventDefault();
+    result = confirm('Данные о прохождении не будут сохранены. Таймер не будет остановлен для этого теста, продолжить?');
+    if (result) {
+        toastr.info('Данные сброшены');
+        nav.go(nav.createLink(window.location.href))
+    }
+    return false;
+};
 </script>
 <?= ($_GET['json'] ? debug($test) : false) ?>

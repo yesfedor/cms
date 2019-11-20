@@ -21,6 +21,10 @@ switch($url_p1) {
         $landingsStatus = true;
         $landingsFile = 'tester-welcome';
     break;
+    case 'for-all-mankind':
+        $landingsStatus = true;
+        $landingsFile = 'for-all-mankind';
+    break;
 }
 
 if ($landingsStatus) {
