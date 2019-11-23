@@ -37,6 +37,6 @@ $p_footer = $objectPath.'footers/'.$domainBase[appGetDomain()].'/default.php';
             hash: {appRoot:'<?= getAppRootHash() ?>', logout: '<?= $hash['logout'] ?>'}
         }
         </script>
-        <script src="/web/js/core/init.js?version=21"></script>
+        <script src="/web/js/core/init.js?version=128"></script>
     </body>
 </html>
