@@ -79,9 +79,11 @@ if ($test['author_uid'] == $_SESSION['user']['uid']) {
     <div id="tester-test-result" class="row white border border-primary rounded py-2">
         <div id="r-info" class="col-12 text-center py-2">loading..</div>
     </div>
-    <div id="tester-test-decisions" class="row white border border-primary rounded py-2 my-2 text-center">
-        <h3 class="text-primary my-3">Все решения теста</h3>
-        <div id="decisions-data" class="col-12 text-center py-2">loading..</div>
+    <div id="tester-test-decisions" class="row white border border-primary rounded py-2 my-2">
+        <div class="col-12 text-center py-2">
+            <h3 class="text-primary my-3">Все решения теста</h3>
+            <div class="col-12"><div id="decisions-data" class="row"></div></div>
+        </div>
     </div>
 </div>
 
@@ -104,7 +106,10 @@ testRoot = {
     isRoot: <?= $testRoot ?>,
     isHashUrl: <?= $isHashUrl ?>,
     init () {
-        if (this.isHashUrl == true) this.showDecisions()
+        if (this.isHashUrl == true) {
+            this.showDecisions()
+            $('#decisions-data').html(mainTpl.nav.tplLoaderModule)
+        }
         else this.hideDecisions()
     },
     showDecisions() {
@@ -115,7 +120,15 @@ testRoot = {
         $('#tester-test-decisions').hide()
     },
     reloadDecisions() {
-
+        $.ajax({
+            type: "POST",
+            url: "/api.php?_action=tester/decisions&v=0.1",
+            data: {tid: testJson.id},
+            dataType: "json",
+            success: function (data) {
+                $('#decisions-data').html(data.html)
+            }
+        })
     }
 }
 testRoot.init()

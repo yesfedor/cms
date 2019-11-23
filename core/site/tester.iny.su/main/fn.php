@@ -339,4 +339,13 @@ function tester_test_get_id($id) {
         return getFullTest($test);
     } else return false;
 }
+
+function tester_test_decisions($tests_id) {
+    $query = "SELECT * FROM tester_answers WHERE tests_id = :tests_id";
+    $var = [
+        ':tests_id' => $tests_id
+    ];
+    $data = dbGetAll($query, $var);
+    return $data;
+}
 ?>
