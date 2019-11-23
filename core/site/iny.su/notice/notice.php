@@ -7,6 +7,7 @@ $page = $thisSitePath.'notice/page.php';
 
 function noticeRender() {
     $notice = userApiNoticeGet();
+    $notice = array_reverse($notice);
 
     $query_app_notice_type = "SELECT * FROM app_notice_type WHERE id != :id";
     $var_app_notice_type[':id'] = 0;
