@@ -32,21 +32,22 @@ if ($_SESSION['user']['uid']) {
             $ansAll = $code['allAns'];
             $ansTrue = 0;
             $html .= '
-            <div class="col-12 text-center">
+            <div class="col-12 border-bottom text-center">
                 <h4 class="text-primary my-2">Пользователь: '.url('https://iny.su/id'.$uid, tetser_get_author($uid), false).'</h4>
             
             ';
             $phtml = '';
             for($j=0;$j<count($code['dataAns']);) {
+                if ($code['dataAns'][$j] == 'true') $ansTrue = $ansTrue + 1;
                 $phtml .= '
                 <h5 class="my-2">
                     '.($j+1).' вопрос - '.($code['dataAns'][$j] == 'true' ? 'Верно':'Неверно').'
                 </h5>
                 ';
-                
+
                 $j++;
             }
-            $html .= $phtml.'</div>';
+            $html .= '<h4>Верно '.$ansTrue.' из '.$ansAll.'</h4>'.$phtml.'</div>';
             $i++;
         }
 
