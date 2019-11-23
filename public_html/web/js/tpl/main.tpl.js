@@ -61,10 +61,10 @@ var mainTpl = {
             content: `
 <div class="row py-1">
     <div class="col-12 text-center mt-1 mb-3">
-        <h4 class="h5 text-primary"><span data-lang="app_user_logout_title"></span></h4>
+        <h4 class="h5 text-primary"><span class="danger-text" data-lang="app_user_logout_title"></span></h4>
     </div>
     <div class="col-12 text-center mb-1">
-        <a class="btn btn-danger btn-rounded btn-lg py-3" role="button" href="/?act=logout&hash=`+ config.hash.logout +`" onclick="return nav.go(this);"><span data-lang="app_user_logout_btn">Logout</span></a>
+        <a class="btn btn-danger btn-rounded btn-lg py-3" role="button" href="/?act=logout&hash=`+ config.hash.logout +`" onclick="return nav.go(this);"><span class="white-text" data-lang="app_user_logout_btn"></span></a>
     </div>
 </div>
             `,

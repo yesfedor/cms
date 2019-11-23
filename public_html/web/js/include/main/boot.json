@@ -10,7 +10,7 @@
 		},
 		"common": {
 			"url": "common.css",
-			"version": 8
+			"version": 64
 		}
 	},
 	"js": {
@@ -32,31 +32,31 @@
 		},
 		"mainTpl": {
 			"url": "tpl/main.tpl.js",
-			"version": 10
+			"version": 64
 		},
 		"style": {
 			"url": "module/main.style.js",
-			"version": 15
+			"version": 64
 		},
 		"navigation": {
 			"url": "core/navigation.js",
-			"version": 33
+			"version": 64
 		},
 		"forms": {
 			"url": "module/forms.js",
-			"version": 10
+			"version": 64
 		},
 		"userApi": {
 			"url": "module/userApi.js",
-			"version": 17
+			"version": 64
 		},
 		"languages": {
 			"url": "core/languages.js",
-			"version": 7
+			"version": 64
 		},
 		"fn": {
 			"url": "module/fn.js",
-			"version": 1
+			"version": 64
 		}
 	},
 	"header": {

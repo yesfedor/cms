@@ -10,7 +10,7 @@ var init = {
         }
     },
     path: {
-        bootFile: 'boot.json',
+        bootFile: 'boot.json?time=' + (new Date()).getTime(),
         css: servers.cdn + '/web/css/',
         js: servers.cdn + '/web/js/',
         header: servers.api + '/api.php?_action=getHeader&v=0.1',
