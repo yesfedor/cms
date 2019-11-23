@@ -29,13 +29,16 @@ if ($_SESSION['user']['uid']) {
             $uid = $results[$i]['uid'];
             $code = json_decode($results[$i]['code_json'], true);
             $date = $results[$i]['date'];
+            $ansAll = $code['allAns'];
+            $ansTrue = 0;
             $html .= '
             <div class="col-12 text-center">
                 <h4 class="text-primary my-2">Пользователь: '.url('https://iny.su/id'.$uid, tetser_get_author($uid), false).'</h4>
             
             ';
+            $phtml = '';
             for($j=0;$j<count($code['dataAns']);) {
-                $html .= '
+                $phtml .= '
                 <h5 class="my-2">
                     '.($j+1).' вопрос - '.($code['dataAns'][$j] == 'true' ? 'Верно':'Неверно').'
                 </h5>
@@ -43,8 +46,7 @@ if ($_SESSION['user']['uid']) {
                 
                 $j++;
             }
-            $html .= '</div>';
-
+            $html .= $phtml.'</div>';
             $i++;
         }
 
