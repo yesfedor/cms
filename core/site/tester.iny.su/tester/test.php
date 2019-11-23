@@ -79,8 +79,8 @@ if ($test['author_uid'] == $_SESSION['user']['uid']) {
     <div id="tester-test-result" class="row white border border-primary rounded py-2">
         <div id="r-info" class="col-12 text-center py-2">loading..</div>
     </div>
-    <div id="tester-test-decisions" class="row white border border-primary rounded py-2 my-2">
-        <h3 class="text-primary my-2">Все решения теста</h3>
+    <div id="tester-test-decisions" class="row white border border-primary rounded py-2 my-2 text-center">
+        <h3 class="text-primary my-3">Все решения теста</h3>
         <div id="decisions-data" class="col-12 text-center py-2">loading..</div>
     </div>
 </div>
