@@ -71,5 +71,9 @@
     "text_send":"Отправить",
     "text_publish":"Опубликовать",
     "text_read_more":"Читать дальше",
-    "text_open":"Открыть"
+    "text_open":"Открыть",
+
+    "noticeTypeWelcome":"благодарим за регистрацию!",
+    "noticeTypeMail_verfy":"указанный вами адрес электронной почты был подтвержден",
+    "noticeTypeSocial_vk_add":"ваша страница ВКонтакте успешно связана"
 }

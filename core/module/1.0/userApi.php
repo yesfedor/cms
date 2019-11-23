@@ -110,6 +110,9 @@ function userApiReg($name, $surname, $mail, $password, $gender) {
     if ($user_new['uid']) {
         userApiSendMailtoVerfy($mail, $name, $surname);
         sleep(0.5);
+
+        userApiNoticeAdd('welcome', ['name' => $_SESSION['user']['name']]);
+        
         return true;
     }
     else return false;
@@ -129,7 +132,7 @@ function userApiLogin($user) {
 }
 function userApiLogout() {
     global $_SESSION;
-    
+
     $_SESSION['user'] = [];
     $_SESSION['data'] = [];
     $_SESSION['cahe'] = [];

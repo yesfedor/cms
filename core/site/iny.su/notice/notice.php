@@ -12,29 +12,29 @@ function noticeRender() {
     $var_app_notice_type[':id'] = 0;
     $app_notice_type = dbGetAll($query_app_notice_type, $var_app_notice_type);
 
-    $app_notice_keys = [];
-
-    for($i=0; $i < count($app_notice_type);) {
-        $key = $app_notice_type[$i]['type'];
-        $app_notice_keys[$key] = $i;
+    $notice_type = [];
+    for($i=0; $i<count($app_notice_type);) {
+        $notice_type[$app_notice_type[$i]['type']] = [
+            'icon' => $app_notice_type[$i]['icon'],
+            'text' => $app_notice_type[$i]['text']
+        ];
 
         $i++;
     }
 
-    for($i=0; $i < count($notice);) {
+    $noticeData = [];
+    for($i=0; $i<count($notice);) {
         $notice[$i]['data'] = json_decode($notice[$i]['data'], true);
-        $noticeThis = $notice[$i];
-
-        $n_type = $noticeThis['type'];
-        $n_tpl = $app_notice_type[$app_notice_keys[$n_type]]['tpl'];
-
-        $noticeData_pre = [
-            'id' => $noticeThis['id'],
-            'date_create' => $noticeThis['date_create'],
-            'html' => textParse($notice[$i]['data'], $n_tpl),
+        $noticePrepare = [
+            'id' => $notice[$i]['id'],
+            'uid' => $notice[$i]['uid'],
+            'type' => $notice[$i]['type'],
+            'data' => $notice[$i]['data'],
+            'date_create' => $notice[$i]['date_create'],
+            'icon' => $notice_type[$notice[$i]['type']]['icon'],
+            'text' => textParse($notice[$i]['data'], $notice_type[$notice[$i]['type']]['text'])
         ];
-
-        $noticeData[] = $noticeData_pre;
+        $noticeData[] = $noticePrepare;
 
         $i++;
     }

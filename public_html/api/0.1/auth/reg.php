@@ -64,7 +64,6 @@ if ($reg_status) {
                         $user = userApiReg($name, $surname, $mail, $password, $gender);
                         $_SESSION['user']['geo_password'] = getUserPassword($_SESSION['user']['password']);
                         if ($user) {
-                            userApiNoticeAdd('welcome', ['name' => $_SESSION['user']['name']]);
                             $js_code = "config.user.auth = true; toastr.success('Loading..'); init.header('user'); init.footer('none'); nav.router(window.location.pathname); $('#modalAuthReg').modal('hide');";
                         } else $js_code .= "toastr.error('Host error'); ";
                     } else $js_code .= "toastr.error('Email address is busy'); ";
