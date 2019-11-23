@@ -128,6 +128,8 @@ function userApiLogin($user) {
     return $result;
 }
 function userApiLogout() {
+    global $_SESSION;
+    
     $_SESSION['user'] = [];
     $_SESSION['data'] = [];
     $_SESSION['cahe'] = [];
