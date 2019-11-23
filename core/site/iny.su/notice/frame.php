@@ -7,17 +7,20 @@ for($i = 0; $i < count($noticeData);) {
     $id = $noticeData[$i]['id'];
     if ($id) {
         $outHtml .= '
-        <div id="notice-id-'.$id.'" class="col-12 white black-text my-1 py-1">
-            <div class="row border-bottom my-0 py-0">
-                <div class="col-10 offset-1">
-                    <div class="row my-0 py-0">
-                        <div class="col-4 text-center my-0 py-0">'.($noticeData[$i]['status'] == 'unread' ? $htmlUnReadNotice : '').'</div>
-                        <div class="col-4 text-center my-0 py-0"><span class="h6 text-muted">'.$noticeData[$i]['date_create'].'</span></div>
-                        <div class="col-4 text-right my-0 py-0"><i style="cursor: pointer;" onclick="userApi.notice.delete('.$id.');" class="fas fa-times fa-sm text-muted"></i></div>
-                    </div>
+        <div id="notice-id-'.$id.'" class="col-10 offset-1 black-text">
+            <div class="row my-2">
+                <div class="d-block col-3 my-0 p-1 text-center">
+                    '.($noticeData[$i]['status'] == 'unread' ? $htmlUnReadNoticeTrue : $htmlUnReadNoticeFalse).'
+                    <i class="'.$noticeData[$i]['icon'].' w-100 fa-3x text-primary"></i>
+                    <a onclick="userApi.notice.delete('.$id.'); return false;" href="#" class="text-muted my-2">скрыть</a>
                 </div>
-                 <div class="col-10 offset-1 text-center"><h5 class="d-flex align-items-center"><i class="'.$noticeData[$i]['icon'].' fa-5x mr-3 text-primary"></i> '.$noticeData[$i]['text'].'</h5></div>
-                <div class="col-10 offset-1"></div>
+                <div class="d-block col-6 my-0 px-1 text-left">
+                    <h5 class="black-text my-0 py-0">'.$noticeData[$i]['text'].'</h5>
+                    <h6 class="text-muted my-0 py-0">'.$noticeData[$i]['date_create'].'</h6>
+                </div>
+                <div class="d-block col-3 my-0 px-1 text-center">
+                    <!-- pic zone -->
+                </div>
             </div>
         </div>
         ';
@@ -35,7 +38,7 @@ body.modal-open {
     padding-right: 0px !important;
 }
 </style>
-<div class="col-12 text-center mb-2 border-bottom">
-    <h3><?= ($outHtml ? $boxTrue : $boxFalse) ?></h3>
+<div class="col-12 text-center mt-n2 mb-2 border-bottom">
+    <h4><?= ($outHtml ? $boxTrue : $boxFalse) ?></h4>
 </div>
 <?= $outHtml ?>

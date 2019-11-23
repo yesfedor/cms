@@ -44,7 +44,8 @@ function noticeRender() {
 }
 
 $noticeData = noticeRender();
-$htmlUnReadNotice = '<span class="h6 badge badge-primary">New</span>';
+$htmlUnReadNoticeTrue = '<span class="h6 badge badge-primary">New</span>';
+$htmlUnReadNoticeFalse = '<span class="h6 badge badge-primary"></span>';
 
 if ($_GET['screen'] != 'mobile') {
     // pc
