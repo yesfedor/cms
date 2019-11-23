@@ -11,7 +11,7 @@ for($i = 0; $i < count($noticeData);) {
             <div class="row border-bottom my-0 py-0">
                 <div class="col-10 offset-1">
                     <div class="row my-0 py-0">
-                        <div class="col-4 text-center my-0 py-0"><span class="h6 text-primary">#'.($i+1).'</span></div>
+                        <div class="col-4 text-center my-0 py-0">'.($noticeData[$i]['status'] == 'status' ? $htmlUnReadNotice : '').'</div>
                         <div class="col-4 text-center my-0 py-0"><span class="h6 text-muted">'.$noticeData[$i]['date_create'].'</span></div>
                         <div class="col-4 text-right my-0 py-0"><i style="cursor: pointer;" onclick="userApi.notice.delete('.$id.');" class="fas fa-times fa-sm text-muted"></i></div>
                     </div>

@@ -31,6 +31,7 @@ function noticeRender() {
             'type' => $notice[$i]['type'],
             'data' => $notice[$i]['data'],
             'date_create' => $notice[$i]['date_create'],
+            'status' => $notice[$i]['status'],
             'icon' => $notice_type[$notice[$i]['type']]['icon'],
             'text' => textParse($notice[$i]['data'], $notice_type[$notice[$i]['type']]['text'])
         ];
@@ -43,6 +44,7 @@ function noticeRender() {
 }
 
 $noticeData = noticeRender();
+$htmlUnReadNotice = '<span class="h6 badge badge-primary">New</span>';
 
 if ($_GET['screen'] != 'mobile') {
     // pc
