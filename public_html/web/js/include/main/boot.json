@@ -48,7 +48,7 @@
 		},
 		"userApi": {
 			"url": "module/userApi.js",
-			"version": 64
+			"version": 65
 		},
 		"languages": {
 			"url": "core/languages.js",

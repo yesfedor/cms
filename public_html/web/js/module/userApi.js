@@ -77,8 +77,14 @@ var userApi = {
                 dataType: "json",
                 success: function (data) {
                     if (data.auth != config.user.auth) window.location.reload()
-                    if (data.notice != false) $('#notice-count').html(data.notice)
-                        else $('#notice-count').html('')
+                    // notify
+                    if (data.notice != false) {
+                        $('#notice-count').html(data.notice)
+                        $('#notice-count-lite').html(data.notice)
+                    } else {
+                        $('#notice-count').html('')
+                        $('#notice-count-lite').html('')
+                    }
                 }
             });
         }, userApi.data.checkerInterval)
