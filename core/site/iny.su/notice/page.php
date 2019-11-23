@@ -15,7 +15,7 @@ for($i = 0; $i < count($noticeData);) {
                     <a onclick="userApi.notice.delete('.$id.'); return false;" href="#" class="text-muted my-2">скрыть</a>
                 </div>
                 <div class="d-block col-6 my-0 px-1 text-left">
-                    <h5 class="black-text my-0 py-0">'.$noticeData[$i]['text'].'</h5>
+                    <h5 class="black-text my-0 py-0">'.$noticeData[$i]['text'].' '.($noticeData[$i]['data']['link'] && $noticeData[$i]['data']['link-text'] ? textParse($noticeData[$i]['data'], $htmlNoticeBtn) : '').'</h5>
                     <h6 class="text-muted my-0 py-0">'.$noticeData[$i]['date_create'].'</h6>
                 </div>
                 <div class="d-block col-3 my-0 px-1 text-center">

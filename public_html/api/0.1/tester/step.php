@@ -74,6 +74,17 @@ if ($_SESSION['user']['uid']) {
                 ':time' => '0'
             ];
             dbAddOne($saveResultQuery, $saveResultVar);
+            if ($testApi['opt']['notifications'] == true) {
+                $noticeAddType = 'test_passed';
+                $noticeAddData = [
+                    'testname' => $testApi['title'],
+                    'link' => 'https://tester.iny.su/test'.$testApi['id'].'/decisions',
+                    'link-text' => 'Посмотреть'
+                ];
+                $noticeAddUid = $testApi['author_uid'];
+
+                userApiNoticeAdd($noticeAddType, $noticeAddData, $noticeAddUid);
+            }
 
             $bigData['allAns'] = $allAns;
             $bigData['dataAns'] = $dataAns;

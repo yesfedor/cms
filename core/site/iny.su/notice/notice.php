@@ -46,6 +46,7 @@ function noticeRender() {
 $noticeData = noticeRender();
 $htmlUnReadNoticeTrue = '<span class="h6 badge badge-primary">New</span>';
 $htmlUnReadNoticeFalse = '<span class="h6 badge badge-primary"></span>';
+$htmlNoticeBtn = '<a onclick="nav.away(this); return false;" class="text-primary my-0" href="{%link%}">{%link-text%}</a>';
 
 if ($_GET['screen'] != 'mobile') {
     // pc

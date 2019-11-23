@@ -21,7 +21,14 @@ switch($test['opt']['overTime']) {
 }
 
 if ($test['explanation']) $test_text_explanation = '<h5><span class="d-block text-muted">Что нужно для решения: </span>'.textLink($test['explanation']).'</h5>';
-    else $test_text_explanation = '';
+else $test_text_explanation = '';
+
+$testRoot = 'false';
+$isHashUrl = 'false';
+if ($test['author_uid'] == $_SESSION['user']['uid']) {
+    $testRoot = 'true';
+    if ($url_p1 == 'decisions') $isHashUrl = 'true';
+}
 
 ?>
 <div class="container my-2 my-md-5 px-3 px-md-5">
@@ -38,6 +45,7 @@ if ($test['explanation']) $test_text_explanation = '<h5><span class="d-block tex
         <div class="col-12 col-md-6 text-center">
             <h4 class="h4 text-primary">Инфо</h4>
             <h5>Автор: <a onclick="return nav.away(this);" href="https://iny.su/id<?= $test['author_uid'] ?>"><?= tetser_get_author($test['author_uid']) ?></a></h5>
+
             <?= $test_text_explanation ?>
         </div>
         <div class="col-12 col-md-6 text-center">
@@ -50,7 +58,7 @@ if ($test['explanation']) $test_text_explanation = '<h5><span class="d-block tex
             </h5>
         </div>
         <div class="col-12 mt-3 text-center">
-            <button onclick="test.showWrapper();" type="button" role="button" class="btn btn-outline-primary">Приступить к решению</button>
+            <button onclick="test.showWrapper();" type="button" role="button" class="btn btn-rounded btn-primary">Приступить к решению</button>
         </div>
 
     </div>
@@ -71,6 +79,10 @@ if ($test['explanation']) $test_text_explanation = '<h5><span class="d-block tex
     <div id="tester-test-result" class="row white border border-primary rounded py-2">
         <div id="r-info" class="col-12 text-center py-2">loading..</div>
     </div>
+    <div id="tester-test-decisions" class="row white border border-primary rounded py-2 my-2">
+        <h3 class="text-primary my-2">Все решения теста</h3>
+        <div id="decisions-data" class="col-12 text-center py-2">loading..</div>
+    </div>
 </div>
 
 <script>
@@ -88,5 +100,24 @@ window.onbeforeunload = function(e) {
     }
     return false;
 };
+testRoot = {
+    isRoot: <?= $testRoot ?>,
+    isHashUrl: <?= $isHashUrl ?>,
+    init () {
+        if (this.isHashUrl == true) this.showDecisions()
+        else this.hideDecisions()
+    },
+    showDecisions() {
+        $('#tester-test-decisions').show()
+        this.reloadDecisions()
+    },
+    hideDecisions() {
+        $('#tester-test-decisions').hide()
+    },
+    reloadDecisions() {
+
+    }
+}
+testRoot.init()
 </script>
 <?= ($_GET['json'] ? debug($test) : false) ?>
