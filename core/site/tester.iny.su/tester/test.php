@@ -45,7 +45,7 @@ if ($test['author_uid'] == $_SESSION['user']['uid']) {
         <div class="col-12 col-md-6 text-center">
             <h4 class="h4 text-primary">Инфо</h4>
             <h5>Автор: <a onclick="return nav.away(this);" href="https://iny.su/id<?= $test['author_uid'] ?>"><?= tetser_get_author($test['author_uid']) ?></a></h5>
-            <?= '<h5><a id="testRoot_toggle" onclick="testRoot.showDecisions(); return false;" href="#">Показать решения</a></h5>' ?>
+            <?= ($testRoot == 'true' ? '<h5><a id="testRoot_toggle" onclick="testRoot.showDecisions(); return false;" href="#">Показать решения</a></h5>':'') ?>
             <?= $test_text_explanation ?>
         </div>
         <div class="col-12 col-md-6 text-center">
