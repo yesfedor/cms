@@ -60,7 +60,7 @@
 		},
 		"law-manager": {
 			"url": "module/law-manager.js",
-			"version": 5
+			"version": 6
 		}
 	},
 	"header": {
