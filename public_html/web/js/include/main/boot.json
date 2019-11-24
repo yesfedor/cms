@@ -57,6 +57,10 @@
 		"fn": {
 			"url": "module/fn.js",
 			"version": 64
+		},
+		"law-manager": {
+			"url": "module/law-manager.js",
+			"version": 5
 		}
 	},
 	"header": {
