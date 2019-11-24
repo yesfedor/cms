@@ -37,7 +37,7 @@ if ($test['author_uid'] == $_SESSION['user']['uid']) {
             <h2 class="text-primary my-0"><small class="black-text">Название теста:</small> <?= $test['title'] ?></h2>
         </div>
         <div class="col-12 text-center py-2">
-            <h3 class="h4 text-50-black my-0"><small class="black-text">Описание теста:</small> <?= textLink($test['description']) ?></h3>
+            <?= $test['description'] ? '<h3 class="h4 text-50-black my-0"><small class="black-text">Описание теста:</small> '.textLink($test['description']).'</h3>':'' ?> 
         </div>
         <div class="col-12 my-1 px-0"><hr class="w-100 border-primary mt-1 mb-3"></div>
 
@@ -79,7 +79,7 @@ if ($test['author_uid'] == $_SESSION['user']['uid']) {
     <div id="tester-test-result" class="row white border border-primary rounded py-2">
         <div id="r-info" class="col-12 text-center py-2">loading..</div>
     </div>
-    <div id="tester-test-decisions" class="row white border border-primary rounded py-2 my-2">
+    <div id="tester-test-decisions" class="row white border border-primary rounded py-2 my-3">
         <div class="col-12 text-center py-2">
             <h3 class="text-primary my-3">Все решения теста</h3>
             <div class="col-12"><div id="decisions-data" class="row"></div></div>
