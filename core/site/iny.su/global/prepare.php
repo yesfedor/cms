@@ -33,8 +33,16 @@ if ($_SESSION['user']['uid']) {
             break;
             case 'mail_verfy':
                 if ($_GET['hash'] == getMailHash(urldecode($_GET['mail']))) {
-                    userApiNoticeAdd('mail_verfy', ['name' => $_SESSION['user']['name']]);
-                    userApiVerfyEmail(urldecode($_GET['mail']));
+                    $prepareNoticeMailQuery = "SELECT id FROM app_notice WHERE uid = :uid type = :type";
+                    $prepareNoticeMailVar = [
+                        ':uid' => $_SESSION['user']['uid'],
+                        ':type' => 'mail_verfy'
+                    ];
+                    $prepareNoticeMail = dbGetOne($prepareNoticeMailQuery, $prepareNoticeMailVar);
+                    if (!$prepareNoticeMail['id']) {
+                        userApiNoticeAdd('mail_verfy', ['name' => $_SESSION['user']['name']]);
+                        userApiVerfyEmail(urldecode($_GET['mail']));
+                    } 
                     $redirect = $actUrl;
                 }
             break;
