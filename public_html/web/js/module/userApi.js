@@ -68,27 +68,30 @@ var userApi = {
             });
         }
     },
-    checker() {
-        var interval = setInterval(()=>{
-            $.ajax({
-                type: "POST",
-                url: userApi.data.checkerApi,
-                data: {'uid': config.user.uid},
-                dataType: "json",
-                success: function (data) {
-                    if (data.auth != config.user.auth) window.location.reload()
-                    // notify
-                    if (data.notice != false) {
-                        $('#notice-count').html(data.notice)
-                        $('#notice-count-lite').html(data.notice)
-                    } else {
-                        $('#notice-count').html('')
-                        $('#notice-count-lite').html('')
-                    }
+    checkerUserApi() {
+        $.ajax({
+            type: "POST",
+            url: userApi.data.checkerApi,
+            data: {'uid': config.user.uid},
+            dataType: "json",
+            success: function (data) {
+                if (data.auth != config.user.auth) window.location.reload()
+                // notify
+                if (data.notice != false) {
+                    $('#notice-count').html(data.notice)
+                    $('#notice-count-lite').html(data.notice)
+                } else {
+                    $('#notice-count').html('')
+                    $('#notice-count-lite').html('')
                 }
-            });
-        }, userApi.data.checkerInterval)
-
+            }
+        })
+    },
+    checker() {
+        window.checkerUserApiInterval = setInterval(userApi.checkerUserApi , userApi.data.checkerInterval)
+        setTimeout(() => {
+            userApi.checkerUserApi()
+        }, 200);
     },
     init() {
         if (config.user.auth === true) {
