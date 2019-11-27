@@ -12,7 +12,7 @@ function myscandir($dir, $sort=0) {
 	// удаляем . и .. (я думаю редко кто использует)
 	if ($sort == 0) unset($list[0],$list[1]);
 	else unset($list[count($list)-1], $list[count($list)-1]);
-	return $list;
+	return array_values($list);
 }
 
 $addons = [
@@ -24,11 +24,12 @@ $module = [
 ];
 
 $apiFileList = myscandir($module['1.0']);
+
 for($apiFileListNum=0;$apiFileListNum<count($apiFileList);) {
     if (array_key_exists($apiFileListNum, $apiFileList)) {
+        $apiFileListFilePath = $module['1.0'].$apiFileList[$apiFileListNum];
         include_once($module['1.0'].$apiFileList[$apiFileListNum]);
     }
-
     $apiFileListNum++;
 }
 ?>
