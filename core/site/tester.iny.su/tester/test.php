@@ -93,6 +93,7 @@ testJson = <?= json_encode($test, JSON_UNESCAPED_UNICODE + JSON_UNESCAPED_SLASHE
 init.js.remove('tester-go')
 init.js.add('tester-go', 'module/tester-go.js', 'β.0-28')
 $('#r-info').html(mainTpl.nav.tplLoaderModule)
+$('#decisions-data').html(mainTpl.nav.tplLoaderModule)
 window.onbeforeunload = function(e) {
     e.preventDefault();
     result = confirm('Данные о прохождении не будут сохранены. Таймер не будет остановлен для этого теста, продолжить?');
@@ -132,7 +133,9 @@ testRoot = {
             data: {tid: testJson.id},
             dataType: "json",
             success: function (data) {
-                $('#decisions-data').html(data.html)
+                setTimeout(() => {
+                    $('#decisions-data').html(data.html)
+                }, 1000);
             }
         })
     }
