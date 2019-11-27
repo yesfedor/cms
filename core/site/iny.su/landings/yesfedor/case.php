@@ -8,36 +8,18 @@
                 <div class="col-12 col-md-6 my-2 p-2">
                     <div class="row">
                         <div class="col-12 border text-center">
-                            <span class="d-block h3 black-text-deep font-weight-bold">Title</span>
-                            <span class="d-block h5 black-text-deep font-weight-bold">Desk</span>
-                            <span class="d-block h5 black-text-deep font-weight-light">Link</span>
+                            <span class="d-block h3 black-text-deep font-weight-bold">Сайт - заглушка</span>
+                            <span class="d-block h5 black-text-deep font-weight-bold">Сайт для блогера с описанием его деятельности и контактами для обратной связи</span>
+                            <span class="d-block h5 black-text-deep font-weight-light"><a class="h5 font-weight-light" href="http://aves.kiev.ua" target="_blank" rel="noopener noreferrer">Посмотреть</a></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 my-2 p-2">
                     <div class="row">
                         <div class="col-12 border text-center">
-                            <span class="d-block h3 black-text-deep font-weight-bold">Title</span>
-                            <span class="d-block h5 black-text-deep font-weight-bold">Desk</span>
-                            <span class="d-block h5 black-text-deep font-weight-light">Link</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 my-2 p-2">
-                    <div class="row">
-                        <div class="col-12 border text-center">
-                            <span class="d-block h3 black-text-deep font-weight-bold">Title</span>
-                            <span class="d-block h5 black-text-deep font-weight-bold">Desk</span>
-                            <span class="d-block h5 black-text-deep font-weight-light">Link</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 my-2 p-2">
-                    <div class="row">
-                        <div class="col-12 border text-center">
-                            <span class="d-block h3 black-text-deep font-weight-bold">Title</span>
-                            <span class="d-block h5 black-text-deep font-weight-bold">Desk</span>
-                            <span class="d-block h5 black-text-deep font-weight-light">Link</span>
+                            <span class="d-block h3 black-text-deep font-weight-bold">Сервис INY Tester</span>
+                            <span class="d-block h5 black-text-deep font-weight-bold">Tester Online - платформа для создания и прохождения тестов, с интуитивной ui и свежим дизайном</span>
+                            <span class="d-block h5 black-text-deep font-weight-light"><a class="h5 font-weight-light" href="https://tester.iny.su" target="_blank" rel="noopener noreferrer">Посмотреть</a></span>
                         </div>
                     </div>
                 </div>
