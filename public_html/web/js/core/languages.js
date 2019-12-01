@@ -75,6 +75,11 @@ var language = {
             if (language.data.locale[lang_str]) $(el).html(language.data.locale[lang_str])
             else $(el).html(language.data.locale['string_not_found'])
         })
+
+        // code with dateParse include core
+        if (typeof dateParse !== 'undefined') {
+            dateParse.render()
+        }
     },
     init() {
         define_lang = language.define()
