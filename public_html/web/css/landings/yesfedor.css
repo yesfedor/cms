@@ -25,7 +25,7 @@ body {
 }
 .white-text-border {
     -webkit-text-stroke: 1px #212121;
-    color: #fafafa;
+    color: #fafafa !important;
 }
 .square {
     border: 5px #212121 solid;

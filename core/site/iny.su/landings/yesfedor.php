@@ -38,7 +38,7 @@ $videos = ['https://www.youtube.com/watch?v=VPIeQpIGNro', 'https://www.youtube.c
 $rand = rand(0, count($videos) - 1);
 $video = $videos[$rand];
 ?>
-<link rel="stylesheet" href="/web/css/landings/yesfedor.css?v=7">
+<link rel="stylesheet" href="/web/css/landings/yesfedor.css?v=67">
 <nav id="header" class="navbar fixed-top navbar-expand-xl navbar-dark scrolling-navbar z-depth-0 py-3">
     <div class="container">
         <a class="navbar-brand white-text" href="#"><strong>INY</strong></a>
@@ -114,4 +114,4 @@ iamin()
         Copyright © <?= date('Y') ?> INY. All rights reserved.
     </div>
 </footer>
-<script src="/web/js/landings/yesfedor.js?v=16"></script>
+<script src="/web/js/landings/yesfedor.js?v=64"></script>
