@@ -25,6 +25,10 @@ switch($url_p1) {
         $landingsStatus = true;
         $landingsFile = 'for-all-mankind';
     break;
+    case 'fannalinur':
+        $landingsStatus = true;
+        $landingsFile = 'aliya';
+    break;
 }
 
 if ($landingsStatus) {
