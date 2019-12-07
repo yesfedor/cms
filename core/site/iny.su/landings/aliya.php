@@ -153,13 +153,13 @@ let aliya = {
                 span.classList.add("font-weight-bold");
                 wrapper.appendChild(span);
 
-                }, 150 * i);
+                }, 200 * i);
             }(i));
         }
         setTimeout(() => {
             this.initBoxFreeText()
             this.initBox()
-        }, textCont.length * 155)
+        }, textCont.length * 205)
     },
     initBg() {
         $('body').addClass('ali-bg-theme')
