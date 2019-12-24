@@ -9,48 +9,53 @@ body {
     min-height: 94.5vh;
 }
 .ali-wave {
-  color: #fce4ec !important;
+  color: #6d4c41 !important;
   animation: alilogo 1s infinite;
 }
 
 @keyframes alilogo {
     50% {
-        color: #e91e63;
+        color: #3e2723;
     }
 }
 
 .ali-bg-theme {
-    background-color: #121212;
-    animation: 2s color;
+    background-color: #fbe7e04d;
+    animation: ali-bg-theme-ch 4s infinite;
+}
+@keyframes ali-bg-theme-ch {
+    50% {
+        background-color: #f9bea94d;
+    }
 }
 
 .ali-border {
-    border-top: solid 0.5rem #f06292 !important;
+    border-top: solid 0.5rem #8d6e63 !important;
     animation: aliborder 4s infinite;
 }
 
 @keyframes aliborder {
     0% {
-        border-color: #f06292;
+        border-color: #8d6e63;
     }
     25% {
-        border-color: #cfd8dc;
+        border-color: #bcaaa4;
     }
     50% {
-        border-color: #e91e63;
+        border-color: #a1887f;
     }
     75% {
-        border-color: #90a4ae;
+        border-color: #795548;
     }
     100% {
-        border-color: #f06292;
+        border-color: #8d6e63;
     }
 }
 #boxFreeText {
-    color: white !important;
+    color: #4e342e !important;
 }
 #boxFreeText > span {
-    color: white !important;
+    color: #4e342e !important;
 }
 
 </style>
@@ -64,7 +69,7 @@ body {
         </div>
     </div>
     <div class="ali-box row justify-content-center wrapper-welcome mb-1" style="display: none;">
-        <div class="col-12 col-md-10 z-depth-3 white rounded border-top ali-border py-5 mt-n5">
+        <div class="col-12 col-md-10 z-depth-2 white rounded border-top ali-border py-5 mt-n5">
             <div class="row">
                 <div class="col-12 text-center">
                     <h3 class="my-0"></h3>

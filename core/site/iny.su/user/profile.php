@@ -14,6 +14,8 @@ if ($p['data']['uid'] == 0) {
         echo '<script>nav.router(\'/main\', true);</script>';
     }
 }
+
+
 ?>
 <div class="col-12">
     <div class="row">

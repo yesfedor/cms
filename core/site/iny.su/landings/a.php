@@ -36,4 +36,3 @@ if ($landingsStatus) {
     include_once($landingsInclude);
 }
 ?>
-

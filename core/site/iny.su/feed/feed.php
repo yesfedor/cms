@@ -8,7 +8,7 @@ function blogNewOptionGetCard($data) {
     <div class="col-10 offset-1 mt-0 mb-3 px-0">
         <div class="card">
             <div class="view overlay">
-                <img class="card-img-top" src="'.$data['poster781x521'].'" alt="Blog New Option Get">
+                <img class="card-img-top" src="'.$data['poster781x521'].'" alt="'.$data['text'].'">
                 <div class="mask rgba-white-slight"></div>
             </div>
             <div class="card-body">
@@ -27,13 +27,13 @@ function blogNewOptionGet() {
         '0' => [
             'title' => 'Новый сервис',
             'text' => 'Сервис коротких ссылок, необходимый для корректной работы сайта!',
-            'poster781x521' => '/uc/86024cad1e83101d97359d7351051156/service-go.jpg',
+            'poster781x521' => 'https://go.iny.su/uc/cc4ca42/v6f7584/bb549e6e/bd64c099313.jpg',
             'go-link' => 'bl6'
         ],
         '1' => [
             'title' => 'Новый сервис',
             'text' => 'Online Tester - Уникальная система создания тестов на INY.SU!',
-            'poster781x521' => '/uc/86024cad1e83101d97359d7351051156/service-tester.jpg',
+            'poster781x521' => 'https://go.iny.su/uc/cc4ca42/v6f7584/ef567538/ffed277ea1d.jpg',
             'go-link' => 'bl7'
         ]
     ];
