@@ -18,12 +18,12 @@ $js_code = '';
 //code
 $reg_status = true;
 
-$name = $_POST['reg-name'];
+$name = htmlspecialchars($_POST['reg-name']);
     if (!preg_match('/^[a-zA-Zа-яёА-ЯЁ\s\-]+$/u', $name) and iconv_strlen($name) < 24) {
         $reg_status = false;
         $js_code .= "toastr.error('Name invalid: Enter your real name'); ";
     }
-$surname = $_POST['reg-surname'];
+$surname = htmlspecialchars($_POST['reg-surname']);
     if (!preg_match('/^[a-zA-Zа-яёА-ЯЁ\s\-]+$/u', $surname) and iconv_strlen($surname) < 24) {
         $reg_status = false;
         $js_code .= "toastr.error('Surname invalid: Enter your real surname'); ";

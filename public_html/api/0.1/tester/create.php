@@ -58,7 +58,7 @@ class createTest {
     private function checkBase() {
         /* Title */
         if ($this->title and iconv_strlen($this->title) > 3 and iconv_strlen($this->title) <= 32) {
-            $this->title = htmlspecialchars($this->title);
+            //ok
         } else $this->status = 1;
 
         /* Type */
@@ -142,9 +142,9 @@ class createTest {
         $query = "INSERT INTO `tester_tests` (`id`, `url`, `author_uid`, `title`, `description`, `explanation`, `type`, `opt`, `poster`, `date`) VALUES (NULL, NULL, :author_uid, :title, :description, :explanation, :type, :opt, :poster, :date)";
         $var = [
             ':author_uid' => $this->uid,
-            ':title' => $this->title,
-            ':description' => $this->description,
-            ':explanation' => $this->explanation,
+            ':title' => htmlspecialchars($this->title),
+            ':description' => htmlspecialchars($this->description),
+            ':explanation' => htmlspecialchars($this->explanation),
             ':type' => $this->type,
             ':opt' => json_encode($this->opt),
             ':poster' => $this->poster,
@@ -159,10 +159,10 @@ class createTest {
                 $query = "INSERT INTO `tester_question` (`id`, `tests_id`, `title`, `description`, `explanation`, `answer`, `type`) VALUES (NULL, :tests_id, :title, :description, :explanation, :answer, :type)";
                 $var = [
                     ':tests_id' => $test_id,
-                    ':title' => $q['title'],
-                    ':description' => $q['description'],
-                    ':explanation' => $q['explanation'],
-                    ':answer' => $q['answer'],
+                    ':title' => htmlspecialchars($q['title']),
+                    ':description' => htmlspecialchars($q['description']),
+                    ':explanation' => htmlspecialchars($q['explanation']),
+                    ':answer' => htmlspecialchars($q['answer']),
                     ':type' => $q['type'],
                 ];
                 $q_id = dbAddOne($query, $var);
@@ -174,7 +174,7 @@ class createTest {
                         $var = [
                             ':tests_id' => $test_id,
                             ':question_id' => $q_id,
-                            ':text' => $text,
+                            ':text' => htmlspecialchars($text),
                         ];
                         dbAddOne($query, $var);
 
