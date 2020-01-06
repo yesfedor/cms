@@ -60,7 +60,7 @@
 </div>
 <div class="container-fluid m-0 p-0 z-depth-2">
     <div class="jarallax" data-jarallax>
-    <img class="jarallax-img" src="/web/file/images/main/landings/yesfedor/writecode.png" alt="">
+    <img class="jarallax-img" src="/web/file/images/main/landings/yesfedor/writecode.jpg" alt="">
         <div class="row papper-600 papper-color m-0 p-0">
             <div data-aos="zoom-in-up" class="d-flex justify-content-center align-self-center col-12 text-center">
                 <div class="row">
