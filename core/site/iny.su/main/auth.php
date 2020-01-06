@@ -3,10 +3,36 @@ if ($_SESSION['user']['uid']) {
     echo '<meta http-equiv="refresh" content="0; url=/">';
 }
 ?>
+<style>
+.authFullMode {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#modalAuthReg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.authFullModeTextWhite {
+    color: white!important;
+}
+</style>
+
+<div class="authFullMode"></div>
 <div class="container my-5">
     <div id="window-tabs" class="col-12 text-center mb-5">
-        <a class="h3 px-3" onclick="return windowChange('login');" href="#"><span class="text-primary" data-lang="app_user_login_login"></span></a>
-        <a class="h3 px-3" onclick="return windowChange('reg');" href="#"><span class="text-primary" data-lang="app_user_reg_reg"></span></a>
+        <a class="h3 px-3" onclick="return windowChange('login');" href="#"><span class="authFullModeText text-primary" data-lang="app_user_login_login"></span></a>
+        <a class="h3 px-3" onclick="return windowChange('reg');" href="#"><span class="authFullModeText text-primary" data-lang="app_user_reg_reg"></span></a>
     </div>
     <div id="window-login" class="col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4 white border border-primary rounded text-center px-0 my-5">
         <h3 class="mt-2 py-2"><span data-lang="app_user_login_login"></span></h3>
@@ -46,10 +72,23 @@ if ($_SESSION['user']['uid']) {
             <div id="app-reg-min-callback" class="col-12 text-center mb-1"><a class="my-0 py-0" href="/api.php?_action=auth/with.vk&v=0.1"><i class="fab fa-vk text-primary"></i></a></div>
         </form>
     </div>
-    <div id="app-mini-footer" class="col-12 text-center"><a class="mx-1" onclick="language.chenge('ru');" href="#">Русский</a> <a class="mx-1" onclick="language.chenge('en');" href="#">English</a></div>
+    <div id="app-mini-footer" class="col-12 text-center"><a class="authFullModeText mx-1" onclick="language.chenge('ru');" href="#">Русский</a> <a class="authFullModeText mx-1" onclick="language.chenge('en');" href="#">English</a></div>
 </div>
 
 <script>
+function authFullMode() {
+    if (!fn.isMobile()) {
+        picPath = 'https://wallpapercave.com/wp/wp3937496.jpg'
+
+        $('.authFullMode').css('background-image', 'url("' + picPath + '")')
+        $('.authFullMode').css('display', 'block')
+        $('.authFullModeText').removeClass('text-primary')
+        $('.authFullModeText').addClass('authFullModeTextWhite')
+        
+    }
+}
+authFullMode()
+
 function windowChange(type) {
     switch(type) {
         case 'login':
@@ -65,7 +104,7 @@ function windowChange(type) {
 }
 windowChange('login')
 
-init.createModal(mainTpl.modal.reg.id, {title: mainTpl.modal.reg.title, content: mainTpl.modal.reg.content, footer: mainTpl.modal.reg.footer}, 'large', mainTpl.modal.reg.bg)
+init.createModal(mainTpl.modal.reg.id, {title: mainTpl.modal.reg.title, content: mainTpl.modal.reg.content, footer: mainTpl.modal.reg.footer}, 'large', (fn.isMobile() ? mainTpl.modal.reg.bg : 'url("https://wallpapercave.com/wp/wp3937496.jpg")'))
 
 interval_modalAuthReg = setInterval(() => {
     if ($('#modalAuthReg').is('div')) {

@@ -23,7 +23,7 @@ switch($size) {
 }
 
 $style = 'm'.iconv_substr(md5($id), 0, 4).rand(0, 9);
-echo '<style>.'.$style.'{background-color: '.($_GET['bg'] ? $_GET['bg'] : '#000000bb').';}</style>';
+echo '<style>.'.$style.'{background: '.($_GET['bg'] ? $_GET['bg'] : '#000000bb').';}</style>';
 ?>
 <div id="<?= $id ?>" class="modal <?= $style ?> fade" tabindex="-1" role="dialog" aria-labelledby="<?= $id ?>Label" aria-hidden="true">
     <div class="modal-dialog <?= $size ?>" role="document">
