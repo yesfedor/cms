@@ -78,7 +78,7 @@ if ($_SESSION['user']['uid']) {
 <script>
 function authFullMode() {
     if (!fn.isMobile()) {
-        picPath = 'http://iny.su/web/file/images/main/authPagePic1.jpg'
+        picPath = 'https://go.iny.su/bmr'
 
         $('.authFullMode').css('background-image', 'url("' + picPath + '")')
         $('.authFullMode').css('display', 'block')
@@ -104,7 +104,7 @@ function windowChange(type) {
 }
 windowChange('login')
 
-init.createModal(mainTpl.modal.reg.id, {title: mainTpl.modal.reg.title, content: mainTpl.modal.reg.content, footer: mainTpl.modal.reg.footer}, 'large', (fn.isMobile() ? mainTpl.modal.reg.bg : 'url("http://iny.su/web/file/images/main/authPagePic1.jpg")'))
+init.createModal(mainTpl.modal.reg.id, {title: mainTpl.modal.reg.title, content: mainTpl.modal.reg.content, footer: mainTpl.modal.reg.footer}, 'large', (fn.isMobile() ? mainTpl.modal.reg.bg : 'url("https://go.iny.su/bmr")'))
 
 interval_modalAuthReg = setInterval(() => {
     if ($('#modalAuthReg').is('div')) {
