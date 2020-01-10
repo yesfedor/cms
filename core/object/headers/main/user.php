@@ -2,7 +2,7 @@
     <div class="container">
         <a href="/" onclick="return nav.go(this);" class="navbar-brand"><b class="theme-logo"><?= $logo ?></b></a>
         <ul class="d-none d-lg-block navbar-nav mr-auto">
-            <li onclick="return userApi.notice.show();" class="nav-item"><i class="far fa-bell fa-sm waves-effect waves-light white-text"></i> <span id="notice-count" class="white-text"></span></li>
+            <li onclick="return userApi.notice.show();" class="nav-item"><i class="far fa-bell fa-lg waves-effect waves-light white-text"></i> <span id="notice-count" class="white-text"></span></li>
         </ul>
         <ul class="d-none d-lg-block navbar-nav ml-auto">
             <li class="nav-item">

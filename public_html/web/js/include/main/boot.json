@@ -40,7 +40,7 @@
 		},
 		"dateParse": {
 			"url": "core/dateParse.js",
-			"version": 8
+			"version": 16
 		},
 		"navigation": {
 			"url": "core/navigation.js",

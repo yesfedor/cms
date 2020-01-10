@@ -22,6 +22,17 @@ dateParse = {
     },
     format(timeObj) {
         let strDate = (timeObj.getDate().toString().length == 2 ? timeObj.getDate() : '0' + timeObj.getDate())
+        let strMonth = ((timeObj.getMonth() + 1).toString().length == 2 ? (timeObj.getMonth() + 1) : '0' + (timeObj.getMonth() + 1))
+        let strYear = timeObj.getFullYear()
+        let strHours = (timeObj.getHours().toString().length == 2 ? timeObj.getHours() : '0' + timeObj.getHours())
+        let strMinutes = (timeObj.getMinutes().toString().length == 2 ? timeObj.getMinutes() : '0' + timeObj.getMinutes())
+        let strSeconds = (timeObj.getSeconds().toString().length == 2 ? timeObj.getSeconds() : '0' + timeObj.getSeconds())
+        let str = strDate + '/' + strMonth + '/' + strYear + ' ' + strHours + ':' + strMinutes + ':' + strSeconds
+        return str
+    } 
+    /*
+    format(timeObj) {
+        let strDate = (timeObj.getDate().toString().length == 2 ? timeObj.getDate() : '0' + timeObj.getDate())
         let strMonth = (timeObj.getMonth().toString().length == 2 ? timeObj.getMonth() : '0' + timeObj.getMonth())
         let strYear = timeObj.getFullYear()
         let strHours = (timeObj.getHours().toString().length == 2 ? timeObj.getHours() : '0' + timeObj.getHours())
@@ -30,4 +41,5 @@ dateParse = {
         let str = strDate + '/' + strMonth + '/' + strYear + ' ' + strHours + ':' + strMinutes + ':' + strSeconds
         return str
     } 
+    */
 }
