@@ -3,10 +3,18 @@ $domain = $_GET['domain'];
 $type = $_GET['type'];
 
 $typeList = [
-    'default' => true,
-    'main' => true,
-    'none' => true,
-    'user' => true
+    'default' => [
+        'access' => 0
+    ],
+    'main' => [
+        'access' => 0
+    ],
+    'none' => [
+        'access' => 0
+    ],
+    'user' => [
+        'access' => 2
+    ]
 ];
 
 $logo = '';
@@ -17,8 +25,9 @@ $logo = '';
     }
 
 if ($domainBase[$domain] and $typeList[$type]) {
+    if (!(getUserAccessScore($_SESSION['user']['access']) >= $typeList[$type]['access'])) $type = 'default';
     $headerTpl = $objectPath.'headers/'.$domainBase[$domain].'/'.$type.'.php';
     include_once($headerTpl);
     echo '<script>style.mainWarpSize();</script>';
-} else die('Route Error')
+} else die('<script>toastr.error("Init: Route Error, #83")</script>')
 ?>

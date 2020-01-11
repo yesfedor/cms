@@ -1,9 +1,16 @@
 <?php
+if ($_GET['api'] == true) echo '<script>init.header("none"); init.footer("none");</script>';
 if ($_SESSION['user']['uid']) {
     echo '<meta http-equiv="refresh" content="0; url=/">';
 }
 ?>
 <style>
+#modalAuthReg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition-duration: 0.5s;
+}
 .authFullMode {
     display: none;
     width: 100vw;
@@ -17,11 +24,8 @@ if ($_SESSION['user']['uid']) {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-#modalAuthReg {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    filter: brightness(0.5);
+    transition-duration: 0.5s;
 }
 .authFullModeTextWhite {
     color: white!important;
