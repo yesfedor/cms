@@ -16,6 +16,10 @@ $warp = "warp";
                         <input type="url" id="url_full" class="form-control">
                         <label class="ml-3 active" for="url_full">Вставьте ссылку</label>
                     </div>
+                    <div class="md-form col-10 offset-1 my-1 py-1 <?= (getUserAccessScore() >= 64 ? '':'d-none') ?>">
+                        <input type="url" id="url_short_private" class="form-control">
+                        <label class="ml-3 active" for="url_short_private">Сокращенный вариант (Modify)</label>
+                    </div>
                     <div class="row">
                         <div class="col-10 offset-1 mt-2 mb-3 py-1 text-center">
                             <button onclick="go_cc.create();" class="btn btn-outline-primary btn-rounded">Создать</button>
@@ -107,10 +111,14 @@ var go_cc = {
     },
     createSuccess() {
         url_full = $('#url_full').val()
+        url_short_private = $('#url_short_private').val()
         $.ajax({
             type: "POST",
             url: "/api.php?_action=go_cc/create&v=0.1",
-            data: {url_full: url_full},
+            data: {
+                url_full: url_full,
+                url_short: url_short_private
+                },
             dataType: "json",
             success: function (data) {
                 console.log(data)

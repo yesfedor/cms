@@ -19,29 +19,44 @@ $js_code = '0';
 function go_cc_hash($num) {
     return base_convert($num, 10, 36);
 }
-function go_cc_create($url_full) {
+function go_cc_create($url_full, $lastImport = 1, $url_short = false) {
+    global $_SESSION;
+
     $query_last = "SELECT MAX(`id`) FROM `go_cc` WHERE id != :id";
     $var_last = [
         ':id' => 0
     ];
     $last = dbGetOne($query_last, $var_last)['MAX(`id`)'];
-    $last++;
+    $last = $last + $lastImport;
 
-    $url_short = go_cc_hash($last);
+    if (getUserAccessScore() >= 64) {
+        if (!$url_short) $url_short = go_cc_hash($last);
+    } else $url_short = go_cc_hash($last);
 
-    $query_add = "INSERT INTO `go_cc` (`id`, `url_short`, `url_to`, `click`) VALUES (NULL, :url_short, :url_to, '1')";
-    $var_add = [
+    // checking id and url_short
+    $query_checking = "SELECT * FROM go_cc WHERE id = :last OR url_short = :url_short";
+    $var_checking = [
+        ':last' => $last,
         ':url_short' => $url_short,
-        ':url_to' => $url_full
     ];
-    if (dbAddOne($query_add, $var_add)) return $url_short;
-    else return false;
+    $checking_data = dbGetAll($query_checking, $var_checking);
+    if (count($checking_data) != 0) go_cc_create($url_full, $lastImport + 1, $url_short);
+    else {
+        $query_add = "INSERT INTO `go_cc` (`id`, `url_short`, `url_to`, `click`) VALUES (NULL, :url_short, :url_to, '1')";
+        $var_add = [
+            ':url_short' => $url_short,
+            ':url_to' => $url_full
+        ];
+        if (dbAddOne($query_add, $var_add)) return $url_short;
+        else return 'Произошла ошибка';
+    }
 }
 
 if ($_SESSION['user']['uid']) {
     $url_full = $_POST['url_full'];
+    $url_short = $_POST['url_short'];
     $bigData['url_full'] = $url_full;
-    $bigData['url_short'] = ($url_full ? go_cc_create($url_full):false);
+    $bigData['url_short'] = ($url_full ? go_cc_create($url_full, 1, $url_short):false);
 } else die('Auth Error');
 
 //return
