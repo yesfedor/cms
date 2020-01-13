@@ -49,9 +49,12 @@ function appRouterPageAccess($page) {
     else return false;
 }
 
-function appRouterAlias($url_page) {
-    $query_alias = "SELECT * FROM page WHERE alias != :alias";
-    $var_alias = [':alias' => ''];
+function appRouterAlias($url_page, $domainType) {
+    $query_alias = "SELECT * FROM page WHERE `site-appname` = :appname and `alias` != :alias";
+    $var_alias = [
+        ':appname' => $domainType,
+        ':alias' => ''
+        ];
 
     $alias = dbGetAll($query_alias, $var_alias);
     $aliasCount = count($alias);
@@ -188,7 +191,7 @@ function appRouter($url) {
     if ($p['page']) return appRouterReturn($p);
 
     #поиск в alias
-    $p = appRouterAlias($url['page']);
+    $p = appRouterAlias($url['page'], $url['domainType']);
     if ($p['page']) return appRouterReturn($p);
 
     if (!$p['page']['id']) appRouterError(404);
