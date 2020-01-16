@@ -33,7 +33,7 @@ $html_comment_block = '<!-- '.PHP_EOL.' ADMIN: https://vk.com/yesfedor '.PHP_EOL
         </application>
         <common class="row"><?= $common_block ?></common>
         <script>
-        var config = {
+        let config = {
             visit: 'user_defaut',
             lang: '<?= $_SESSION['lang'] ?>',
             domain: '<?= appGetDomain() ?>',
@@ -41,12 +41,12 @@ $html_comment_block = '<!-- '.PHP_EOL.' ADMIN: https://vk.com/yesfedor '.PHP_EOL
             user: {auth: <?= ($_SESSION['user']['uid'] ? 'true':'false') ?>,  uid: '<?= $_SESSION['user']['uid'] ?>', url: '<?= $_SESSION['user']['url'] ?>', name: '<?= $_SESSION['user']['name'] ?>', surname: '<?= $_SESSION['user']['surname'] ?>', gender: '<?= $_SESSION['user']['gender'] ?>', access: '<?= $_SESSION['user']['access'] ?>', mail_verfy: '<?= $_SESSION['user']['mail_verfy'] ?>', number_verfy: '<?= $_SESSION['user']['number_verfy'] ?>'},
             hash: {appRoot:'<?= getAppRootHash() ?>', logout: '<?= $hash['logout'] ?>'}
         }
-        var servers = {
+        let servers = {
             api: '',
             cdn: ''
         }
         </script>
-        <script src="/web/js/core/init.js?version=128"></script>
+        <script src="/web/js/core/init.js?version=129"></script>
         <script src="/web/js/module/@offline.js"></script>
     </body>
 </html>

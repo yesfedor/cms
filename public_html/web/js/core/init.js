@@ -190,6 +190,11 @@ var init = {
     },
 
     start(setting=false) {
+        // test from
+        let fromReload = /(\?|\&)from=([A-Za-z0-9]{0,50})/g
+        let fromReloadStatus = fromReload.test(document.location.search)
+        if (fromReloadStatus) document.location.href = document.location.href.replace(fromReload, '')
+
         // setting
         if (setting) init.setSetting(setting)
 
