@@ -212,11 +212,10 @@ var nav = {
             $.ajax({
                 type: "POST",
                 url: "/api.php?_action=go_cc/info&v=0.1",
-                data: {url_short: url},
+                data: {url_short: url, _origin: document.location.href},
                 dataType: "json",
                 success: function (data) {
                     info = data.info
-                    console.log(info)
                     link = nav.createLink(info.url_to)
 
                     if (link.host == window.location.host) nav.away(link)

@@ -44,7 +44,7 @@
 		},
 		"navigation": {
 			"url": "core/navigation.js",
-			"version": 67
+			"version": 68
 		},
 		"forms": {
 			"url": "module/forms.js",
