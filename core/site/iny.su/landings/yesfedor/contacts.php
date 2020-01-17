@@ -58,10 +58,10 @@
                     <span data-aos="fade-right" class="d-block h2 white-text-border">Связаться со мной (Фёдор Гаранин)</span>
                     <div class="row my-2">
                         <div class="col-12 col-md-6 text-center">
-                            <button type="button" onclick="nav.away(nav.createLink('https://vk.com/yesfedor'));" class="btn btn-outline-secondary black-text-deep text-uppercase waves-effect w-100 w-lg-75">vkontakte</button>
+                            <a href="yf_vk" onclick="return nav.cc(this);" class="btn btn-outline-secondary black-text-deep text-uppercase waves-effect w-100 w-lg-75">vkontakte</a>
                         </div>
                         <div class="col-12 col-md-6 text-center">
-                            <button type="button" onclick="nav.away(nav.createLink('tg://resolve?domain=yesfedor'));" class="btn btn-outline-secondary black-text-deep text-uppercase waves-effect w-100 w-lg-75">telegram</button>
+                            <a href="yf_tg" onclick="return nav.cc(this);" class="btn btn-outline-secondary black-text-deep text-uppercase waves-effect w-100 w-lg-75">telegram</a>
                         </div>
                         <div class="col-12 text-center">
                             <a class="btn btn-link waves-effect black-text-deep text-uppercase w-100 w-lg-75" onclick="nav.away(this);" href="mailto:yesfedor.go@gmail.com">yesfedor.go@gmail.com</a>

@@ -174,12 +174,10 @@ let aliya = {
     },
     initBoxFreeText() {
         const phrases = [
-        'Заказ!?',
-        'Новая идея?',
-        'Я помогу с реализацией',
-        'Что по стоимости?',
-        'Как со мной связаться?',
-        'Смотри ниже',
+        'I love',
+        'Design',
+        '♥♥♥',
+        'Made With Love'
         ]
 
         const el = document.querySelector('#boxFreeText')
