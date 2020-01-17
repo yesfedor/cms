@@ -239,10 +239,10 @@ var init = {
         let titleContent = ``
         let footerContent = ``
 
-        if (title == '' || title.length == 0) title = false
-        if (footer == '' || footer.length == 0) footer = false
-        if (size == '' || size.length == 0) size = 'large'
-        if (bgcolor == '' || bgcolor.length == 0) bgcolor = false
+        if (title == '' || title.length == 0 || title == 'false') title = ''
+        if (footer == '' || footer.length == 0 || footer == 'false') footer = ''
+        if (size == '' || size.length == 0 || size == 'false') size = 'large'
+        if (bgcolor == '' || bgcolor.length == 0 || bgcolor == 'false') bgcolor = ''
 
         switch(size) {
             case 'small':
@@ -262,6 +262,7 @@ var init = {
         if (title.length != 0) {
             titleContent = `<div class="modal-header border-bottom border-primary"><h4 class="modal-title w-100" id="` + id + `Label">` + title + `</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>`
         }
+        console.log(footer.length)
         if (footer.length != 0) {
             footerContent = `<div class="modal-footer border-primary mt-1 py-1">` + footer + `</div>`
         }
