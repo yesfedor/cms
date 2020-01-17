@@ -179,17 +179,35 @@ var nav = {
         }
     },
     go(element, module='') {
-        url = $(element).attr('href')
-        nav.router(url, 'go', module)
+        let url = $(element).attr('href')
+        let urlCheckAway = /https:\/\/go.iny.su\/[\w_\-.\p{а-я}]{0,}/g
+        if (urlCheckAway.test(url)) {
+            nav.cc(element)
+        } else {
+            nav.router(url, 'go', module)
+        }
+        
         return false
     },
     away(element) {
-        url = $(element).attr('href')
+        let url = $(element).attr('href')
         window.open(url, '_blank')
         return false
     },
     cc(element) {
-        url = $(element).attr('href')
+        let url = $(element).attr('href')
+
+        let urlCheckAway = /https:\/\/go.iny.su\/[\w_\-.\p{а-я}]{0,}/g
+        let urlAwayReplace = /https:\/\/go.iny.su\//g
+        let urlCheckShortUrl = /[\w\.\-\p{а-я}]{0,}/g
+
+        if (urlCheckAway.test(url)) {
+            url = url.replace(urlAwayReplace, '')
+        }
+        else if (urlCheckShortUrl.test(url)) {
+            url = url
+        }
+        
         if (url) {
             $.ajax({
                 type: "POST",
