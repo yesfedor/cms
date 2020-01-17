@@ -262,7 +262,6 @@ var init = {
         if (title.length != 0) {
             titleContent = `<div class="modal-header border-bottom border-primary"><h4 class="modal-title w-100" id="` + id + `Label">` + title + `</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>`
         }
-        console.log(footer.length)
         if (footer.length != 0) {
             footerContent = `<div class="modal-footer border-primary mt-1 py-1">` + footer + `</div>`
         }
