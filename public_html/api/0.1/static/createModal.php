@@ -9,16 +9,16 @@ $size = $_POST['size'];
 
 switch($size) {
     case 'small':
-        $size= 'modal-sm';
+        $size = 'modal-sm';
     break;
     case 'large':
-        $size= 'modal-lg';
+        $size = 'modal-lg';
     break;
     case 'full':
-        $size= 'modal-fluid';
+        $size = 'modal-fluid';
     break;
     default:
-        $size= 'modal-lg';
+        $size = 'modal-lg';
     break;
 }
 

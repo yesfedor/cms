@@ -218,31 +218,72 @@ var init = {
     createModal(id, html={title:'', content:'', footer:''}, size='', bgcolor='') {
         // size = small : large : full
         if ($('#' + id).is('div') === false) {
-            $.ajax({
-                type: "POST",
-                url: servers.api + "/api.php?_action=static/createModal&v=0.1" + (bgcolor ? '&bg=' + encodeURIComponent(bgcolor):''),
-                data: {
-                    crossDomain: true,
-                    id: id,
-                    title: html.title,
-                    content: html.content,
-                    footer: html.footer,
-                    size: size
-                },
-                dataType: "html",
-                success: function (html) {
-                    $('body').append(html)
-                    $('#' + id).on('hide.bs.modal', function () {
-                        init.data.modal.id = id
-                        init.data.modal.status = 'hide'
-                    })
-                    $('#' + id).on('show.bs.modal', function () {
-                        init.data.modal.id = id
-                        init.data.modal.status = 'show'
-                    })
-                }
-            });
+            let newModalHtml = init.createModalRender(id, html.title, html.content, html.footer, size, bgcolor)
+            $('body').append(newModalHtml)
+            $('#' + id).on('hide.bs.modal', function () {
+                init.data.modal.id = id
+                init.data.modal.status = 'hide'
+            })
+            $('#' + id).on('show.bs.modal', function () {
+                init.data.modal.id = id
+                init.data.modal.status = 'show'
+            })
+
+            userApi.checkerUserApi()
         }
+    },
+
+    createModalRender(id, title='', content='', footer='', size='', bgcolor='') {
+        let html = ``
+        let style = ``
+        let titleContent = ``
+        let footerContent = ``
+
+        if (title == '' || title.length == 0) title = false
+        if (footer == '' || footer.length == 0) footer = false
+        if (size == '' || size.length == 0) size = 'large'
+        if (bgcolor == '' || bgcolor.length == 0) bgcolor = false
+
+        switch(size) {
+            case 'small':
+                size = 'modal-sm';
+            break;
+            case 'large':
+                size = 'modal-lg';
+            break;
+            case 'full':
+                size = 'modal-fluid';
+            break;
+            default:
+                size = 'modal-lg';
+            break;
+        }
+
+        if (title.length != 0) {
+            titleContent = `<div class="modal-header border-bottom border-primary"><h4 class="modal-title w-100" id="` + id + `Label">` + title + `</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>`
+        }
+        if (footer.length != 0) {
+            footerContent = `<div class="modal-footer border-primary mt-1 py-1">` + footer + `</div>`
+        }
+
+
+        style = `m` + id.substr(0, 2) + Math.round(Math.random() * 1e9.toString().substr(0, 9))
+        html = `
+            <style>.` + style + ` {background: ` + (bgcolor != false ? bgcolor : '#000000bb') + `;}</style>
+            <div id="` + id + `" class="modal ` + style + ` fade" tabindex="-1" role="dialog" aria-labelledby="` + id + `Label" aria-hidden="true">
+                <div class="modal-dialog ` + size + `" role="document">
+                    <div class="modal-content z-depth-0 border border-primary rounded">
+                        ` + titleContent + `
+                        <div class="modal-body">
+                        ` + content + `
+                        </div>
+                        ` + footerContent + `
+                    </div>
+                </div>
+            </div>
+        `
+
+        return html
     }
 }
 
