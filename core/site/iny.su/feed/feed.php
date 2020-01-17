@@ -14,7 +14,7 @@ function blogNewOptionGetCard($data) {
             <div class="card-body">
                 <h4 class="card-title">'.$data['title'].'</h4>
                 <p class="card-text">'.$data['text'].'</p>
-                <button onclick="nav.cc(nav.createLink(\''.$data['go-link'].'\'));" data-lang="text_open" type="button" class="btn btn-primary"></button>
+                <a href="https://go.iny.su/'.$data['go-link'].'" onclick="return nav.go(this);" data-lang="text_open" type="button" class="btn btn-primary"></a>
             </div>
         </div>
     </div>
