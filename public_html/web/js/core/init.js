@@ -272,7 +272,7 @@ var init = {
             <style>.` + style + ` {background: ` + (bgcolor != false ? bgcolor : '#000000bb') + `;}</style>
             <div id="` + id + `" class="modal ` + style + ` fade" tabindex="-1" role="dialog" aria-labelledby="` + id + `Label" aria-hidden="true">
                 <div class="modal-dialog ` + size + `" role="document">
-                    <div class="modal-content z-depth-0 border border-primary rounded">
+                    <div class="theme-panel modal-content z-depth-0 border border-primary rounded">
                         ` + titleContent + `
                         <div class="modal-body">
                         ` + content + `

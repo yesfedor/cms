@@ -73,7 +73,7 @@ if ($_SESSION['user']['id_ns_check_last']) {
             $ns_check_html = '
             <div id="ns_check_block" class="row my-1">
                 <div class="col-12">
-                    <div class="alert alert-success" role="alert">
+                    <div class="alert theme-primary" role="alert">
                         <b class="d-block">Изменения сохранены</b>
                         <span class="d-block">Новые данные будут отражены на Вашей странице</span>
                         <a onclick="edit_name_disapprove();" class="d-block alert-link" style="cursor:pointer;">Закрыть</a>
@@ -86,7 +86,7 @@ if ($_SESSION['user']['id_ns_check_last']) {
             $ns_check_html = '
             <div id="ns_check_block" class="row my-1">
                 <div class="col-12">
-                    <div class="alert alert-primary" role="alert">
+                    <div class="alert theme-primary" role="alert">
                         <b class="d-block">Ваша заявка принята</b>
                         <span class="d-block">('.$_SESSION['user']['name'].' '.$_SESSION['user']['surname'].') -> <b>('.htmlspecialchars($ns_check['name']).' '.htmlspecialchars($ns_check['surname']).')</b></span>
                         <span class="d-block">На сайте принято использовать настоящие имена. Поэтому некторые заявки на смену имени проверяются модераторами. Пожалуйста, дождитесь одобрения.</span>
@@ -157,7 +157,7 @@ if ($_SESSION['user']['relationship'] and $_SESSION['user']['relationship_partne
 ?>
 <div class="col-12">
     <div class="row">
-        <div class="col-12 white border border-primary">
+        <div class="col-12 theme-panel border border-primary rounded">
             <div class="row">
                 <div class="col-12 text-left">
                     <h4 class="my-2 text-primary"><b data-lang="ui_edit_menu_base"></b></h4>
@@ -182,7 +182,7 @@ if ($_SESSION['user']['relationship'] and $_SESSION['user']['relationship_partne
                         <?= genEdit('multiselect', 'editUserLanguages', 'edit-user-languages', $lang['ival-ui_edit_base_languages'], $edit_languages) ?>
 
                         <div class="col-10 offset-1 my-1 py-1">
-                            <button class="mx-0 btn btn-outline-primary waves-effect" onclick="appForms.go('form-edit', 'user/edit-main'); return false;"><span data-lang="btn_save">Save</span></button>
+                            <button class="mx-0 btn btn-rounded btn-outline-primary waves-effect" onclick="appForms.go('form-edit', 'user/edit-main'); return false;"><span data-lang="btn_save">Save</span></button>
                         </div>
                     </form>
                 </div>

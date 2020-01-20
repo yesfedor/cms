@@ -85,20 +85,20 @@ html, body {
     transition-duration: var(--theme-duration-change);
     color: var(--theme-icon)!important;
 }
-.thme-panel {
+.theme-panel {
     transition-property: background-color, color, border-color;
     transition-duration: var(--theme-duration-change);
-    color: var(--theme-panel)!important;
+    background-color: var(--theme-panel)!important;
 }
 .theme-panel-dark {
     transition-property: background-color, color, border-color;
     transition-duration: var(--theme-duration-change);
-    color: var(--theme-panel-dark)!important;
+    background-color: var(--theme-panel-dark)!important;
 }
 .theme-panel-primary {
     transition-property: background-color, color, border-color;
     transition-duration: var(--theme-duration-change);
-    color: var(--theme-panel-primary)!important;
+    background-color: var(--theme-panel-primary)!important;
 }
 
 /* Supported Bootstrap4 */
@@ -145,6 +145,21 @@ h1, h2, h3, h4, h5, h6, b, span, small, big {
 }
 .white {
     background-color: var(--theme-primary)!important;
+}
+
+.dropdown-content {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    background-color: var(--theme-panel)!important;
+}
+.dropdown-content li.active, .dropdown-content li:hover {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    background-color: var(--theme-primary)!important;
+    color: var(--theme-link)!important;
+}
+.select-wrapper input.select-dropdown {
+    color: var(--theme-title)!important;
 }
 
 /* Old Style */

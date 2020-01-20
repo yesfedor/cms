@@ -19,7 +19,7 @@ if ($p['data']['uid'] == 0) {
 ?>
 <div class="col-12">
     <div class="row">
-        <div class="col-12 white border border-primary text-center">
+        <div class="col-12 theme-panel border border-primary rounded text-center">
             <h2 class="text-truncate my-1 py-2"><?= $p['data']['name'].' '.$p['data']['surname'] ?></h2>
         </div>
     </div>

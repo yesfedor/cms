@@ -6,7 +6,7 @@ $pageActive['feed'] = 'active';
 function blogNewOptionGetCard($data) {
     $html = '
     <div class="col-10 offset-1 mt-0 mb-3 px-0">
-        <div class="card">
+        <div class="card theme-panel">
             <div class="view overlay">
                 <img class="card-img-top" src="'.$data['poster781x521'].'" alt="'.$data['text'].'">
                 <div class="mask rgba-white-slight"></div>
@@ -14,7 +14,7 @@ function blogNewOptionGetCard($data) {
             <div class="card-body">
                 <h4 class="card-title">'.$data['title'].'</h4>
                 <p class="card-text">'.$data['text'].'</p>
-                <a href="https://go.iny.su/'.$data['go-link'].'" onclick="return nav.go(this);" data-lang="text_open" type="button" class="btn btn-primary"></a>
+                <a href="https://go.iny.su/'.$data['go-link'].'" onclick="return nav.go(this);" data-lang="text_open" type="button" class="btn btn-rounded btn-outline-primary"></a>
             </div>
         </div>
     </div>
@@ -48,8 +48,8 @@ function blogNewOptionGet() {
 }
 function blogNewOption() {
     $html = '
-    <div class="col-10 white border border-primary rounded offset-1 mt-0 mb-3 py-2">
-        <h4 data-lang="module_news_feed_new_option" class="black-text my-0 py-0"></h4>
+    <div class="col-10 theme-panel border border-primary rounded offset-1 mt-0 mb-3 py-2">
+        <h4 data-lang="module_news_feed_new_option" class="theme-title my-0 py-0"></h4>
     </div>
     '.blogNewOptionGet().'
     ';
@@ -60,7 +60,7 @@ function doPostAddMin() {
     global $_SESSION;
     $html = '
     <!-- Add post -->
-    <div id="do-post-add-min" onclick="post.doPostAdd();" class="col-10 white border border-primary rounded offset-1 mt-0 mb-3 py-2 d-none">
+    <div id="do-post-add-min" onclick="post.doPostAdd();" class="col-10 theme-panel border border-primary rounded offset-1 mt-0 mb-3 py-2 d-none">
 
     </div>
     ';

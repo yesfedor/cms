@@ -21,8 +21,8 @@ $html_comment_block = '<!-- '.PHP_EOL.' ADMIN: https://vk.com/yesfedor '.PHP_EOL
         <meta name="keywords" content="<?= $keywords ?>">
         <?= openGraph() ?>
         
-        <link id="app-css-theme-data" rel="stylesheet" href="/web/css/theme/<?= $domainBase[appGetDomain()].$_SESSION['theme'] ?>.css?version=20">
-        <link rel="stylesheet" href="/web/css/themes.css?version=1">
+        <link id="app-css-theme-data" rel="stylesheet" href="/web/css/theme/<?= $domainBase[appGetDomain()].$_SESSION['theme'] ?>.css?version=32">
+        <link rel="stylesheet" href="/web/css/themes.css?version=9">
         <link rel="stylesheet" href="/web/css/@offline.css">
     </head>
     <body>
@@ -46,7 +46,7 @@ $html_comment_block = '<!-- '.PHP_EOL.' ADMIN: https://vk.com/yesfedor '.PHP_EOL
             cdn: ''
         }
         </script>
-        <script src="/web/js/core/init.js?version=256"></script>
+        <script src="/web/js/core/init.js?version=257"></script>
         <script src="/web/js/module/@offline.js"></script>
     </body>
 </html>
