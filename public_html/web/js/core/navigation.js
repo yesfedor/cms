@@ -19,6 +19,14 @@ var nav = {
             prev_html: ''
         }
     },
+
+    onunload: false,
+    navEmmetOnunload() {
+        if (typeof this.onunload == 'function') {
+            this.onunload()
+        }
+        this.onunload
+    }
     
     scroll (el) {
         var elementClick = $(el).attr("href");
@@ -186,6 +194,8 @@ var nav = {
         } else {
             nav.router(url, 'go', module)
         }
+        
+        this.navEmmetOnunload();
         
         return false
     },
