@@ -7,11 +7,11 @@ for($i = 0; $i < count($noticeData);) {
     $id = $noticeData[$i]['id'];
     if ($id) {
         $outHtml .= '
-        <div id="notice-id-'.$id.'" class="col-12 theme-panel theme-text">
+        <div id="notice-id-'.$id.'" class="col-12 theme-text">
             <div class="row my-2">
                 <div class="d-block col-3 my-0 p-1 text-center">
                     '.($noticeData[$i]['status'] == 'unread' ? $htmlUnReadNoticeTrue : $htmlUnReadNoticeFalse).'
-                    <i class="'.$noticeData[$i]['icon'].' w-100 fa-3x text-primary"></i>
+                    <i class="'.$noticeData[$i]['icon'].' w-100 fa-3x theme-icon"></i>
                     <a onclick="userApi.notice.delete('.$id.'); return false;" href="#" class="text-muted my-2">скрыть</a>
                 </div>
                 <div class="d-block col-6 my-0 px-1 text-left">
