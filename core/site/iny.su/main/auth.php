@@ -1,5 +1,4 @@
 <?php
-if ($_GET['api'] == true) echo '<script>init.header("none"); init.footer("none");</script>';
 if ($_SESSION['user']['uid']) {
     echo '<meta http-equiv="refresh" content="0; url=/">';
 }
@@ -77,9 +76,16 @@ if ($_SESSION['user']['uid']) {
         </form>
     </div>
     <div id="app-mini-footer" class="col-12 text-center"><a class="authFullModeText mx-1" onclick="language.chenge('ru');" href="#">Русский</a> <a class="authFullModeText mx-1" onclick="language.chenge('en');" href="#">English</a></div>
+    <div class="col-12 text-center"><a data-lang="text_return_to_main_page" class="authFullModeText mx-1" onclick="return nav.go(this);" href="/main"></a></div>
 </div>
 
 <script>
+init.header("none");
+init.footer("none");
+nav.onunload = () => {
+    init.header("default");
+    init.footer("default");
+}
 function authFullMode() {
     if (!fn.isMobile()) {
         picPath = 'https://go.iny.su/bmr'
