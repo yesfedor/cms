@@ -25,7 +25,7 @@ var nav = {
         if (typeof this.onunload == 'function') {
             this.onunload()
         }
-        this.onunload
+        this.onunload = false
     },
     scroll (el) {
         var elementClick = $(el).attr("href");
