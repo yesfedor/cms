@@ -1,4 +1,5 @@
 <?php
+// я VSCode, скачай меня, Кристиночка
 $ui = true;
 $warp = "warp-page";
 $pageActive['feed'] = 'active';
