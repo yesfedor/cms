@@ -39,6 +39,11 @@ $rand = rand(0, count($videos) - 1);
 $video = $videos[$rand];
 ?>
 <link rel="stylesheet" href="/web/css/landings/yesfedor.css?v=67">
+<style>
+html, body {
+    background: white!important;
+}
+</style>
 <nav id="header" class="navbar fixed-top navbar-expand-xl navbar-dark scrolling-navbar z-depth-0 py-3">
     <div class="container">
         <a class="navbar-brand white-text" href="#"><strong>INY</strong></a>
@@ -84,6 +89,11 @@ $video = $videos[$rand];
     </div>
 </div>
 <script>
+nav.onunload = () => {
+    $(init.data.appDefaultEl).html(init.data.appDefaultContent)
+    init.header()
+    init.footer()
+}
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -110,6 +120,7 @@ iamin()
     include_once ($landingsInclude);
 ?>
 <footer class="d-block page-footer font-small elegant-color-dark pt-4">
+        <a onclick="return nav.go(this);" href="/main" data-lang="text_return_to_main_page" class="white-text"></a>
     <div class="container-fluid footer-copyright text-center py-3 white-text">
         Copyright © <?= date('Y') ?> INY. All rights reserved.
     </div>

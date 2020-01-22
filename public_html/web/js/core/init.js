@@ -7,7 +7,9 @@ var init = {
         modal: {
             id:'',
             status:'hide'
-        }
+        },
+        appDefaultEl: '#app',
+        appDefaultContent: '<header class="sticky-top"></header><main id="warp"></main><footer class="page-footer font-small theme-primary"></footer>'
     },
     path: {
         bootFile: 'boot.json?time=' + (new Date()).getTime(),
@@ -111,7 +113,11 @@ var init = {
         }
     },
 
-    header(type) {
+    header(type='') {
+        if (type == '') {
+            if (config.user.auth) type = 'user'
+            else type = 'default'
+        }
         $('header')
             .css('display', 'none')
             .load(init.path.header + '&domain=' + window.location.hostname + '&type=' + type)
@@ -120,7 +126,11 @@ var init = {
         init.data.header[type] = true
     },
 
-    footer(type) {
+    footer(type='') {
+        if (type == '') {
+            if (config.user.auth) type = 'none'
+            else type = 'default'
+        }
         $('footer')
             .css('display', 'none')
             .load(init.path.footer + '&domain=' + window.location.hostname + '&type=' + type)
