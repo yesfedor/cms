@@ -11,7 +11,7 @@
         </ul>
         <ul class="navbar-nav nav-flex-icons">
             <li class="nav-item">
-                <a id="themeToggle" class="nav-link waves-effect waves-light" onclick="style.theme.btnToggle(this); return false;" href="#"></a>
+                <a id="themeToggle" class="nav-link waves-effect waves-light" onclick="toastr.info('Функция смены темы пока недоступна'); return false;" href="#"></a>
             </li>
         </ul>
     </div>
