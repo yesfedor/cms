@@ -10,7 +10,7 @@
 		},
 		"common": {
 			"url": "common.css",
-			"version": 64
+			"version": 67
 		}
 	},
 	"js": {
@@ -32,7 +32,7 @@
 		},
 		"mainTpl": {
 			"url": "tpl/main.tpl.js",
-			"version": 64
+			"version": 65
 		},
 		"style": {
 			"url": "module/main.style.js",

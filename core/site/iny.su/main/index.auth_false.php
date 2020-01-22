@@ -11,7 +11,7 @@ $warp = "warp";
                     <div id="warp-welcome" class="row"></div>
                 </div>
                 <hr class="w-100 border-primary mt-0 mb-1">
-                <div id="app-mini-footer" class="col-12 text-center"><a class="mx-1" onclick="language.chenge('ru');" href="#">Русский</a> <a class="mx-1" onclick="language.chenge('en');" href="#">English</a></div>
+                <div id="app-mini-footer" class="col-12 text-center"><a class="theme-link mx-1" onclick="language.chenge('ru');" href="#">Русский</a> <a class="theme-link mx-1" onclick="language.chenge('en');" href="#">English</a></div>
             </div>
         </div>
         <div class="col-12 col-lg-4 offset-lg-1 my-lg-3 mt-2 my-lg-0 px-5 px-md-4 px-lg-3">
@@ -32,7 +32,7 @@ $warp = "warp";
         <button type="button" class="btn btn-outline-primary btn-rounded waves-effect z-depth-0 my-0" onclick="appForms.go('app-login', 'auth/login');"><span data-lang="app_user_login_login_btn"></span></button>
     </div>
     <hr class="w-100 border-primary my-2">
-    <div id="app-login-callback" class="col-12 text-center mb-1"><a class="my-0 py-0" href="/api.php?_action=auth/with.vk&v=0.1"><i class="fab fa-vk text-primary"></i></a></div>
+    <div id="app-login-callback" class="col-12 text-center mb-1"><a class="my-0 py-0" href="/api.php?_action=auth/with.vk&v=0.1"><i class="fab fa-vk theme-link"></i></a></div>
 </form>
                 </div>
                 <div class="col-12 my-2"></div>

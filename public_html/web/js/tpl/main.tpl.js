@@ -4,7 +4,7 @@ var mainTpl = {
         tplLoaderModule: '<div class="col-12 text-center"><div class="row py-1 px-1"><div class="col-12 text-center"><div class="preloader-wrapper big active"><div class="spinner-layer spinner-blue-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div></div></div></div>'
     },
     userApi: {
-        usersStr: '<div id="module-fast-login-{%i1%}" class="col-4 my-1"><div class="row my-0 py-0"><div class="col-10 offset-1 text-right mx-4 my-0 pt-1"><i style="cursor: pointer;" onclick="userApi.auth.fastLoginDelete({%uidDelete%}, {%i2%});" class="fas fa-times fa-sm text-muted"></i></div><div class="col-12" style="cursor:pointer;" onclick="userApi.auth.fastLogin({%uid%})"><div class="col-12 text-center my-1 pt-1"> {%icon%} </div><div class="col-12 text-center my-1 pb-1"><span class="text-muted"> {%name%} {%surname%} </span></div></div></div></div>'
+        usersStr: '<div id="module-fast-login-{%i1%}" class="col-4 my-1"><div class="row my-0 py-0"><div class="col-10 offset-1 text-right mx-4 my-0 pt-1"><i style="cursor: pointer;" onclick="userApi.auth.fastLoginDelete({%uidDelete%}, {%i2%});" class="fas fa-times fa-sm text-muted"></i></div><div class="col-12" style="cursor:pointer;" onclick="userApi.auth.fastLogin({%uid%})"><div class="col-12 text-center my-1 pt-1"> {%icon%} </div><div class="col-12 text-center my-1 pb-1"><span class="theme-text"> {%name%} {%surname%} </span></div></div></div></div>'
     },
     modal: {
         notice: {
@@ -22,29 +22,29 @@ var mainTpl = {
             content: `
 <form id="app-reg" class= "row my-0 py-0 px-3">
     <div class="col-12 md-form md-outline mt-1 mb-2">
-        <input type="text" id="user-name" name="reg-name" class="form-control">
-        <label class="mx-3" for="user-name"><span data-lang="app_reg_name"></span></label>
+        <input type="text" id="user-name" name="reg-name" class="theme-text form-control">
+        <label class="theme-panel mx-3" for="user-name"><span data-lang="app_reg_name"></span></label>
     </div>
     <div class="col-12 md-form md-outline mt-1 mb-2">
-        <input type="text" id="user-surname" name="reg-surname" class="form-control">
-        <label class="mx-3" for="user-surname"><span data-lang="app_reg_surname"></span></label>
+        <input type="text" id="user-surname" name="reg-surname" class="theme-text form-control">
+        <label class="theme-panel mx-3" for="user-surname"><span data-lang="app_reg_surname"></span></label>
     </div>
     <div class="col-12 md-form md-outline mt-1 mb-2">
-        <input type="text" id="user-email" name="reg-mail" class="form-control">
-        <label class="mx-3" for="user-email"><span data-lang="app_reg_mail"></span></label>
+        <input type="text" id="user-email" name="reg-mail" class="theme-text form-control">
+        <label class="theme-panel mx-3" for="user-email"><span data-lang="app_reg_mail"></span></label>
     </div>
     <div class="col-12 md-form md-outline mt-1 mb-2">
-        <input type="password" id="user-password" name="reg-password" class="form-control">
-        <label class="mx-3" for="user-password"><span data-lang="app_reg_password"></span></label>
+        <input type="password" id="user-password" name="reg-password" class="theme-text form-control">
+        <label class="theme-panel mx-3" for="user-password"><span data-lang="app_reg_password"></span></label>
     </div>
     <div class="col-12 mt-1 mb-2">
         <div class="form-check form-check-inline">
             <input type="radio" class="form-check-input" id="user-gender" value="male" name="reg-gender">
-            <label class="form-check-label" for="user-gender"><span data-lang="gender_male"></span></label>
+            <label class="theme-panel form-check-label" for="user-gender"><span data-lang="gender_male"></span></label>
         </div>
         <div class="form-check form-check-inline">
             <input type="radio" class="form-check-input" id="user-gender2" value="female" name="reg-gender">
-            <label class="form-check-label" for="user-gender2"><span data-lang="gender_female"></span></label>
+            <label class="theme-panel form-check-label" for="user-gender2"><span data-lang="gender_female"></span></label>
         </div>
     </div>
     <div class="col-12 text-center my-0">
