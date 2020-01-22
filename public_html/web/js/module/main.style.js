@@ -41,22 +41,28 @@ var style = {
     },
     theme: {
         init() {
+            themeType = localStorage.getItem('themeType')
             themeName = localStorage.getItem('theme')
             themeVersion = localStorage.getItem('themeVersion')
             if (themeName != null) {
                 $('#app-css-theme-data').attr('href', '/web/css/theme/' + themeName + '.css?version=' + themeVersion)
             }
+            if (themeType == null) {
+                localStorage.setItem('themeType', 'light')
+            }
         },
-        change(newTheme, version='51') {
+        change(newTheme, version='64') {
             newThemeName = ''
 
             switch(newTheme) {
                 default:
                 case 'light':
+                    localStorage.setItem('themeType', 'light')
                     newThemeName = config.info.appname
                     style.theme.changeApi('light')
                 break;
                 case 'dark':
+                    localStorage.setItem('themeType', 'dark')
                     newThemeName = config.info.appname + '-dark'
                     style.theme.changeApi('dark')
                 break;
@@ -77,11 +83,42 @@ var style = {
                     console.log('theme:changeApi:True')
                 }
             });
+        },
+        btnToggle(el='#themeToggle') {
+            let iconLight = '<i class="theme-nav-link far fa-sun"></i>'
+            let iconDark = '<i class="theme-nav-link far fa-moon"></i>'
+            let dataTheme = localStorage.getItem('themeType')
+            switch(dataTheme) {
+                default:
+                case 'light':
+                    style.theme.change('dark')
+                    $(el).html(iconDark)
+                break;
+                case 'dark':
+                    style.theme.change('light')
+                    $(el).html(iconLight)
+                break;
+            }
+            return false
+        },
+        initToggle(el='#themeToggle') {
+            let iconLight = '<i class="theme-nav-link far fa-sun"></i>'
+            let iconDark = '<i class="theme-nav-link far fa-moon"></i>'
+            let dataTheme = localStorage.getItem('theme')
+            switch(dataTheme) {
+                default:
+                case 'light':
+                    $(el).html(iconDark)
+                break;
+                case 'dark':
+                    $(el).html(iconLight)
+                break;
+            }
         }
     },
     init() {
         style.common()
-        this.theme.init()
+        style.theme.init()
     }
 }
 

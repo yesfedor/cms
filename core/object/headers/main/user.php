@@ -9,10 +9,16 @@
                 <a href="/?act=logout&hash=<?= $hash['logout'] ?>" onclick="$('#confirm-account-exit').modal('show'); return false;" class="nav-link"><i class="mr-1 fas fa-sign-out-alt fa-sm waves-effect waves-light white-text"></i> <span class="theme-nav-link" data-lang="app_user_logout_btn"></span></a>
             </li>
         </ul>
+        <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+                <a id="themeToggle" class="nav-link waves-effect waves-light" onclick="style.theme.btnToggle(this); return false;" href="#"></a>
+            </li>
+        </ul>
     </div>
 </nav>
 
 <script>
+style.theme.initToggle('#themeToggle')
 setTimeout(() => {
     init.createModal(mainTpl.modal.notice.id, {title: mainTpl.modal.notice.title, content: mainTpl.modal.notice.content, footer: mainTpl.modal.notice.footer}, 'large', mainTpl.modal.notice.bg)
     init.createModal(mainTpl.modal.account_confirm_exit.id, {title: mainTpl.modal.account_confirm_exit.title, content: mainTpl.modal.account_confirm_exit.content, footer:mainTpl.modal.account_confirm_exit.footer}, 'large', mainTpl.modal.account_confirm_exit.bg)
