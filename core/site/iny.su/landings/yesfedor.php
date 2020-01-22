@@ -119,8 +119,8 @@ iamin()
 <?php
     include_once ($landingsInclude);
 ?>
-<footer class="d-block page-footer font-small elegant-color-dark pt-4">
-        <a onclick="return nav.go(this);" href="/main" data-lang="text_return_to_main_page" class="white-text"></a>
+<footer class="d-block page-footer font-small elegant-color-dark pt-2 text-center">
+        <a onclick="return nav.go(this);" href="/main" data-lang="text_return_to_main_page" class="d-block white-text my-0 pb-2"></a>
     <div class="container-fluid footer-copyright text-center py-3 white-text">
         Copyright © <?= date('Y') ?> INY. All rights reserved.
     </div>
