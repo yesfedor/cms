@@ -209,7 +209,7 @@ var init = {
         if (setting) init.setSetting(setting)
 
         // load default boot json
-        var includePath = init.path.js + 'include/' + config.info.appname + '/' + init.path.bootFile
+        let includePath = init.path.js + 'include/' + config.info.appname + '/' + init.path.bootFile
         $.ajax({
             crossDomain: true,
             dataType: 'json',
@@ -294,7 +294,25 @@ var init = {
         `
 
         return html
+    },
+    listenTab() {
+        window.addEventListener('storage', function (event) {
+            // event.key - key
+            // event.newValue - newValue
+            // event.oldValue - oldValue
+            if (event.newValue != event.oldValue) {
+                switch(event.key) {
+                    default:
+                        return;
+                    case 'themeType':
+                        style.theme.change(event.newValue)
+                        style.theme.initToggle()
+                    break;
+                }
+            }
+        });
     }
 }
 
 init.initJquery()
+init.listenTab()
