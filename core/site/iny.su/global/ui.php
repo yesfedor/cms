@@ -77,9 +77,9 @@ $bigData['html']['warp'] = '
             <div id="warp-page-helper" class="row"></div>
         </div>
         <div class="d-block d-lg-none col-12 fixed-bottom">
-            <div class="row my-0 py-1 white z-depth-1-half border-top border-primary">
+            <div class="row my-0 py-1 theme-panel z-depth-1-half border-top border-primary">
                 <div class="col-3 text-center waves-effect py-1">'.url('/feed?screen=mobile', '<i class="far fa-newspaper fa-2x theme-icon"></i>', false, false, true).'</div>
-                <div class="col-3 text-center waves-effect py-1">'.url('/notice?screen=mobile', '<div class="row"><div class="col-10 offset-1 text-right mb-n4 ml-n1"><span id="notice-count-lite" class="badge badge-info"></span></div></div><i class="far fa-bell fa-2x theme-icon"></i>', false, false, true).'</div>
+                <div class="col-3 text-center waves-effect py-1">'.url('/notice?screen=mobile', '<div class="row"><div class="col-10 offset-1 text-right mb-n4 ml-n1"><span id="notice-count-lite" class="badge badge-info theme-icon"></span></div></div><i class="far fa-bell fa-2x theme-icon"></i>', false, false, true).'</div>
                 <div class="col-3 text-center waves-effect py-1">'.url('/msg?screen=mobile', '<i class="far fa-envelope fa-2x theme-icon"></i>', false, false, true).'</div>
                 <div class="col-3 text-center waves-effect py-1">'.url('/menu?screen=mobile', '<i class="fas fa-bars fa-2x theme-icon"></i>', false, false, true).'</div>
             </div>
