@@ -3,8 +3,8 @@ $warp = "warp";
 ?>
 <div class="container my-2 my-lg-5">
     <div class="row">
-        <div class="col-12 col-lg-7 white border border-primary rounded text-center my-lg-3 pt-3 pb-1 d-none d-lg-block">
-            <h2 class="py-1"><span class="h2 font-weight-bold white text-primary py-1">INY.SU</span> <span id="module-layout-name" class="font-weight-light primary-color white-text rounded py-1 px-2"></span></h2>
+        <div class="col-12 col-lg-7 theme-panel border border-primary rounded text-center my-lg-3 pt-3 pb-1 d-none d-lg-block">
+            <h2 class="py-1"><span class="h2 font-weight-bold theme-panel text-primary py-1">INY.SU</span> <span id="module-layout-name" class="font-weight-light primary-color white-text rounded py-1 px-2"></span></h2>
             <div class="row">
                 <hr class="w-100 border-primary mt-1 mb-0">
                 <div class="col-12 text-center" style="overflow-y: scroll">
@@ -16,17 +16,17 @@ $warp = "warp";
         </div>
         <div class="col-12 col-lg-4 offset-lg-1 my-lg-3 mt-2 my-lg-0 px-5 px-md-4 px-lg-3">
             <div class="row my-0 py-0">
-                <div id="window-login" class="col-12 white border border-primary rounded text-center px-0">
+                <div id="window-login" class="col-12 theme-panel border border-primary rounded text-center px-0">
                     <h3 class="mt-2 py-2"><span data-lang="app_user_login_login"></span></h3>
                     <hr class="w-100 border-primary mt-2">
 <form id="app-login" class= "row my-0 py-0 px-3">
     <div class="col-12 md-form md-outline mt-1 mb-2">
-        <input type="text" id="app-login-username" name="login-username" class="form-control">
-        <label class="mx-3" for="app-login-username"><span data-lang="app_user_login_username"></span></label>
+        <input type="text" id="app-login-username" name="login-username" class="theme-text form-control">
+        <label class="theme-panel mx-3" for="app-login-username"><span data-lang="app_user_login_username"></span></label>
     </div>
     <div class="col-12 md-form md-outline mt-1 mb-2">
-        <input type="password" id="app-login-password" name="login-password" class="form-control">
-        <label class="mx-3" for="app-login-password"><span data-lang="app_user_login_password"></span></label>
+        <input type="password" id="app-login-password" name="login-password" class="theme-text form-control">
+        <label class="theme-panel mx-3" for="app-login-password"><span data-lang="app_user_login_password"></span></label>
     </div>
     <div class="col-12 text-center my-0">
         <button type="button" class="btn btn-outline-primary btn-rounded waves-effect z-depth-0 my-0" onclick="appForms.go('app-login', 'auth/login');"><span data-lang="app_user_login_login_btn"></span></button>
@@ -36,17 +36,17 @@ $warp = "warp";
 </form>
                 </div>
                 <div class="col-12 my-2"></div>
-                <div class="col-12 white border border-primary rounded text-center px-0">
+                <div class="col-12 theme-panel border border-primary rounded text-center px-0">
                     <h3 class="mt-2 py-2"><span data-lang="app_user_reg_reg"></span></h3>
                     <hr class="w-100 border-primary mt-2">
 <form id="app-reg-min" class= "row my-0 py-0 px-3">
     <div class="col-12 md-form md-outline mt-1 mb-2">
-        <input type="text" id="user-name-min" class="form-control">
-        <label class="mx-3" for="user-name-min"><span data-lang="app_user_reg_name"></span></label>
+        <input type="text" id="user-name-min" class="theme-text form-control">
+        <label class="theme-panel mx-3" for="user-name-min"><span data-lang="app_user_reg_name"></span></label>
     </div>
     <div class="col-12 md-form md-outline mt-1 mb-2">
-        <input type="text" id="user-surname-min" class="form-control">
-        <label class="mx-3" for="user-surname-min"><span data-lang="app_user_reg_surname"></span></label>
+        <input type="text" id="user-surname-min" class="theme-text form-control">
+        <label class="theme-panel mx-3" for="user-surname-min"><span data-lang="app_user_reg_surname"></span></label>
     </div>
     <div class="col-12 text-center my-0">
         <button type="button" class="btn btn-outline-primary btn-rounded waves-effect z-depth-0 my-0" data-toggle="modal" data-target="#modalAuthReg"><span data-lang="app_user_reg_step"></span></button>

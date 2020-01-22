@@ -50,25 +50,10 @@ html, body {
     transition-duration: var(--theme-duration-change);
     color: var(--theme-title)!important;
 }
-.theme-white {
+.theme-text {
     transition-property: background-color, color, border-color;
     transition-duration: var(--theme-duration-change);
-    background-color: var(--theme-white)!important;
-}
-.theme-white-text {
-    transition-property: background-color, color, border-color;
-    transition-duration: var(--theme-duration-change);
-    color: var(--theme-white)!important;
-}
-.theme-black {
-    transition-property: background-color, color, border-color;
-    transition-duration: var(--theme-duration-change);
-    background-color: var(--theme-black)!important;
-}
-.theme-black-text {
-    transition-property: background-color, color, border-color;
-    transition-duration: var(--theme-duration-change);
-    color: var(--theme-black)!important;
+    color: var(--theme-text)!important;
 }
 .theme-logo {
     transition-property: background-color, color, border-color;
