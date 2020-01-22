@@ -13,7 +13,7 @@
                 <a href="tg://resolve=yesfedor" class="nav-link waves-effect waves-light"><i class="theme-nav-link fab fa-telegram-plane"></i></a>
             </li>
             <li class="nav-item">
-                <a id="themeToggle" class="nav-link waves-effect waves-light" onclick="toastr.info('Функция смены темы пока недоступна'); return false;" href="#"></a>
+                <a id="themeToggle" class="nav-link waves-effect waves-light" onclick="styleThemeToggle('#themeToggle'); return false;" href="#"></a>
             </li>
         </ul>
     </div>

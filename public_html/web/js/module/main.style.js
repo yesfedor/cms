@@ -92,11 +92,11 @@ var style = {
                 default:
                 case 'light':
                     style.theme.change('dark')
-                    $(el).html(iconDark)
+                    $(el).html(iconLight)
                 break;
                 case 'dark':
                     style.theme.change('light')
-                    $(el).html(iconLight)
+                    $(el).html(iconDark)
                 break;
             }
             return false
@@ -104,7 +104,7 @@ var style = {
         initToggle(el='#themeToggle') {
             let iconLight = '<i class="theme-nav-link far fa-sun"></i>'
             let iconDark = '<i class="theme-nav-link far fa-moon"></i>'
-            let dataTheme = localStorage.getItem('theme')
+            let dataTheme = localStorage.getItem('themeType')
             switch(dataTheme) {
                 default:
                 case 'light':
@@ -120,6 +120,10 @@ var style = {
         style.common()
         style.theme.init()
     }
+}
+
+function styleThemeToggle(id='#themeToggle') {
+    style.theme.btnToggle(id)
 }
 
 style.init()
