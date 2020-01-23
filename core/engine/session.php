@@ -17,7 +17,7 @@ function user_checker() {
     }
 }
 function getMailHash($mail) {
-    $hash = md5($mail).'/?act=mail_verfy';
+    $hash = md5(urldecode($mail)).'/?act=mail_verfy';
     $hash = md5($hash);
     return $hash;
 }

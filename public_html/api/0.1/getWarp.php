@@ -1,4 +1,6 @@
 <?php
+#$_GET['site'] = 'test';
+
 $public = $_SERVER['DOCUMENT_ROOT'];
 $private = mb_substr($_SERVER['DOCUMENT_ROOT'], 0, -12);
 $enginePath = $private.'/core/engine/';
