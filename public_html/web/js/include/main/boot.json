@@ -32,7 +32,7 @@
 		},
 		"mainTpl": {
 			"url": "tpl/main.tpl.js",
-			"version": 65
+			"version": 69
 		},
 		"style": {
 			"url": "module/main.style.js",
