@@ -2,7 +2,7 @@
 $bigData['html']['warp'] = '
 <div class="container my-lg-5">
     <div class="row">
-        <div class="d-none d-lg-block col-lg-3 col-xl-2 h-100 sticky">
+        <div class="d-none d-lg-block col-lg-3 col-xl-2 h-100">
             <div class="nav flex-column nav-pills text-left" id="app-main-menu" aria-orientation="vertical">
                 <a id="app-main-menu_profile" class="nav-link waves-effect text-truncate" href="'.$user_profile_href.'" onclick="return nav.go(this);">
                     <div class="row my-0 py-0">
@@ -70,7 +70,7 @@ $bigData['html']['warp'] = '
                 </div>
             </div>
         </div>
-        <div class="d-block mb-5 col-lg-7 col-xl-8">
+        <div class="d-block mb-5 col-lg-7 col-xl-8 px-lg-5">
             <div id="warp-page" class="row"></div>
         </div>
         <div class="d-none mb-5 d-lg-block col-lg-2 col-xl-2">
@@ -86,12 +86,5 @@ $bigData['html']['warp'] = '
         </div>
     </div>
 </div>
-<script>
-$(".sticky").sticky({
-    topSpacing: 0,
-    stopper: "footer",
-    startScrolling: "top"
-})
-</script>
 ';
 ?>
