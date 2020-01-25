@@ -61,6 +61,8 @@
     "ui_menu_settings": "Настройки",
     "ui_notice_title": "Ваши уведомления",
     "ui_notice_title_not": "У вас еще нет уведомлений",
+    "ui_settings_menu_base": "Общее",
+    "ui_settings_menu_security": "Безопасность",
     "userApi_fastlogin_help": "Чтобы снова войти, нажмите на значок или имя.",
     "userApi_fastlogin_info": "Недавно входили на сайт с этого компьютера",
     "userApi_fastlogin_as": "Войти как ",

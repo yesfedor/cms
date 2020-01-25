@@ -3,8 +3,6 @@ $ui = true;
 $warp = "warp-page";
 $pageActive['edit'] = 'active';
 
-
-
 function genEdit($type, $id, $name, $place, $value=false, $style=false, $js=false, $onstr=false) {
     
     switch($type) {

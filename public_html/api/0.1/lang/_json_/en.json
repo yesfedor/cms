@@ -61,6 +61,8 @@
     "ui_menu_settings": "Settings",
     "ui_notice_title": "Your notifications",
     "ui_notice_title_not": "You don't have notifications yet",
+    "ui_settings_menu_base": "Base",
+    "ui_settings_menu_security": "Security",
     "userApi_fastlogin_help": "To log in again, click on the icon or name.",
     "userApi_fastlogin_info": "Recently logged in from this computer",
     "userApi_fastlogin_as": "Login as ",
