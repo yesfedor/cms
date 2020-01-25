@@ -51,4 +51,4 @@ var law = {
         }
     }
 }
-law.init()
+//law.init()
