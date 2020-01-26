@@ -98,7 +98,7 @@ function user_checker() {
     userApiActivityHistoryAuth();
 }
 // user check
-if ($_SESSION['check'] >= 120) {
+if ($_SESSION['check'] >= 60) {
     if ($_SESSION['user']) {
         user_checker();
     }
