@@ -360,16 +360,18 @@ function userApiActivityHistoryGet() {
     ];
     $ah = dbGetAll($query, $var);
     if ($ah) {
-        $html = '<div class="col-10 offset-1"><h2 class="theme-title my-2">Activity history</h2></div>';
+        // align-items-center justify-content-center
+        $html = '<div class="row justify-content-center my-3" style="min-height: 50vh;"><div class="text-center"><h2 class="d-block theme-title">Activity History</h2>';
         for ($i=0;$i<count($ah);) {
             $location = userApiUserLocation($ah[$i]['client_ip']);
-            $html .= '<div class="col-10 offset-1"><h4 class="theme-text my-2">#'.($i+1).' '.$location['country_name'].', '.$location['city'].' <br> <small class="theme-text my-1">IP: '.$ah[$i]['client_ip'].'</small></h4></div>';
+            $html .= '<h4 class="d-block text-left theme-text my-2 py-2"><span class="theme-link">#'.($i+1).'</span> '.$location['country_name'].', '.$location['city'].'<br><small class="d-block text-left theme-text my-1">IP: '.$ah[$i]['client_ip'].'</small></h4>';
             $i++;
         }
+        $html .= '</div></div>';
     } else {
-        $html = '<div class="col-10 offset-1"><h2 class="theme-title my-2">Activity history empty :)</h2></div>';
+        $html = '<div class="col-10 offset-1 text-center"><h2 class="theme-title my-2">Activity History - Empty :)</h2></div>';
     }
-    echo $html;
+    return $html;
 }
 function userApiActivityHistoryLogout() {
     global $_SESSION;

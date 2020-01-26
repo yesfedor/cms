@@ -14,5 +14,6 @@ if ($_SESSION['domain-redirect']) {
         echo mainLocation();
     }
     $_SESSION['domain-redirect'] = false;
-} else echo mainLocation();
+}
+if (!$_GET['act']) echo mainLocation();
 ?>

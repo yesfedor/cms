@@ -25,7 +25,7 @@ if ($_GET['act']) {
                     if ($_GET['hash'] == getAppRootHash()) {
                         $ui = true;
                         $warp = "warp-page";
-                        userApiActivityHistoryGet();
+                        echo userApiActivityHistoryGet();
                     } else {
                         $redirect = $actUrl;
                     }
