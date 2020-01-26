@@ -67,15 +67,21 @@ switch($url_p1) {
         $p1_include .= 'security.php';
     break;
 }
-include_once($p1_include);
 
 $bigData['warp-page-helper'] = 'settings_page';
 $bigData['html']['warp-page-helper'] = '
-        <div class="col-12 h-100 theme-panel border border-primary rounded offset-1 text-center">
+        <div class="col-12 h-100 theme-panel border border-primary rounded text-center">
             <h5>
-                <a class="d-block my-1 py-1" href="/settings" onclick="return nav.go(this);"><span data-lang="ui_settings_menu_base"></span></a>
+                <a class="d-block my-1 py-1" href="/settings/base" onclick="return nav.go(this);"><span data-lang="ui_settings_menu_base"></span></a>
                 <a class="d-block my-1 py-1" href="/settings/security" onclick="return nav.go(this);"><span data-lang="ui_settings_menu_security"></span></a>
             </h5>
         </div>
 ';
+
+if ($_GET['screen'] == 'mobile') {
+    if ($url_p1 != 'null') include_once($p1_include);
+    else {
+        echo $bigData['html']['warp-page-helper'];
+    }
+} else include_once($p1_include);
 ?>

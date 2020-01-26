@@ -21,9 +21,9 @@ $pageActive['menu_mobile'] = 'active';
         <div class="col-12 theme-panel z-depth-1 my-0">
             <div class="row my-0 py-2">
                 <!-- Edit profile -->
-                <div onclick="nav.router('/edit', true);" class="col-10 offset-1 text-left waves-effect py-2"><h5 class="h5 my-0 py-0 text-truncate"><i class="mr-1 fas fa-edit fa-lg text-muted"></i> <span data-lang="ui_menu_mobile_edit_profile"></span></h5></div>
+                <div onclick="nav.router('/edit?screen=mobile', true);" class="col-10 offset-1 text-left waves-effect py-2"><h5 class="h5 my-0 py-0 text-truncate"><i class="mr-1 fas fa-edit fa-lg text-muted"></i> <span data-lang="ui_menu_mobile_edit_profile"></span></h5></div>
                 <!-- Setting profile -->
-                <div onclick="nav.router('/settings', true);" class="col-10 offset-1 text-left waves-effect py-2"><h5 class="h5 my-0 py-0 text-truncate"><i class="mr-2 fas fa-cog fa-lg text-muted"></i> <span data-lang="ui_menu_mobile_settings"></span></h5></div>
+                <div onclick="nav.router('/settings?screen=mobile', true);" class="col-10 offset-1 text-left waves-effect py-2"><h5 class="h5 my-0 py-0 text-truncate"><i class="mr-2 fas fa-cog fa-lg text-muted"></i> <span data-lang="ui_menu_mobile_settings"></span></h5></div>
 
                 <div onclick="$('#confirm-account-exit').modal('show');" class="col-10 offset-1 text-left waves-effect py-2 border-top border-bottom"><h5 class="h5 my-0 py-0 text-truncate"><i class="mr-2 fas fa-sign-out-alt fa-lg red-text"></i> <span data-lang="app_user_logout_btn"></span></h5></div>
             </div>

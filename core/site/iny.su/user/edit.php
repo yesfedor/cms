@@ -77,15 +77,14 @@ switch($url_p1) {
         $p1_include .= 'life.php';
     break;
 }
-include_once($p1_include);
 
 $p1_link_class = 'black-text disabled';
 
 $bigData['warp-page-helper'] = 'edit_page';
 $bigData['html']['warp-page-helper'] = '
-        <div class="col-12 h-100 theme-panel border border-primary rounded offset-1 text-center">
+        <div class="col-12 h-100 theme-panel border border-primary rounded text-center">
             <h5>
-                <a class="d-block my-1 py-1" href="/edit" onclick="return nav.go(this);"><span data-lang="ui_edit_menu_base"></span></a>
+                <a class="d-block my-1 py-1" href="/edit/base" onclick="return nav.go(this);"><span data-lang="ui_edit_menu_base"></span></a>
                 <a class="disabled d-none my-1 py-1" href="/edit/contacts" onclick="return nav.go(this);"><span data-lang="ui_edit_menu_ontacts"></span></a>
                 <a class="disabled d-none my-1 py-1" href="/edit/interests" onclick="return nav.go(this);"><span data-lang="ui_edit_menu_interests"></span></a>
                 <a class="disabled d-none my-1 py-1" href="/edit/life" onclick="return nav.go(this);"><span data-lang="ui_edit_menu_life"></span></a>
@@ -93,4 +92,10 @@ $bigData['html']['warp-page-helper'] = '
         </div>
 ';
 
+if ($_GET['screen'] == 'mobile') {
+    if ($url_p1 != 'null') include_once($p1_include);
+    else {
+        echo $bigData['html']['warp-page-helper'];
+    }
+} else include_once($p1_include);
 ?>
