@@ -295,6 +295,75 @@ function checkUserGeoPassword() {
         return false;
     } else return true;
 }
-
 checkUserGeoPassword();
+
+function userApiUserLocation($ip) {
+    /* country_name, city */
+    $location = geoip_record_by_name($ip);
+    return $location;
+}
+function userApiActivityHistoryLogin() {
+    global $_SESSION;
+    global $client_id;
+    $client_ip = getIP();
+    $uid = $_SESSION['user']['uid'];
+
+    $ah_select = userApiActivityHistoryCheck($uid, $client_id, $client_ip);
+    if ($ah_select['id']) {
+        $query_update = "UPDATE activity_history SET status = :status WHERE uid = :uid and client_id = :client_id and client_ip = :client_ip";
+        $var_update = [
+            ':uid' => $uid,
+            ':client_id' => $client_id,
+            ':client_ip' => $client_ip,
+            ':status' => 'allow'
+        ];
+        dbAddOne($query_update, $var_update);
+    } else {
+        $query_add = "INSERT INTO `activity_history`(`id`, `uid`, `client_id`, `client_ip`, `status`) VALUES (NULL, :uid, :client_id, :client_ip, :status)";
+        $var_add = [
+            ':uid' => $uid,
+            ':client_id' => $client_id,
+            ':client_ip' => $client_ip,
+            ':status' => 'allow'
+        ];
+        dbAddOne($query_add, $var_add);
+    }
+}
+function userApiActivityHistoryCheck($uid, $client_id, $client_ip) {
+    $query_check = "SELECT * FROM activity_history WHERE uid = :uid and client_id = :client_id and client_ip = :client_ip";
+    $var_check = [
+        ':uid' => $uid,
+        ':client_id' => $client_id,
+        ':client_ip' => $client_ip
+    ];
+    $result = dbGetOne($query_check, $var_check);
+    return $result;
+}
+function userApiActivityHistoryGet() {
+    global $_SESSION;
+    $uid = $_SESSION['user']['uid'];
+    $query = "SELECT * FROM activity_history WHERE uid = :uid";
+    $var = [
+        ':uid' => $uid
+    ];
+    $ah = dbGetAll($query, $var);
+    if ($ah) {
+        $html = '<div class="col-10 offset-1"><h2 class="theme-title my-2">Activity history</h2></div>';
+        for ($i=0;$i<count($ah);) {
+            $location = userApiUserLocation($ah[$i]['client_ip']);
+            $html .= '<div class="col-10 offset-1"><h4 class="theme-text my-2">#'.($i+1).' '.$location['country_name'].', '.$location['city'].' <br> <small class="theme-text my-1">IP: '.$ah[$i]['client_ip'].'</small></h4></div>';
+            $i++;
+        }
+    } else {
+        $html = '<div class="col-10 offset-1"><h2 class="theme-title my-2">Activity history empty :)</h2></div>';
+    }
+    echo $html;
+}
+function userApiLogout() {
+    global $_SESSION;
+}
+function userApiLogoutAll() {
+    global $_SESSION;
+}
+
 ?>

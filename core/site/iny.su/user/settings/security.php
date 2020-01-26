@@ -15,7 +15,7 @@
                             <h4 class="theme-text mb-3">Подтверждение входа по номеру телефона пока не доступно</h4>
                             <h5>
                             <a class="d-block mb-2" onclick="return nav.go(this);" href="/?act=activity_history&hash=<?= getAppRootHash() ?>">Показать историю активности</a>
-                            <a class="d-block mb-2" onclick="return nav.go(this);" href="/?act=logoutAll&hash=<?= $hash['logout'] ?>">Завершить все сеансы</a>
+                            <a class="d-block mb-2" onclick="return nav.go(this);" href="/?act=logout_all&hash=<?= $hash['logout'] ?>">Завершить все сеансы</a>
                             </h5>
                         </div>
                     </form>

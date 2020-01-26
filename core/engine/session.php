@@ -1,4 +1,6 @@
 <?php
+$client_id = $_COOKIE['client_id'];
+
 function user_checker() {
     global $_SESSION;
 

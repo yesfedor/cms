@@ -4,16 +4,25 @@ if ($_GET['act']) {
     $actUrl = '/main';
 
     switch((boolean) $_SESSION['user']['uid']) {
-        case false: 
+        case false:
             // if false
         break;
         case true:
             switch($_GET['act']) {
-                case 'logout': 
+                case 'logout':
                     if ($_GET['hash'] == $hash['logout']) {
                         userApiLogout();
-                        $redirect = $actUrl;
                     }
+                    $redirect = $actUrl;
+                break;
+                case 'logout_all':
+                    if ($_GET['hash'] == $hash['logout']) {
+                        userApiLogoutAll();
+                    }
+                    $redirect = $actUrl;
+                break;
+                case 'activity_history':
+                    userApiActivityHistoryGet();
                 break;
             }
         break;
