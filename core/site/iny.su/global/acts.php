@@ -22,7 +22,13 @@ if ($_GET['act']) {
                     $redirect = $actUrl;
                 break;
                 case 'activity_history':
-                    userApiActivityHistoryGet();
+                    if ($_GET['hash'] == getAppRootHash()) {
+                        $ui = true;
+                        $warp = "warp-page";
+                        userApiActivityHistoryGet();
+                    } else {
+                        $redirect = $actUrl;
+                    }
                 break;
             }
         break;

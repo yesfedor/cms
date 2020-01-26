@@ -127,12 +127,13 @@ function userApiLogin($user) {
     }
 
     userApiSave();
+    userApiActivityHistoryLogin();
 
     return $result;
 }
 function userApiLogout() {
     global $_SESSION;
-
+    if ($_SESSION['user']['uid']) userApiActivityHistoryLogout();
     $_SESSION['user'] = [];
     $_SESSION['data'] = [];
     $_SESSION['cahe'] = [];
@@ -339,12 +340,23 @@ function userApiActivityHistoryCheck($uid, $client_id, $client_ip) {
     $result = dbGetOne($query_check, $var_check);
     return $result;
 }
+function userApiActivityHistoryAuth() {
+    global $_SESSION;
+    global $client_id;
+    $client_ip = getIP();
+    $uid = $_SESSION['user']['uid'];
+    $ah_select = userApiActivityHistoryCheck($uid, $client_id, $client_ip);
+    if ($ah_select['id']) {
+        
+    }
+}
 function userApiActivityHistoryGet() {
     global $_SESSION;
     $uid = $_SESSION['user']['uid'];
-    $query = "SELECT * FROM activity_history WHERE uid = :uid";
+    $query = "SELECT * FROM activity_history WHERE uid = :uid and status = :status";
     $var = [
-        ':uid' => $uid
+        ':uid' => $uid,
+        ':status' => 'allow'
     ];
     $ah = dbGetAll($query, $var);
     if ($ah) {
@@ -359,11 +371,39 @@ function userApiActivityHistoryGet() {
     }
     echo $html;
 }
-function userApiLogout() {
+function userApiActivityHistoryLogout() {
     global $_SESSION;
+    global $client_id;
+    $client_ip = getIP();
+    $uid = $_SESSION['user']['uid'];
+
+    $ah_select = userApiActivityHistoryCheck($uid, $client_id, $client_ip);
+    if ($ah_select['id']) {
+        $query_update = "UPDATE activity_history SET status = :status WHERE uid = :uid and client_id = :client_id and client_ip = :client_ip";
+        $var_update = [
+            ':uid' => $uid,
+            ':client_id' => $client_id,
+            ':client_ip' => $client_ip,
+            ':status' => 'disallow'
+        ];
+        dbAddOne($query_update, $var_update);
+    }
 }
 function userApiLogoutAll() {
     global $_SESSION;
+    global $client_id;
+    $client_ip = getIP();
+    $uid = $_SESSION['user']['uid'];
+    $ah_select = userApiActivityHistoryCheck($uid, $client_id, $client_ip);
+    if ($ah_select['id']) {
+        $query_update = "UPDATE activity_history SET status = :status WHERE uid = :uid and client_id != :client_id and client_ip != :client_ip";
+        $var_update = [
+            ':uid' => $uid,
+            ':client_id' => $client_id,
+            ':client_ip' => $client_ip,
+            ':status' => 'disallow'
+        ];
+        dbAddOne($query_update, $var_update);
+    }
 }
-
 ?>
