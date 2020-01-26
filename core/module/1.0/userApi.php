@@ -361,7 +361,7 @@ function userApiActivityHistoryGet() {
     $ah = dbGetAll($query, $var);
     if ($ah) {
         // align-items-center justify-content-center
-        $html = '<div class="row justify-content-center my-3" style="min-height: 50vh;"><div class="text-center"><h2 class="d-block theme-title">Activity History</h2>';
+        $html = '<div class="row my-3" style="min-height: 50vh;"><div class="col-10 offset-1 col-lg-6 offset-lg-3 text-center"><h2 class="d-block theme-title">Activity History</h2>';
         for ($i=0;$i<count($ah);) {
             $location = userApiUserLocation($ah[$i]['client_ip']);
             $html .= '<h4 class="d-block text-left theme-text my-2 py-2"><span class="theme-link">#'.($i+1).'</span> '.$location['country_name'].', '.$location['city'].'<br><small class="d-block text-left theme-text my-1">IP: '.$ah[$i]['client_ip'].'</small></h4>';
