@@ -346,8 +346,8 @@ function userApiActivityHistoryAuth() {
     $client_ip = getIP();
     $uid = $_SESSION['user']['uid'];
     $ah_select = userApiActivityHistoryCheck($uid, $client_id, $client_ip);
-    if ($ah_select['id']) {
-        
+    if ($ah_select['status'] != 'allow') {
+        userApiLogout();
     }
 }
 function userApiActivityHistoryGet() {

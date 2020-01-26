@@ -1,23 +1,6 @@
 <?php
 $client_id = $_COOKIE['client_id'];
 
-function user_checker() {
-    global $_SESSION;
-
-    $q = "SELECT * FROM user WHERE uid = :uid";
-    $v = [
-        ':uid' => $_SESSION['user']['uid']
-    ];
-
-    $u = dbGetOne($q, $v);
-    if ($_SESSION['user']['password'] == $u['password']) {
-        foreach($u as $key => $value) {
-            $_SESSION['user'][$key] = $value;
-        }
-    } else {
-        $_SESSION['user'] = false;
-    }
-}
 function getMailHash($mail) {
     $hash = md5(urldecode($mail)).'/?act=mail_verfy';
     $hash = md5($hash);
@@ -65,15 +48,6 @@ else {
     *   'user-verfy','user-default','none'
     */
     $_SESSION['user']['access'] = 'none';
-}
-
-// user check
-if ($_SESSION['check'] >= 120) {
-    if ($_SESSION['user']) {
-        user_checker();
-    }
-
-    $_SESSION['check'] = 0;
 }
 
 $_SESSION['check']++;

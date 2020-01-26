@@ -77,5 +77,32 @@ $err404mod = $thisSitePath.'global/error/404mod.php';
 if (!$fastMode) {
     include_once($engineRoute);
 }
-//JSON_UNESCAPED_UNICODE
+
+// user_checker
+function user_checker() {
+    global $_SESSION;
+
+    $q = "SELECT * FROM user WHERE uid = :uid";
+    $v = [
+        ':uid' => $_SESSION['user']['uid']
+    ];
+
+    $u = dbGetOne($q, $v);
+    if ($_SESSION['user']['password'] == $u['password']) {
+        foreach($u as $key => $value) {
+            $_SESSION['user'][$key] = $value;
+        }
+    } else {
+        userApiLogout();
+    }
+    userApiActivityHistoryAuth();
+}
+// user check
+if ($_SESSION['check'] >= 120) {
+    if ($_SESSION['user']) {
+        user_checker();
+    }
+
+    $_SESSION['check'] = 0;
+}
 ?>
