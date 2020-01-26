@@ -138,6 +138,25 @@ function userApiLogout() {
     $_SESSION['data'] = [];
     $_SESSION['cahe'] = [];
 }
+function userApiChangePassword($settingsPassword, $settingsNewPassword) {
+    global $_SESSION;
+    global $redirect;
+    $query_select = "SELECT * FROM user WHERE uid = :uid";
+    $var_select = [
+        ':uid' => $_SESSION['user']['uid']
+    ];
+    $user = dbGetOne($query_select, $var_select);
+    if ($user['password'] == $settingsPassword) {
+        $query_update = "UPDATE user SET password = :password WHERE uid = :uid";
+        $var_update = [
+            ':password' => $settingsNewPassword,
+            ':uid' => $_SESSION['user']['uid']
+        ];
+        dbAddOne($query_update, $var_update);
+        userApiLogout();
+        return true;
+    } else return false;
+}
 
 // Notice User API
 function userApiNoticeAdd($type, $data, $uid=false) {
@@ -398,11 +417,10 @@ function userApiLogoutAll() {
     $uid = $_SESSION['user']['uid'];
     $ah_select = userApiActivityHistoryCheck($uid, $client_id, $client_ip);
     if ($ah_select['id']) {
-        $query_update = "UPDATE activity_history SET status = :status WHERE uid = :uid and client_id != :client_id and client_ip != :client_ip";
+        $query_update = "UPDATE activity_history SET status = :status WHERE uid = :uid and client_id != :client_id";
         $var_update = [
             ':uid' => $uid,
             ':client_id' => $client_id,
-            ':client_ip' => $client_ip,
             ':status' => 'disallow'
         ];
         dbAddOne($query_update, $var_update);

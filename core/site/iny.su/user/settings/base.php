@@ -20,7 +20,8 @@
                         <?= genEdit('text', 'settingsUserUrl', 'settingsUserUrl', 'Адрес страницы', 'https://'.appGetDomain().'/'.($_SESSION['user']['url'] ? $_SESSION['user']['url'] : 'id'.$_SESSION['user']['uid'])) ?>
 
                         <div class="col-10 offset-1 my-1 py-1">
-                            <button class="mx-0 btn btn-rounded btn-outline-primary waves-effect" onclick="appForms.go('form-settings', 'user/settings-main'); return false;"><span data-lang="btn_save"></span></button>
+                            <h5 id="settings-status" class="theme-text my-0"></h5>
+                            <button class="mx-0 btn btn-rounded btn-outline-primary waves-effect" onclick="appForms.go('form-settings', 'user/settings-main'); return false;"><span data-lang="btn_save"></span></button> <span id="" class="px-3 theme-text"></span>
                         </div>
                     </form>
                 </div>
