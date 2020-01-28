@@ -1,6 +1,6 @@
 var userApi = {
     data: {
-        checkerInterval: 5000,
+        checkerInterval: 2500,
         checkerApi: servers.api + '/api.php?_action=checker&v=0.1',
         fastLoginInfoApi: servers.api + '/api.php?v=0.1&_action=user/fastLoginInfo',
         fastLoginDeleteApi: servers.api + '/api.php?v=0.1&_action=auth/fastLoginDelete',
