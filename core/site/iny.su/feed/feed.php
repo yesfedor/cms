@@ -7,7 +7,7 @@ $pageActive['feed'] = 'active';
 function blogNewOptionGetCard($data) {
     $html = '
     <div class="col-10 offset-1 mt-0 mb-3 px-0">
-        <div class="card theme-panel">
+        <div class="card theme-panel z-depth-0">
             <div class="view overlay">
                 <img class="card-img-top" src="'.$data['poster781x521'].'" alt="'.$data['text'].'">
                 <div class="mask rgba-white-slight"></div>
@@ -15,7 +15,7 @@ function blogNewOptionGetCard($data) {
             <div class="card-body">
                 <h4 class="card-title">'.$data['title'].'</h4>
                 <p class="card-text">'.$data['text'].'</p>
-                <a href="https://go.iny.su/'.$data['go-link'].'" onclick="return nav.go(this);" data-lang="text_open" type="button" class="btn btn-rounded btn-outline-primary"></a>
+                <a href="https://go.iny.su/'.$data['go-link'].'" onclick="return nav.go(this);" data-lang="text_open" type="button" class="btn btn-rounded btn-outline-primary z-depth-0"></a>
             </div>
         </div>
     </div>
