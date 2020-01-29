@@ -21,7 +21,7 @@ function ordered_freelance_add($name, $number, $mail, $description, $task, $budg
     if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) return 'Введите валидный email адресс';
     $query = "INSERT INTO `ordered_freelance`(`id`, `time`, `name`, `number`, `mail`, `description`, `task`, `budget`) VALUES (NULL, :time, :name, :number, :mail, :description, :task, :budget)";
     $var = [
-        ':time' => appDateGetInt(appDate()),
+        ':time' => appDateGetInt(appDateGetStr()),
         ':name' => $name,
         ':number' => $number,
         ':mail' => $mail,
@@ -40,7 +40,7 @@ $contants_desk = htmlspecialchars($_POST['contants_desk']);
 $contants_do = htmlspecialchars($_POST['contants_do']);
 $contants_credit = htmlspecialchars($_POST['contants_credit']);
 
-if (mb_strlen($contants_name) > 5 and mb_strlen($contants_phone) > 5 and mb_strlen($contants_mail) > 5 and mb_strlen($contants_desk) > 5 and mb_strlen($contants_do) > 5 and mb_strlen($contants_credit) > 5) {
+if (mb_strlen($contants_name) > 1 and mb_strlen($contants_phone) > 4 and mb_strlen($contants_mail) > 4 and mb_strlen($contants_desk) > 4 and mb_strlen($contants_do) > 4 and mb_strlen($contants_credit) > 1) {
     $html_code = ordered_freelance_add($contants_name, $contants_phone, $contants_mail, $contants_desk, $contants_do, $contants_credit);
 } else $html_code = 'Заполните все поля развернутно, больше 5 сим. каждый.';
 
