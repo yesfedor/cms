@@ -51,17 +51,20 @@ var style = {
                 localStorage.setItem('themeType', 'light')
             }
         },
-        change(newTheme, version='64') {
-            newThemeName = ''
+        change(newTheme) {
+            let newThemeName = ''
+            let version = 2
 
             switch(newTheme) {
                 default:
                 case 'light':
+                    version = config.themeVersion.light
                     localStorage.setItem('themeType', 'light')
                     newThemeName = config.info.appname
                     style.theme.changeApi('light')
                 break;
                 case 'dark':
+                    version = config.themeVersion.dark
                     localStorage.setItem('themeType', 'dark')
                     newThemeName = config.info.appname + '-dark'
                     style.theme.changeApi('dark')

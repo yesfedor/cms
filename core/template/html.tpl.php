@@ -39,7 +39,11 @@ $html_comment_block = '<!-- '.PHP_EOL.' ADMIN: https://vk.com/yesfedor '.PHP_EOL
             domain: '<?= appGetDomain() ?>',
             info: <?= json_encode($domainInfo[appGetDomain()], JSON_UNESCAPED_UNICODE) ?>,
             user: {auth: <?= ($_SESSION['user']['uid'] ? 'true':'false') ?>,  uid: '<?= $_SESSION['user']['uid'] ?>', url: '<?= $_SESSION['user']['url'] ?>', name: '<?= $_SESSION['user']['name'] ?>', surname: '<?= $_SESSION['user']['surname'] ?>', gender: '<?= $_SESSION['user']['gender'] ?>', access: '<?= $_SESSION['user']['access'] ?>', mail_verfy: '<?= $_SESSION['user']['mail_verfy'] ?>', number_verfy: '<?= $_SESSION['user']['number_verfy'] ?>'},
-            hash: {appRoot:'<?= getAppRootHash() ?>', logout: '<?= $hash['logout'] ?>'}
+            hash: {appRoot:'<?= getAppRootHash() ?>', logout: '<?= $hash['logout'] ?>'},
+            themeVersion: {
+                light: 64,
+                dark: 128
+            }
         }
         let servers = {
             api: '',
