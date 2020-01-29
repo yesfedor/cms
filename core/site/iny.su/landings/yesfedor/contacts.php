@@ -49,8 +49,8 @@
                                 <label for="contants_credit" class="active pl-3">Бюджет</label>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 text-center my-1 py-1">
-                            <h3 id="yesfedor-contact-callback" class="black-text my-0 py-2"></h3>
+                        <div class="col-12 text-center my-1 py-1">
+                            <h4 id="yesfedor-contact-callback" class="black-text my-0 py-2"></h4>
                         </div>
                         <div class="col-12 col-md-6 text-center my-1 py-1">
                             <button type="button" onclick="appForms.go('contants', 'landings/yesfedor-contact');" class="btn btn-rounded purple darken-4 white-text">Отправить</button>
