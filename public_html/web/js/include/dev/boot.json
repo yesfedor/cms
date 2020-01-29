@@ -38,6 +38,10 @@
 			"url": "module/main.style.js",
 			"version": 64
 		},
+		"dateParse": {
+			"url": "core/dateParse.js",
+			"version": 17
+		},
 		"navigation": {
 			"url": "core/navigation.js",
 			"version": 69

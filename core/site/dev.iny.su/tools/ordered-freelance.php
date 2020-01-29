@@ -19,20 +19,21 @@ $ordered_freelance_data = dbGetAll($queryOrdered, $varOrdered);
 </div>
 <script>
 let ordered_freelance_data = <?= json_encode($ordered_freelance_data) ?>
+
 function ordered_freelance_cards(cards) {
     return `
         <div class="col-12 border py-2 mb-2">
-            <h4 class="d-block theme-title mb-2 py-0">$(cards.name) <small class="theme-text">$(cards.mail), $(cards.number)</small> (<small data-ctime="$(cards.time)" class="theme-text"></small>)</h4>
+            <h4 class="d-block theme-title mb-2 py-0">` + cards.name + ` <small class="theme-text">` + cards.mail + `, ` + cards.number + `</small> (<small data-ctime="` + cards.time + `" class="theme-text"></small>)</h4>
             <h5 class="d-block theme-text mb-2 py-0">
                 <span class="d-block mb-1 py-0">Описание</span>
-                $(cards.description)
+                ` + cards.description + `
             </h5>
             <h5 class="d-block theme-text mb-2 py-0">
                 <span class="d-block mb-1 py-0">Задача</span>
-                $(cards.task)
+                ` + cards.task + `
             </h5>
             <h5 class="d-block theme-text mb-2 py-0">
-                <span class="">Бюджет:</span> $(cards.budget)
+                <span class="">Бюджет:</span> ` + cards.budget + `
             </h5>
         </div>
     `
@@ -43,7 +44,7 @@ function ordered_freelance_render(el, data) {
         html = html + ordered_freelance_cards(data[i])
         i++
     }
-    $(el).append(html);
+    $(el).prepend(html);
 }
 
 ordered_freelance_render('#ordered_freelance_container', ordered_freelance_data)
