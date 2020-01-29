@@ -12,6 +12,7 @@ $warp = "warp";
                         <li class="list-group-item primary-color white-text">App Settings</li>
                         <a onclick="return nav.go(this);" href="/root" class="list-group-item list-group-item-action">Назначение прав доступа</a>
                         <a onclick="return nav.go(this);" href="/tools/locale" class="list-group-item list-group-item-action">Настройка локали</a>
+                        <a onclick="return nav.go(this);" href="/tools/ordered-freelance" class="list-group-item list-group-item-action">Фриланс</a>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-6 text-center mb-4">

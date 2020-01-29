@@ -14,6 +14,10 @@ switch($url_p1) {
         $min_score = 256;
         $tool = 'locale';
     break;
+    case 'ordered-freelance':
+        $min_score = 256;
+        $tool = 'ordered-freelance';
+    break;
 }
 
 if (getUserAccessScore() >= $min_score) {

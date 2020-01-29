@@ -1,5 +1,5 @@
 <div class="container-fluid px-5 py-5 papper">
-    <div class="row mb-5">
+    <div class="d-none d-lg-block row mb-5">
         <div class="col-12 col-lg-10 offset-lg-1 text-left">
             <h2 data-aos="fade-left" class="display-4 font-weight-bold black-text-deep">
                 <span data-aos="fade-left" class="d-block white-text-border text-uppercase">INY Creators -</span>
@@ -48,6 +48,9 @@
                                 <input type="text" id="contants_credit" name="contants_credit" placeholder="Например - 65$" class="form-control">
                                 <label for="contants_credit" class="active pl-3">Бюджет</label>
                             </div>
+                        </div>
+                        <div class="col-12 col-md-6 text-center my-1 py-1">
+                            <h3 id="yesfedor-contact-callback" class="black-text my-0 py-2"></h3>
                         </div>
                         <div class="col-12 col-md-6 text-center my-1 py-1">
                             <button type="button" onclick="appForms.go('contants', 'landings/yesfedor-contact');" class="btn btn-rounded purple darken-4 white-text">Отправить</button>

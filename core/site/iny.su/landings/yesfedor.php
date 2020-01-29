@@ -43,6 +43,9 @@ $video = $videos[$rand];
 html, body {
     background: white!important;
 }
+span {
+    color: black!important;
+}
 </style>
 <nav id="header" class="navbar fixed-top navbar-expand-xl navbar-dark scrolling-navbar z-depth-0 py-3">
     <div class="container">
@@ -72,7 +75,7 @@ html, body {
             <div class="d-flex justify-content-center align-self-end col-12 text-center mt-n5">
                 <div class="row">
                     <div data-aos="fade-up" class="col-10 offset-1">
-                        <small class="d-block white-text font-weight-light">Фёдор Гаранин (@yesfedor) - Фрилансер</small>
+                        <small class="d-block white-text font-weight-light">Фёдор Гаранин (@yesfedor)</small>
                         <span class="d-block white-text font-weight-light my-3"><?= $pageData['tdesc'] ?></span><br>
                         <h1 id="iamin" class="display-1 white-text text-uppercase font-weight-bold"><?= $pageData['title'] ?></h1>
                     </div>
