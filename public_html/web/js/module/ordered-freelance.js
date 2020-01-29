@@ -1,10 +1,10 @@
 function ordered_freelance_cards(cards) {
     return `
         <div class="col-12 border py-2 mb-2">
-            <h3 class="d-block theme-title border-bottom pb-2 mb-3"><span class="text-primary">Имя:</span> ` + cards.name + `</h3>
-            <h4 class="d-block theme-title border-bottom pb-2 mb-3"><span class="text-primary">Почта:</span> ` + cards.mail + `</h4>
-            <h4 class="d-block theme-title border-bottom pb-2 mb-3"><span class="text-primary">Номер:</span> ` + cards.number + `</h4>
-            <h4 class="d-block theme-title border-bottom pb-2 mb-3"><span class="text-primary">Дата:</span> <span data-ctime="` + cards.time + `"></span></h4>
+            <h5 class="d-block theme-title border-bottom pb-2 mb-3"><span class="text-primary">Имя:</span> ` + cards.name + `</h5>
+            <h5 class="d-block theme-title border-bottom pb-2 mb-3"><span class="text-primary">Почта:</span> ` + cards.mail + `</h5>
+            <h5 class="d-block theme-title border-bottom pb-2 mb-3"><span class="text-primary">Номер:</span> ` + cards.number + `</h5>
+            <h5 class="d-block theme-title border-bottom pb-2 mb-3"><span class="text-primary">Дата:</span> <span data-ctime="` + cards.time + `"></span></h5>
             <h5 class="d-block theme-text border-bottom pb-2 mb-3">
                 <span class="text-primary mb-1 py-0">Описание:</span> ` + cards.description + `
             </h5>

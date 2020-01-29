@@ -59,7 +59,7 @@ var init = {
 
                 break;
             case 'js':
-                if ($('#app-css' + id).is('script')) {
+                if ($('#app-js' + id).is('script')) {
                     return false
                 } else return true
                 break;
