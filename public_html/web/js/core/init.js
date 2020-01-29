@@ -53,13 +53,13 @@ var init = {
     checkData(type, id) {
         switch(type) {
             case 'css':
-                if ($('#app-css' + id).is('link')) {
+                if ($('#app-css-' + id).is('link')) {
                     return false
                 } else return true
 
                 break;
             case 'js':
-                if ($('#app-js' + id).is('script')) {
+                if ($('#app-js-' + id).is('script')) {
                     return false
                 } else return true
                 break;
