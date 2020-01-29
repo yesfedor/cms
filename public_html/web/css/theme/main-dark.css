@@ -1,15 +1,15 @@
 :root {
     /* Main pallet */
-    --theme-primary: #212121;
-    --theme-primary-plus: #161616;
-    --theme-background: #161616;
+    --theme-primary: #282828;
+    --theme-primary-plus: #282828;
+    --theme-background: #1f1f1f;
     --theme-base-color: white;
     --theme-muted: #c0c0c0;
     --theme-title: #fafafa;
     --theme-text: #d4d4d4;
     --theme-link: #007bff;
     --theme-link-hover: #3F729B;
-    --theme-panel: #212121;
+    --theme-panel: #282828;
     --theme-panel-dark: white;
     --theme-panel-primary: #4285F4;
     
