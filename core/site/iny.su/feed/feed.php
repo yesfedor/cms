@@ -6,7 +6,7 @@ $pageActive['feed'] = 'active';
 
 function blogNewOptionGetCard($data) {
     $html = '
-    <div class="col-10 offset-1 mt-0 mb-3 px-0">
+    <div class="col-10 offset-1 border border-primary rounded mt-0 mb-3 px-0">
         <div class="card theme-panel z-depth-0">
             <div class="view overlay">
                 <img class="card-img-top" src="'.$data['poster781x521'].'" alt="'.$data['text'].'">
@@ -33,7 +33,7 @@ function blogNewOptionGet() {
         ],
         '1' => [
             'title' => 'Новый сервис',
-            'text' => 'Online Tester - Уникальная система создания тестов на INY.SU!',
+            'text' => 'Tester Online - Уникальная система создания тестов на INY.SU!',
             'poster781x521' => 'https://go.iny.su/uc/cc4ca42/v6f7584/ef567538/ffed277ea1d.jpg',
             'go-link' => 'bl7'
         ]

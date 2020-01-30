@@ -24,3 +24,6 @@ main {
     overflow-x: hidden;
     min-height: 100vh;
 }
+.h100vh {
+    min-height: 100vh;
+}
