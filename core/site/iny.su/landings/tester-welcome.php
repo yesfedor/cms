@@ -48,7 +48,6 @@ $warp = 'app';
                 <div data-aos="fade-up" data-aos-duration="800" class="col-12 col-lg-8 offset-lg-2">
                     <h2 class="mb-5"><b class="black-text">Определение целей</b></h2>
                     <h4 class="black-text mb-5">Цель: Создать удобное и красивое SPA приложение</h4>
-                    <h4 class="black-text mb-5">Чему следовало придерживаться</h4>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item black-text">Практичное решение тестов, даже с телефона</li>
                         <li class="list-group-item black-text">Комфортное создание тестов</li>
@@ -75,19 +74,6 @@ $warp = 'app';
                         <li class="list-group-item black-text">Какие технологии использовать</li>
                         <li class="list-group-item black-text">Технические требования к сайту</li>
                     </ul>
-                    <h4 data-aos="fade-up" data-aos-duration="800" class="black-text mb-5">Разберем каждый пункт - вопросов не останется</h4>
-                    <h4 data-aos="fade-up" data-aos-duration="800" class="black-text mb-5">Целевая аудитория - только по направлению обучения, распространяться на ранних этапах - недопустимо.<br> Миссия проста - проверка знаний</h4>
-                    <h4 data-aos="fade-up" data-aos-duration="800" class="black-text mb-5">Структура имеет следующий вид, всего 6 страниц</h4>
-                    <ul data-aos="fade-up" data-aos-duration="800" class="list-group list-group-flush mb-5">
-                        <li class="list-group-item black-text">Главная - 2 версии</li>
-                        <li class="list-group-item black-text">Поиск</li>
-                        <li class="list-group-item black-text">Экран создания теста</li>
-                        <li class="list-group-item black-text">Экран прохождения теста</li>
-                        <li class="list-group-item black-text">Информация об использовании</li>
-                    </ul>
-                    <h4 data-aos="fade-up" data-aos-duration="800" class="black-text mb-3">Выделю два больших модуля: карточки с тестами, карточки итогов тестирования</h4>
-                    <h4 data-aos="fade-up" data-aos-duration="800" class="black-text mb-5">Технологии: Backend - PHP7 + MySQL + Собственная CMS, Frontend - Ванильный JS + расширения от CMS</h4>
-                    <h4 data-aos="fade-up" data-aos-duration="800" class="black-text mb-5">Главное требование - устойчивость к большим нагрузкам, следовательно, кешируем все, что можно! Не забывая сокращать исходящий трафик и серверный рендеринг</h4>
                 </div>
             </div>
         </div>
@@ -168,10 +154,10 @@ $warp = 'app';
             <div class="row">
                 <div data-aos="fade-up" data-aos-duration="800" class="col-12 col-lg-8 offset-lg-2">
                     <h2 class="mb-5"><b class="black-text">Запуск</b></h2>
-                    <h4 class="black-text mb-5">В качестве хостинга: свервер с моим сайтом, ресурсов которого достаточно для полноценной работы</h4>
-                    <h4 class="black-text mb-5">Домен: Выделенный для проекта субдомен</h4>
-                    <h4 class="black-text mb-5">Оптимизация SEO: Поисковый робот видит весь исходный код</h4>
-                    <h4 class="black-text mb-5">Установка внешней метрики и аналитики отсуствует, доступны только средства CMS</h4>
+                    <h4 class="h5 black-text mb-5">В качестве хостинга: свервер с моим сайтом, ресурсов которого достаточно для полноценной работы</h4>
+                    <h4 class="h5 black-text mb-5">Домен: Выделенный для проекта субдомен</h4>
+                    <h4 class="h5 black-text mb-5">Оптимизация SEO: Поисковый робот видит весь исходный код</h4>
+                    <h4 class="h5 black-text mb-5">Установка внешней метрики и аналитики отсуствует, доступны только средства CMS</h4>
                 </div>
             </div>
         </div>
@@ -184,10 +170,6 @@ $warp = 'app';
                     <h4 class="white-text mb-5">Для сайта проводилось только нагрузочное тестирование при 1к запросов в минуту</h4>
                     <h4 class="white-text mb-3">Показатели процессора: ~1 cpu points</h4>
                     <h4 class="white-text mb-3">Показатели MySQL: ~1сек</h4>
-                    <h4 class="white-text mb-3">Конфигурация:</h4>
-                    <h4 class="white-text mb-3">CPU: 10 x 2800 МГц, Intel Xeon Processor E5-2680</h4>
-                    <h4 class="white-text mb-3">RAM: 128 ГБ</h4>
-                    <h4 class="white-text mb-3">Канал: до 1 ГБ/сек</h4>
                 </div>
             </div>
         </div>
