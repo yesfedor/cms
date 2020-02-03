@@ -115,7 +115,7 @@ var test = {
         <div class="col-10 offset-1 my-0">
             <div class="row">
                 <div class="col-10 offset-1 text-center mt-0 mb-2">
-                    <h3 class="h3 black-text my-0 py-2" style="white-space: pre-wrap;">` + data.title + `</h3>
+                    <h3 class="h4 black-text my-0 py-2" style="white-space: pre-wrap;">` + data.title + `</h3>
                 </div>
                 <div class="col-10 offset-1 text-center mt-0 mb-2">
                     <h5 class="text-50-black" style="white-space: pre-wrap;">` + data.description + `</h5>

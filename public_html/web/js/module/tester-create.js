@@ -207,7 +207,7 @@ testerCreate = {
         <div class="col-10 offset-1 white z-depth-1 rounded mt-0 mb-3 py-2">
             <div class="row">
                 <div class="col-10 offset-1 text-center mt-0 mb-2">
-                    <h3 class="h3 black-text my-0 py-2" style="white-space: pre-wrap;">` + data.title + `</h3>
+                    <h3 class="h4 black-text my-0 py-2" style="white-space: pre-wrap;">` + data.title + `</h3>
                 </div>
                 <div class="col-10 offset-1 text-center mt-0 mb-2">
                     <h5 class="text-50-black" style="white-space: pre-wrap;">` + data.description + `</h5>
@@ -232,7 +232,7 @@ testerCreate = {
                 preRender = `
                 <input type="hidden" id="addQuestion-addOption--type" value="text">
                 <div class="col-10 offset-1 md-form md-bg mt-0 mb-3">
-                    <input type="text" id="addQuestion-addOption--text" class="form-control">
+                    <input type="text" id="addQuestion-addOption--text" class="form-control" value="Введите ответ">
                     <label for="addQuestion-addOption--text" class="pl-4">Подсказка к вопросу</label>
                 </div>
                 <div class="col-10 offset-1 md-form md-bg mt-0 mb-3">
@@ -323,9 +323,9 @@ testerCreate = {
                         <div class="col-12 d-flex justify-content-center align-self-center mt-n2">
                             <div class="row">
                                 <div class="col-12 text-center">
-                                    <h5 class="mb-2 white-text">Author</h5>
+                                    <h5 class="mb-2 white-text">` + config.user.name + ` ` + config.user.surname + `</h5>
                                     <h4 class="my-3 white-text">%type%</h4>
-                                    <h6 class="text-white-50 mt-2 h6">Date</h6>
+                                    <h6 data-ctime="` + (new Date().getTime()) + `" class="text-white-50 mt-2 h6"></h6>
                                 </div>
                             </div>
                         </div>

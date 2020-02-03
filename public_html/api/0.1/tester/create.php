@@ -99,12 +99,12 @@ class createTest {
                     return;
                 }
             $description = $que['description'];
-                if (!($title and iconv_strlen($description) <= 1024)) {
+                if (!($title and iconv_strlen($description) <= 2048)) {
                     $this->status = 10;
                     return;
                 }
             $explanation = $que['explanation'];
-                if (!($title and iconv_strlen($explanation) <= 1024)) {
+                if (!($title and iconv_strlen($explanation) <= 2048)) {
                     $this->status = 10;
                     return;
                 }
