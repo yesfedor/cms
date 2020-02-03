@@ -207,10 +207,10 @@ testerCreate = {
         <div class="col-10 offset-1 white z-depth-1 rounded mt-0 mb-3 py-2">
             <div class="row">
                 <div class="col-10 offset-1 text-center mt-0 mb-2">
-                    <h3 class="h3 black-text my-0 py-2">` + data.title + `</h3>
+                    <h3 class="h3 black-text my-0 py-2"><pre class="h3 black-text my-0 py-2">` + data.title + `</pre></h3>
                 </div>
                 <div class="col-10 offset-1 text-center mt-0 mb-2">
-                    <h5 class="text-50-black">` + data.description + `</h5>
+                    <h5 class="text-50-black"><pre class="h3 black-text my-0 py-2">` + data.description + `</pre></h5>
                 </div>
             </div>
             <div class="row">%option%</div>

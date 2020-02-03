@@ -47,7 +47,7 @@ $warp = 'warp';
                     <option value="true">Разрешить</option>
                     <option value="false">Запретить</option>
                 </select>
-                <select id="tester-data--test-opt-overTime" class="mdb-select md-form col-10 offset-1 colorful-select dropdown-primary">
+                <select id="tester-data--test-opt-overTime" class="d-none mdb-select md-form col-10 offset-1 colorful-select dropdown-primary">
                     <option value="0" disabled selected>Время на выполнение теста</option>
                     <option value="0">Без ограничений по времени</option>
                     <option value="300">5 минут</option>

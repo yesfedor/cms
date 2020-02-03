@@ -91,7 +91,7 @@ if ($test['author_uid'] == $_SESSION['user']['uid']) {
 testJson = <?= json_encode($test, JSON_UNESCAPED_UNICODE + JSON_UNESCAPED_SLASHES) ?>
 
 init.js.remove('tester-go')
-init.js.add('tester-go', 'module/tester-go.js', '67')
+init.js.add('tester-go', 'module/tester-go.js', '68')
 $('#r-info').html(mainTpl.nav.tplLoaderModule)
 $('#decisions-data').html(mainTpl.nav.tplLoaderModule)
 window.onbeforeunload = function(e) {

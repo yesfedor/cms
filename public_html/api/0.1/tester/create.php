@@ -57,7 +57,7 @@ class createTest {
     }
     private function checkBase() {
         /* Title */
-        if ($this->title and iconv_strlen($this->title) > 3 and iconv_strlen($this->title) <= 32) {
+        if ($this->title and iconv_strlen($this->title) > 3 and iconv_strlen($this->title) <= 256) {
             //ok
         } else $this->status = 1;
 
@@ -94,22 +94,22 @@ class createTest {
         for($i=0; $i<count($this->question);) {
             $que = $this->question[$i];
             $title = $que['title'];
-                if (!($title and iconv_strlen($title) <= 256)) {
+                if (!($title and iconv_strlen($title) <= 512)) {
                     $this->status = 10;
                     return;
                 }
             $description = $que['description'];
-                if (!($title and iconv_strlen($description) <= 256)) {
+                if (!($title and iconv_strlen($description) <= 1024)) {
                     $this->status = 10;
                     return;
                 }
             $explanation = $que['explanation'];
-                if (!($title and iconv_strlen($explanation) <= 256)) {
+                if (!($title and iconv_strlen($explanation) <= 1024)) {
                     $this->status = 10;
                     return;
                 }
             $answer = $que['answer'];
-                if (!($title and iconv_strlen($answer) <= 256)) {
+                if (!($title and iconv_strlen($answer) <= 512)) {
                     $this->status = 10;
                     return;
                 }
@@ -126,7 +126,7 @@ class createTest {
             for($j=0;$j<count($option);) {
                 $opt = $option[$j];
                 $text = $option['text'];
-                    if (!($title and iconv_strlen($title) <= 128)) {
+                    if (!($title and iconv_strlen($title) <= 512)) {
                         $this->status = 10;
                         return;
                     }
