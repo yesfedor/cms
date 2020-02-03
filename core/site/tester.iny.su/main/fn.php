@@ -307,13 +307,21 @@ function getFullTest($test) {
     return $test;
 }
 
-function tester_search_test($q) {
+function tester_search_test($q, $search_by_type=false) {
     $result = '';
     if ($q) {
-        $query = "SELECT * FROM tester_tests WHERE title LIKE :q or description LIKE :q";
-        $var = [
-            ':q' => '%'.$q.'%'
-        ];
+        if ($search_by_type) {
+            $query = "SELECT * FROM tester_tests WHERE type = :q";
+            $var = [
+                ':q' => $q
+            ];
+        } else {
+            $query = "SELECT * FROM tester_tests WHERE title LIKE :q or description LIKE :q or type = :q";
+            $var = [
+                ':q' => '%'.$q.'%'
+            ];
+        }
+        
         $data = dbGetAll($query, $var);
         if ($data) {
             for($i=0; $i<count($data);) {

@@ -21,7 +21,12 @@ include_once($fnTester);
 
 if ($_SESSION['user']['uid']) {
     $bigData['status'] = 200;
-    $search_result = tester_search_test($_POST['query']);
+    $search_by_type = false;
+    if (mb_substr($_POST['query'], 0, 5) == 'type-') {
+        $_POST['query'] = mb_substr($_POST['query'], 5);
+        $search_by_type = true;
+    }
+    $search_result = tester_search_test($_POST['query'], $search_by_type);
     $cards = '
     <div class="col-12 text-left mt-5">
         <h5 class="h6 text-primary">'.RusEnding($search_result['count'], 'Показан', 'Показано', 'Показано').' '.$search_result['count'].' '.RusEnding($search_result['count'], 'результат', 'результата', 'результатов').'</b></h5>
