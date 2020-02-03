@@ -392,7 +392,7 @@ testerCreate = {
             this.displayManager('#tester-create-display-1', '#tester-create-display-1--base')
             return false
         }
-        data.description = $('#tester-data--test-title').val()
+        data.description = $('#tester-data--test-description').val()
         data.explanation = $('#tester-data--test-explanation').val()
         data.type = $('#tester-data--test-type').val()
         if (data.type === false) data.type = "0"
