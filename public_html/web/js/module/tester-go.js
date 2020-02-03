@@ -115,10 +115,10 @@ var test = {
         <div class="col-10 offset-1 my-0">
             <div class="row">
                 <div class="col-10 offset-1 text-center mt-0 mb-2">
-                    <h3 class="h3 black-text my-0 py-2"><pre class="h3 black-text my-0 py-2">` + data.title + `</pre></h3>
+                    <h3 class="h3 black-text my-0 py-2" style="white-space: pre-wrap;">` + data.title + `</h3>
                 </div>
                 <div class="col-10 offset-1 text-center mt-0 mb-2">
-                    <h5 class="text-50-black"><pre class="h3 black-text my-0 py-2">` + data.description + `</pre></h5>
+                    <h5 class="text-50-black" style="white-space: pre-wrap;">` + data.description + `</h5>
                 </div>
             </div>
             <div class="row">%option%</div>
