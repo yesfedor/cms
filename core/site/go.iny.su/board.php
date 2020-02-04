@@ -11,7 +11,7 @@ $warp = "warp";
             <div class="card border border-primary rounded">
                 <div class="card-body text-center">
                     <h3 class="card-title">Сокращение ссылок</h3>
-                    <h5 class="card-text">Сокращение ссылок необходимо в тех случаях, когда пользователю требуется укоротить длинный URL адрес, чтобы получить более короткую и удобную ссылку.</h5>
+                    <h5 class="card-text">Сокращение ссылок необходимо в тех случаях<br>когда пользователю требуется укоротить длинный URL адрес<br>чтобы получить более короткую и удобную ссылку.</h5>
                     <div class="md-form col-10 offset-1 my-1 py-1">
                         <input type="url" id="url_full" class="form-control">
                         <label class="ml-3 active" for="url_full">Вставьте ссылку</label>
