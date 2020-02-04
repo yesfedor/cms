@@ -1,4 +1,37 @@
 <?php
+/*
+if ($_POST['tid']) {
+    $tid = $_POST['tid'];
+    $results = tester_test_decisions($tid);
+    $html = '';
+    for($i=0;$i<count($results);) {
+        $uid = $results[$i]['uid'];
+        $code = json_decode($results[$i]['code_json'], true);
+        $date = $results[$i]['date'];
+        $ansAll = $code['allAns'];
+        $ansTrue = 0;
+        $html .= '
+        <div class="col-12 border-bottom text-center">
+            <h4 class="text-primary my-2">Пользователь: '.url('https://iny.su/id'.$uid, tetser_get_author($uid), false).'</h4>
+        
+        ';
+        $phtml = '';
+        for($j=0;$j<count($code['dataAns']);) {
+            if ($code['dataAns'][$j] == 'true') $ansTrue = $ansTrue + 1;
+            $phtml .= '
+            <h5 class="my-2">
+                '.($j+1).' вопрос - '.($code['dataAns'][$j] == 'true' ? 'Верно':'Неверно').'
+            </h5>
+            ';
+
+            $j++;
+        }
+        $html .= '<h4>Верно '.$ansTrue.' из '.$ansAll.'</h4>'.$phtml.'</div>';
+        $i++;
+    }
+
+} else $bigData['status'] = 404;
+*/
 $public = $_SERVER['DOCUMENT_ROOT'];
 $private = mb_substr($_SERVER['DOCUMENT_ROOT'], 0, -12);
 $enginePath = $private.'/core/engine/';
@@ -20,40 +53,35 @@ $fnTester = $thisSitePath.'main/fn.php';
 include_once($fnTester);
 
 if ($_SESSION['user']['uid']) {
-    
     if ($_POST['tid']) {
         $tid = $_POST['tid'];
         $results = tester_test_decisions($tid);
-        $html = '';
-        for($i=0;$i<count($results);) {
-            $uid = $results[$i]['uid'];
-            $code = json_decode($results[$i]['code_json'], true);
-            $date = $results[$i]['date'];
-            $ansAll = $code['allAns'];
-            $ansTrue = 0;
-            $html .= '
-            <div class="col-12 border-bottom text-center">
-                <h4 class="text-primary my-2">Пользователь: '.url('https://iny.su/id'.$uid, tetser_get_author($uid), false).'</h4>
-            
-            ';
-            $phtml = '';
-            for($j=0;$j<count($code['dataAns']);) {
-                if ($code['dataAns'][$j] == 'true') $ansTrue = $ansTrue + 1;
-                $phtml .= '
-                <h5 class="my-2">
-                    '.($j+1).' вопрос - '.($code['dataAns'][$j] == 'true' ? 'Верно':'Неверно').'
-                </h5>
-                ';
+        if ($results[0]) {
+            //data answers
+            $answers = [];
+            for($i = 0; $i < count($results);) {
+                $uid = $results[$i]['uid'];
+                $code = json_decode($results[$i]['code_json'], true);
+                $answers[] = [
+                    'date' => $results[$i]['date'],
+                    'time' => $results[$i]['time'],
+                    'uid' => $results[$i]['uid'],
+                    'code' => $code,
+                    'user' => tetser_get_author($uid)
+                ];
 
-                $j++;
+                $i++;
             }
-            $html .= '<h4>Верно '.$ansTrue.' из '.$ansAll.'</h4>'.$phtml.'</div>';
-            $i++;
-        }
 
+            // data export
+            $decisions = [
+                'count' => count($results),
+                'answers' => $answers
+            ];
+        } else $bigData['status'] = 403;
     } else $bigData['status'] = 404;
 
-    $bigData['html'] = $html;
+    $bigData['decisions'] = $decisions;
 } else $bigData['status'] = 403;
 
 //return

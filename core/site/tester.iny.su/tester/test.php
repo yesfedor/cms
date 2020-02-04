@@ -58,7 +58,7 @@ if ($test['author_uid'] == $_SESSION['user']['uid']) {
             </h5>
         </div>
         <div class="col-12 mt-3 text-center">
-            <button onclick="test.showWrapper();" type="button" role="button" class="btn btn-rounded btn-primary">Приступить к решению</button>
+            <button onclick="test.showWrapper();" type="button" role="button" class="btn btn-rounded btn-outline-primary">Приступить к решению</button>
         </div>
 
     </div>
@@ -81,29 +81,20 @@ if ($test['author_uid'] == $_SESSION['user']['uid']) {
     </div>
     <div id="tester-test-decisions" class="row white border border-primary rounded py-2 my-3">
         <div class="col-12 text-center py-2">
-            <h3 class="text-primary my-3">Все решения теста</h3>
             <div class="col-12"><div id="decisions-data" class="row"></div></div>
         </div>
     </div>
 </div>
 
 <script>
-testJson = <?= json_encode($test, JSON_UNESCAPED_UNICODE + JSON_UNESCAPED_SLASHES) ?>
+let testJson = <?= json_encode($test, JSON_UNESCAPED_UNICODE + JSON_UNESCAPED_SLASHES) ?>
 
 init.js.remove('tester-go')
 init.js.add('tester-go', 'module/tester-go.js', 81)
 $('#r-info').html(mainTpl.nav.tplLoaderModule)
 $('#decisions-data').html(mainTpl.nav.tplLoaderModule)
-window.onbeforeunload = function(e) {
-    e.preventDefault();
-    result = confirm('Данные о прохождении не будут сохранены. Таймер не будет остановлен для этого теста, продолжить?');
-    if (result) {
-        toastr.info('Данные сброшены');
-        nav.go(nav.createLink(window.location.href))
-    }
-    return false;
-};
-testRoot = {
+
+let testRoot = {
     isRoot: <?= $testRoot ?>,
     isHashUrl: <?= $isHashUrl ?>,
     init () {
@@ -134,10 +125,60 @@ testRoot = {
             dataType: "json",
             success: function (data) {
                 setTimeout(() => {
-                    $('#decisions-data').html(data.html)
-                }, 1500);
+                    if (data.status == '403') $('#decisions-data').html('<div class="col-10 offset-1"><b class="h4 black-text">Решений пока нет</b></div>')
+                    else testRoot.renderDecisions(data.decisions)
+                }, 1000);
+            },
+            error: () => {
+                toastr.info('Ошибка при загрузке решений, повторите запрос позже')
             }
         })
+    },
+    renderDecisions(decisions) {
+        let el = '#decisions-data'
+        let output = ``
+        output += `<div class="col-10 offset-1 mb-3"><h3 class="black-text">Всего решений: ` + decisions.count + `<b></b></h3></div>`
+        for(let i= 0; i < decisions.count;) {
+            output = output + testRoot.renderCard(decisions.answers[i])
+            i++
+        }
+        $(el).html(output)
+    },
+    renderCard(data) {
+        // data.code data.user
+        let box = `
+        <div class="col-12 border rounded py-3 mb-3 text-center">
+            <h4 class="mb-2"><b class="black-text"><a class="theme-link" onclick="return nav.away(this);" href="https://iny.su/id` + data.uid + `">` + data.user + `</a></b> <small class="black-text">(` + data.date + `)</small></h4>
+            <div class="row">
+                ` + testRoot.renderTable(data.code) + `
+            </div>
+        </div>
+        `
+
+        return box
+    },
+    renderTable(data) {
+        let card_title = ``
+        let card_tpl = ``
+        let qCountAll = testJson.question.length
+        let qTrueCount = 0
+        let qFalseCount = 0
+        for(let i = 0; i < qCountAll;) {
+            if (typeof data.dataAns[i] != 'undefined') {
+                if (data.dataAns[i] == 'true') {
+                    card_tpl += '#' + (i + 1) + ' - Верно'
+                    qTrueCount++
+                } else {
+                    card_tpl += '#' + (i + 1) + ' - Неверно'
+                }
+            }
+            i++
+        }
+
+        qFalseCount = qCountAll - qTrueCount
+        card_title = `<div class="col-12 text-center"><h5 class="black-text">Решено правильно <b>` + qTrueCount + `</b> из <b>` + qCountAll + `</b></h5></div>`
+
+        return card_title
     }
 }
 testRoot.init()
