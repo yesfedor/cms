@@ -58,7 +58,7 @@ if ($test['author_uid'] == $_SESSION['user']['uid']) {
             </h5>
         </div>
         <div class="col-12 mt-3 text-center">
-            <button onclick="test.showWrapper();" type="button" role="button" class="btn btn-rounded btn-outline-primary">Приступить к решению</button>
+            <button onclick="test.showWrapper();" type="button" role="button" class="btn btn-rounded btn-outline-primary z-depth-0 waves-effect waves-light">Приступить к решению</button>
         </div>
 
     </div>
