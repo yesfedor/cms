@@ -68,6 +68,12 @@ RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)$ /?page=$1&parameterOne=$2&
 RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)/([^/]*)$ /?page=$1&parameterOne=$2&parameterTwo=$3&parameterThree=$4&parameterFour=$5&parameterFive=$6 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.css -f
+RewriteRule ^(.*)$ $1.css
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.js -f
+RewriteRule ^(.*)$ $1.js
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
 RewriteCond %{REQUEST_FILENAME} !-d
