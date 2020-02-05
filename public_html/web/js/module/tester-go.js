@@ -1,4 +1,4 @@
-var test = {
+test = {
     timeoutans: false,
     timeoutanstype: '',
     test_data: testJson,
@@ -168,3 +168,111 @@ var test = {
 }
 
 test.init()
+
+testRoot = {
+    isRoot: testRootData.isRoot,
+    isHashUrl: testRootData.isHashUrl,
+    init () {
+        if (this.isHashUrl == true) {
+            this.showDecisions()
+            $('#decisions-data').html(mainTpl.nav.tplLoaderModule)
+        }
+        else this.hideDecisions()
+    },
+    deleteTest() {
+        tid = testJson.id
+        $.ajax({
+            type: "POST",
+            url: "/api.php?_action=tester/deleted&v=0.1",
+            data: {tid: tid},
+            dataType: "json",
+            success: (data) => {
+                if (data.deleted == 'deleted') window.location.href = "/"
+            },
+            error: () => {
+                toastr.info('Произошла ошибка на сервере')
+            }
+        });
+    },
+    showDecisions() {
+        $('#testRoot_toggle').attr('onclick', 'testRoot.hideDecisions(); return false;')
+        $('#testRoot_toggle').html('Скрыть решения')
+
+        $('#tester-test-decisions').show()
+        this.reloadDecisions()
+    },
+    hideDecisions() {
+        $('#testRoot_toggle').attr('onclick', 'testRoot.showDecisions(); return false;')
+        $('#testRoot_toggle').html('Показать решения')
+
+        $('#tester-test-decisions').hide()
+    },
+    reloadDecisions() {
+        $.ajax({
+            type: "POST",
+            url: "/api.php?_action=tester/decisions&v=0.1",
+            data: {tid: testJson.id},
+            dataType: "json",
+            success: function (data) {
+                setTimeout(() => {
+                    if (data.status == '403') $('#decisions-data').html('<div class="col-10 offset-1"><b class="h4 black-text">Решений пока нет</b></div>')
+                    else testRoot.renderDecisions(data.decisions)
+                }, 1000);
+            },
+            error: () => {
+                toastr.info('Ошибка при загрузке решений, повторите запрос позже')
+            }
+        })
+    },
+    renderDecisions(decisions) {
+        let el = '#decisions-data'
+        let output = ``
+        output += `<div class="col-10 offset-1 mb-3"><h3 class="black-text">Всего решений: ` + decisions.count + `<b></b></h3></div>`
+        for(let i= 0; i < decisions.count;) {
+            output = output + testRoot.renderCard(decisions.answers[i])
+            i++
+        }
+        $(el).html(output)
+    },
+    renderCard(data) {
+        // data.code data.user
+        let box = `
+        <div class="col-12 border rounded py-3 mb-3 text-center">
+            <h4 class="mb-2"><b class="black-text"><a class="theme-link" onclick="return nav.away(this);" href="https://iny.su/id` + data.uid + `">` + data.user + `</a></b> <small class="black-text">(` + data.date + `)</small></h4>
+            <div class="row">
+                ` + testRoot.renderTable(data.code) + `
+            </div>
+        </div>
+        `
+
+        return box
+    },
+    renderTable(data) {
+        let card_title = ``
+        let card_tpl = ``
+        let qCountAll = testJson.question.length
+        let qTrueCount = 0
+        let qFalseCount = 0
+        for(let i = 0; i < qCountAll;) {
+            if (typeof data.dataAns[i] != 'undefined') {
+                if (data.dataAns[i] == 'true') {
+                    card_tpl += '#' + (i + 1) + ' - Верно'
+                    qTrueCount++
+                } else {
+                    card_tpl += '#' + (i + 1) + ' - Неверно'
+                }
+            }
+            i++
+        }
+
+        qFalseCount = qCountAll - qTrueCount
+        card_title = `<div class="col-12 text-center"><h5 class="black-text">Решено правильно <b>` + qTrueCount + `</b> из <b>` + qCountAll + `</b></h5></div>`
+
+        return card_title
+    }
+};
+testRoot.init();
+
+$('#r-info').html(mainTpl.nav.tplLoaderModule)
+$('#decisions-data').html(mainTpl.nav.tplLoaderModule)
+init.createModal('tester-test-delete-confirm', {title: 'Удаление теста', content: '<div class="row"><div class="col-12 text-center my-5"><button onclick="return testRoot.deleteTest();" class="btn btn-outline-danger btn-rounded">Удалить</button></div></div>', footer: ''}, 'large', 'var(--bg-color)')
