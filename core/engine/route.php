@@ -1,35 +1,37 @@
 <?php
 function appRouterError($code) {
+    global $appRouterErrorShowFalse;
     global $err403;
     global $err404;
     global $err403mod;
     global $err404mod;
     global $moduleMode;
-    
-    if (!$moduleMode) $type = 'page';
-    else $type = 'module';
+    if (!$appRouterErrorShowFalse) {
+        if (!$moduleMode) $type = 'page';
+        else $type = 'module';
 
-    switch($type) {
-        case 'page':
-            switch($code) {
-                case 403:
-                    include_once($err403);
-                break;
-                case 404:
-                    include_once($err404);
-                break;
-            }
-        break;
-        case 'module':
-            switch($code) {
-                case 403:
-                    include_once($err403mod);
-                break;
-                case 404:
-                    include_once($err404mod);
-                break;
-            }
-        break;
+        switch($type) {
+            case 'page':
+                switch($code) {
+                    case 403:
+                        include_once($err403);
+                    break;
+                    case 404:
+                        include_once($err404);
+                    break;
+                }
+            break;
+            case 'module':
+                switch($code) {
+                    case 403:
+                        include_once($err403mod);
+                    break;
+                    case 404:
+                        include_once($err404mod);
+                    break;
+                }
+            break;
+        }
     }
 }
 

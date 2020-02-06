@@ -23,6 +23,12 @@ function setStatus($el, $text) {
     $html_id = $el;
     $html_code = $text;
 }
+function setJs($code) {
+    global $js_use;
+    global $js_code;
+    $js_use = '1';
+    $js_code = $code;
+}
 //code
 $elStatus = '#settings-status';
 $settingsNewPassword = htmlspecialchars($_POST['settingsNewPassword']);
@@ -31,8 +37,8 @@ $settingsPassword = htmlspecialchars($_POST['settingsPassword']);
 $settingsMail = htmlspecialchars($_POST['settingsMail']);
 $settingsUserUrl = htmlspecialchars($_POST['settingsUserUrl']);
 
-//password check
 if (!$_SESSION['user']['uid']) die('error');
+//password check
 if ($settingsNewPassword and $settingsNewPasswordRepeat and $settingsPassword == $_SESSION['user']['password']) {
     if ($settingsNewPassword == $settingsNewPasswordRepeat) {
         if (userApiChangePassword($settingsPassword, $settingsNewPassword)) setStatus('#settings-status', 'Пароль изменен');
@@ -46,8 +52,59 @@ if (filter_var($email_a, FILTER_VALIDATE_EMAIL)) {
 }
 
 //user url check
-if (true) {
+if ($settingsUserUrl) {
+    $settingsUserUrl_changed = false;
 
+    //parse
+    $domain_profile = 'https://'.appGetDomain().'/';
+    $domain_profile_len = mb_strlen($domain_profile);
+
+    if (mb_substr($settingsUserUrl, 0, $domain_profile_len) == $domain_profile) {
+        $settingsUserUrl = mb_substr($settingsUserUrl, $domain_profile_len);
+    }
+
+    // url != url
+    if ($settingsUserUrl == $_SESSION['user']['uid']) $settingsUserUrl_changed = true;
+
+    // default view - id12345
+    if ($settingsUserUrl == 'id'.$_SESSION['user']['uid'] and !$settingsUserUrl_changed) {
+        $query = "UPDATE user SET url = :newurl WHERE uid = :uid";
+        $var = [
+            ':newurl' => NULL,
+            ':uid' => $_SESSION['user']['uid']
+        ];
+        dbAddOne($query,  $var);
+        $_SESSION['user']['url'] = false;
+        setStatus('#settings-status', 'Вы успешно удалили короткий адрес, для корректной работы сайта, пожалуйста, обновите страницу');
+        setJs('config.user.url = \'\'; $(\'#app-main-menu_profile\').attr(\'href\', \'/id'.$_SESSION['user']['uid'].'\');');
+        $settingsUserUrl_changed = true;
+    }
+
+    // allow?
+    if (!$settingsUserUrl_changed) {
+        $settingsUserUrl_status = checkDomain($settingsUserUrl);
+        switch($settingsUserUrl_status) {
+            case 'allow':
+                $query = "UPDATE user SET url = :newurl WHERE uid = :uid";
+                $var = [
+                    ':newurl' => $settingsUserUrl,
+                    ':uid' => $_SESSION['user']['uid']
+                ];
+                dbAddOne($query,  $var);
+                $_SESSION['user']['url'] = $settingsUserUrl;
+
+                setStatus('#settings-status', 'Вы успешно заняли короткий адрес, для корректной работы сайта, пожалуйста, обновите страницу');
+                setJs('config.user.url = \''.$settingsUserUrl.'\'; $(\'#app-main-menu_profile\').attr(\'href\', \'/id'.$settingsUserUrl.'\');');
+            break;
+            case 'deny':
+                setStatus('#settings-status', 'Адрес уже занят');
+            break;
+            case 'invalid':
+                setStatus('#settings-status', 'Недопустимый формат');
+            break;
+        }
+        $settingsUserUrl_changed = true;
+    }
 }
 
 
