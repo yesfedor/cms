@@ -3,6 +3,16 @@ $lastInsertId = 0;
 
 if (!$_SESSION['db_all_request']) $_SESSION['db_all_request'] = 0;
 if ($_SESSION['db_all_request'] > 1000) $_SESSION['db_all_request'] = 0;
+function dbLogRequest($query, $var) {
+    global $private;
+    $logged = false;
+    if ($logged) {
+        $output = 'QUERY: '.$query.PHP_EOL.'DATA: '.json_encode($var).PHP_EOL.'---------'.PHP_EOL;
+        $log = fopen($private.'/db_log.txt', 'a+');
+        fwrite($log, $output);
+        fclose($log);
+    }
+}
 
 function dbFetchAll($result) { 	
    	return $result = $result->fetchAll(PDO::FETCH_ASSOC);
@@ -14,6 +24,7 @@ function dbGetAll($query, $var) {
     global $db;
     global $_SESSION;
     $_SESSION['db_all_request']++;
+    dbLogRequest($query, $var);
     $stmt = $db->prepare($query);
     $stmt->execute($var);
     $result = dbFetchAll($stmt);
@@ -30,6 +41,7 @@ function dbAddOne($query, $var) {
     global $lastInsertId;
     global $_SESSION;
     $_SESSION['db_all_request']++;
+    dbLogRequest($query, $var);
     $db->prepare($query)->execute($var);
     $db_lastInsertId = $db->lastInsertId();
     $lastInsertId = $db_lastInsertId;
