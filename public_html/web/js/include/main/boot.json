@@ -2,11 +2,11 @@
 	"css": {
 		"bootstrap": {
 			"url": "base:/web/vendor/css/bootstrap.min.css",
-			"version": false
+			"version": 4
 		},
 		"mdb": {
 			"url": "base:/web/vendor/css/mdb.min.css",
-			"version": false
+			"version": 4
 		},
 		"common": {
 			"url": "common.css",
@@ -16,19 +16,19 @@
 	"js": {
 		"bootstrap": {
 			"url": "base:/web/vendor/js/bootstrap.min.js",
-			"version": false
+			"version": 4
 		},
 		"mdb": {
 			"url": "base:/web/vendor/js/mdb.min.js",
-			"version": false
+			"version": 4
 		},
 		"popper": {
 			"url": "base:/web/vendor/js/popper.min.js",
-			"version": false
+			"version": 4
 		},
 		"icon": {
 			"url": "base:/web/vendor/js/icon.js",
-			"version": false
+			"version": 4
 		},
 		"mainTpl": {
 			"url": "tpl/main.tpl.js",
