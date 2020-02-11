@@ -23,8 +23,10 @@ var init = {
     checkUrl(type, url) {
         tplBaseDir = 'base:'
         tplBaseDomain = 'domain:'
+        tplBaseComponents = 'wc:'
         tplBaseDirLen = tplBaseDir.length
         tplBaseDomainLen = tplBaseDomain.length
+        tplBaseComponentsLen = tplBaseComponents.length
 
         newUrl = ''
         oldUrl = url
@@ -37,6 +39,18 @@ var init = {
         if (oldUrl.substr(0, tplBaseDomainLen) == tplBaseDomain && changed == false) {
             newUrl = oldUrl.substr(tplBaseDomainLen)
             changed = true
+        }
+        if (oldUrl.substr(0, tplBaseComponentsLen) == tplBaseComponents && changed == false) {
+            newUrl = init.path.js + 'components/' + oldUrl.substr(tplBaseComponentsLen)
+            changed = true
+        }
+
+        // mask filename.substr(-0)
+        if (type == 'css') {
+            if (newUrl.substr(-4) != '.css') newUrl += '.css'
+        }
+        if (type == 'js') {
+            if (newUrl.substr(-3) != '.js') newUrl += '.js'
         }
 
         if (type == 'css' && changed == false) {

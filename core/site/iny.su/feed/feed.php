@@ -1,29 +1,10 @@
 <?php
-// я VSCode, скачай меня, Кристиночка
 $ui = true;
 $warp = "warp-page";
 $pageActive['feed'] = 'active';
 
-function blogNewOptionGetCard($data) {
-    $html = '
-    <div class="col-10 offset-1 border border-primary rounded mt-0 mb-3 px-0">
-        <div class="card theme-panel z-depth-0">
-            <div class="view overlay">
-                <img class="card-img-top" src="'.$data['poster781x521'].'" alt="'.$data['text'].'">
-                <div class="mask rgba-white-slight"></div>
-            </div>
-            <div class="card-body">
-                <h4 class="card-title">'.$data['title'].'</h4>
-                <p class="card-text">'.$data['text'].'</p>
-                <a href="https://go.iny.su/'.$data['go-link'].'" onclick="return nav.go(this);" data-lang="text_open" type="button" class="btn btn-rounded btn-outline-primary z-depth-0"></a>
-            </div>
-        </div>
-    </div>
-    ';
-
-    return $html;
-}
 function blogNewOptionGet() {
+    global $AppFeedPostData;
     $dataAll = [
         '0' => [
             'title' => 'Новый сервис',
@@ -36,12 +17,26 @@ function blogNewOptionGet() {
             'text' => 'Tester Online - Уникальная система создания тестов на INY.SU!',
             'poster781x521' => 'https://go.iny.su/uc/cc4ca42/v6f7584/ef567538/ffed277ea1d.jpg',
             'go-link' => 'bl7'
+        ],
+        '2' => [
+            'title' => 'Доступны тесты приложения',
+            'text' => 'Взгляните на результаты, данные по страницам<br>INY.SU: https://go.iny.su/bnb <br>Landing: https://go.iny.su/bnc <br>Tester Online: https://go.iny.su/bnd',
+            'poster781x521' => 'https://go.iny.su/web/file/ogimg/main/dev.png'
         ]
     ];
+    $dataAll = array_reverse($dataAll);
 
     $html = '';
+    $AppFeedPostData = [];
     for($i=0; $i<count($dataAll);) {
-        $html .= blogNewOptionGetCard($dataAll[$i]);
+        $html .= '<feed-post data-id="w'.$i.'"></feed-post>';
+        $AppFeedPostData['w'.$i] = [
+            'title' => $dataAll[$i]['title'],
+            'text' => textLink($dataAll[$i]['text']),
+            'poster781x521' => $dataAll[$i]['poster781x521'],
+            'go-link' => $dataAll[$i]['go-link']
+        ];
+
         $i++;
     }
 
@@ -61,7 +56,7 @@ function doPostAddMin() {
     global $_SESSION;
     $html = '
     <!-- Add post -->
-    <div id="do-post-add-min" onclick="post.doPostAdd();" class="col-10 theme-panel border border-primary rounded offset-1 mt-0 mb-3 py-2 d-none">
+    <div id="do-post-add-min" onclick="" class="col-10 theme-panel border border-primary rounded offset-1 mt-0 mb-3 py-2 d-none">
 
     </div>
     ';
@@ -80,13 +75,6 @@ function post($info) {
 </div>
 
 <script>
-var post = {
-    api: {
-        addPost: '/api.php?_action=wall/post.add&v=0.2'
-    },
-    data: {},
-    doPostAdd() {
-
-    }
-}
+AppFeedPostData = <?= json_encode($AppFeedPostData) ?>;
+init.js.add('module_AppFeedPost', 'wc:AppFeedPost');
 </script>
