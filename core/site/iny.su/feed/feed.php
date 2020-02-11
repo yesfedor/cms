@@ -76,5 +76,5 @@ function post($info) {
 
 <script>
 AppFeedPostData = <?= json_encode($AppFeedPostData) ?>;
-init.js.add('module_AppFeedPost', 'wc:AppFeedPost');
+init.js.add('wc-AppFeedPost', 'wc:AppFeedPost');
 </script>
