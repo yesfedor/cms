@@ -36,7 +36,7 @@
 		},
 		"style": {
 			"url": "module/main.style.js",
-			"version": 79
+			"version": 84
 		},
 		"dateParse": {
 			"url": "core/dateParse.js",

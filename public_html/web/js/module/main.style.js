@@ -119,6 +119,29 @@ var style = {
             }
         }
     },
+    flashing(config=false, colorFrom='#212121', colorTo=false, animationDuration=1, fixColor=false, fixDuration=0.1) {
+        /*
+        colorFrom: цвет мигания
+        colorTo: восстановленный цвет
+        animationDuration: длительность мигания в сек
+        */
+        if (typeof config == 'object') {
+            colorFrom = config.colorFrom
+            colorTo = config.colorTo || false
+            animationDuration = config.animationDuration || 1
+            fixColor = config.fixColor || false
+            fixDuration = config.fixDuration || 0.1
+        }
+        let body = document.getElementsByTagName('body')[0]
+        if (colorTo === false) colorTo = window.getComputedStyle(body).backgroundColor
+        body.style.backgroundColor = colorFrom
+        setTimeout(() => {
+            body.style.backgroundColor = colorTo
+            if (fixColor === true) setTimeout(() => {
+                body.style.backgroundColor = ''
+            }, fixDuration*1000);
+        }, animationDuration * 1000);
+    },
     init() {
         style.common()
         style.theme.init()
