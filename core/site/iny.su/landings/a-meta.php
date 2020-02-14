@@ -46,5 +46,14 @@ switch($url_p1) {
             'og_image' => 'about.png',
         ];
     break;
+    case 'vel0ur':
+        $landingsMetaPath = $thisSitePath.'landings/a-meta.php';
+        $landingsMeta = [
+            'title' => 'Анастасия Велюр (@vel0ur)',
+            'description' => 'Фотографирю. Красиво. Стильно. Only Lutsk. Instagram: @velour_ph',
+            'keywords' => 'фотосессия, красивый профиль, красивое фото, Анастасия Велюр, vel0ur, velour_phб, Lutsk',
+            'og_image' => 'landings.png',
+        ];
+    break;
 }
 ?>

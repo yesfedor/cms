@@ -29,6 +29,10 @@ switch($url_p1) {
         $landingsStatus = true;
         $landingsFile = 'aliya';
     break;
+    case 'vel0ur':
+        $landingsStatus = true;
+        $landingsFile = 'vel0ur';
+    break;
 }
 
 if ($landingsStatus) {
