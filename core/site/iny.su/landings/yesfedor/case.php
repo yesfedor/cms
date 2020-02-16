@@ -1,29 +1,11 @@
 <div class="container">
     <div class="row my-5">
-        <div class="col-12 text-center ">
+        <div class="col-12 text-center">
             <h2 class="black-text-deep font-weight-bold my-2 py-2">My Portfolio</h2>
         </div>
-        <div id="scroll" class="col-12">
-            <div id="cards" class="row text-center">
-                <div class="col-12 col-md-6 my-2 p-2">
-                    <div class="row">
-                        <div class="col-12 border text-center">
-                            <span class="d-block h3 black-text-deep font-weight-bold">Сайт - заглушка</span>
-                            <span class="d-block h5 black-text-deep font-weight-bold">Сайт для блогера с описанием его деятельности и контактами для обратной связи</span>
-                            <span class="d-block h5 black-text-deep font-weight-light"><a class="h5 font-weight-light" href="http://aves.kiev.ua" target="_blank" rel="noopener noreferrer">Посмотреть</a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 my-2 p-2">
-                    <div class="row">
-                        <div class="col-12 border text-center">
-                            <span class="d-block h3 black-text-deep font-weight-bold">Сервис INY Tester</span>
-                            <span class="d-block h5 black-text-deep font-weight-bold">Tester Online - платформа для создания и прохождения тестов, с интуитивной ui и свежим дизайном</span>
-                            <span class="d-block h5 black-text-deep font-weight-light"><a class="h5 font-weight-light" href="https://tester.iny.su" target="_blank" rel="noopener noreferrer">Посмотреть</a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="scroll" class="col-12 text-center">
+            <h3 class="my-2"><a onclick="return nav.away(this);" href="https://iny.su/landings/vel0ur">Посмотреть пример лендинга</a></h3>
+            <h3 class="my-2"><a onclick="return nav.away(this);" href="https://tester.iny.su">Проект - Tester Online</a></h3>
         </div>
     </div>
 </div>
