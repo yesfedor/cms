@@ -3,15 +3,15 @@ $warp = 'app';
 
 $pagesData = [
     '#main' => [
-        'title' => 'i\'m .in',
+        'title' => 'Web Developer',
         'tdesc' => 'Фрилансер, выпускающий различные проекты для упрощенного выполнения интересных задач в сфере социальных сетей, и не только.'
     ],
     '#case' => [
-        'title' => 'portfolio',
+        'title' => 'Portfolio',
         'tdesc' => 'Фрилансер, выпускающий различные проекты для упрощенного выполнения интересных задач в сфере социальных сетей, и не только.'
     ],
     '#contacts' => [
-        'title' => 'contacts',
+        'title' => 'Contacts',
         'tdesc' => 'Фрилансер, выпускающий различные проекты для упрощенного выполнения интересных задач в сфере социальных сетей, и не только.'
     ]
 ];
@@ -59,9 +59,9 @@ span {
                 <li class="nav-item">
                     <a class="nav-link text-uppercase" href="#">Home</a>
                 </li>
-                <li class="nav-item">
+                <!--<li class="nav-item">
                     <a class="nav-link text-uppercase" href="#case">Case</a>
-                </li>
+                </li>-->
                 <li class="nav-item">
                     <a class="nav-link text-uppercase" href="#contacts">Contacts</a>
                 </li>
@@ -75,9 +75,10 @@ span {
             <div class="d-flex justify-content-center align-self-end col-12 text-center mt-n5">
                 <div class="row">
                     <div data-aos="fade-up" class="col-10 offset-1">
-                        <small class="d-block white-text font-weight-light">Фёдор Гаранин (@yesfedor)</small>
+                        <span class="d-block white-text font-weight-light">Фёдор Гаранин (@yesfedor)</span>
                         <span class="d-block white-text font-weight-light my-3"><?= $pageData['tdesc'] ?></span><br>
-                        <h1 id="iamin" class="display-1 white-text text-uppercase font-weight-bold"><?= $pageData['title'] ?></h1>
+                        <h1 id="imhere" class="display-3 white-text text-uppercase font-weight-bold"><?= $pageData['title'] ?></h1>
+                        <button onclick="nav.go(nav.createLink('#contacts'));" class="btn btn-rounded btn-large btn-outline-white mt-4">Оставить заявку</button>
                     </div>
                 </div>
             </div>
@@ -92,38 +93,18 @@ span {
     </div>
 </div>
 <script>
-nav.onunload = () => {
+function returnToMainPage(el) {
     $(init.data.appDefaultEl).html(init.data.appDefaultContent)
     init.header()
     init.footer()
+    return nav.go(el)
 }
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-function iaminChange() {
-    window.mainText = $('#iamin').html()
-    window.bestText = '- Я В ДЕЛЕ'
-    $('#iamin').html(window.bestText)
-    setTimeout(() => {
-        $('#iamin').html(window.mainText)
-    }, 800);
-}
-function iamin() {
-    setTimeout(() => {
-        iaminChange()
-    }, getRandomInt(800, 5000));
-}
-setInterval(()=>{
-    iamin()
-}, 5000)
-
-iamin()
 </script>
 <?php
     include_once ($landingsInclude);
 ?>
 <footer class="d-block page-footer font-small elegant-color-dark pt-2 text-center">
-        <a onclick="return nav.go(this);" href="/main" data-lang="text_return_to_main_page" class="d-block white-text my-0 pb-2"></a>
+        <a onclick="return returnToMainPage(this);" href="/main" data-lang="text_return_to_main_page" class="d-block white-text my-0 pb-2"></a>
     <div class="container-fluid footer-copyright text-center py-3 white-text">
         Copyright © <?= date('Y') ?> INY. All rights reserved.
     </div>
