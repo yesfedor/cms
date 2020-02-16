@@ -1,9 +1,8 @@
 <div class="container-fluid px-5 py-5 papper">
     <div class="d-none d-lg-block row mb-5">
         <div class="col-12 col-lg-10 offset-lg-1 text-left">
-            <h2 data-aos="fade-left" class="display-4 font-weight-bold black-text-deep">
-                <span data-aos="fade-left" class="d-block white-text-border text-uppercase">INY Creators -</span>
-                <span data-aos="fade-right" class="d-block white-text-border text-uppercase mt-4">I DO MORE THAN OTHERS</span>
+            <h4 data-aos="fade-left" class="font-weight-bold black-text-deep">
+                <span data-aos="fade-left" class="d-block white-text-border text-uppercase">INY Creators - I DO MORE THAN OTHERS</span>
 
                 <span data-aos="fade-up" class="d-block black-text-deep text-uppercase">Я открыт к новым проектам и</span>
                 <span data-aos="fade-down" class="d-block black-text-deep text-uppercase">люблю делать что-то сложное и дико</span>
@@ -11,7 +10,7 @@
                 <span data-aos="fade-down" class="d-block black-text-deep text-uppercase">не знаете как ее воплотить в жизнь,</span>
                 <span data-aos="fade-down" class="d-block black-text-deep text-uppercase">буду рад сделать это вместе с</span>
                 <span data-aos="fade-down" class="d-block black-text-deep text-uppercase mb-2">вами</span>
-            </h2>
+            </h4>
             <hr class="w-100 border">
         </div>
     </div>
