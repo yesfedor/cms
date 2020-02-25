@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark theme-header z-depth-0 my-0 py-1">
     <div class="container">
         <a href="/" onclick="return nav.go(this);" class="navbar-brand"><b class="theme-logo"><?= $logo ?></b></a>
-        <ul class="d-none d-lg-block navbar-nav mr-auto">
+        <ul class="d-none d-lg-block navbar-nav mr-auto pl-3">
             <li onclick="return userApi.notice.show();" class="nav-item"><i class="far fa-bell fa-lg waves-effect waves-light theme-nav-link"></i> <span id="notice-count" class="theme-nav-link"></span></li>
         </ul>
         <ul class="d-none d-lg-block navbar-nav ml-auto">
