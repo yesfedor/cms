@@ -5,9 +5,10 @@ $common_block = <<<common_block
     <div class="col-12 text-center"><div class="row py-1 px-1"><div class="col-12 my-5 text-center"><div class="preloader-wrapper big active"><div class="spinner-layer spinner-blue-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div></div></div></div>
 common_block;
 
-$html_comment_block = '<!-- '.PHP_EOL.' ADMIN: https://vk.com/yesfedor '.PHP_EOL.' CONTACT: https://vk.com/inysu '.PHP_EOL.' --> ';
+$html_comment_block = '<!--'.PHP_EOL.' ADMIN: https://vk.com/yesfedor'.PHP_EOL.' CONTACT: https://iny.su/landings/yesfedor'.PHP_EOL.'-->'.PHP_EOL;
 ?>
 <!DOCTYPE html>
+<?= $html_comment_block ?>
 <html lang="<?= $_SESSION['lang'] ?>">
     <head>
         <meta charset="UTF-8">
@@ -22,7 +23,7 @@ $html_comment_block = '<!-- '.PHP_EOL.' ADMIN: https://vk.com/yesfedor '.PHP_EOL
         <?= openGraph() ?>
         
         <link id="app-css-theme-data" rel="stylesheet" href="/web/css/theme/<?= $domainBase[appGetDomain()].$_SESSION['theme'] ?>.css?version=32">
-        <link rel="stylesheet" href="/web/css/themes.css?version=10">
+        <link rel="stylesheet" href="/web/css/themes.css?version=11">
         <link rel="stylesheet" href="/web/css/@offline.css">
     </head>
     <body>
@@ -40,7 +41,7 @@ $html_comment_block = '<!-- '.PHP_EOL.' ADMIN: https://vk.com/yesfedor '.PHP_EOL
             info: <?= json_encode($domainInfo[appGetDomain()], JSON_UNESCAPED_UNICODE) ?>,
             user: {auth: <?= ($_SESSION['user']['uid'] ? 'true':'false') ?>,  uid: '<?= $_SESSION['user']['uid'] ?>', url: '<?= $_SESSION['user']['url'] ?>', name: '<?= $_SESSION['user']['name'] ?>', surname: '<?= $_SESSION['user']['surname'] ?>', gender: '<?= $_SESSION['user']['gender'] ?>', access: '<?= $_SESSION['user']['access'] ?>', mail_verfy: '<?= $_SESSION['user']['mail_verfy'] ?>', number_verfy: '<?= $_SESSION['user']['number_verfy'] ?>'},
             hash: {appRoot:'<?= getAppRootHash() ?>', logout: '<?= $hash['logout'] ?>'},
-            themeVersion: {light: 64, dark: 135}
+            themeVersion: {light: 72, dark: 136}
         }
         let servers = {
             api: '',

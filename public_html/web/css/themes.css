@@ -85,7 +85,16 @@ html, body {
     transition-duration: var(--theme-duration-change);
     background-color: var(--theme-panel-primary)!important;
 }
-
+.theme-header {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    background-color: var(--theme-header)!important;
+}
+.theme-footer {
+    transition-property: background-color, color, border-color;
+    transition-duration: var(--theme-duration-change);
+    background-color: var(--theme-footer)!important;
+}
 /* Supported Bootstrap4 */
 h1, h2, h3, h4, h5, h6, b, span, small, big {
     transition-property: background-color, color, border-color;

@@ -2,7 +2,7 @@
     /* Main pallet */
     --theme-primary: #4285F4;
     --theme-primary-plus: #0d47a1;
-    --theme-background: #fafaff;
+    --theme-background: #ffffff;
     --theme-base-color: black;
     --theme-muted: #424242;
     --theme-title: #212121;
@@ -17,6 +17,8 @@
     --theme-logo: white;
     --theme-nav-link: white;
     --theme-icon: #4285F4;
+    --theme-header: #4285F4;
+    --theme-footer: #4285F4;
 
     /* Step pallet */
     --theme-white: white;
