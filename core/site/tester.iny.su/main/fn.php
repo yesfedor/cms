@@ -224,7 +224,7 @@ function tester_get_card_tpl($data) {
                 </div>
                 <div class="card-body text-center p-2">
                     <h5 class="card-title text-truncate">'.$data['title'].'</h5>
-                    <p class="card-text">'.$data['description'].'</p>
+                    <p class="card-text text-truncate">'.$data['description'].'</p>
                     <a onclick="return nav.go(this);" href="/test'.$data['id'].'" class="btn btn-rounded btn-primary">Пройти тест</a>
                 </div>
             </div>

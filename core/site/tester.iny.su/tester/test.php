@@ -32,7 +32,7 @@ if ($testOptRepeated) {
     ];
 
     $data_testOptRepeated = dbGetAll($query_testOptRepeated, $var_testOptRepeated);
-    if ($data_testOptRepeated[0]['uid'] == $_SESSION['user']['uid'] and $data_testOptRepeated[0]['tests_id'] == $test['id']) {
+    if ($data_testOptRepeated[0]['uid'] == $_SESSION['user']['uid'] and $data_testOptRepeated[0]['tests_id'] == $test['id'] and $test['author_uid'] != $_SESSION['user']['uid']) {
         $test = ['error' => 'testOptRepeated'];
         $block_testOptRepeated = '<script>$("#tester-test-repeated-block").show();</script>';
     }
@@ -55,7 +55,7 @@ if ($test['author_uid'] == $_SESSION['user']['uid']) {
             <h2 class="text-primary my-0"><small class="black-text">Название теста:</small> <?= $test['title'] ?></h2>
         </div>
         <div class="col-12 text-center py-2">
-            <?= $test['description'] ? '<h3 class="h4 text-50-black my-0"><small class="black-text">Описание теста:</small> '.textLink($test['description']).'</h3>':'' ?> 
+            <?= $test['description'] ? '<h5 class="text-50-black my-0">'.textLink($test['description']).'</h5>':'' ?> 
         </div>
         <div class="col-12 my-1 px-0"><hr class="w-100 border-primary mt-1 mb-3"></div>
 
