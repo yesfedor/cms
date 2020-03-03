@@ -265,9 +265,9 @@ function tester_test_get_new() {
     return $html;
 }
 
-function tester_test_get_my() {
+function tester_test_get_my($limit=6) {
     global $_SESSION;
-    $query = "SELECT * FROM tester_tests WHERE author_uid = :id ORDER BY id DESC LIMIT 6";
+    $query = "SELECT * FROM tester_tests WHERE author_uid = :id ORDER BY id DESC LIMIT ".$limit;
     $var = [
         ':id' => $_SESSION['user']['uid']
     ];

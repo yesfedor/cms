@@ -12,12 +12,30 @@ if ($test['opt']['notifications'] == 'true') $opt_text['notifications'] = 'Ув�
     else $opt_text['notifications'] = 'Уведомления отключены';
 
 if ($test['opt']['repeated'] == 'true') $opt_text['repeated'] = 'Повторное решение доступно';
-    else $opt_text['repeated'] = 'Повторное решение запрещено';
+    else {
+        $opt_text['repeated'] = 'Повторное решение запрещено';
+        $testOptRepeated = true;
+    }
 
 switch($test['opt']['overTime']) {
     case 0:
         $opt_text['overTime'] = 'Неограниченно';
     break;
+}
+
+// проерка на повторное решение
+if ($testOptRepeated) {
+    $query_testOptRepeated = "SELECT * FROM tester_answers WHERE uid = :uid and tests_id = :tests_id";
+    $var_testOptRepeated = [
+        ':uid' => $_SESSION['user']['uid'],
+        ':tests_id' => $test['id']
+    ];
+
+    $data_testOptRepeated = dbGetAll($query_testOptRepeated, $var_testOptRepeated);
+    if ($data_testOptRepeated[0]['uid'] == $_SESSION['user']['uid'] and $data_testOptRepeated[0]['tests_id'] == $test['id']) {
+        $test = ['error' => 'testOptRepeated'];
+        $block_testOptRepeated = '<script>$("#tester-test-repeated-block").show();</script>';
+    }
 }
 
 if ($test['explanation']) $test_text_explanation = '<h5><span class="d-block text-muted">Что нужно для решения: </span>'.textLink($test['explanation']).'</h5>';
@@ -89,6 +107,13 @@ if ($test['author_uid'] == $_SESSION['user']['uid']) {
             <div class="col-12"><div id="decisions-data" class="row"></div></div>
         </div>
     </div>
+    <div id="tester-test-repeated-block" class="row py-2" style="display:block;">
+        <div class="col-12 text-center py-2">
+            <div class="alert alert-danger" role="alert">
+                Вы уже решили данный тест<br> Повторное решение недоступно
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -106,6 +131,6 @@ testRootData = {
     isRoot: <?= $testRoot ?>,
     isHashUrl: <?= $isHashUrl ?>
 }
-init.js.add('tester-go', 'module/tester-go.js', 93)
+init.js.add('tester-go', 'module/tester-go.js', 95)
 </script>
 <?= ($_GET['json'] ? debug($test) : false) ?>

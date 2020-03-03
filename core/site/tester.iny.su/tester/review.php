@@ -5,7 +5,7 @@ $block_recoms_test = false;
     if (!$block_recoms_test) $block_recoms_test = 'hide';
 $block_new_test = tester_test_get_new();
     if (!$block_new_test) $block_new_test = 'hide';
-$block_new_test_my = tester_test_get_my();
+$block_new_test_my = tester_test_get_my(6);
     if (!$block_new_test_my) $block_new_test_my = 'hide';
 ?>
 <div class="container my-5">
@@ -36,7 +36,12 @@ $block_new_test_my = tester_test_get_my();
             <div class="row mt-n2 mb-3 px-2">
                 <div class="col-12 primary-color py-3 text-center z-depth-1-half rounded"><span class="white-text h3 my-0">Мои тесты</span></div>
             </div>
-            <div id="cards-new-my" class="row mb-5"><?= $block_new_test_my ?></div>
+            <div id="cards-new-my" class="row mb-3"><?= $block_new_test_my ?></div>
+            <div class="row mb-5">
+                <div class="col-10 offset-1 text-center my-0 py-2">
+                    <h5 class="my-0 py-0"><a class="theme-link" onclick="return nav.go(this);" href="/my">Посмотреть все мои тесты</a></h5>
+                </div>
+            </div>
         </div>
     </div>
 </div>

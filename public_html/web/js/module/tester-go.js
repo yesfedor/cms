@@ -1,22 +1,35 @@
 test = {
     timeoutans: false,
     timeoutanstype: '',
-    test_data: testJson,
+    test_data: {},
     active_question: 0,
-    questionCount: testJson.question.length,
+    questionCount: {},
     ans: [],
     init() {
-        this.showInfo()
+        if (typeof testJson.error == 'undefined') {
+            this.test_data = testJson
+            this.questionCount = testJson.question.length
+            this.showInfo()
+        } else {
+            if (testJson.error == 'testOptRepeated') {
+                $('#tester-test-info').hide()
+                $('#tester-test-wrapper').hide()
+                $('#tester-test-result').hide()
+                $('#tester-test-repeated-block').show()
+            }
+        }
     },
     showInfo() {
         $('#tester-test-info').show()
         $('#tester-test-wrapper').hide()
         $('#tester-test-result').hide()
+        $('#tester-test-repeated-block').hide()
     },
     showWrapper() {
         $('#tester-test-info').hide()
         $('#tester-test-wrapper').show()
         $('#tester-test-result').hide()
+        $('#tester-test-repeated-block').hide()
         this.active_question = 0
         this.addQuestionWrapper(this.test_data.question[0])
         
@@ -29,6 +42,7 @@ test = {
         $('#tester-test-info').hide()
         $('#tester-test-wrapper').hide()
         $('#tester-test-result').show()
+        $('#tester-test-repeated-block').hide()
     },
     board_prev() {
         //fst id #q-board_prev
