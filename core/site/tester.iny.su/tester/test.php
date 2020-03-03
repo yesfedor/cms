@@ -38,9 +38,6 @@ if ($testOptRepeated) {
     }
 }
 
-if ($test['explanation']) $test_text_explanation = '<h5><span class="d-block text-muted">Что нужно для решения: </span>'.textLink($test['explanation']).'</h5>';
-else $test_text_explanation = '';
-
 $testRoot = 'false';
 $isHashUrl = 'false';
 if ($test['author_uid'] == $_SESSION['user']['uid']) {
@@ -49,43 +46,72 @@ if ($test['author_uid'] == $_SESSION['user']['uid']) {
 }
 
 ?>
-<div class="container my-2 my-md-5 px-3 px-md-5">
-    <div id="tester-test-info" class="row white border border-primary rounded py-2">
-        <div class="col-12 text-center py-2">
-            <h2 class="text-primary my-0"><small class="black-text">Название теста:</small> <?= $test['title'] ?></h2>
+<div class="container my-3 px-3">
+    <!-- tester-test-info -->
+    <div id="tester-test-info" class="row white border border-primary rounded py-2 my-3">
+        <div class="col-12 col-md-10 offset-md-1 text-center">
+            <ul class="nav md-pills nav-justified pills-rounded pills-primary">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#tester-test-info--base" role="tab">Основное</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tester-test-info--settings" role="tab">Настройки</a>
+                </li>
+                <li class="nav-item <?= ($testRoot == 'true' ? 'd-block' : 'd-none') ?>">
+                    <a class="nav-link" data-toggle="tab" href="#tester-test-info--do" role="tab">Действия</a>
+                </li>
+            </ul>
+            <div class="col-12 my-2 px-0"><hr class="w-100 border-primary my-3"></div>
+            <div class="tab-content my-0 py-0">
+                <div class="tab-pane fade in show active" id="tester-test-info--base" role="tabpanel">
+                    <div class="row">
+                        <div class="col-12 my-2 px-0 text-center">
+                            <h3 class="black-text my-0 py-2">Название теста</h3>
+                            <span class="h5 text-muted my-0 py-2"><?= $test['title'] ?></span>
+                        </div>
+                        <div class="col-12 my-2 px-0"><hr class="w-50 border my-3"></div>
+                        <div class="col-12 text-center">
+                            <h3 class="black-text my-0 py-2">Описание теста</h3>
+                            <span class="h5 text-muted my-0 py-2"><?= ($test['description'] ? textLink($test['description']) : 'Описание отсутствует') ?></span>
+                        </div>
+                        <div class="col-12 my-2 px-0"><hr class="w-50 border my-3"></div>
+                        <div class="col-12 text-center">
+                            <h3 class="black-text my-0 py-2">Что нужно для решения</h3>
+                            <span class="h5 text-muted my-0 py-2"><?= ($test['explanation'] ? textLink($test['explanation']) : 'Автор не указал необходимых материалов') ?></span>
+                        </div>
+                        <div class="col-12 mt-2 mb-0 px-0"><hr class="w-50 border-primary my-2"></div>
+                        <div class="col-12 my-2 px-0 text-center">
+                            <button onclick="test.showWrapper();" type="button" role="button" class="btn btn-rounded btn-outline-primary z-depth-0 waves-effect waves-light">Приступить к решению</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tester-test-info--settings" role="tabpanel">
+                    <div class="row">
+                        <div class="col-12 my-2 text-center">
+                            <span class="h3 text-muted my-0 py-2">Настройки теста</span>
+                            <h5 class="black-text my-0 py-2">
+                                <span class="d-none text-black my-1">Время на выполнение теста: <?= $opt_text['overTime'] ?></span>
+                                <span class="d-block text-black my-1"><?= $opt_text['repeated'] ?></span>
+                                <span class="d-block text-black my-1"><?= $opt_text['showAnswers'] ?></span>
+                                <span class="d-block text-black my-1"><?= $opt_text['notifications'] ?></span>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tester-test-info--do" role="tabpanel">
+                    <div class="row">
+                        <div class="col-12 my-2 px-0 text-center">
+                            <h5><a id="testRoot_toggle" onclick="testRoot.showDecisions(); return false;" class="theme-link" href="#">Показать решения теста</a></h5>
+                            <h5><a id="testRoot_toggle" onclick="$('#tester-test-delete-confirm').modal('show'); return false;" class="theme-link" href="#">Удалить тест</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-12 text-center py-2">
-            <?= $test['description'] ? '<h5 class="text-50-black my-0">'.textLink($test['description']).'</h5>':'' ?> 
-        </div>
-        <div class="col-12 my-1 px-0"><hr class="w-100 border-primary mt-1 mb-3"></div>
-
-        <!-- Info -->
-        <div class="col-12 col-md-6 text-center">
-            <h4 class="h4 text-primary">Инфо</h4>
-            <h5>Автор: <a onclick="return nav.away(this);" href="https://iny.su/id<?= $test['author_uid'] ?>"><?= tetser_get_author($test['author_uid']) ?></a></h5>
-            <?php
-            if ($testRoot == 'true') {
-                echo '<h5><a id="testRoot_toggle" onclick="testRoot.showDecisions(); return false;" href="#">Показать решения</a></h5>';
-                echo '<h5><a id="testRoot_toggle" onclick="$(\'#tester-test-delete-confirm\').modal(\'show\'); return false;" href="#">Удалить тест</a></h5>';
-            }
-            ?>
-            <?= $test_text_explanation ?>
-        </div>
-        <div class="col-12 col-md-6 text-center">
-            <h4 class="h4 text-primary">Настройки теста</h3>
-            <h5>
-                <span class="d-block text-black my-1">Время на выполнение теста: <?= $opt_text['overTime'] ?></span>
-                <span class="d-block text-black my-1"><?= $opt_text['repeated'] ?></span>
-                <span class="d-block text-black my-1"><?= $opt_text['showAnswers'] ?></span>
-                <span class="d-none text-black my-1"><?= $opt_text['notifications'] ?></span>
-            </h5>
-        </div>
-        <div class="col-12 mt-3 text-center">
-            <button onclick="test.showWrapper();" type="button" role="button" class="btn btn-rounded btn-outline-primary z-depth-0 waves-effect waves-light">Приступить к решению</button>
-        </div>
-
     </div>
-    <div id="tester-test-wrapper" class="row white border border-primary rounded py-2">
+
+    <!-- tester-test-wrapper -->
+    <div id="tester-test-wrapper" class="row white border border-primary rounded py-2 my-3">
         <div id="q-tabs" class="col-12 text-center py-2"><h3 class="my-0">Всего вопросов: <?= count($test['question']) ?></h3></div>
         <div class="col-12 my-1 px-0"><hr class="w-100 border-primary my-2"></div>
         <div class="col-12 text-center py-2">
@@ -99,23 +125,26 @@ if ($test['author_uid'] == $_SESSION['user']['uid']) {
             </div>
         </div>
     </div>
-    <div id="tester-test-result" class="row white border border-primary rounded py-2">
-        <div id="r-info" class="col-12 text-center py-2">loading..</div>
+
+    <!-- tester-test-result -->
+    <div id="tester-test-result" class="row white border border-primary rounded py-2 my-3">
+        <div id="r-info" class="col-12 text-center py-2">Loading..</div>
     </div>
+
+    <!-- tester-test-decisions -->
     <div id="tester-test-decisions" class="row white border border-primary rounded py-2 my-3">
-        <div class="col-12 text-center py-2">
-            <div class="col-12"><div id="decisions-data" class="row"></div></div>
+        <div class="col-12 text-center">
+            <div id="decisions-data" class="row"></div>
         </div>
     </div>
-    <div id="tester-test-repeated-block" class="row py-2" style="display:block;">
-        <div class="col-12 text-center py-2">
-            <div class="alert alert-danger" role="alert">
-                Вы уже решили данный тест<br> Повторное решение недоступно
-            </div>
+
+    <!-- tester-test-repeated-block -->
+    <div id="tester-test-repeated-block" class="row white border border-primary rounded py-2 my-3">
+        <div class="alert alert-danger" role="alert">
+            Вы уже решили данный тест<br> Повторное решение недоступно
         </div>
     </div>
 </div>
-
 <script>
 nav.onunload = () => {
     test = false
