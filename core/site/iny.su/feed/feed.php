@@ -22,6 +22,11 @@ function blogNewOptionGet() {
             'title' => 'Доступны тесты приложения',
             'text' => 'Взгляните на результаты, данные по страницам<br>INY.SU: https://go.iny.su/bnb <br>Landing: https://go.iny.su/bnc <br>Tester Online: https://go.iny.su/bnd',
             'poster781x521' => 'https://go.iny.su/web/file/ogimg/main/dev.png'
+        ],
+        '3' => [
+            'title' => 'Закрытая медиатека',
+            'text' => 'Здесь вы найдете фильмы и сериалы на любой вкус и цвет в хорошем качестве: https://iny.su/media',
+            'poster781x521' => 'https://go.iny.su/web/file/ogimg/main/media.png',
         ]
     ];
     $dataAll = array_reverse($dataAll);
