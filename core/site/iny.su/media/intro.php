@@ -84,7 +84,7 @@ $warp = "warp-page";
 </div>
 
 <script>
-init.js.add('wc-AppMediaCard', 'wc:AppMediaCard', 27)
+init.js.add('wc-AppMediaCard', 'wc:AppMediaCard', 29)
 setTimeout(() => {
     mediaIntro.init()
 }, 500);

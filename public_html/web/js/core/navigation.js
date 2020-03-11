@@ -20,7 +20,17 @@ var nav = {
         }
     },
     onunload: false,
-
+    url: {
+        get() {
+            return document.location.href
+        },
+        query(name) {
+            let url_string = nav.url.get()
+            let url_obj = new URL(url_string)
+            let query_result = url_obj.searchParams.get(name)
+            return query_result
+        }
+    },
     navEmmetOnunload() {
         if (typeof this.onunload == 'function') {
             this.onunload()

@@ -9,6 +9,7 @@ class AppMediaCard extends HTMLElement {
         let type = el.getAttribute('data-type')
         let title = el.getAttribute('data-title')
         let kpid = el.getAttribute('data-kpid')
+        nav.changeUrl('/media?kpid=' + kpid, 'go')
         
         el.setAttribute('onclick', 'return mediaIntro.scene.render(this);')
         el.setAttribute('href', kpid)
@@ -52,8 +53,9 @@ let mediaIntro = {
         mediaIntro.test_search()
     },
     kpid_search() {
-        if (document.location.hash != "") {
-            $('#kpid_search').attr('data-kpid', document.location.hash.substr(1))
+        let kpid = nav.url.query('kpid')
+        if (kpid != null) {
+            $('#kpid_search').attr('data-kpid', kpid)
             mediaIntro.scene.render(mediaIntro.el.kpid_search)
         }
         $('#kpid_search').on('input', () => {
