@@ -15,5 +15,9 @@ if ($_SESSION['domain-redirect']) {
     }
     $_SESSION['domain-redirect'] = false;
 }
+if ($_SESSION['page-redirect']) {
+    echo '<script>nav.go(nav.createLink(\''.$_SESSION['page-redirect'].'\'));</script>';
+    $_SESSION['page-redirect'] = false;
+}
 if (!$_GET['act']) echo mainLocation();
 ?>

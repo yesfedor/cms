@@ -1,4 +1,8 @@
-<?php http_response_code(403) ?>
+<?php
+http_response_code(403);
+$_SESSION['page-redirect'] = appGetUrl();
+header('Location: /');
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
