@@ -24,11 +24,11 @@ customElements.define('media-card', AppMediaCard);
 
 let mediaIntro = {
     el: {
-        test_search: document.getElementById('test_search'),
-        kpid_search: document.getElementById('kpid_search'),
-        mediaNewMovie: document.getElementById('mediaNewMovie'),
-        mediaNewSerial: document.getElementById('mediaNewSerial'),
-        testSearchResultBox: document.getElementById('testSearchResultBox')
+        test_search: false,
+        kpid_search: false,
+        mediaNewMovie: false,
+        mediaNewSerial: false,
+        testSearchResultBox: false
     },
     api: {
         path: 'https://videocdn.tv/api/',
@@ -40,6 +40,12 @@ let mediaIntro = {
         search: {}
     },
     init() {
+        mediaIntro.el.test_search = document.getElementById('test_search')
+        mediaIntro.el.kpid_search = document.getElementById('kpid_search')
+        mediaIntro.el.mediaNewMovie = document.getElementById('mediaNewMovie')
+        mediaIntro.el.mediaNewSerial = document.getElementById('mediaNewSerial')
+        mediaIntro.el.testSearchResultBox = document.getElementById('testSearchResultBox')
+
         mediaIntro.getData('movies', 1)
         mediaIntro.getData('tv-series', 1)
         mediaIntro.kpid_search()
