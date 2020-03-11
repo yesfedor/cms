@@ -24,9 +24,11 @@ customElements.define('media-card', AppMediaCard);
 
 let mediaIntro = {
     el: {
+        test_search: document.getElementById('test_search'),
         kpid_search: document.getElementById('kpid_search'),
         mediaNewMovie: document.getElementById('mediaNewMovie'),
-        mediaNewSerial: document.getElementById('mediaNewSerial')
+        mediaNewSerial: document.getElementById('mediaNewSerial'),
+        testSearchResultBox: document.getElementById('testSearchResultBox')
     },
     api: {
         path: 'https://videocdn.tv/api/',
@@ -34,12 +36,14 @@ let mediaIntro = {
     },
     data: {
         movie: {},
-        serial: {}
+        serial: {},
+        search: {}
     },
     init() {
         mediaIntro.getData('movies', 1)
         mediaIntro.getData('tv-series', 1)
         mediaIntro.kpid_search()
+        mediaIntro.test_search()
     },
     kpid_search() {
         if (document.location.hash != "") {
@@ -50,6 +54,15 @@ let mediaIntro = {
             let kpids = $('#kpid_search').val()
             $('#kpid_search').attr('data-kpid', kpids)
             mediaIntro.scene.render(mediaIntro.el.kpid_search)
+        })
+    },
+    test_search() {
+        $('#test_search').on('input', () => {
+            let kpids = $('#test_search').val()
+            if (kpids !== '') {
+                mediaIntro.getData('short', 1, {title: kpids})
+                $('#testSearchResult').fadeIn()
+            } else $('#testSearchResult').fadeOut()
         })
     },
     movie: {
@@ -71,6 +84,17 @@ let mediaIntro = {
         },
         next() {
             if (mediaIntro.serial.page < 50) mediaIntro.getData('tv-series', mediaIntro.serial.page + 1)
+            return false;   
+        }
+    },
+    search: {
+        page: 1,
+        prev() {
+            if (mediaIntro.search.page > 1) mediaIntro.getData('short', mediaIntro.search.page - 1)
+            return false;
+        },
+        next() {
+            if (mediaIntro.search.page < 50) mediaIntro.getData('short', mediaIntro.search.page + 1)
             return false;   
         }
     },
@@ -121,11 +145,11 @@ let mediaIntro = {
             return false
         }
     },
-    getData(mediaType='movies', page=1) {
+    getData(mediaType='movies', page=1, plusData={}) {
         $.ajax({
             type: "GET",
             url: mediaIntro.api.path + mediaType,
-            data: {api_token: mediaIntro.api.token, page: page, limit: 6, ordering: 'created', direction: 'desc'},
+            data: Object.assign({api_token: mediaIntro.api.token, page: page, limit: 6, ordering: 'created', direction: 'desc'}, plusData),
             dataType: "json",
             success: function (data) {
                 switch(mediaType) {
@@ -154,6 +178,20 @@ let mediaIntro = {
                             newNode.setAttribute('data-title', data.ru_title)
                             newNode.setAttribute('data-kpid', data.kinopoisk_id)
                             mediaIntro.el.mediaNewSerial.appendChild(newNode)
+                        })
+                    break;
+                    case 'short':
+                        mediaIntro.el.testSearchResultBox.innerHTML = ''
+                        mediaIntro.search.page = page
+                        mediaIntro.data.search = data
+                        $('#testSearchResultPage').html(page)
+                        mediaIntro.data.search.data.forEach((data) => {
+                            if (data.kp_id != null) {
+                                let newNode = document.createElement('media-card')
+                                newNode.setAttribute('data-title', data.title)
+                                newNode.setAttribute('data-kpid', data.kp_id)
+                                mediaIntro.el.testSearchResultBox.appendChild(newNode)
+                            }
                         })
                     break;
                 }
