@@ -49,6 +49,15 @@ if ($_SESSION['user']['uid']) {
                     </a>
                     '.(getUserAccessScore() >= 8 ? '
                     <div class="row my-0 py-0 nav-link pr-3"><div class="col-9 offset-3 px-2"><hr class="w-100 my-0 py-0"></div></div>
+                    <a class="nav-link waves-effect" href="/media" onclick="return nav.go(this);">
+                        <div class="row my-0 py-0">
+                            <div class="col-3 text-right px-2">
+                                <i class="fas fa-play fa-lg theme-icon"></i>
+                            </div>
+                            <div class="col-9 text-left px-2"><span>Media</span></div>
+                        </div>
+                    </a>
+                    <div class="row my-0 py-0 nav-link pr-3"><div class="col-9 offset-3 px-2"><hr class="w-100 my-0 py-0"></div></div>
                     <a class="nav-link waves-effect" href="//'.$domainBase['dev'].'" onclick="return nav.away(this);">
                         <div class="row my-0 py-0">
                             <div class="col-3 text-right px-2">
