@@ -213,6 +213,19 @@ var init = {
         }, 100)
     },
 
+    preload: {
+        duration: 2000,
+        go(duration=2000) {
+            init.preload.duration = duration
+            $('application').hide()
+            $('common').show()
+            setTimeout(() => {
+                $('common').hide()
+                $('application').show()  
+            }, init.preload.duration);
+        }
+    },
+
     start(setting=false) {
         // test from
         let fromReload = /(\?|\&)from=([A-Za-z0-9]{0,50})/g
