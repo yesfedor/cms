@@ -12,7 +12,7 @@ $warp = "warp-page";
 <div id="scene_box" class="col-10 offset-1 rounded text-center my-3" style="display:none;">
     <div class="row py-2">
         <div class="col-12 embed-responsive embed-responsive-16by9">
-            <iframe id="scene_player" class="embed-responsive-item" src="/" allowfullscreen></iframe>
+            <iframe id="scene_player" class="embed-responsive-item" src="" allowfullscreen></iframe>
         </div>
         <div class="col-12 text-left">
             <h4 class="my-0 py-2"><span id="scene_type"></span> <span id="scene_title"></span>, <small id="scene_year"></small></h4>
