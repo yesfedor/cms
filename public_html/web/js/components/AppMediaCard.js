@@ -9,7 +9,6 @@ class AppMediaCard extends HTMLElement {
         let type = el.getAttribute('data-type')
         let title = el.getAttribute('data-title')
         let kpid = el.getAttribute('data-kpid')
-        nav.changeUrl('/media?kpid=' + kpid, 'go')
         
         el.setAttribute('onclick', 'return mediaIntro.scene.render(this);')
         el.setAttribute('href', kpid)
@@ -138,6 +137,7 @@ let mediaIntro = {
                 data: {api_token: mediaIntro.api.token, kinopoisk_id: kpid},
                 dataType: "json",
                 success: function (data) {
+                    nav.changeUrl('/media?kpid=' + kpid, 'go')
                     $('#scene_player').attr('src', data.data[0].iframe_src)
                     if (data.data[0].type == 'movie') $('#scene_type').html('Фильм')
                     if (data.data[0].type == 'serial') $('#scene_type').html('Сериал')
