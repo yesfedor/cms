@@ -96,11 +96,11 @@ let mediaIntro = {
     search: {
         page: 1,
         prev() {
-            if (mediaIntro.search.page > 1) mediaIntro.getData('short', mediaIntro.search.page - 1)
+            if (mediaIntro.search.page > 1) mediaIntro.getData('short', mediaIntro.search.page - 1, {title: $('#test_search').val()})
             return false;
         },
         next() {
-            if (mediaIntro.search.page < 50) mediaIntro.getData('short', mediaIntro.search.page + 1)
+            if (mediaIntro.search.page < 50) mediaIntro.getData('short', mediaIntro.search.page + 1, {title: $('#test_search').val()})
             return false;   
         }
     },
