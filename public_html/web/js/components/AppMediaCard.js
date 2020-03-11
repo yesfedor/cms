@@ -40,7 +40,7 @@ let mediaIntro = {
         search: {}
     },
     init() {
-        init.preload.go(2000)
+        init.preload.go(1500)
         
         mediaIntro.el.test_search = document.getElementById('test_search')
         mediaIntro.el.kpid_search = document.getElementById('kpid_search')
