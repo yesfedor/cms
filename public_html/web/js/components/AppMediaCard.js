@@ -199,4 +199,3 @@ let mediaIntro = {
         })
     }
 }
-mediaIntro.init()
