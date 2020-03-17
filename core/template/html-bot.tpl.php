@@ -11,6 +11,8 @@ $html_comment_block = '<!-- '.PHP_EOL.' ADMIN: https://vk.com/yesfedor '.PHP_EOL
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <meta name="yandex-verification" content="4516b047d1a2799c" />
 
         <noscript><meta http-equiv="refresh" content="0; URL=/app.noscript.php"></noscript>
 
