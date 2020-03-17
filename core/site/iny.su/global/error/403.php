@@ -1,7 +1,7 @@
 <?php
 http_response_code(403);
 $_SESSION['page-redirect'] = appGetUrl();
-header('Location: /');
+header('Location: /auth');
 ?>
 <!DOCTYPE html>
 <html lang="en">
