@@ -37,7 +37,7 @@ var nav = {
         }
         this.onunload = false
     },
-    scroll (el) {
+    scroll(el) {
         var elementClick = $(el).attr("href");
         var destination = $(elementClick).offset().top;
         $('html, body').animate({ scrollTop: destination }, 600);
