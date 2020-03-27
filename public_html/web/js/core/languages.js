@@ -11,7 +11,7 @@ var language = {
         chenged: true
     },
     define () {
-        l = (navigator.language || navigator.systemLanguage || navigator.userLanguage || 'en').substr(0, 2).toLowerCase()
+        let l = (navigator.language || navigator.systemLanguage || navigator.userLanguage || 'en').substr(0, 2).toLowerCase()
         return l
     },
     getAllLanguage() {
@@ -27,8 +27,7 @@ var language = {
     },
     chenge(new_lang) {
         language.data.chenged = false
-        $('application').fadeOut('100')
-        $('common').html(nav.data.tplLoaderModule).fadeIn('100')
+        init.preload.go(3500)
 
         $.ajax({
             type: "GET",
@@ -45,13 +44,7 @@ var language = {
                     $('[data-lang]').each((i, el)=>{
                         $(el).attr('data-lang-success', 'false')
                     })
-
-                    setTimeout(() => {
-                        //nav.router(window.location.href, 'go')
-                        language.data.chenged = true
-                        $('common').html('').fadeOut('100')
-                        $('application').fadeIn('200')
-                    }, 500);
+                    language.data.chenged = true
                 }, 500);
             }
         });
@@ -70,7 +63,7 @@ var language = {
             });
         }
         $('[data-lang][data-lang-success != true]').each((i, el)=>{
-            lang_str = $(el).attr('data-lang')
+            let lang_str = $(el).attr('data-lang')
             $(el).attr('data-lang-success', 'true')
             if (language.data.locale[lang_str]) $(el).html(language.data.locale[lang_str])
             else $(el).html(language.data.locale['string_not_found'])
