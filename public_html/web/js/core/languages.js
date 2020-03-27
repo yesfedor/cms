@@ -27,7 +27,7 @@ var language = {
     },
     chenge(new_lang) {
         language.data.chenged = false
-        init.preload.go(3500)
+        init.preload.go(4000)
 
         $.ajax({
             type: "GET",
