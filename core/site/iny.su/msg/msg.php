@@ -12,7 +12,7 @@ $pageActive['msg'] = 'active';
         <div class="col-12">
             <div class="row h70vh justify-content-center align-items-center">
                 <div class="col-10 text-center">
-                    <h4 class="text-muted my-0 py-0">Когда вы начнете переписку, она появится здесь</h4>
+                    <h4 data-lang="ui_msg_there_are_no_dialogs" class="text-muted my-0 py-0"></h4>
                 </div>
             </div>
         </div>
@@ -20,5 +20,5 @@ $pageActive['msg'] = 'active';
 </div>
 
 <script>
-toastr.info('Модуль отключен')
+toastr.info(language.data.locale.string_not_found)
 </script>
