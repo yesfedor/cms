@@ -12,10 +12,10 @@
                 <div class="col-12">
                     <form id="form-settings" class="row">
                         <div class="col-10 offset-1 my-3 py-1">
-                            <h4 class="theme-text mb-3">Подтверждение входа по номеру телефона пока не доступно</h4>
+                            <h4 data-lang="ui_settings_security_by_phone" class="theme-text mb-3"></h4>
                             <h5>
-                            <a class="d-block mb-2" onclick="return nav.go(this);" href="/?act=activity_history&hash=<?= getAppRootHash() ?>">Показать историю активности</a>
-                            <a class="d-block mb-2" onclick="return nav.go(this);" href="/?act=logout_all&hash=<?= $hash['logout'] ?>">Завершить все сеансы</a>
+                                <a data-lang="ui_settings_security_show_activity_history" class="d-block mb-2" onclick="return nav.go(this);" href="/?act=activity_history&hash=<?= getAppRootHash() ?>"></a>
+                                <a data-lang="ui_settings_security_end_all_sessions" class="d-block mb-2" onclick="return nav.go(this);" href="/?act=logout_all&hash=<?= $hash['logout'] ?>"></a>
                             </h5>
                         </div>
                     </form>

@@ -11,13 +11,13 @@
                 <hr class="w-100 my-0 py-0 mb-2 pb-2 border-primary">
                 <div class="col-12">
                     <form id="form-settings" class="row">
-                        <?= genEdit('password', 'settingsNewPassword', 'settingsNewPassword', 'Изменить пароль', false) ?>
-                        <?= genEdit('password', 'settingsNewPasswordRepeat', 'settingsNewPasswordRepeat', 'Повторите пароль', false, 'display:none;') ?>
-                        <?= genEdit('password', 'settingsPassword', 'settingsPassword', 'Старый пароль', false, 'display:none;') ?>
+                        <?= genEdit('password', 'settingsNewPassword', 'settingsNewPassword', '<span data-lang="ui_settings_base_change_password"></span>', false) ?>
+                        <?= genEdit('password', 'settingsNewPasswordRepeat', 'settingsNewPasswordRepeat', '<span data-lang="ui_settings_base_repeat_password"></span>', false, 'display:none;') ?>
+                        <?= genEdit('password', 'settingsPassword', 'settingsPassword', '<span data-lang="ui_settings_base_old_password"></span>', false, 'display:none;') ?>
 
-                        <?= genEdit('text', 'settingsMail', 'settingsMail', 'Электронная почта', $_SESSION['user']['mail']) ?>
+                        <?= genEdit('text', 'settingsMail', 'settingsMail', '<span data-lang="ui_settings_base_mail"></span>', $_SESSION['user']['mail']) ?>
 
-                        <?= genEdit('text', 'settingsUserUrl', 'settingsUserUrl', 'Адрес страницы', 'https://'.appGetDomain().'/'.($_SESSION['user']['url'] ? $_SESSION['user']['url'] : 'id'.$_SESSION['user']['uid'])) ?>
+                        <?= genEdit('text', 'settingsUserUrl', 'settingsUserUrl', '<span data-lang="ui_settings_base_user_link"></span>', 'https://'.appGetDomain().'/'.($_SESSION['user']['url'] ? $_SESSION['user']['url'] : 'id'.$_SESSION['user']['uid'])) ?>
 
                         <div class="col-10 offset-1 my-1 py-1">
                             <h5 id="settings-status" class="theme-text my-0"></h5>
@@ -34,8 +34,8 @@
 $('#settingsNewPassword').on('input', () => {
     let el = '#settingsNewPassword'
     let elLabel = '[for = settingsNewPassword]'
-    let elLabelTextTrue = '<span>Новый пароль</span>'
-    let elLabelTextFalse = '<span>Изменить пароль</span>'
+    let elLabelTextTrue = '<span data-lang="ui_settings_base_new_password"></span>'
+    let elLabelTextFalse = '<span data-lang="ui_settings_base_change_password"></span>'
     let checkValue = $(el).val()
     if (checkValue != '' && checkValue != ' ') {
         $(elLabel).html(elLabelTextTrue)
@@ -46,5 +46,6 @@ $('#settingsNewPassword').on('input', () => {
         $('#settingsNewPasswordRepeat').parent().fadeOut()
         $('#settingsPassword').parent().fadeOut()
     }
+    language.render()
 })
 </script>
