@@ -75,7 +75,16 @@ if ($_SESSION['user']['uid']) {
                             <a class="text-muted px-1" onclick="return nav.go(this);" href="/blog"><span data-lang="ui_menu_blog"></span></a>
                             <a class="text-muted px-1" onclick="return nav.go(this);" href="/dev"><span data-lang="ui_menu_dev"></span></a><br>
                             <a class="text-muted px-1" onclick="return nav.go(this);" href="/ads"><span data-lang="ui_menu_ads"></span></a>
-                            <a class="text-muted px-1" onclick="return nav.go(this);" href="#"><span data-lang="ui_menu_more"></span></a>
+                            <div class="dropdown d-inline-block">
+                                <a class="nav-link dropdown-toggle px-1" type="button" id="ui_menu_more_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span data-lang="ui_menu_more"></span></a>
+                                <div class="dropdown-menu theme-header">
+                                    <h6 data-lang="ui_menu_more_language" class="dropdown-header"></h6>
+                                    <a class="dropdown-item theme-nav-link" onclick="language.chenge(\'ru\'); return false;" href="#">Русский</a>
+                                    <a class="dropdown-item theme-nav-link" onclick="language.chenge(\'en\'); return false;" href="#">English</a>
+                                    <div class="dropdown-divider"></div>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

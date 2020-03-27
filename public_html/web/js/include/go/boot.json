@@ -14,16 +14,16 @@
 		}
 	},
 	"js": {
+		"popper": {
+			"url": "base:/web/vendor/js/popper.min.js",
+			"version": false
+		},
 		"bootstrap": {
 			"url": "base:/web/vendor/js/bootstrap.min.js",
 			"version": false
 		},
 		"mdb": {
 			"url": "base:/web/vendor/js/mdb.min.js",
-			"version": false
-		},
-		"popper": {
-			"url": "base:/web/vendor/js/popper.min.js",
 			"version": false
 		},
 		"icon": {
