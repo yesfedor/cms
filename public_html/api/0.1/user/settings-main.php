@@ -94,7 +94,7 @@ if ($settingsUserUrl) {
                 $_SESSION['user']['url'] = $settingsUserUrl;
 
                 setStatus('#settings-status', 'Вы успешно заняли короткий адрес, для корректной работы сайта, пожалуйста, обновите страницу');
-                setJs('config.user.url = \''.$settingsUserUrl.'\'; $(\'#app-main-menu_profile\').attr(\'href\', \'/id'.$settingsUserUrl.'\');');
+                setJs('config.user.url = \''.$settingsUserUrl.'\'; $(\'#app-main-menu_profile\').attr(\'href\', \'/'.$settingsUserUrl.'\');');
             break;
             case 'deny':
                 setStatus('#settings-status', 'Адрес уже занят');

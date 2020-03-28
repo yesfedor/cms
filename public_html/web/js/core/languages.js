@@ -27,7 +27,7 @@ var language = {
     },
     chenge(new_lang) {
         language.data.chenged = false
-        init.preload.go(4000)
+        init.preload.go(3000)
 
         $.ajax({
             type: "GET",
@@ -73,6 +73,16 @@ var language = {
         if (typeof dateParse !== 'undefined') {
             dateParse.render()
         }
+        language.activeToggle()
+    },
+    activeToggle() {
+        // data-lang-toggle="en" ; -> add class "active"
+        // language.data.language -> language = en
+        $('[data-lang-toggle]').each((i, el) => {
+            let langStr = $(el).attr('data-lang-toggle')
+            if (language.data.language == langStr) $(el).addClass('active')
+            else $(el).removeClass('active')
+        })
     },
     init() {
         define_lang = language.define()
