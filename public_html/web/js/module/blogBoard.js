@@ -2,6 +2,7 @@ let blogBoard = {
     init() {
         blogBoard.blogNavbar()
         blogBoard.categoriesToggle()
+        blogBoard.render(blogBoardPostsData)
     },
     blogNavbar() {
         let blogNavbarCurrent = nav.url.query('category')
@@ -53,6 +54,22 @@ let blogBoard = {
             }
         })
         $('#dropdownCategoriesToggleMenu').html(toggleHTML)
+    },
+    render(card) {
+        if (card.length >= 1) {
+            card.forEach((item)=>{
+                let html = `
+                    <blog-post post-id="${item.id}" url="${item.url}" uid="${item.uid}" category="${item.category}" date_create="${item.date_create}" title="${item.title}" poster_url="${item.poster_url}" preview="${item.preview}"><blog-post/>
+                `
+                $('#board-posts').append(html)
+            })
+        } else {
+            let html = `
+                <div class="col-12 text-center theme-panel rounded my-3 py-5">
+                    <h4 data-lang="string_not_found" class="theme-title"></h4>
+                </div>
+            `
+            $('#board-posts').append(html)
+        }
     }
 }
-blogBoard.init()
