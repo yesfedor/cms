@@ -39,11 +39,10 @@ else $blogBoardPostsData = blogPostsGetAll();
                     </div>
                     <!-- Blog post -->
                     <div id="board-posts" class="row mt-3"></div>
-                    <div id="stoper" class="d-block"></div>
                 </div>
                 <div class="col-12 col-lg-4">
                     <!-- Blog Helper -->
-                    <div class="row sticky">
+                    <div class="row">
                         <div class="col-12 text-center">
                             <h4 class="h4 theme-title">Подписка на блог</h4>
                             <h5 class="h4 theme-text">Вы можете получать новости блога по электронной почте, привязанной к Вашему аккаунту.</h5>
@@ -79,12 +78,4 @@ else {
         }
     }, 100);
 }
-
-$(function () {
-  $(".sticky").sticky({
-    topSpacing: 0,
-    zIndex: 2,
-    stopper: "#stoper"
-});
-});
 </script>
