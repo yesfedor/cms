@@ -13,6 +13,8 @@ switch($url_p1) {
         else $blogFile = 'board';
     break;
 }
+$blogFn = $thisSitePath.'blog/fn.php';
+include_once($blogFn);
 $blogPage = $thisSitePath.'blog/'.$blogFile.'.php';
 include_once($blogPage);
 ?>

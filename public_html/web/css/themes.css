@@ -30,7 +30,7 @@ html, body {
     transition-duration: var(--theme-duration-change);
     background-color: var(--theme-primary-plus)!important;
 }
-.theme-primary-plu-text {
+.theme-primary-plus-text {
     transition-property: background-color, color, border-color;
     transition-duration: var(--theme-duration-change);
     color: var(--theme-primary-plus)!important;
