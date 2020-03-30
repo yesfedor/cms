@@ -1,8 +1,19 @@
 let blogBoard = {
     init() {
+        blogBoard.activate()
         blogBoard.blogNavbar()
         blogBoard.categoriesToggle()
         blogBoard.render(blogBoardPostsData)
+    },
+    activate() {
+        if (nav.url.query('category') === null) blogFirstPost = false
+        else blogFirstPost = true
+
+        nav.onunload = () => {
+            blogFirstPost = false
+            blogBoardPostsData = false
+            delete blogBoardPostsData
+        }
     },
     blogNavbar() {
         let blogNavbarCurrent = nav.url.query('category')
@@ -33,6 +44,11 @@ let blogBoard = {
                 title: 'Разработка'
             }
         ]
+    },
+    getCategory(categoryId) {
+        let arr = blogBoard.getCategories(),
+            obj = arr.find(item => item.category == categoryId)
+        return obj
     },
     categoriesToggle() {
         let blogNavbarCurrent = nav.url.query('category') || 0
