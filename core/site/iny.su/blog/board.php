@@ -23,6 +23,15 @@ else $blogBoardPostsData = blogPostsGetAll();
                                 <a onclick="return nav.go(this);" href="/blog?category=1">
                                     <span id="blogNavbarImplementation" class="my-0 py-3 pr-3">В реализации</span>
                                 </a>
+                                <?php
+                                if ($blogRoot) {
+                                    echo '
+                                <a onclick="return nav.go(this);" href="/blog/create">
+                                    <span class="text-muted my-0 py-3 pr-3">Добавить запись</span>
+                                </a>
+                                    ';
+                                }
+                                ?>
                             </h4>
                         </div>
                         <div class="col-12 col-lg-4 text-left text-lg-right">

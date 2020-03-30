@@ -1,6 +1,9 @@
 <?php
 $warp = 'warp';
 
+$blogRoot = false;
+if (getUserAccessScore() >= 64) $blogRoot = true;
+
 switch($url_p1) {
     default:
         $blogFile = 'board';
@@ -9,7 +12,7 @@ switch($url_p1) {
         $blogFile = 'post';
     break;
     case 'create':
-        if (getUserAccessScore() >= 64) $blogFile = 'create';
+        if ($blogRoot) $blogFile = 'create';
         else $blogFile = 'board';
     break;
 }
