@@ -42,14 +42,14 @@
                                     <h5 class="h5 dropdown-header theme-title">Подготовка к публикации</h5>
                                     <div class="dropdown-divider"></div>
                                     <div class="form-group">
-                                        <label for="blogEditorPublishPoster">Обложка</label>
-                                        <input type="text" class="form-control" id="blogEditorPublishPoster" placeholder="https://iny.su/poster.png">
+                                        <label class="theme-text" for="blogEditorPublishPoster">Обложка</label>
+                                        <input type="text" class="theme-panel theme-text form-control" id="blogEditorPublishPoster" placeholder="https://iny.su/poster.png">
                                     </div>
                                     <div class="form-group">
-                                        <label for="blogEditorPublishUrl">Статья будет доступна по ссылке:</label>
-                                        <input type="text" class="form-control" id="blogEditorPublishUrl" placeholder="https://iny.su/blog/post/">
+                                        <label class="theme-text" for="blogEditorPublishUrl">Статья будет доступна по ссылке:</label>
+                                        <input type="text" class="theme-panel theme-text form-control" id="blogEditorPublishUrl" placeholder="https://iny.su/blog/post/">
                                     </div>
-                                    <a onclick="return false;" class="dropdown-item theme-link" href="#publish">Опубликовать</a>
+                                    <a onclick="blogEditor.publish(); return false;" class="dropdown-item theme-link" href="#publish">Опубликовать</a>
                                 </div>
                             </div>
                         </div>
@@ -101,15 +101,8 @@
     </div>
 </div>
 <script>
-init.header('none')
-init.footer('none')
-nav.onunload = ()=> {
-    init.header()
-    init.footer()
-}
-
 init.js.add('blogBoard', 'module/blogBoard.js', 22)
-init.js.add('blogEditor', 'module/blogEditor.js', 49)
+init.js.add('blogEditor', 'module/blogEditor.js', 57)
 
 if (typeof blogEditor == 'object') blogEditor.init()
 else {

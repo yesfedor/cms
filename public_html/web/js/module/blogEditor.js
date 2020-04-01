@@ -16,6 +16,14 @@ let blogEditor = {
     },
     contentData: [],
     init() {
+        nav.onunload = ()=> {
+            init.header()
+            init.footer()
+        }
+        
+        init.header('none')
+        init.footer('none')
+
         this.categoryInit()
         this.defaultFieldsInit()
     },
@@ -114,6 +122,8 @@ let blogEditor = {
             }, 100)
         }
 
+        prop.$el.addEventListener('paste', this.handlePaste)
+
         if (this.lastFocus == false) $(wrapper).append(prop.$el)
         else this.lastFocus.insertAdjacentElement('afterEnd', prop.$el)
 
@@ -200,6 +210,9 @@ let blogEditor = {
             let el = data.srcElement
             if (el.innerHTML == defaultFieldsText.preview) el.innerHTML = ''
         }
+
+        blogEditorTitle.addEventListener('paste', this.handlePaste)
+        blogEditorPreview.addEventListener('paste', this.handlePaste)
     },
     categoryInit() {
         let categories = blogBoard.getCategories()
@@ -237,15 +250,27 @@ let blogEditor = {
                 let obj = {
                     _id: item._id,
                     type: item.type,
+                    value: item.$el.textContent,
                     align: item.align,
                     b: item.b
                 }
-                this.sendData.content(obj)
+                this.sendData.content.push(obj)
             }
         })
     },
     publish() {
         this.toCollect()
-        console.log(this.contentData)
+        console.log(this.sendData)
+        toastr.info('Published')
+    },
+    handlePaste(e) {
+        let clipboardData, pastedData
+        let el = e.srcElement
+        e.stopPropagation()
+        e.preventDefault()
+        clipboardData = e.clipboardData || window.clipboardData
+        pastedData = clipboardData.getData('Text')
+        el.innerHTML = pastedData
+        return false
     }
 }
