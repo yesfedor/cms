@@ -27,3 +27,5 @@ main {
 /* h100vh-h10vh */
 .h100vh{min-height:100vh}.h90vh{min-height:90vh}.h80vh{min-height:80vh}.h70vh{min-height:70vh}.h60vh{min-height:60vh}.h50vh{min-height:50vh}.h40vh{min-height:40vh}.h30vh{min-height:30vh}.h20vh{min-height:20vh}.h10vh{min-height:10vh}
 .not-select {user-select: none;-ms-user-select: none;-moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;}
+.mark-pre {white-space: pre-wrap;}
+.extension-block {display: block;content: '';cursor: pointer;padding: 0,5em;}

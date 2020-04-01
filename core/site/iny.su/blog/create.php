@@ -1,182 +1,121 @@
-<style>
-.pre {
-    white-space: pre-wrap;
-}
-.click-large:before {
-  content: '';
-  position: absolute;
-  display: block;
-  top: -15px;
-  left: -15px;
-  right: -15px;
-  bottom: -15px;
-  cursor: pointer;
-}
-</style>
-<div class="container my-3 my-lg-5">
+<div class="container my-3">
     <div class="row">
-        <div class="col-10 offset-1 my-3">
-            <h1 class="h1 font-weight-bold my-3 theme-title">Добавить пост</h1>
+        <!-- Header -->
+        <div class="col-12 d-block fixed-top mt-3 py-3">
+            <div class="row d-flex justify-content-between align-items-center">
+                <!-- User Profile -->
+                <div class="col text-center px-3">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col text-right">
+                            <a class="d-inline-block" onclick="return nav.go(this);" href="/id<?= $_SESSION['user']['uid'] ?>">
+                                <i class="fas fa-user-edit fa-2x theme-link"></i>
+                            </a>
+                        </div>
+                        <div class="col text-left">
+                            <a class="d-inline-block text-muted" onclick="return nav.go(this);" href="/id<?= $_SESSION['user']['uid'] ?>"><?= $_SESSION['user']['name'].' '.$_SESSION['user']['surname'] ?></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Default Action -->
+                <div class="col text-center px-3">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <!-- Category Action -->
+                        <div class="col text-right">
+                            <div class="dropdown d-inline-block">
+                                <!--Trigger-->
+                                <a class="dropdown-toggle text-muted" type="button" id="blogEditorCategoriesToggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Категория
+                                </a>
+                                <!--Menu-->
+                                <div id="blogEditorCategoriesMenu" class="dropdown-menu dropdown-menu-right theme-panel"></div>
+                            </div>
+                        </div>
+
+                        <!-- Publish Button -->
+                        <div class="col text-center">
+                            <div class="dropdown d-inline-block">
+                                <a class="dropdown-toggle theme-link" href="#" role="button" id="blogEditorPublish" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Публикация
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right theme-panel" style="width: max-content;">
+                                    <h5 class="h5 dropdown-header theme-title">Подготовка к публикации</h5>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="form-group">
+                                        <label for="blogEditorPublishPoster">Обложка</label>
+                                        <input type="text" class="form-control" id="blogEditorPublishPoster" placeholder="https://iny.su/poster.png">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="blogEditorPublishUrl">Статья будет доступна по ссылке:</label>
+                                        <input type="text" class="form-control" id="blogEditorPublishUrl" placeholder="https://iny.su/blog/post/">
+                                    </div>
+                                    <a onclick="return false;" class="dropdown-item theme-link" href="#publish">Опубликовать</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Close Button -->
+                        <div class="col text-left">
+                            <a onclick="return nav.go(this);" href="/blog">
+                                <i class="fas fa-times fa-2x text-muted"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-10 offset-1 my-3">
+
+        <!-- Content -->
+        <div class="col-12 d-block my-5 py-3">
+            <div class="row my-5">
+                <div id="blogEditorWrapper" class="col-12">
+                    <h2 id="blogEditorTitle" class="h2 mb-3" contenteditable>Хотите сделать мир лучше?</h2>
+                    <h4 id="blogEditorPreview" class="mb-3" contenteditable>Подарите ему хороший текст</h4>
+                    <div id="blogEditorDefaultFocus" class="d-none"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Action Button -->
+        <div class="col-12 d-block fixed-bottom my-5 py-3">
             <div class="row">
-                <div class="col-12">
-                    <h2 id="blog-title" class="d-block theme-title mb-3 pre" contenteditable>Введите заголовок</h2>
-                    <h4 id="blog-preview" class="d-block theme-text mb-3 pre" contenteditable>Короткое описание</h4>
-                    <h4 id="blog-url" class="d-block theme-text mb-3 pre" contenteditable>https://iny.su/blog/post/URL</h4>
-                    <h4 id="blog-poster_url" class="d-block theme-text mb-3 pre" contenteditable>https://iny.su/poster_url.png</h4>
+                <!-- blogEditorActionMain -->
+                <div id="blogEditorActionMain" class="col-12 text-center">
+                    <button onclick="blogEditor.addEl('h2', true);" class="btn btn-outline-primary btn-rounded mx-3">H1</button>
+                    <button onclick="blogEditor.addEl('h4', true);" class="btn btn-outline-primary btn-rounded mx-3">H2</button>
+                    <button onclick="blogEditor.addEl('h5', true);" class="btn btn-outline-primary btn-rounded mx-3">H3</button>
+                    <button onclick="blogEditor.addEl('hr');" class="btn btn-outline-primary btn-rounded mx-3">Line</button>
                 </div>
-                <div class="col-12">
-                    <hr class="w-100 my-3">
-                </div>
-                <div id="blog-wrapper" class="col-12 pre"></div>
-                <div class="col-12">
-                    <hr class="w-100 my-3">
+
+                <!-- blogEditorActionText -->
+                <div id="blogEditorActionElement" class="col-12 text-center" style="display: none;">
+                    <button onclick="" class="btn btn-outline-primary btn-rounded mx-3">Left</button>
+                    <button onclick="" class="btn btn-outline-primary btn-rounded mx-3">Center</button>
+                    <button onclick="" class="btn btn-outline-primary btn-rounded mx-3">Right</button>
+                    <button onclick="blogEditor.btnRemoveEl();" class="btn btn-outline-danger btn-rounded mx-3">Delete</button>
                 </div>
             </div>
-        </div>
-        <div class="col-10 offset-1 text-center">
-            <a class="btn btn-outline-danger btn-rounded px-3" onclick="return nav.go(this);" href="/blog">Отмена</a>
-            <button class="btn btn-outline-primary btn-rounded px-3" onclick="blogCreatePost.publish();">Опубликовать</button>
-            <div class="dropdown d-inline-block">
-                <!--Trigger-->
-                <button class="btn btn-outline-primary btn-rounded dropdown-toggle" type="button" id="dropdownCategoriesToggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span id="dropdownCategoriesToggleCurrent" class="theme-title">Категория</span>
-                </button>
-                <!--Menu-->
-                <div id="dropdownCategoriesToggleMenu" class="dropdown-menu dropdown-primary theme-panel"></div>
-            </div>
-        </div>
-    </div>
-    <div class="row fixed-bottom theme-panel py-3">
-        <div id="controlElement-main" class="col-10 offset-1 text-center my-3" style="display:block;">
-            <button onclick="blogCreatePost.controlElement('h2');" class="btn btn-outline-primary px-3">H1</button>
-            <button onclick="blogCreatePost.controlElement('h4');" class="btn btn-outline-primary px-3">H2</button>
-            <button onclick="blogCreatePost.controlElement('h5');" class="btn btn-outline-primary px-3">H3</button>
-            <button onclick="blogCreatePost.controlElement('hr', false);" class="btn btn-outline-primary px-3">LINE</button>
-        </div>
-        <div id="controlElement-element" class="col-10 offset-1 text-center my-3" style="display:none;">
-            controlElement-element
         </div>
     </div>
 </div>
-
 <script>
-init.js.add('blogBoard', 'module/blogBoard.js', 22)
-
-blogCreatePost = {
-    data: {
-        url: '',
-        uid: config.user.uid,
-        category: 1,
-        title: '',
-        content: '',
-        poster_url: '',
-        preview: '',
-        date_create: ''
-    },
-    contentCloud: [],
-    api: {
-        path: '/api.php?_action=blog/create&v=0.1'
-    },
-    init() {
-        blogCreatePost.categoryRender()
-        blogCreatePost.categoryChange(1)
-    },
-    deleteElement(el) {
-        let el_id = el.getAttribute('data-id')
-        blogCreatePost.contentCloud.splice(el_id, 1)
-        $(el).remove()
-    },
-    controlElement(type, fucusBool=true) {
-        let _id = blogCreatePost.contentCloud.length
-        let wrapper = '#blog-wrapper'
-        let objElement = {
-            _id: _id,
-            $el: document.createElement(type)
-        }
-
-        // objElement.$el.setAttribute('id', 'controlElement' + _id)
-        objElement.$el.setAttribute('placeholder', 'true')
-        objElement.$el.setAttribute('contenteditable', 'true')
-
-        switch(type) {
-            case 'h2':
-            case 'h4':
-            case 'h5':
-                objElement.$el.setAttribute('class', 'theme-text my-3')
-                break;
-            case 'hr':
-                objElement.$el.setAttribute('class', 'w-100 my-3 click-large')
-                break;
-        }
-        
-        objElement.$el.setAttribute('data-id', _id)
-        objElement.$el.oninput = (data) => {
-            let el = data.srcElement
-            if (data.srcElement.innerHTML == '') {
-                blogCreatePost.deleteElement(el)
-            }
-        }
-        objElement.$el.onfocus = (data) => {
-            let el = data.srcElement
-            $('#controlElement-main').hide()
-            $('#controlElement-element').show()
-            if (el.tagName == 'HR') blogCreatePost.deleteElement(el)
-        }
-        objElement.$el.onblur = (data) => {
-            let el = data.srcElement
-            $('#controlElement-element').hide()
-            $('#controlElement-main').show()
-        }
-
-        $(wrapper).append(objElement.$el)
-        blogCreatePost.contentCloud.push(objElement)
-
-        if (fucusBool) objElement.$el.focus()
-    },
-    categoryRender() {
-        let categories = blogBoard.getCategories()
-        let toggleHTML = ''
-        categories.forEach(item => {
-            if (item.category != 0) {
-                let category = item.category
-                let title = item.title
-                toggleHTML = toggleHTML + `<a onclick="return blogCreatePost.categoryChange(${category});" class="dropdown-item theme-text" href="#category">${title}</a>`
-            }
-        })
-        $('#dropdownCategoriesToggleMenu').html(toggleHTML)
-    },
-    categoryChange(category) {
-        let categoryObj = blogBoard.getCategory(category)
-        let categoryTitle = categoryObj.title
-        blogCreatePost.data.category = category
-        $('#dropdownCategoriesToggleCurrent').html(categoryTitle)
-        return false
-    },
-    toCollect() {
-        let tplUrl = `https://${config.domain}/blog/post/`
-        let tplUrlLen = tplUrl.length
-        let dataUrl = $('#blog-url').html()
-        if (tplUrl == dataUrl.substr(0, tplUrlLen)) blogCreatePost.data.url = $('#blog-url').html()
-        else blogCreatePost.data.url = tplUrl + $('#blog-url').html()
-
-        blogCreatePost.data.title = $('#blog-title').html() || 'Введите заголовок'
-        blogCreatePost.data.preview = $('#blog-preview').html() || 'Короткое описание'
-        blogCreatePost.data.poster_url = $('#blog-poster_url').html() || '/web/file/ogimg/main/blog.png'
-    },
-    publish() {
-        blogCreatePost.toCollect()
-        $.ajax({
-            type: "POST",
-            url: blogCreatePost.api.path,
-            data: blogCreatePost.data,
-            dataType: "json",
-            success: function (data) {
-                toastr.info('Publishing success')
-            }
-        });
-    }
+init.header('none')
+init.footer('none')
+nav.onunload = ()=> {
+    init.header()
+    init.footer()
 }
-blogCreatePost.init()
+
+init.js.add('blogBoard', 'module/blogBoard.js', 22)
+init.js.add('blogEditor', 'module/blogEditor.js', 44)
+
+if (typeof blogEditor == 'object') blogEditor.init()
+else {
+    waitBlogEditor = setInterval(() => {
+        if (typeof blogEditor == 'object') {
+            blogEditor.init()
+            clearInterval(waitBlogEditor)
+        }
+    }, 100);
+}
 </script>
