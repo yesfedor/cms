@@ -71,6 +71,7 @@
                 <div id="blogEditorWrapper" class="col-12">
                     <h2 id="blogEditorTitle" class="h2 mb-3" contenteditable>Хотите сделать мир лучше?</h2>
                     <h4 id="blogEditorPreview" class="mb-3" contenteditable>Подарите ему хороший текст</h4>
+                    <hr class="w-100 py-1 my-3">
                     <div id="blogEditorDefaultFocus" class="d-none"></div>
                 </div>
             </div>
@@ -89,9 +90,10 @@
 
                 <!-- blogEditorActionText -->
                 <div id="blogEditorActionElement" class="col-12 text-center" style="display: none;">
-                    <button onclick="" class="btn btn-outline-primary btn-rounded mx-3">Left</button>
-                    <button onclick="" class="btn btn-outline-primary btn-rounded mx-3">Center</button>
-                    <button onclick="" class="btn btn-outline-primary btn-rounded mx-3">Right</button>
+                    <button onclick="blogEditor.editEl('left');" class="btn btn-outline-primary btn-rounded mx-3">Left</button>
+                    <button onclick="blogEditor.editEl('center');" class="btn btn-outline-primary btn-rounded mx-3">Center</button>
+                    <button onclick="blogEditor.editEl('right');" class="btn btn-outline-primary btn-rounded mx-3">Right</button>
+                    <button onclick="blogEditor.editEl('b');" class="btn btn-outline-primary btn-rounded mx-3">B</button>
                     <button onclick="blogEditor.btnRemoveEl();" class="btn btn-outline-danger btn-rounded mx-3">Delete</button>
                 </div>
             </div>
@@ -107,7 +109,7 @@ nav.onunload = ()=> {
 }
 
 init.js.add('blogBoard', 'module/blogBoard.js', 22)
-init.js.add('blogEditor', 'module/blogEditor.js', 44)
+init.js.add('blogEditor', 'module/blogEditor.js', 49)
 
 if (typeof blogEditor == 'object') blogEditor.init()
 else {

@@ -46,8 +46,24 @@ let blogEditor = {
         this.contentData[el_id] = false
         this.lastFocus = false
     },
-    editEl() {
-        let el = this.lastFocus
+    editEl(attr) {
+        let el_id = this.lastFocus.getAttribute('data-id')
+        let tagName = blogEditor.contentData[el_id].$el.tagName
+        if (this.isAllow(tagName, attr)) {
+            switch(attr) {
+                case 'left': case 'center': case 'right':
+                    blogEditor.contentData[el_id].align = attr
+                    blogEditor.contentData[el_id].$el.classList.remove('text-left')
+                    blogEditor.contentData[el_id].$el.classList.remove('text-center')
+                    blogEditor.contentData[el_id].$el.classList.remove('text-right')
+                    blogEditor.contentData[el_id].$el.classList.add('text-' + attr)
+                    break;
+                case 'b':
+                    let b_status = blogEditor.contentData[el_id].$el.classList.toggle('font-weight-bold')
+                    blogEditor.contentData[el_id].b = b_status
+                    break;
+            }
+        }
     },
     addEl(tag="", focus=false) {
         tag = tag.toLowerCase()
@@ -130,7 +146,18 @@ let blogEditor = {
         blogEditorPreview.innerHTML = defaultFieldsText.preview
         blogEditorPreview.classList.add('text-muted')
         
-        blogEditorTitle.oninput = blogEditorTitle.onblur = (data) => {
+        blogEditorTitle.oninput = (data) => {
+            let el = data.srcElement
+            if (el.innerHTML == defaultFieldsText.title) {
+                el.innerHTML = defaultFieldsText.title
+                el.classList.remove('theme-title')
+                el.classList.add('text-muted')
+            } else {
+                el.classList.remove('text-muted')
+                el.classList.add('theme-title')
+            }
+        }
+        blogEditorTitle.onblur = (data) => {
             let el = data.srcElement
             if (el.innerHTML == defaultFieldsText.title || el.innerHTML == '') {
                 el.innerHTML = defaultFieldsText.title
@@ -141,7 +168,19 @@ let blogEditor = {
                 el.classList.add('theme-title')
             }
         }
-        blogEditorPreview.oninput = blogEditorPreview.onblur = (data) => {
+
+        blogEditorPreview.oninput = (data) => {
+            let el = data.srcElement
+            if (el.innerHTML == defaultFieldsText.preview) {
+                el.innerHTML = defaultFieldsText.preview
+                el.classList.remove('theme-title')
+                el.classList.add('text-muted')
+            } else {
+                el.classList.remove('text-muted')
+                el.classList.add('theme-title')
+            }
+        }
+        blogEditorPreview.onblur = (data) => {
             let el = data.srcElement
             if (el.innerHTML == defaultFieldsText.preview || el.innerHTML == '') {
                 el.innerHTML = defaultFieldsText.preview
@@ -152,6 +191,7 @@ let blogEditor = {
                 el.classList.add('theme-title')
             }
         }
+
         blogEditorTitle.onfocus = (data) => {
             let el = data.srcElement
             if (el.innerHTML == defaultFieldsText.title) el.innerHTML = ''
@@ -160,7 +200,6 @@ let blogEditor = {
             let el = data.srcElement
             if (el.innerHTML == defaultFieldsText.preview) el.innerHTML = ''
         }
-
     },
     categoryInit() {
         let categories = blogBoard.getCategories()
@@ -181,7 +220,32 @@ let blogEditor = {
         $('#blogEditorCategoriesToggle').html(categoryTitle)
         return false
     },
+    toCollect() {
+        let tplUrl = `https://${config.domain}/blog/post/`
+        let tplUrlLen = tplUrl.length
+        let dataUrl = $('#blogEditorPublishUrl').html()
+        if (tplUrl == dataUrl.substr(0, tplUrlLen)) blogEditor.sendData.url = dataUrl
+        else blogEditor.sendData.url = tplUrl + dataUrl
+
+        blogEditor.sendData.poster_url = $('#blogEditorPublishPoster').html()
+        blogEditor.sendData.title = $('#blogEditorTitle').html()
+        blogEditor.sendData.preview = $('#blogEditorPreview').html()
+
+        let content = []
+        this.contentData.forEach(item=> {
+            if (item != false) {
+                let obj = {
+                    _id: item._id,
+                    type: item.type,
+                    align: item.align,
+                    b: item.b
+                }
+                this.sendData.content(obj)
+            }
+        })
+    },
     publish() {
-        console.log('qwe')
+        this.toCollect()
+        console.log(this.contentData)
     }
 }
