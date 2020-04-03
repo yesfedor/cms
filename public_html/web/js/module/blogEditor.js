@@ -28,6 +28,7 @@ let blogEditor = {
         
         this.categoryInit()
         this.defaultFieldsInit()
+        this.doReset()
     },
     allowEl() {
         return ['h2', 'h4', 'h5', 'hr']
@@ -51,6 +52,7 @@ let blogEditor = {
         this.removeEl(data.$el)
     },
     removeEl(el) {
+        if (typeof el != 'object') return false
         let el_id = el.getAttribute('data-id')
         $(el).remove()
         this.contentData[el_id] = false
@@ -84,7 +86,7 @@ let blogEditor = {
         let _id = this.totalId
         this.totalId++
 
-        if (propLimited) {
+        if (propLimited != false) {
             prop = {
                 _id: _id,
                 $el: document.createElement(tag),
@@ -92,7 +94,7 @@ let blogEditor = {
                 align: propLimited.align,
                 b: propLimited.b
             }
-            prop.$el.innerHTML = propLimited.value
+            prop.$el.textContent = propLimited.value
         } else {
             prop = {
                 _id: _id,
@@ -147,12 +149,13 @@ let blogEditor = {
         if (focus) prop.$el.focus()
 
         if (propLimited) {
+            prop.$el.textContent = propLimited.value
+            this.lastFocus = prop.$el
             this.editEl(propLimited.align)
-            this.editEl(propLimited.b)
+            if (propLimited.b) this.editEl('b')
         }
 
         prop = false
-        delete prop
     },
     isAllow(tagName, type=false) {
         let allowEl = this.allowEl()
@@ -259,11 +262,11 @@ let blogEditor = {
     toCollect() {
         let tplUrl = `https://${config.domain}/blog/post/`
         let tplUrlLen = tplUrl.length
-        let dataUrl = $('#blogEditorPublishUrl').html()
+        let dataUrl = $('#blogEditorPublishUrl').val()
         if (tplUrl == dataUrl.substr(0, tplUrlLen)) blogEditor.sendData.url = dataUrl
         else blogEditor.sendData.url = tplUrl + dataUrl
 
-        blogEditor.sendData.poster_url = $('#blogEditorPublishPoster').html()
+        blogEditor.sendData.poster_url = $('#blogEditorPublishPoster').val()
         blogEditor.sendData.title = $('#blogEditorTitle').html()
         blogEditor.sendData.preview = $('#blogEditorPreview').html()
 
@@ -297,6 +300,11 @@ let blogEditor = {
                 }
             }
         })
+
+        blogEditorBeforeData = {
+            sendData: this.sendData,
+            contentData: this.sendData.content
+        }
     },
     handlePaste(e) {
         let clipboardData, pastedData
@@ -340,11 +348,41 @@ let blogEditor = {
     reset(data) {
         let sendData = data.sendData
         let contentData = data.contentData
+        this.totalId = 0
+
+        // sendData
         this.sendData = sendData
         this.categoryChange(sendData.category)
+
+        $('#blogEditorPublishPoster').val(sendData.poster_url)
+        $('#blogEditorPublishUrl').val(sendData.url)
+
+        $('#blogEditorTitle').html(sendData.title)
+        $('#blogEditorPreview').html(sendData.preview)
+
+        // contentData
         contentData.forEach(item => {
-            console.log(item)
-            blogEditor.addEl(item.type, true, {align: item.align, b: item.b})
+            if (item != false && typeof item.value == 'string') blogEditor.addEl(item.type, true, {align: item.align, b: item.b, value: item.value})
         })
-    }
+    },
+    doReset (action) {
+        if (typeof blogEditorBeforeData == 'object') {
+            $('#blogEditorActionMain').hide()
+            $('#blogEditorActionElement').hide()
+            $('#blogEditorActionReset').show()
+            switch(action) {
+                case 'yes':
+                    blogEditor.reset(blogEditorBeforeData)
+                    $('#blogEditorActionMain').show()
+                    $('#blogEditorActionElement').hide()
+                    $('#blogEditorActionReset').hide()
+                    break
+                case 'no':
+                    $('#blogEditorActionMain').show()
+                    $('#blogEditorActionElement').hide()
+                    $('#blogEditorActionReset').hide()
+                    break
+            }
+        }
+    } 
 }

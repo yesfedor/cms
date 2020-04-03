@@ -96,6 +96,12 @@
                     <button onclick="blogEditor.editEl('b');" class="btn btn-outline-primary btn-rounded mx-3">B</button>
                     <button onclick="blogEditor.btnRemoveEl();" class="btn btn-outline-danger btn-rounded mx-3">Delete</button>
                 </div>
+
+                <!-- Maybe reset? -->
+                <div id="blogEditorActionReset" class="col-12 text-center" style="display: none;">
+                    <button onclick="blogEditor.doReset('yes');" class="btn btn-outline-primary btn-rounded mx-3">Восстановить прежнюю версию?</button>
+                    <button onclick="blogEditor.doReset('no');" class="btn btn-outline-danger btn-rounded mx-3">Нет</button>
+                </div>
             </div>
         </div>
     </div>
@@ -103,7 +109,7 @@
 <script>
 init.preload.go(500)
 init.js.add('blogBoard', 'module/blogBoard.js', 22)
-init.js.add('blogEditor', 'module/blogEditor.js', 73)
+init.js.add('blogEditor', 'module/blogEditor.js', 'beta-1')
 
 if (typeof blogEditor == 'object') blogEditor.init()
 else {
