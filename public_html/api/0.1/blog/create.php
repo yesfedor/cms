@@ -17,10 +17,15 @@ $js_code = '0';
 
 //code
 $url = $_POST['url'];
-$category = $_POST['category'];
+$urlDefault = 'https://'.$domainBase['main'].'/blog/post/';
+$urlDefaultLen = mb_strlen($urlDefault);
+if (mb_substr($url, 0, $urlDefaultLen) == $urlDefault) $url = mb_substr($url, $urlDefaultLen);
+else die('Error URL');
+
+$category = $_POST['category'] || 1;
 $title = $_POST['title'];
 $content = $_POST['content'];
-$content = json_encode($content);
+$content = json_encode($content, JSON_UNESCAPED_UNICODE);
 $poster_url = $_POST['poster_url'];
 $preview = $_POST['preview'];
 $date_create = appDate();
@@ -32,10 +37,11 @@ if (getUserAccessScore($_SESSION['user']['access']) >= 64) {
         ':url' => $url
     ];
     $result_get = dbGetOne($query_get, $var_get);
-
+    echo '-123-'.PHP_EOL;
     if ($result_get['id']) {
+        echo '-456-'.PHP_EOL;
         if ($result_get['uid'] == $_SESSION['user']['uid']) {
-            $query_update = "UPDATE `blogpost` SET category = :category, date_create = :date_create, title = :title, content = :content, poster_url = :poster_url, preview = :preview  WHERE id = :id and url = :url and uid = :uid";
+            $query_update = "UPDATE blogpost SET category = :category, date_create = :date_create, title = :title, content = :content, poster_url = :poster_url, preview = :preview  WHERE id = :id and url = :url and uid = :uid";
             $var_update = [
                 ':id' => $result_get['id'],
                 ':url' => $url,
@@ -50,7 +56,8 @@ if (getUserAccessScore($_SESSION['user']['access']) >= 64) {
             dbAddOne($query_update, $var_update);
         } else $bigData['text'] = 'no';
     } else {
-        $query_add = "INSERT INTO `blogpost` (`id`, `url`, `uid`, `category`, `date_create`, `title`, `content`, `poster_url`, `preview`) VALUES (NULL, :id, :url, :category, :date_create, :title, :content, :poster_url, :preview)";
+        echo '-789-'.PHP_EOL;
+        $query_add = "INSERT INTO blogpost (id, url, uid, category, date_create, title, content, poster_url, preview) VALUES (NULL, :url, :uid, :category, :date_create, :title, :content, :poster_url, :preview)";
         $var_add = [
             ':url' => $url,
             ':uid' => $_SESSION['user']['uid'],
