@@ -16,6 +16,8 @@ let blogEditor = {
     },
     contentData: [],
     init() {
+        this.clear()
+
         nav.onunload = ()=> {
             init.header()
             init.footer()
@@ -23,7 +25,7 @@ let blogEditor = {
         
         init.header('none')
         init.footer('none')
-
+        
         this.categoryInit()
         this.defaultFieldsInit()
     },
@@ -73,7 +75,7 @@ let blogEditor = {
             }
         }
     },
-    addEl(tag="", focus=false) {
+    addEl(tag="", focus=false, propLimited=false) {
         tag = tag.toLowerCase()
         if (!this.isAllow(tag)) return false
 
@@ -82,13 +84,26 @@ let blogEditor = {
         let _id = this.totalId
         this.totalId++
 
-        let prop = {
-            _id: _id,
-            $el: document.createElement(tag),
-            type: tag,
-            align: 'left',
-            b: false
+        if (propLimited) {
+            prop = {
+                _id: _id,
+                $el: document.createElement(tag),
+                type: tag,
+                align: propLimited.align,
+                b: propLimited.b
+            }
+            prop.$el.innerHTML = propLimited.value
+        } else {
+            prop = {
+                _id: _id,
+                $el: document.createElement(tag),
+                type: tag,
+                align: 'left',
+                b: false
+            }
         }
+        
+
 
         switch(tag) {
             case 'h2': case 'h4': case 'h5':
@@ -130,6 +145,14 @@ let blogEditor = {
         this.contentData[_id] = prop
 
         if (focus) prop.$el.focus()
+
+        if (propLimited) {
+            this.editEl(propLimited.align)
+            this.editEl(propLimited.b)
+        }
+
+        prop = false
+        delete prop
     },
     isAllow(tagName, type=false) {
         let allowEl = this.allowEl()
@@ -260,8 +283,20 @@ let blogEditor = {
     },
     publish() {
         this.toCollect()
-        console.log(this.sendData)
-        toastr.info('Published')
+        $.ajax({
+            type: 'POST',
+            url: this.apiPath,
+            data: this.sendData,
+            dataType: 'json',
+            success: function (response) {
+                if (typeof response.text == 'string') {
+                    if (response.text == 'ok') {
+                        toastr.info('Published')
+                        nav.go(nav.createLink('/blog'))
+                    } 
+                }
+            }
+        })
     },
     handlePaste(e) {
         let clipboardData, pastedData
@@ -272,5 +307,43 @@ let blogEditor = {
         pastedData = clipboardData.getData('Text')
         el.innerHTML = pastedData
         return false
+    },
+    clear() {
+        let blogEditorTitle = document.getElementById('blogEditorTitle')
+        let blogEditorPreview = document.getElementById('blogEditorPreview')
+        let blogEditorPublishPoster = document.getElementById('blogEditorPublishPoster')
+        let blogEditorPublishUrl = document.getElementById('blogEditorPublishUrl')
+
+        blogEditorTitle.innerHTML = ''
+        blogEditorPreview.innerHTML = ''
+        blogEditorPublishPoster.value = ''
+        blogEditorPublishUrl.value = ''
+
+        this.defaultFieldsInit()
+
+        this.contentData.forEach(item => {
+            this.removeEl(item.$el)
+        })
+        this.sendData = {
+            url: '',
+            uid: config.user.uid,
+            category: 1,
+            title: '',
+            content: [],
+            poster_url: '',
+            preview: '',
+            date_create: ''
+        }
+        this.contentData = []
+
+    },
+    reset(data) {
+        let sendData = data.sendData
+        let contentData = data.contentData
+        this.sendData = sendData
+        this.categoryChange(sendData.category)
+        contentData.forEach(item => {
+            blogEditor.addEl(item.type, true, {align: item.align, b: item.b})
+        })
     }
 }

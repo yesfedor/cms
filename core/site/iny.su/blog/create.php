@@ -101,8 +101,9 @@
     </div>
 </div>
 <script>
+init.preload.go(500)
 init.js.add('blogBoard', 'module/blogBoard.js', 22)
-init.js.add('blogEditor', 'module/blogEditor.js', 57)
+init.js.add('blogEditor', 'module/blogEditor.js', 72)
 
 if (typeof blogEditor == 'object') blogEditor.init()
 else {
