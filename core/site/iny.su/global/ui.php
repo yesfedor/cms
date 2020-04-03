@@ -21,7 +21,6 @@ if ($_SESSION['user']['uid']) {
                             <div class="col-9 text-left px-2"><span data-lang="ui_menu_edit_profile"></span></div>
                         </div>
                     </a>
-                    <div class="row my-0 py-0 nav-link pr-3"><div class="col-9 offset-3 px-2"><hr class="w-100 my-0 py-0"></div></div>
                     <a id="app-main-menu_feed" class="nav-link waves-effect" href="/feed" onclick="return nav.go(this);">
                         <div class="row my-0 py-0">
                             <div class="col-3 text-right px-2">
@@ -38,7 +37,6 @@ if ($_SESSION['user']['uid']) {
                             <div class="col-9 text-left px-2"><span data-lang="ui_menu_msg"></span></div>
                         </div>
                     </a>
-                    <div class="row my-0 py-0 nav-link pr-3"><div class="col-9 offset-3 px-2"><hr class="w-100 my-0 py-0"></div></div>
                     <a class="nav-link waves-effect" href="/media" onclick="return nav.go(this);">
                         <div class="row my-0 py-0">
                             <div class="col-3 text-right px-2">
@@ -47,7 +45,6 @@ if ($_SESSION['user']['uid']) {
                             <div class="col-9 text-left px-2"><span>Media</span></div>
                         </div>
                     </a>
-                    <div class="row my-0 py-0 nav-link pr-3"><div class="col-9 offset-3 px-2"><hr class="w-100 my-0 py-0"></div></div>
                     <a id="app-main-menu_settings" class="nav-link waves-effect" href="/settings" onclick="return nav.go(this);">
                         <div class="row my-0 py-0">
                             <div class="col-3 text-right px-2">
@@ -57,7 +54,6 @@ if ($_SESSION['user']['uid']) {
                         </div>
                     </a>
                     '.(getUserAccessScore() >= 8 ? '
-                    <div class="row my-0 py-0 nav-link pr-3"><div class="col-9 offset-3 px-2"><hr class="w-100 my-0 py-0"></div></div>
                     <a class="nav-link waves-effect" href="//'.$domainBase['dev'].'" onclick="return nav.away(this);">
                         <div class="row my-0 py-0">
                             <div class="col-3 text-right px-2">
@@ -67,7 +63,6 @@ if ($_SESSION['user']['uid']) {
                         </div>
                     </a>
                     ':'').'
-                    <div class="row my-0 py-0 nav-link pr-3"><div class="col-9 offset-3 px-2"><hr class="w-100 my-0 py-0"></div></div>
                 </div>
                 <div id="app-mini-footer">
                     <div class="row my-0 pt-3 pb-0">

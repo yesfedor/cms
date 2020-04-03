@@ -343,6 +343,7 @@ let blogEditor = {
         this.sendData = sendData
         this.categoryChange(sendData.category)
         contentData.forEach(item => {
+            console.log(item)
             blogEditor.addEl(item.type, true, {align: item.align, b: item.b})
         })
     }
