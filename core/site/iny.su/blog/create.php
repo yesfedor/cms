@@ -109,7 +109,7 @@
 <script>
 init.preload.go(500)
 init.js.add('blogBoard', 'module/blogBoard.js', 22)
-init.js.add('blogEditor', 'module/blogEditor.js', 'beta-1')
+init.js.add('blogEditor', 'module/blogEditor.js', 104)
 
 if (typeof blogEditor == 'object') blogEditor.init()
 else {
