@@ -1,3 +1,3 @@
 <div class="footer-copyright text-center py-2">
-    <span class="white-text"> Copyright © <?= date('Y') ?> <?= $domainInfo[$domain]['logo'] ?>. All rights reserved.</span>
+    <span class="white-text">© <?= $domainInfo[$domain]['logo'] ?>, <?= date('Y') ?>. All rights reserved.</span>
 </div>

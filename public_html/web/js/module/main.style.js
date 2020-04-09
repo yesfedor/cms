@@ -40,20 +40,42 @@ var style = {
         });
     },
     theme: {
+        elToggle: [],
         init() {
-            themeType = localStorage.getItem('themeType')
-            themeName = localStorage.getItem('theme')
-            themeVersion = localStorage.getItem('themeVersion')
-            if (themeName != null) {
-                $('#app-css-theme-data').attr('href', '/web/css/theme/' + themeName + '.css?version=' + themeVersion)
-            }
+            let themeType = localStorage.getItem('themeType')
+            let themeName = localStorage.getItem('theme')
+            let themeVersion = localStorage.getItem('themeVersion')
+
             if (themeType == null) {
                 localStorage.setItem('themeType', 'light')
             }
+
+            style.theme.change(themeType, '!!! init: themeType')
+            style.theme.autoMode()
         },
-        change(newTheme) {
+        autoMode() {
+            let t_light = window.matchMedia('(prefers-color-scheme: light)')
+            let t_dark = window.matchMedia('(prefers-color-scheme: dark)')
+
+            // base change
+            if (t_light.matches) style.theme.change('light', '!!! autoMode: light')
+            if (t_dark.matches) style.theme.change('dark', '!!! autoMode: dark')
+
+            // onchange
+            t_light.addListener((e) => {
+                if (e.matches) style.theme.change('light', '!!! autoMode matches: light')
+            })
+            t_dark.addListener((e) => {
+                if (e.matches) style.theme.change('dark', '!!! autoMode matches: dark')
+            })
+        },
+        change(newTheme, str) {
+            console.log(str)
             let newThemeName = ''
-            let version = 2
+            let version = 3
+            let iconLight = '<i class="theme-nav-link far fa-sun"></i>'
+            let iconDark = '<i class="theme-nav-link far fa-moon"></i>'
+            let icon = ''
 
             switch(newTheme) {
                 default:
@@ -62,12 +84,14 @@ var style = {
                     localStorage.setItem('themeType', 'light')
                     newThemeName = config.info.appname
                     style.theme.changeApi('light')
+                    icon = iconDark
                 break;
                 case 'dark':
                     version = config.themeVersion.dark
                     localStorage.setItem('themeType', 'dark')
                     newThemeName = config.info.appname + '-dark'
                     style.theme.changeApi('dark')
+                    icon = iconLight
                 break;
             }
 
@@ -75,6 +99,10 @@ var style = {
             localStorage.setItem('themeVersion', version)
 
             $('#app-css-theme-data').attr('href', '/web/css/theme/' + newThemeName + '.css?version=' + version)
+
+            style.theme.elToggle.forEach(el => {
+                $(el).html(icon)
+            })
         },
         changeApi(type) {
             $.ajax({
@@ -95,16 +123,15 @@ var style = {
                 default:
                 case 'light':
                     style.theme.change('dark')
-                    $(el).html(iconLight)
                 break;
                 case 'dark':
                     style.theme.change('light')
-                    $(el).html(iconDark)
                 break;
             }
             return false
         },
         initToggle(el='#themeToggle') {
+            style.theme.elToggle.push(el)
             let iconLight = '<i class="theme-nav-link far fa-sun"></i>'
             let iconDark = '<i class="theme-nav-link far fa-moon"></i>'
             let dataTheme = localStorage.getItem('themeType')
