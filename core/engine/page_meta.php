@@ -14,7 +14,7 @@ if ($domainBase[appGetDomain()] == 'main') {
     }
 }
 
-if ($domainBase[appGetDomain()] == 'dev' or $domainBase[appGetDomain()] == 'go' or $domainBase[appGetDomain()] == 'tester') {
+if ($domainBase[appGetDomain()] == 'dev' or $domainBase[appGetDomain()] == 'go' or $domainBase[appGetDomain()] == 'tester' or $domainBase[appGetDomain()] == 'paradises') {
     $title = $p['meta']['title_'.$_SESSION['lang']];
     $description = $p['meta']['description_'.$_SESSION['lang']];
     $keywords = $p['meta']['keywords_'.$_SESSION['lang']];

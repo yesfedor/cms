@@ -226,6 +226,8 @@ $p = appRouter($url);
 if ($isBots) $p_tpl = $templatePath.$p['page']['template'].'-bot.tpl.php';
 else $p_tpl = $templatePath.$p['page']['template'].'.tpl.php';
 
+
+
 if ($p['page']['module_auth'] == 'false') $p_module = $thisSitePath.$p['page']['module'].'.php';
 else {
     if ($_SESSION['user']['uid']) $p_module = $thisSitePath.$p['page']['module'].'.auth_true.php';
@@ -240,4 +242,5 @@ if ($p['page']) {
         include_once($sitePrepareFile);
     }
 }
+
 ?>

@@ -1,6 +1,5 @@
 <?php
-$warp = 'app';
-
+$warp = 'warp';
 ?>
 <style>
 .wrapper-bg {
@@ -108,5 +107,3 @@ function copy(str, msg) {
     toastr.info(msg)
 }
 </script>
-
-<meta http-equiv="refresh" content="0; url=https://iny.su/landings/fbb-paradise">

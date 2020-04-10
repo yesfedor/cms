@@ -45,14 +45,34 @@
 		"navigation": {
 			"url": "core/navigation.js",
 			"version": 71
+		},
+		"forms": {
+			"url": "module/forms.js",
+			"version": 64
+		},
+		"userApi": {
+			"url": "module/userApi.js",
+			"version": 76
+		},
+		"languages": {
+			"url": "core/languages.js",
+			"version": 73
+		},
+		"fn": {
+			"url": "module/fn.js",
+			"version": 64
+		},
+		"law-manager": {
+			"url": "module/law-manager.js",
+			"version": 7
 		}
 	},
 	"header": {
-		"type_auth_false": "none",
-		"type_auth_true": "none"
+		"type_auth_false": "default",
+		"type_auth_true": "user"
 	},
 	"footer": {
-		"type_auth_false": "none",
+		"type_auth_false": "default",
 		"type_auth_true": "none"
 	}
 }

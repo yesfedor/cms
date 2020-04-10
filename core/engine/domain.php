@@ -16,6 +16,7 @@ function getDomainSetting() {
         $appname = $domainConfig[$i]['appname'];
         $assess = $domainConfig[$i]['assess'];
         $logo = $domainConfig[$i]['logo'];
+        $session = $domainConfig[$i]['session'];
 
         $domainSetting['base'][$domain] = $appname;
         $domainSetting['base'][$appname] = $domain;
@@ -24,14 +25,16 @@ function getDomainSetting() {
             'appname' => $appname,
             'domain' => $domain,
             'assess' => $assess,
-            'logo' => $logo
+            'logo' => $logo,
+            'session' => $session
         ];
         $domainSetting['info'][$appname] = [
             'ssl' => $ssl,
             'appname' => $appname,
             'domain' => $domain,
             'assess' => $assess,
-            'logo' => $logo
+            'logo' => $logo,
+            'session' => $session
         ];
         
         $i++;
@@ -39,8 +42,8 @@ function getDomainSetting() {
 
     return $domainSetting;
 }
-
 $domainSetting = getDomainSetting();
 $domainBase = $domainSetting['base'];
 $domainInfo = $domainSetting['info'];
+$domain_session = $domainSetting['info'][appGetDomain()]['session'];
 ?>

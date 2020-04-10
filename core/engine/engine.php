@@ -24,7 +24,7 @@ include_once($engineDomain);
 
 session_name('client_id');
 date_default_timezone_set('UTC');
-session_set_cookie_params(864000, '/', '.'.$domainBase['main']);
+session_set_cookie_params(864000, '/', '.'.$domain_session);
 session_start([
     'cookie_lifetime' => 864000,
 ]);

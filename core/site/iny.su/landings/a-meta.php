@@ -55,14 +55,5 @@ switch($url_p1) {
             'og_image' => 'landings.png',
         ];
     break;
-    case 'fbb-paradise':
-        $landingsMetaPath = $thisSitePath.'landings/a-meta.php';
-        $landingsMeta = [
-            'title' => 'FBB Paradise | Сервер Minecraft | Java Edition | 1.15.2',
-            'description' => 'Закончилась вторая эра сервера FBB Paradise для Minecraft, и начинается новая. В ней вас ждёт много нового. Приготовьтесь выживать в новом, опасном мире! Сервер ждёт вас. Сервер без приватов!',
-            'keywords' => 'Сервер Minecraft, Java Edition, 1.15.2, FBB Paradise, FBB, Paradise',
-            'og_image' => 'fbb-paradise.png',
-        ];
-    break;
 }
 ?>
