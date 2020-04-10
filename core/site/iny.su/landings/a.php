@@ -33,6 +33,10 @@ switch($url_p1) {
         $landingsStatus = true;
         $landingsFile = 'vel0ur';
     break;
+    case 'fbb-paradise':
+        $landingsStatus = true;
+        $landingsFile = 'fbb-paradise';
+    break;
 }
 
 if ($landingsStatus) {
