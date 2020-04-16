@@ -20,10 +20,10 @@ $warp = 'warp';
                     <a onclick="nav.scroll(this); return false;" class="nav-link white-text" href="#server-main">О сервере</a>
                 </li>
                 <li class="nav-item">
-                    <a onclick="nav.away(this); return false;" class="nav-link white-text" href="https://go.iny.su/fbb-paradise-rules">Правила</a>
+                    <a onclick="nav.scroll(this); return false;" class="nav-link white-text" href="#server-donate">Поддержать</a>
                 </li>
                 <li class="nav-item">
-                    <a onclick="nav.scroll(this); return false;" class="nav-link white-text" href="#server-donate">Поддержать</a>
+                    <a onclick="nav.away(this); return false;" class="nav-link white-text" href="https://go.iny.su/fbb-paradise-rules">Правила</a>
                 </li>
                 <li class="nav-item">
                     <a onclick="nav.away(this); return false;" class="nav-link white-text" href="https://vk.com/fbb_paradise">Группа ВК</a>
@@ -56,7 +56,7 @@ $warp = 'warp';
                             </div>
                         </div>
                         <div class="col-12 text-center mb-5">
-                            <button onclick="copy('mc.fbb-paradises.ru', 'Удачной игры!');" type="button" class="btn btn-outline-white btn-rounded waves-effect">Скопировать IP</button>
+                            <button onclick="copy('fbb-paradises.ru', 'Удачной игры!');" type="button" class="btn btn-outline-white btn-rounded waves-effect">Скопировать IP</button>
                         </div>
                         <div class="col-12 text-center">
                             <h4 class="white-text my-0"><a class="white-text" onclick="nav.away(this); return false;" href="https://vk.com/tenebray">Остались вопросы? Пиши сюда</a></h4>
@@ -67,25 +67,35 @@ $warp = 'warp';
         </div>
     </div>
 
-    <div class="row h100vh justify-content-center align-items-center white z-depth-3">
+    <div class="row h100vh justify-content-center align-items-center elegant-color-dark z-depth-3">
         <!-- server-donate -->
-        <div id="server-donate" class="col-10 h-100 text-center">
+        <div id="server-donate" class="col-12 h100vh jarallax">
             <div class="row justify-content-center align-items-center">
-                <div class="col-12 text-center">
-                    <h1 class="h1 black-text mb-3">Поддержать проект</h1> 
-                </div>
-                <div class="col-12 col-lg-6 text-center">
-                    <div class="list-group w-auto">
-                        <a href="#" class="list-group-item list-group-item-action secondary-color-dark white-text">Поддержать проект можно по этим реквизитам</a>
-                        <a href="#" class="list-group-item list-group-item-action black-text" onclick="copy('+79257616375', 'Скопировано!'); return false;">QIWI-кошелёк: +79257616375</a>
-                        <a href="#" class="list-group-item list-group-item-action black-text" onclick="copy('5469380075636075', 'Скопировано!'); return false;">Сбербанк: 5469380075636075</a>
-                        <a href="#" class="list-group-item list-group-item-action text-muted" onclick="return false;">Онлайн: скоро</a>
+                <img class="jarallax-img wrapper-bg" src="https://go.iny.su/uc/cc4ca42/v6f7584/fd0d61c0/8d8a18e906b.jpg" alt="FBB Paradise Background">
+                <div class="row h100vh justify-content-center align-items-center">
+                    <div class="col-12">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-12 text-center">
+                                <h1 class="h1 white-text mb-3">Поддержать проект</h1> 
+                            </div>
+                            <div class="col-12 col-lg-8 text-center">
+                                <div class="list-group w-auto">
+                                    <a href="#" class="list-group-item list-group-item-action secondary-color-dark white-text">Поддержать проект можно по этим реквизитам</a>
+                                    <a href="#" class="list-group-item list-group-item-action elegant-color-dark white-text" onclick="copy('+79257616375', 'Скопировано!'); return false;">QIWI-кошелёк: +79257616375</a>
+                                    <a href="#" class="list-group-item list-group-item-action elegant-color-dark white-text" onclick="copy('5469380075636075', 'Скопировано!'); return false;">Сбербанк: 5469380075636075</a>
+                                    <a href="#" class="list-group-item list-group-item-action elegant-color-dark text-muted" onclick="return false;">Онлайн: скоро</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
     </div>
+</div>
 
+<div class="footer-copyright text-center py-2 elegant-color">
+    <span class="white-text">© <?= $domainInfo[$domain]['logo'] ?>, <?= date('Y') ?>. All rights reserved. Created by <a onclick="return nav.away(this);" class="white-text" href="//go.iny.su/yesfedor">@yesfedor</a></span>
 </div>
 
 <script>
