@@ -195,16 +195,15 @@ var init = {
                 clearInterval(interval)
                 init.start()
 
-                var firstload = localStorage.getItem('app-status')
+                let firstload = localStorage.getItem('app-status')
                 if (firstload == 'true' || config.visit == 'robot') {
                     $('body').css('display', 'block')
                 }
                 else {
+                    $('body').css('display', 'block')
                     setTimeout(() => {
                         localStorage.setItem('app-status', 'true')
-                        $('body').fadeIn()
                         setTimeout(() => {
-                            $('body').css('display', 'block')
                             toastr.info('First download the longest')
                         }, 1000);
                     }, 1500);
