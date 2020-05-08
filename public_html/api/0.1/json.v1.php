@@ -15,9 +15,8 @@ $data = [
     ],
 ];
 
-if ($bigData) {
-    $data = array_merge($data, $bigData);
-}
+if ($html_use or $html_id or $html_code or $js_use or $js_code) $data = array_merge($data, $bigData);
+else $data = $bigData;
 
 echo json_encode($data, JSON_UNESCAPED_UNICODE);
 ?>
