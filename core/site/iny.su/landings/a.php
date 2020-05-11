@@ -33,6 +33,10 @@ switch($url_p1) {
         $landingsStatus = true;
         $landingsFile = 'vel0ur';
     break;
+    case 'administration-command':
+        $landingsStatus = true;
+        $landingsFile = 'administration-command';
+    break;
 }
 
 if ($landingsStatus) {

@@ -55,13 +55,13 @@ switch($url_p1) {
             'og_image' => 'landings.png',
         ];
     break;
-    case 'adminostration-command':
+    case 'administration-command':
         $landingsMetaPath = $thisSitePath.'landings/a-meta.php';
         $landingsMeta = [
-            'title' => 'Анастасия Легостаева - Велюр (@vel0ur)',
-            'description' => 'Фотографирю. Красиво. Стильно. Only Lutsk. Instagram: @velour_ph, Обо мне: Анастасия Легостаева фотограф..',
-            'keywords' => 'фотосессия, красивый профиль, красивое фото, Анастасия Велюр, vel0ur, velour_phб, Lutsk',
-            'og_image' => 'landings.png',
+            'title' => 'Команда Администрирования',
+            'description' => 'Добро пожаловать на сайт нашей команды системного администрирования. Если у вас есть проект на какой-либо интернет-платформе, и вам необходим персонал, который будет администрировать и модерировать ваш проект, то вы по адресу!',
+            'keywords' => 'Команда Администрирования, нужен сервер, создать сервер майнкрафт, заказать сайт, нужен сайт, как сделать сайт',
+            'og_image' => 'team.png',
         ];
     break;
 }
