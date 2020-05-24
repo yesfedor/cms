@@ -2,7 +2,11 @@
 $warp = 'app';
 ?>
 <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
-<style>#header{transition: all 1s;}.jarallax-img {filter: brightness(0.3);}</style>
+<style>
+:root {--theme-background: #2e2e2e;}
+#header{transition: all 1s;}
+.jarallax-img {filter: brightness(0.3);}
+</style>
 
 <nav id="header" class="navbar navbar-expand-lg navbar-dark fixed-top z-depth-0 py-3">
     <div class="container text-center">
@@ -30,67 +34,60 @@ $warp = 'app';
         </div>
     </div>
 </nav>
+<section id="intro" class="display-wrapper text-center">
+    <h1 class="display-logo display-2 text-center">Команда Администрирования</h1>
+</section>
 <div id="page-1" class="container-fluid">
-    <div data-jarallax data-speed="0.2" class="jarallax row h100vh justify-content-center align-items-center z-depth-1">
+    <div data-jarallax data-speed="0.5" class="jarallax row h100vh justify-content-center align-items-center">
         <img class="jarallax-img" src="https://go.iny.su/uc/cc4ca42/v6f7584/d7a3317b/07f51c93101.jpg" alt="">
         <div class="col-10 col-lg-5 text-center">
-            <h1 data-aos="fade-down" class="h1-responsive white-text py-3 mb-3">Команда Администрирования</h1>
-            <h4 data-aos="fade-down" data-aos-duration="1500" class="h4-responsive white-text px-md-2 px-lg-5">Добро пожаловать на сайт нашей команды системного администрирования. Если у вас есть проект на какой-либо интернет-платформе, и вам необходим персонал, который будет администрировать и модерировать ваш проект, то вы по адресу!</h4>
+            <h4 class="h4-responsive white-text px-md-2 px-lg-5">Добро пожаловать на сайт нашей команды системного администрирования. Если у вас есть проект на какой-либо интернет-платформе, и вам необходим персонал, который будет администрировать и модерировать ваш проект, то вы по адресу!</h4>
         </div>
     </div>
 </div>
-<div id="page-2" class="container-fluid">
-    <div class="row h100vh justify-content-center align-items-center z-depth-1 white">
-        <div class="col-10 col-lg-6">
-            <div class="row d-flex justify-content-center">
-                <div data-aos="fade-down" class="col-12 text-center">
-                    <h1 class="mb-3">О наc</h1>
-                    <h4 class="mb-5">Быстро, катчественно - наши принципы!</h4>
-                </div>
-                <div data-aos="fade-down" class="col-md-10">
-                <div class="card">
-                    <div class="card-body m-3">
-                    <div class="row">
-                        <div class="col-lg-4 d-flex mb-2 align-items-center">
-                        <div class="avatar mx-4 w-100 white d-flex justify-content-center align-items-center">
-                            <img src="https://go.iny.su/uc/cc4ca42/v6f7584/469dc3ce/426e19e5765.jpg" class="rounded-circle img-fluid z-depth-1" alt="avatar">
-                        </div>
-                        </div>
-                        <div class="col-lg-8">
-                        <p class="text-muted font-weight-light mb-4">
-                        Мы - команда специалистов , которая работает с настройками различных интернет-платформ.
-                        Мы создаем индивидуальные системы персонала на этих платформах.
-                        Мы делам так, чтобы ваш проект работал,как часы,вместе с системой персонала.
-                        Для каждого клиента мы привносим некоторые изменения в наши системы, что дает им индивидуальность.
-                        </p>
-                        <p class="font-weight-bold lead mb-2"><strong>Вадим Новиков</strong> <i onclick="nav.away(nav.createLink('https://vk.com/wadimeng'));" class="fab fa-vk text-muted ml-lg-2" style="cursor:pointer;"></i></p>
-                        <p class="font-weight-bold text-muted mb-0">Администратор</p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+<div id="page-2" class="container">
+    <div class="row h100vh justify-content-center align-items-center elegant-color">
+        <div class="col-12 col-lg-6 text-center">
+            <h1 data-aos="fade-down" class="h1-responsive white-text font-weight-bold">О нас</h1>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 text-center">
+
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div id="page-3" class="container-fluid">
-    <div class="row h100vh justify-content-center align-items-center blue-grey lighten-5">
-        <div data-aos="fade-down" class="col-10 col-lg-6">
-            <h1>Услуги</h1>
+<div id="page-3" class="container">
+    <div class="row h100vh justify-content-center align-items-center elegant-color">
+        <div class="col-12 col-lg-6 text-center">
+            <h1 data-aos="fade-down" class="h1-responsive white-text font-weight-bold">Услуги</h1>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 text-center">
+                    
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<div id="page-4" class="container-fluid">
-    <div class="row h100vh justify-content-center align-items-center white">
-        <div data-aos="fade-down" class="d-block col-10 col-lg-12 text-center">
-            <h1 class="h1-responsive font-wight-bold black-text mb-3">Если вы действительно чего-то хотите, не ждите — будьте нетерпеливыми.</h1>
-            <h4 class="h4-responsive font-wight-bold black-text mb-3">Напишите нам, и мы вам поможем.</h4>
-            <button onclick="nav.away(nav.createLink('mailto:vadimnovikov108@gmail.com'));" class="btn btn-outline-black btn-rounded">vadimnovikov108@gmail.com</button>
+<div id="page-4" class="container">
+    <div class="row h100vh justify-content-center align-items-center elegant-color">
+        <div class="col-12 col-lg-6 text-center">
+            <h1 data-aos="fade-down" class="h1-responsive white-text font-weight-bold">Контакты</h1>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 text-center">
+                    
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<footer class="page-footer font-small mdb-color">
+<footer class="page-footer font-small elegant-color-dark">
     <div class="footer-copyright white-text text-center py-3">© 2020 Copyright:
         <a href="https://iny.su"> INY.SU</a>
     </div>
@@ -100,6 +97,16 @@ $warp = 'app';
 init.preload.go(500)
 init.css.add('aos', 'domain:https://unpkg.com/aos@2.3.1/dist/aos.css', 1)
 init.js.add('aos', 'domain:https://unpkg.com/aos@2.3.1/dist/aos.js', 1)
+
+init.css.add('animationTextDisplay', 'sandbox/animationTextDisplay.css', 7)
+init.js.add('animationTextDisplay', 'sandbox/animationTextDisplay.js', 7)
+animationTextDisplay.init(200, ()=>{
+    setTimeout(() => {
+        nav.scroll(nav.createLink('#page-1'))
+        if (!fn.isMobile()) VK.Widgets.CommunityMessages("vk_community_messages", 194836692, {expanded: "1",disableExpandChatSound: "1",disableNewMessagesSound: "1",tooltipButtonText: "Есть вопрос?"})
+    }, 200)
+})
+
 AOSinterval = setInterval(() => {
        if (typeof AOS == 'object') {
            AOS.init()
@@ -115,12 +122,9 @@ jarallax(document.querySelectorAll('.jarallax-keep-img'), {
 
 style.changeHeaderColor({
     block: '#header',
-    height: window.innerHeight - $('#header').innerHeight()*2,
+    height: window.innerHeight - $('#header').innerHeight()*4,
     baseColor: '#00000000',
-    plusColor: '#45526e',
-    baseClass: 'z-depth-0 py-3'
+    plusColor: '#212121',
+    baseClass: 'py-3'
 })
-setTimeout(() => {
-    if (!fn.isMobile()) VK.Widgets.CommunityMessages("vk_community_messages", 194836692, {expanded: "1",disableExpandChatSound: "1",disableNewMessagesSound: "1",tooltipButtonText: "Есть вопрос?"})
-}, 2000)
 </script>

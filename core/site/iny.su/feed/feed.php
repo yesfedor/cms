@@ -9,13 +9,13 @@ function blogNewOptionGet() {
         '0' => [
             'title' => 'Новый сервис',
             'text' => 'Сервис коротких ссылок, необходимый для корректной работы сайта!',
-            'poster781x521' => 'https://go.iny.su/uc/cc4ca42/v6f7584/bb549e6e/bd64c099313.jpg',
+            'poster781x521' => 'https://go.iny.su/web/file/ogimg/main/cc.png',
             'go-link' => 'bl6'
         ],
         '1' => [
             'title' => 'Новый сервис',
             'text' => 'Tester Online - Уникальная система создания тестов на INY.SU!',
-            'poster781x521' => 'https://go.iny.su/uc/cc4ca42/v6f7584/ef567538/ffed277ea1d.jpg',
+            'poster781x521' => 'https://go.iny.su/web/file/ogimg/main/tester.png',
             'go-link' => 'bl7'
         ],
         '2' => [
