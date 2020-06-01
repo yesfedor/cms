@@ -29,7 +29,7 @@ if ($api_action) {
     if ($api_version) {
         $api_path = $public.'/api/'.$api_version.'/';
         if (file_exists($api_path)) {
-            $api_file = $api_path.$api_action.'.php';
+            $api_file = $api_path.str_replace('.', '/', $api_action).'.php';
             if (file_exists($api_file)) {
                 include_once($api_file);
             } else {
