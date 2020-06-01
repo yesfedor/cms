@@ -82,7 +82,7 @@ if ($get_hash == md5($config['vkapp']['app_id'].$get_uid.$config['vkapp']['secre
             </div>
         </div>
         <script type="text/javascript">
-            VK.Widgets.Auth("with_vk", {"authUrl":"/api/0.1/auth/with.vk.php"});
+            VK.Widgets.Auth("with_vk", {"authUrl":"/api/0.1/auth/vk.php"});
         </script>
     </body>
 </html>

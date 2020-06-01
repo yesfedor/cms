@@ -32,7 +32,7 @@ $warp = "warp";
         <button type="button" class="btn btn-outline-primary btn-rounded waves-effect z-depth-0 my-0" onclick="appForms.go('app-login', 'auth/login');"><span data-lang="app_user_login_login_btn"></span></button>
     </div>
     <hr class="w-100 border-primary my-2">
-    <div id="app-login-callback" class="col-12 text-center mb-1"><a class="my-0 py-0" href="/api.php?_action=auth/with.vk&v=0.1"><i class="fab fa-vk theme-link"></i></a></div>
+    <div id="app-login-callback" class="col-12 text-center mb-1"><a class="my-0 py-0" href="/api.php?_action=auth/vk&v=0.1"><i class="fab fa-vk theme-link"></i></a></div>
 </form>
                 </div>
                 <div class="col-12 my-2"></div>
