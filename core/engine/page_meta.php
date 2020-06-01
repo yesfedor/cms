@@ -1,6 +1,6 @@
 <?php
 /* 
- * @info условия для показа meta-данных
+ * @comment условия для показа meta-данных
  * подключается файл global/meta.php у сайта
 */
 $enginePageMetaSite = $thisSitePath.'global/meta.php';
