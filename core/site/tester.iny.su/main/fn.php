@@ -192,7 +192,7 @@ function tester_create_get_select_poster() {
 }
 
 function tetser_get_author($author_uid) {
-    $getUserInfoUrl = 'https://api.iny.su/api.php?_action=user/getInfo&v=0.1&uid='.$author_uid;
+    $getUserInfoUrl = 'https://iny.su/api.php?_action=user/getInfo&v=0.1&uid='.$author_uid;
     $author_info = json_decode(file_get_contents($getUserInfoUrl), true);
         if ($author_info['uid']) $author = $author_info['name'].' '.$author_info['surname'];
         else $author = 'Пользователь удалён';
