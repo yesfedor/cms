@@ -54,7 +54,7 @@ if ($_SESSION['user']['uid']) {
                     <button type="button" class="btn btn-outline-primary btn-rounded waves-effect z-depth-0 my-0" onclick="appForms.go('app-login', 'auth/login');"><span data-lang="app_user_login_login_btn"></span></button>
                 </div>
                 <hr class="w-100 border-primary my-2">
-                <div id="app-login-callback" class="col-12 text-center mb-1"><a class="my-0 py-0" href="/api.php?_action=auth/vk&v=0.1"><i class="fab fa-vk text-primary"></i></a></div>
+                <div id="app-login-callback" class="col-12 text-center mb-1"><a class="my-0 py-0" href="/api.php?_action=auth.vk&v=0.1"><i class="fab fa-vk text-primary"></i></a></div>
             </form>
         </div>
         <div id="window-reg" class="col-12 col-md-6 col-lg-4 theme-panel border border-primary rounded text-center px-0 my-5">
@@ -73,7 +73,7 @@ if ($_SESSION['user']['uid']) {
                     <button type="button" class="btn btn-outline-primary btn-rounded waves-effect z-depth-0 my-0" data-toggle="modal" data-target="#modalAuthReg"><span data-lang="app_user_reg_step"></span></button>
                 </div>
                 <hr class="w-100 border-primary my-2">
-                <div id="app-reg-min-callback" class="col-12 text-center mb-1"><a class="my-0 py-0" href="/api.php?_action=auth/vk&v=0.1"><i class="fab fa-vk text-primary"></i></a></div>
+                <div id="app-reg-min-callback" class="col-12 text-center mb-1"><a class="my-0 py-0" href="/api.php?_action=auth.vk&v=0.1"><i class="fab fa-vk text-primary"></i></a></div>
             </form>
         </div>
         <div id="app-mini-footer" class="col-12 text-center"><a class="authFullModeText mx-1" onclick="language.chenge('ru');" href="#">Русский</a> <a class="authFullModeText mx-1" onclick="language.chenge('en');" href="#">English</a></div>
