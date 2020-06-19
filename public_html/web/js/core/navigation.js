@@ -69,18 +69,18 @@ var nav = {
         switch(element) {
             case 'start':
                 nav.data.restart = true
-                history.replaceState({
+                history.pushState({
                     pathname:data_pathname,
                     search: data_query,
                     hash: data_hash
-                }, null, link.href)
+                }, '', link.href)
             break;
             case 'go':
                 history.pushState({
                     pathname:data_pathname,
                     search: data_query,
                     hash: data_hash
-                }, null, link.href)
+                }, '', link.href)
             break;
         }
         
@@ -266,7 +266,7 @@ var nav = {
 }
 
 window.addEventListener("popstate", function() {
-    nav.router(window.location.href, 'start')
+    nav.router(window.location.href, 'go')
 }, false);
 
 nav.router(window.location.href, 'start')
