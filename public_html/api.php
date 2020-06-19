@@ -18,7 +18,6 @@ switch($wait) {
         $api_w = '0.1';
     break;
 }
-#$api_w = 5;
 sleep($api_w);
 
 $public = $_SERVER['DOCUMENT_ROOT'];
