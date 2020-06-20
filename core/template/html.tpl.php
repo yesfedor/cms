@@ -2,7 +2,8 @@
 http_response_code(200);
 
 $common_block = <<<common_block
-    <div class="col-12 text-center"><div class="row py-1 px-1"><div class="col-12 my-5 text-center"><div class="preloader-wrapper big active"><div class="spinner-layer spinner-blue-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div></div></div></div>
+<div class="col-12 text-center"><div class="row py-1 px-1"><div class="col-12 my-5 text-center"><div class="preloader-wrapper big active"><div class="spinner-layer spinner-blue-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div></div></div></div>
+
 common_block;
 
 $html_comment_block = '<!--'.PHP_EOL.' ADMIN: https://vk.com/yesfedor'.PHP_EOL.' CONTACT: https://iny.su/landings/yesfedor'.PHP_EOL.'-->'.PHP_EOL;
@@ -32,7 +33,9 @@ $html_comment_block = '<!--'.PHP_EOL.' ADMIN: https://vk.com/yesfedor'.PHP_EOL.'
             <main id="warp"></main>
             <footer class="page-footer font-small theme-primary"></footer>
         </application>
-        <common class="row"><?= $common_block ?></common>
+        <common class="row h100vh">
+            <?= $common_block ?>
+        </common>
         <script>
         let config = {
             visit: 'user_defaut',
