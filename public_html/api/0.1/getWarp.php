@@ -35,6 +35,10 @@ ob_start();
 ob_end_clean();
 
 $bigData['title'] = $title;
+$bigData['meta'] = [
+    'title_ru' => $p['meta']['title_ru'],
+    'title_en' => $p['meta']['title_en']
+];
 $bigData['redirect'] = ($redirect ? $redirect : false);
 $bigData['header-app-theme-color'] = ($p['page']['theme-color'] ? $p['page']['theme-color'] : '#ffffff');
 if (!$bigData['html']['warp-page-helper']) $bigData['html']['warp-page-helper'] = false;

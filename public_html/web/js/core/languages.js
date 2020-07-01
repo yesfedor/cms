@@ -39,6 +39,7 @@ var language = {
                 language.data.language = new_lang
                 language.data.localeStatus = true
                 language.data.locale = data.locale
+                nav.changeTitle(nav.pageMeta['title_' + new_lang])
 
                 setTimeout(() => {
                     $('[data-lang]').each((i, el)=>{

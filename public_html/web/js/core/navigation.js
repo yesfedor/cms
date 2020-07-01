@@ -31,6 +31,7 @@ var nav = {
             return query_result
         }
     },
+    pageMeta: {},
     navEmmetOnunload() {
         if (typeof this.onunload == 'function') {
             this.onunload()
@@ -109,7 +110,8 @@ var nav = {
             },
             success: function (data) {
                 if (data.redirect) window.location.href = data.redirect
-                if (data.title) document.title = data.title
+                if (data.title) nav.changeTitle(data.title)
+                if (data.meta) nav.pageMeta = data.meta
                 $('#header-app-theme-color').attr('content', data['header-app-theme-color'])
 
                 if (data.ui_json) {
