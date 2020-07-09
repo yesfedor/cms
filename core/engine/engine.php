@@ -10,6 +10,8 @@ $private = mb_substr($_SERVER['DOCUMENT_ROOT'], 0, -12);
 $enginePath = $private.'/core/engine/';
 $engine_build = $enginePath.'engine.php';
 
+$cookie_lifetime = 60*60*24*365;
+
 $engineApi = $enginePath.'api.php';
 $engineConfig = $enginePath.'config.php';
 $engineDb = $enginePath.'db.php';
@@ -24,9 +26,9 @@ include_once($engineDomain);
 
 session_name('client_id');
 date_default_timezone_set('UTC');
-session_set_cookie_params(864000, '/', '.'.$domain_session);
+session_set_cookie_params($cookie_lifetime, '/', '.'.$domain_session);
 session_start([
-    'cookie_lifetime' => 864000,
+    'cookie_lifetime' => $cookie_lifetime,
 ]);
 
 function debug($bug) {
