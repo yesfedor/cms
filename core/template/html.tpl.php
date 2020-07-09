@@ -24,7 +24,7 @@ $html_comment_block = '<!--'.PHP_EOL.' ADMIN: https://vk.com/yesfedor'.PHP_EOL.'
         <?= openGraph() ?>
         
         <link id="app-css-theme-data" rel="stylesheet" href="/web/css/theme/<?= $domainBase[appGetDomain()].$_SESSION['theme'] ?>.css?version=32">
-        <link rel="stylesheet" href="/web/css/themes.css?version=17">
+        <link rel="stylesheet" href="/web/css/themes.css?version=32">
         <link rel="stylesheet" href="/web/css/@offline.css">
     </head>
     <body>

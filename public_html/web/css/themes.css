@@ -1,5 +1,5 @@
 :root {
-    --theme-duration-change: 0s;
+    --theme-duration-change: 0.2s;
 }
 html, body {
     transition-property: background-color, color, border-color;
