@@ -19,7 +19,6 @@ var init = {
         footer: servers.api + '/api.php?_action=getFooter&v=0.1',
         jquery: servers.cdn + '/web/vendor/js/jquery.js'
     },
-
     checkUrl(type, url) {
         tplBaseDir = 'base:'
         tplBaseDomain = 'domain:'
@@ -79,7 +78,6 @@ var init = {
                 break;
         }
     },
-
     css: {
         add(id, url, version=false) {
             if (init.checkData('css', id)) {
@@ -88,7 +86,7 @@ var init = {
                 $('<link/>', {
                     id: 'app-css-' + id,
                     rel: 'stylesheet',
-                    href: url + (version ? '?version=' + version : '')     
+                    href: url + (version ? '?version=' + version : '')
                 }).appendTo('head')
 
                 init.data.css[id] = {
@@ -96,14 +94,13 @@ var init = {
                     url: url,
                     version: version
                 }
-            } 
+            }
         },
         remove(id) {
             $('#app-css-' + id).remove()
             init.data.css[id] = false
         }
     },
-
     js: {
         add(id, url, version=false) {
             if (init.checkData('js', id)) {
@@ -126,7 +123,6 @@ var init = {
             init.data.js[id] = false   
         }
     },
-
     header(type='') {
         if (type == '') {
             if (config.user.auth) type = 'user'
@@ -139,7 +135,6 @@ var init = {
         
         init.data.header[type] = true
     },
-
     footer(type='') {
         if (type == '') {
             if (config.user.auth) type = 'none'
@@ -152,7 +147,6 @@ var init = {
         
         init.data.footer[type] = true
     },
-
     boot(data) {
         if (data.setting) init.setSetting(setting)
         if (data.css) {
@@ -174,7 +168,6 @@ var init = {
             else init.footer(data.footer.type_auth_false)
         }
     },
-
     setSetting(setting=false) {
         if (setting.path.css) init.path.css = setting.path.css
         if (setting.path.js) init.path.js = setting.path.js
@@ -182,7 +175,6 @@ var init = {
         if (setting.path.footer) init.path.footer = setting.path.footer
         if (setting.path.jquery) init.path.jquery = setting.path.jquery
     },
-
     initJquery() {
         // init jquery
         var jquery = document.createElement('script');
@@ -211,7 +203,6 @@ var init = {
             }
         }, 100)
     },
-
     preload: {
         duration: 2000,
         go(duration=2000) {
@@ -224,7 +215,6 @@ var init = {
             }, init.preload.duration);
         }
     },
-
     start(setting=false) {
         // test from
         let fromReload = /(\?|\&)from=([A-Za-z0-9]{0,50})/g
@@ -250,7 +240,6 @@ var init = {
             }
         })
     },
-
     createModal(id, html={title:'', content:'', footer:''}, size='', bgcolor='') {
         // size = small : large : full
         if ($('#' + id).is('div') === false) {
@@ -268,7 +257,6 @@ var init = {
             userApi.checkerUserApi()
         }
     },
-
     createModalRender(id, title='', content='', footer='', size='', bgcolor='') {
         let html = ``
         let style = ``
