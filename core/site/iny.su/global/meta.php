@@ -20,15 +20,4 @@ if ($url_page == 'landings') {
     $og_type = 'website';
     $og_image = $landingsMeta['og_image'];
 }
-
-if ($url_page == 'media') {
-    $landingsMetaPath = $thisSitePath.'landings/a-meta.php';
-    include_once($landingsMetaPath);
-
-    $title = 'Закрытая медиатека от INY.SU';
-    $description = 'Здесь вы найдете фильмы и сериалы на любой вкус в хорошем качестве';
-    $keywords = '';
-    $og_type = 'website';
-    $og_image = 'media.png';
-}
 ?>
