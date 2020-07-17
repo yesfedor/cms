@@ -21,15 +21,15 @@ $warp = "warp-page";
 </div>
 
 <!-- KPID Search -->
-<div class="col-10 offset-1 md-form my-3">
-    <input type="text" id="kpid_search" class="form-control">
-    <label for="kpid_search">По базе Кинопоиска</label>
+<div class="col-10 offset-1 md-form md-outline my-3">
+    <input type="text" id="kpid_search" class="theme-panel form-control">
+    <label for="kpid_search" class="theme-panel rounded theme-title mx-3">По базе Кинопоиска</label>
 </div>
 
 <!-- Text Search -->
-<div class="col-10 offset-1 md-form my-3">
-    <input type="text" id="test_search" class="form-control">
-    <label for="test_search">Поиск</label>
+<div class="col-10 offset-1 md-form md-outline my-3">
+    <input type="text" id="test_search" class="theme-panel form-control">
+    <label for="test_search" class="theme-panel rounded theme-title mx-3">Поиск</label>
 </div>
 
 <!-- Text Search Result -->
