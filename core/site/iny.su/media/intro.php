@@ -5,7 +5,7 @@ $warp = "warp-page";
 <!-- Welcome Preview -->
 <div class="col-10 offset-1 text-center">
     <h3 class="h3 theme-title py-0 mt-0 mb-3">Закрытая медиатека от INY.SU</h3>
-    <h5 class="theme-text py-0 mt-3 mb-0">Здесь вы найдете фильмы и сериалы на любой вкус и цвет в хорошем качестве</h5>
+    <h5 class="theme-text py-0 mt-3 mb-0">Здесь вы найдете фильмы и сериалы на любой вкус в хорошем качестве</h5>
 </div>
 
 <!-- Scene -->
@@ -23,13 +23,13 @@ $warp = "warp-page";
 <!-- KPID Search -->
 <div class="col-10 offset-1 md-form my-3">
     <input type="text" id="kpid_search" class="form-control">
-    <label for="kpid_search">Kinopoisk id</label>
+    <label for="kpid_search">По базе Кинопоиска</label>
 </div>
 
 <!-- Text Search -->
 <div class="col-10 offset-1 md-form my-3">
     <input type="text" id="test_search" class="form-control">
-    <label for="test_search">Search</label>
+    <label for="test_search">Поиск</label>
 </div>
 
 <!-- Text Search Result -->
