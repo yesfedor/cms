@@ -72,5 +72,5 @@ if (typeof watch == 'object') {
     watch.data = watchData
     watch.init()
 }
-else init.js.add('media-watch', 'module/media.watch.js', 7)
+else init.js.add('media-watch', 'module/media.watch.js', 8)
 </script>

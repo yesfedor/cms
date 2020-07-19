@@ -60,8 +60,6 @@ let watch = {
     init() {
         watch.data = watch.data.data
 
-        console.log(watch.data)
-
         this.initEls()
         this.initPlayer()
     }
