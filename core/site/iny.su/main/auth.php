@@ -89,7 +89,15 @@ nav.onunload = () => {
     init.footer("default");
 }
 function authFullMode() {
-    picPath = 'https://go.iny.su/bmr'
+    let authFullMode = document.getElementsByClassName('authFullMode')[0]
+    let picPath = 'https://go.iny.su/bmr'
+
+    // media.iny.su inject
+    let kpid = nav.url.query('kpid')
+    if (kpid != null) {
+        picPath = 'http://st.kinopoisk.ru/images/film_big/' + kpid + '.jpg'
+        authFullMode.style.filter = 'brightness(0.2) grayscale(1)'
+    }
 
     $('.authFullMode').css('background-image', 'url("' + picPath + '")')
     $('.authFullMode').css('display', 'block')

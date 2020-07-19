@@ -2,7 +2,7 @@
 function mainLocation() {
     global $_SESSION;
 
-    $url_auth_true = '/feed';
+    $url_auth_true = '/main';
     $url_auth_false = '/main';
 
     if ($_SESSION['user']['uid']) return '<script>nav.router(\''.$url_auth_true.'\', true);</script>';

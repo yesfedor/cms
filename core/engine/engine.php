@@ -65,6 +65,9 @@ function getUserAccessScore($access='') {
 include_once($engineSession);
 include_once($engineApi);
 
+parse_str(parse_url(appGetUrl(), PHP_URL_QUERY), $getQuery);
+$_GET = array_merge($_GET, $getQuery);
+
 $templatePath = $private.'/core/template/';
 $sitePath = $private.'/core/site/';
 $thisSitePath = $private.'/core/site/'.appGetDomain().'/';

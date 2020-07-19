@@ -5,14 +5,19 @@ $keywords = $p['meta']['keywords_'.$_SESSION['lang']];
 $og_type = $p['meta']['og_type'];
 $og_image = $p['meta']['og_image'];
 
-if ($url_page != 'main' and $url_p1 != 'info') {
-    header('Location: '.$p['data']['url_to']);
-    echo '<meta http-equiv="refresh" content="0; url='.$p['data']['url_to'].'">';
-
-    $query_go_cc_add_click = "UPDATE go_cc SET `click` = `click` + 1 WHERE `id` = :id";
-    $var_go_cc_add_click = [
-        ':id' =>  $p['data']['id']
-    ];
-    dbAddOne($query_go_cc_add_click, $var_go_cc_add_click);
+if ($url_page == 'watch') {
+    $kpid = $_GET['kpid'];
+    $ch = curl_init();
+    $headers = array('accept: application/json', 'x-api-key: 91d00358-6586-40e6-9d4e-9d9070547812');
+    curl_setopt($ch, CURLOPT_URL, 'https://kinopoiskapiunofficial.tech/api/v2.1/films/'.$kpid); # URL to post to
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); # return into a variable
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers); # custom headers, see above
+    $data = curl_exec($ch); # run!
+    curl_close($ch);
+    $content = json_decode($data, true);
+    $content = $content['data'];
+    
+    $title = $content['nameRu'].', '.$content['year'].' | INY Media';
+    $description = $content['slogan'];
 }
 ?>
