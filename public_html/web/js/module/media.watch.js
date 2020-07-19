@@ -6,12 +6,12 @@ let watch = {
         token: 'dhYHeqruV5o7oint21ggMMIUBaDE0Rm6'
     },
     els: {
-        player: document.getElementById('watch_player'),
-        title: document.getElementById('watch_title'),
-        date: document.getElementById('watch_date'),
-        genre: document.getElementById('watch_genre'),
-        desc_item: document.getElementById('watch_desc_item'),
-        desc: document.getElementById('watch_desc')
+        player: null,
+        title: null,
+        date: null,
+        genre: null,
+        desc_item: null,
+        desc: null
     },
     initPlayer() {
         let kpid = nav.url.query('kpid')
@@ -49,8 +49,20 @@ let watch = {
             }
         })
     },
+    initEls() {
+        this.els.player = document.getElementById('watch_player')
+        this.els.title = document.getElementById('watch_title')
+        this.els.date = document.getElementById('watch_date')
+        this.els.genre = document.getElementById('watch_genre')
+        this.els.desc_item = document.getElementById('watch_desc_item')
+        this.els.desc = document.getElementById('watch_desc')
+    },
     init() {
         watch.data = watch.data.data
+
+        console.log(watch.data)
+
+        this.initEls()
         this.initPlayer()
     }
 }

@@ -13,7 +13,7 @@ if ($kpid) {
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers); # custom headers, see above
     $data = curl_exec($ch); # run!
     curl_close($ch);
-    $content = json_decode($data, true)['data'];
+    $content = json_decode($data, true);
 } else $redirect = '/main';
 ?>
 <div class="container-fluid">
@@ -61,8 +61,10 @@ if ($kpid) {
 watchData = <?= $data ?>
 
 if (typeof watch == 'object') {
+    watch.data = {}
+    watch.content = {}
     watch.data = watchData
-    watch.initPlayer()
+    watch.init()
 }
-else init.js.add('media-watch', 'module/media.watch.js', 4)
+else init.js.add('media-watch', 'module/media.watch.js', 7)
 </script>

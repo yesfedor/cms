@@ -4,6 +4,7 @@ $warp = "warp";
 
 $kpid = $_GET['kpid'];
 if (!$kpid) $redirect = '/main';
+else $_SESSION['url-redirect'] = 'https://media.iny.su/watch?kpid='.$kpid;
 ?>
 <meta http-equiv="refresh" content="5; url=https://iny.su/auth?to=media.iny.su&_origin=false&api=true&kpid=<?= $kpid ?>">
 <div class="container-fluid">
