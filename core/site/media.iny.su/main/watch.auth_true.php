@@ -46,10 +46,16 @@ if ($kpid) {
                 <div class="col-12 col-lg-3">
                     <div class="row px-lg-5">
                         <!-- Recoms -->
-                        <div class="col-12 text-center mt-5 mt-lg-0">
-                            <h4 class="theme-title">Рекомендации</h4>
+                        <div class="col-12 text-center mt-5 mt-lg-0 px-0">
+                            <h4 class="theme-title mb-2">Рекомендации</h4>
                         </div>
                         <hr class="w-100 w-lg-75 theme-border-primary text-center my-3">
+
+                        <div class="col-12 text-center mt-5 mt-lg-0 px-0">
+                            <h6 class="theme-text"><?= $content['data']['slogan'] ?></h6>
+                        </div>
+                        <hr class="w-100 w-lg-75 theme-border-primary text-center my-3">
+
                     </div>
                 </div>
             </div>
