@@ -10,7 +10,7 @@ $mediaSerialsTop = file_get_contents('https://media.iny.su/api/0.1/media/mediaSe
     }
 </style>
 <!-- Welcome Gallery -->
-<div id="gallery-intro" class="d-none d-lg-block carousel slide carousel-fade z-depth-0" data-ride="carousel">
+<div id="gallery-intro" class="d-none d-md-block carousel slide carousel-fade z-depth-0" data-ride="carousel">
     <!--Indicators-->
     <ol class="carousel-indicators">
         <li data-target="#gallery-intro" data-slide-to="0" class="active"></li>
@@ -142,8 +142,8 @@ $mediaSerialsTop = file_get_contents('https://media.iny.su/api/0.1/media/mediaSe
 </div>
 
 <script>
-init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 16)
-init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 256)
+init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 32)
+init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 512)
 
 films = <?= $mediaSerialsTop ?>
 

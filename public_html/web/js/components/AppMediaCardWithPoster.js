@@ -32,14 +32,14 @@ class AppMediaCardWithPoster extends HTMLElement {
 }
 customElements.define('media-card', AppMediaCardWithPoster);
 
-function appMediaRender(warpId, data, opt = {fill: 'default', type: 'serial'}) {
+function appMediaRender(warpId, data, opt = {fill: 'default', type: false}) {
     let fill = opt.fill
     let type = opt.type
     mediaWrapper = document.getElementById(warpId)
     data.forEach((obj)=>{
-        let guessType = obj.year
-        if ( guessType.length == 4) guessType = 'movie'
-        if ( guessType.length > 4) guessType = 'serial'
+        let guess = obj.year
+        if (guess.length == '4') guessType = 'movie'
+        if (guess.length > 4) guessType = 'serial'
 
         let el = document.createElement('media-card')
         el.setAttribute('data-fill', (fill ? fill : 'default'))
