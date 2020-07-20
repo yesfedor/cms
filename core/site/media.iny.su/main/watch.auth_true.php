@@ -23,7 +23,7 @@ if ($kpid) {
         <div class="col-12 col-md-10 offset-md-1">
             <!-- Wrapper -->
             <div class="row my-3">
-                <div class="col-12 col-lg-9">
+                <div class="col-12 col-xl-9">
                     <div class="row">
                         <!-- Player -->
                         <div class="col-12 theme-panel embed-responsive embed-responsive-16by9">
@@ -45,18 +45,18 @@ if ($kpid) {
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-3">
-                    <div class="row px-lg-5">
+                <div class="col-12 col-xl-3">
+                    <div class="row px-xl-5">
                         <!-- Recoms -->
-                        <div class="col-12 text-center mt-5 mt-lg-0 px-0">
+                        <div class="col-12 text-center mt-5 mt-xl-0 px-0">
                             <h4 class="theme-title mb-2">Рекомендации</h4>
                         </div>
-                        <hr class="w-100 w-lg-75 theme-border-primary text-center my-3">
+                        <hr class="w-100 w-xl-75 theme-border-primary text-center my-3">
 
-                        <div class="col-12 text-center mt-5 mt-lg-0 px-0">
-                            <h6 class="theme-text"><?= $content['data']['slogan'] ?></h6>
+                        <div class="col-12 text-center mt-5 mt-xl-0 px-0">
+                            <h6 class="theme-text my-0"><?= $content['data']['slogan'] ?></h6>
                         </div>
-                        <hr class="w-100 w-lg-75 theme-border-primary text-center my-3">
+                        <hr class="w-100 w-xl-75 theme-border-primary text-center my-3">
                         <div class="col-12">
                             <div id="mediaWrapper" class="row"></div>
                         </div>
@@ -72,8 +72,8 @@ watchData = <?= $data ?>
 
 watchDataRecoms = <?= $watchDataRecoms ?>
 
-init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 64)
-init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 4096)
+init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 128)
+init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 8192)
 if (typeof watch == 'object') {
     watch.data = {}
     watch.content = {}

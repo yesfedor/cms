@@ -2,7 +2,7 @@
     border-color: white!important;
 }
 .card-poster {
-    height: 70vh;
+    /* height: 70vh; */
     filter: grayscale(1);
     background-color: #000000bb;
     background-size: cover;
@@ -15,4 +15,46 @@
 .card-poster:hover {
     filter: grayscale(0) drop-shadow(0px 0px 8px #4285F4);
     background-color: #00000066;
+}
+
+.card-poster_view-default {
+    height: 60vh;
+}
+.card-poster_view-max-content {
+    height: 30vh;
+}
+@media (min-width: 576px) {
+    .card-poster_view-default {
+        height: 60vh;
+    }
+    .card-poster_view-max-content {
+        height: 30vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-poster_view-default {
+        height: 60vh;
+    }
+    .card-poster_view-max-content {
+        height: 40vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-poster_view-default {
+        height: 60vh;
+    }
+    .card-poster_view-max-content {
+        height: 40vh;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-poster_view-default {
+        height: 60vh;
+    }
+    .card-poster_view-max-content {
+        height: 30vh;
+    }
 }
