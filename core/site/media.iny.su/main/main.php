@@ -143,19 +143,9 @@ $mediaSerialsTop = file_get_contents('https://media.iny.su/api/0.1/media/mediaSe
 
 <script>
 init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 16)
-init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 64)
+init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 256)
 
 films = <?= $mediaSerialsTop ?>
 
-mediaWrapper = document.getElementById('mediaWrapper')
-films.forEach((obj)=>{
-    let el = document.createElement('media-card')
-    el.setAttribute('data-fill', 'default')
-    el.setAttribute('data-type', 'serial')
-    el.setAttribute('data-title', obj.nameRu)
-    el.setAttribute('data-year', obj.year)
-    el.setAttribute('data-kpid', obj.filmId)
-    mediaWrapper.append(el)
-})
-
+appMediaRender('mediaWrapper', films, {fill: 'default', type: false})
 </script>

@@ -31,3 +31,22 @@ class AppMediaCardWithPoster extends HTMLElement {
     }
 }
 customElements.define('media-card', AppMediaCardWithPoster);
+
+function appMediaRender(warpId, data, opt = {fill: 'default', type: 'serial'}) {
+    let fill = opt.fill
+    let type = opt.type
+    mediaWrapper = document.getElementById(warpId)
+    data.forEach((obj)=>{
+        let guessType = obj.year
+        if ( guessType.length == 4) guessType = 'movie'
+        if ( guessType.length > 4) guessType = 'serial'
+
+        let el = document.createElement('media-card')
+        el.setAttribute('data-fill', (fill ? fill : 'default'))
+        el.setAttribute('data-type', (type ? type : guessType))
+        el.setAttribute('data-title', obj.nameRu)
+        el.setAttribute('data-year', obj.year)
+        el.setAttribute('data-kpid', obj.filmId)
+        mediaWrapper.append(el)
+    })
+}
