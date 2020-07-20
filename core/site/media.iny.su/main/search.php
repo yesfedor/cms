@@ -14,9 +14,16 @@
 init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 32)
 init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 512)
 
-let el_search = document.getElementById('search')
+el_search = document.getElementById('search')
 nav.onsearch('change', '#search', '/search?query={%query%}', '/search', '{%query%}', () => {
-    console.log('init Search module')
+    setTimeout(() => {
+        let initQuery = nav.url.query('query')
+        if (initQuery != null) {
+            $('[for = search]').addClass('active');
+            el_search.setAttribute('value', initQuery)
+            el_search.dispatchEvent(new Event('change'))
+        }
+    }, 500);
 }, () => {
     let value = el_search.value
     if (value.length > 2) {
@@ -35,11 +42,4 @@ nav.onsearch('change', '#search', '/search?query={%query%}', '/search', '{%query
         });
     }
 }, urlState='go')
-
-let initQuery = nav.url.query('query')
-if (initQuery != null) {
-    $('[for = search]').addClass('active');
-    el_search.setAttribute('value', initQuery)
-    el_search.dispatchEvent(new Event('change'))
-}
 </script>
