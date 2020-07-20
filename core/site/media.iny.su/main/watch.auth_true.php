@@ -14,6 +14,8 @@ if ($kpid) {
     $data = curl_exec($ch); # run!
     curl_close($ch);
     $content = json_decode($data, true);
+
+    $watchDataRecoms = json_encode(array_slice(json_decode(file_get_contents('https://media.iny.su/api/0.1/media/mediaWatchRecoms.json')), 0, 5), JSON_UNESCAPED_UNICODE);
 } else $redirect = '/main';
 ?>
 <div class="container-fluid">
@@ -55,7 +57,9 @@ if ($kpid) {
                             <h6 class="theme-text"><?= $content['data']['slogan'] ?></h6>
                         </div>
                         <hr class="w-100 w-lg-75 theme-border-primary text-center my-3">
-
+                        <div class="col-12">
+                            <div id="mediaWrapper" class="row"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -66,11 +70,15 @@ if ($kpid) {
 <script>
 watchData = <?= $data ?>
 
+watchDataRecoms = <?= $watchDataRecoms ?>
+
+init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 64)
+init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 4096)
 if (typeof watch == 'object') {
     watch.data = {}
     watch.content = {}
     watch.data = watchData
     watch.init()
-}
-else init.js.add('media-watch', 'module/media.watch.js', 8)
+} else init.js.add('media-watch', 'module/media.watch.js', 8)
+appMediaRender('mediaWrapper', watchDataRecoms, {fill: 'max-content', type: false})
 </script>

@@ -7,8 +7,8 @@
         </button>
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav nav-flex-icons">
-                <li class="nav-item"><?= url('/serials', '<span class="theme-nav-link">Сериалы</span>', false, 'nav-link', true) ?></li>
-                <li class="nav-item"><?= url('/films', '<span class="theme-nav-link">Фильмы</span>', false, 'nav-link', true) ?></li>
+                <!--<li class="nav-item"><?= url('/serials', '<span class="theme-nav-link">Сериалы</span>', false, 'nav-link', true) ?></li>
+                <li class="nav-item"><?= url('/films', '<span class="theme-nav-link">Фильмы</span>', false, 'nav-link', true) ?></li> -->
                 <li class="nav-item"><?= url('/search', '<span class="theme-nav-link">Поиск</span>', false, 'nav-link', true) ?></li>
             </ul>
         </div>

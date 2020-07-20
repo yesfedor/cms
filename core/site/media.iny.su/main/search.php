@@ -4,15 +4,15 @@
             <h1 class="theme-title">Поиск фильмов и сериалов</h1>
         </div>
         <div class="col-10 offset-1 col-md-4 offset-md-4 text-center md-form md-outline my-5">
-            <input type="search" id="search" class="theme-panel form-control">
+            <input type="search" id="search" class="theme-panel theme-title form-control">
             <label for="search" class="theme-panel rounded mx-3">Поиск</label>
         </div>
     </div>
     <div id="mediaWrapper" class="d-flex row align-items-center"></div>
 </div>
 <script>
-init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 32)
-init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 512)
+init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 64)
+init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 4096)
 
 el_search = document.getElementById('search')
 nav.onsearch('change', '#search', '/search?query={%query%}', '/search', '{%query%}', () => {

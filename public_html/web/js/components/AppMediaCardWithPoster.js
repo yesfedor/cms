@@ -7,6 +7,16 @@ class AppMediaCardWithPoster extends HTMLElement {
     }
     AppMediaRender(el) {
         let fill = el.getAttribute('data-fill')
+        let fillStyle = ''
+            if (fill == 'default') {
+                el.className = 'col-12 col-md-6 col-lg-4 col-xl-3 mb-3'
+                fillStyle = 'height: 60vh;'
+            }
+            if (fill == 'max-content') {
+                el.className = 'col-12 mb-3'
+                fillStyle = 'height: 30vh;'
+            }
+        
         let type = el.getAttribute('data-type')
         if (type == 'movie') type = 'Фильм'
         if (type == 'serial') type = 'Сериал'
@@ -14,7 +24,7 @@ class AppMediaCardWithPoster extends HTMLElement {
         let year = el.getAttribute('data-year')
         let kpid = el.getAttribute('data-kpid')
         let html = `
-            <div class="row justify-content-center align-items-center card-poster" style="background-image: url(https://kinopoiskapiunofficial.tech/images/posters/kp/${kpid}.jpg);">
+            <div class="row justify-content-center align-items-center card-poster" style="background-image: url(https://kinopoiskapiunofficial.tech/images/posters/kp/${kpid}.jpg);${fillStyle}">
                 <div class="col-12 text-center">
                     <h5 class="white-text">${type}</h5>
                     <hr class="w-25 card-border">
