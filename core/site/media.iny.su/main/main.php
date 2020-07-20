@@ -1,15 +1,16 @@
 <?php
 $ui = false;
 $warp = "warp";
+
+$mediaSerialsTop = file_get_contents('https://media.iny.su/api/0.1/media/mediaSerialsTop.json')
 ?>
 <style>
     .h90vhn {
         max-height: 90vh;
     }
 </style>
-
 <!-- Welcome Gallery -->
-<div id="gallery-intro" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+<div id="gallery-intro" class="d-none d-lg-block carousel slide carousel-fade z-depth-0" data-ride="carousel">
     <!--Indicators-->
     <ol class="carousel-indicators">
         <li data-target="#gallery-intro" data-slide-to="0" class="active"></li>
@@ -32,7 +33,7 @@ $warp = "warp";
             <div class="carousel-caption">
                 <a onclick="return nav.go(this);" href="/watch?kpid=1264562">
                     <h3 class="h3-responsive">Внешние отмели</h3>
-                    <p>Смотреть</p>
+                    <p class="white-text">Смотреть</p>
                 </a>
             </div>
         </div>
@@ -46,7 +47,7 @@ $warp = "warp";
             <div class="carousel-caption">
                 <a onclick="return nav.go(this);" href="/watch?kpid=1040419">
                     <h3 class="h3-responsive">Детство Шелдона</h3>
-                    <p>Смотреть</p>
+                    <p class="white-text">Смотреть</p>
                 </a>
             </div>
         </div>
@@ -60,7 +61,7 @@ $warp = "warp";
             <div class="carousel-caption">
                 <a onclick="return nav.go(this);" href="/watch?kpid=893621">
                     <h3 class="h3-responsive">Люцифер</h3>
-                    <p>Смотреть</p>
+                    <p class="white-text">Смотреть</p>
                 </a>
             </div>
         </div>
@@ -74,7 +75,7 @@ $warp = "warp";
             <div class="carousel-caption">
                 <a onclick="return nav.go(this);" href="/watch?kpid=1013917">
                     <h3 class="h3-responsive">Резидент</h3>
-                    <p>Смотреть</p>
+                    <p class="white-text">Смотреть</p>
                 </a>
             </div>
         </div>
@@ -88,7 +89,7 @@ $warp = "warp";
             <div class="carousel-caption">
                 <a onclick="return nav.go(this);" href="/watch?kpid=258048">
                     <h3 class="h3-responsive">Побег</h3>
-                    <p>Смотреть</p>
+                    <p class="white-text">Смотреть</p>
                 </a>
             </div>
         </div>
@@ -102,7 +103,7 @@ $warp = "warp";
             <div class="carousel-caption">
                 <a onclick="return nav.go(this);" href="/watch?kpid=733493">
                     <h3 class="h3-responsive">Сотня</h3>
-                    <p>Смотреть</p>
+                    <p class="white-text">Смотреть</p>
                 </a>
             </div>
         </div>
@@ -116,7 +117,7 @@ $warp = "warp";
             <div class="carousel-caption">
                 <a onclick="return nav.go(this);" href="/watch?kpid=741231">
                     <h3 class="h3-responsive">Чёрный список</h3>
-                    <p>Смотреть</p>
+                    <p class="white-text">Смотреть</p>
                 </a>
             </div>
         </div>
@@ -131,8 +132,30 @@ $warp = "warp";
         <span class="sr-only">Next</span>
     </a>
 </div>
-
 <!-- Wrapper View -->
 <div class="container-fluid">
-
+    <div id="mediaWrapper" class="row">
+        <div class="col-12 text-center">
+            <h1 class="theme-title my-5">Закрытая медиатека от INY.SU</h1>
+        </div>
+    </div>
 </div>
+
+<script>
+init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 16)
+init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 64)
+
+films = <?= $mediaSerialsTop ?>
+
+mediaWrapper = document.getElementById('mediaWrapper')
+films.forEach((obj)=>{
+    let el = document.createElement('media-card')
+    el.setAttribute('data-fill', 'default')
+    el.setAttribute('data-type', 'serial')
+    el.setAttribute('data-title', obj.nameRu)
+    el.setAttribute('data-year', obj.year)
+    el.setAttribute('data-kpid', obj.filmId)
+    mediaWrapper.append(el)
+})
+
+</script>

@@ -1,0 +1,18 @@
+.card-border {
+    border-color: white!important;
+}
+.card-poster {
+    height: 70vh;
+    filter: grayscale(1);
+    background-color: #000000dd;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: overlay;
+    transition: background-color, filter;
+    transition-duration: 0.5s;
+}
+.card-poster:hover {
+    filter: grayscale(0);
+    background-color: #00000066;
+}

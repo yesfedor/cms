@@ -1,0 +1,1607 @@
+[
+    {
+        "filmId": 464963,
+        "nameRu": "Игра престолов",
+        "nameEn": "Game of Thrones",
+        "year": "2011-2019",
+        "filmLength": "0:55",
+        "countries": [
+            {
+                "country": "США"
+            },
+            {
+                "country": "Великобритания"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "фэнтези"
+            },
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "боевик"
+            }
+        ],
+        "rating": "9.0",
+        "ratingVoteCount": 564868,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/464963.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/464963.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 77044,
+        "nameRu": "Друзья",
+        "nameEn": "Friends",
+        "year": "1994-2004",
+        "filmLength": "0:22",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "комедия"
+            },
+            {
+                "genre": "мелодрама"
+            }
+        ],
+        "rating": "9.3",
+        "ratingVoteCount": 341260,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/77044.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/77044.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 404900,
+        "nameRu": "Во все тяжкие",
+        "nameEn": "Breaking Bad",
+        "year": "2008-2013",
+        "filmLength": "0:47",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "криминал"
+            },
+            {
+                "genre": "драма"
+            }
+        ],
+        "rating": "8.9",
+        "ratingVoteCount": 325164,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/404900.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/404900.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 502838,
+        "nameRu": "Шерлок",
+        "nameEn": "Sherlock",
+        "year": "2010-2017",
+        "filmLength": "1:30",
+        "countries": [
+            {
+                "country": "Великобритания"
+            },
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "детектив"
+            },
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "драма"
+            }
+        ],
+        "rating": "8.9",
+        "ratingVoteCount": 359980,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/502838.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/502838.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 178710,
+        "nameRu": "Доктор Хаус",
+        "nameEn": "House, M.D.",
+        "year": "2004-2012",
+        "filmLength": "0:43",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "детектив"
+            }
+        ],
+        "rating": "8.8",
+        "ratingVoteCount": 294797,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/178710.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/178710.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 681831,
+        "nameRu": "Настоящий детектив",
+        "nameEn": "True Detective",
+        "year": "2014-...",
+        "filmLength": "1:00",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "детектив"
+            },
+            {
+                "genre": "криминал"
+            },
+            {
+                "genre": "триллер"
+            }
+        ],
+        "rating": "8.7",
+        "ratingVoteCount": 204284,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/681831.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/681831.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 306084,
+        "nameRu": "Теория большого взрыва",
+        "nameEn": "The Big Bang Theory",
+        "year": "2007-2019",
+        "filmLength": "0:22",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "комедия"
+            },
+            {
+                "genre": "мелодрама"
+            }
+        ],
+        "rating": "8.6",
+        "ratingVoteCount": 272122,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/306084.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/306084.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 79848,
+        "nameRu": "Клан Сопрано",
+        "nameEn": "The Sopranos",
+        "year": "1999-2007",
+        "filmLength": "0:55",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "криминал"
+            }
+        ],
+        "rating": "8.7",
+        "ratingVoteCount": 56025,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/79848.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/79848.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 251568,
+        "nameRu": "Клиника",
+        "nameEn": "Scrubs",
+        "year": "2001-2010",
+        "filmLength": "0:22",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "комедия"
+            },
+            {
+                "genre": "драма"
+            }
+        ],
+        "rating": "8.7",
+        "ratingVoteCount": 177811,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/251568.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/251568.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 401522,
+        "nameRu": "Как я встретил вашу маму",
+        "nameEn": "How I Met Your Mother",
+        "year": "2005-2014",
+        "filmLength": "0:22",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "комедия"
+            },
+            {
+                "genre": "мелодрама"
+            },
+            {
+                "genre": "драма"
+            }
+        ],
+        "rating": "8.6",
+        "ratingVoteCount": 127383,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/401522.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/401522.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 258048,
+        "nameRu": "Побег",
+        "nameEn": "Prison Break",
+        "year": "2005-2017",
+        "filmLength": "0:43",
+        "countries": [
+            {
+                "country": "Великобритания"
+            },
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "боевик"
+            },
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "драма"
+            }
+        ],
+        "rating": "8.4",
+        "ratingVoteCount": 160143,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/258048.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/258048.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 655800,
+        "nameRu": "Черное зеркало",
+        "nameEn": "Black Mirror",
+        "year": "2011-2019",
+        "filmLength": "0:43",
+        "countries": [
+            {
+                "country": "Великобритания"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "фантастика"
+            },
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "драма"
+            }
+        ],
+        "rating": "8.5",
+        "ratingVoteCount": 165077,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/655800.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/655800.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 767379,
+        "nameRu": "Фарго",
+        "nameEn": "Fargo",
+        "year": "2014-...",
+        "filmLength": "0:53",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "криминал"
+            }
+        ],
+        "rating": "8.4",
+        "ratingVoteCount": 102693,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/767379.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/767379.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 79818,
+        "nameRu": "Дживс и Вустер",
+        "nameEn": "Jeeves and Wooster",
+        "year": "1990-1993",
+        "filmLength": "0:51",
+        "countries": [
+            {
+                "country": "Великобритания"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "комедия"
+            }
+        ],
+        "rating": "8.6",
+        "ratingVoteCount": 22279,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/79818.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/79818.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 518192,
+        "nameRu": "Аббатство Даунтон",
+        "nameEn": "Downton Abbey",
+        "year": "2010-2015",
+        "filmLength": "0:54",
+        "countries": [
+            {
+                "country": "Великобритания"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "мелодрама"
+            }
+        ],
+        "rating": "8.4",
+        "ratingVoteCount": 46634,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/518192.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/518192.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 581937,
+        "nameRu": "Карточный домик",
+        "nameEn": "House of Cards",
+        "year": "2013-2018",
+        "filmLength": "0:50",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            }
+        ],
+        "rating": "8.4",
+        "ratingVoteCount": 63732,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/581937.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/581937.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 277537,
+        "nameRu": "Декстер",
+        "nameEn": "Dexter",
+        "year": "2006-2013",
+        "filmLength": "0:55",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "криминал"
+            }
+        ],
+        "rating": "8.3",
+        "ratingVoteCount": 129749,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/277537.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/277537.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 915196,
+        "nameRu": "Очень странные дела",
+        "nameEn": "Stranger Things",
+        "year": "2016-...",
+        "filmLength": "0:51",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "ужасы"
+            },
+            {
+                "genre": "фантастика"
+            },
+            {
+                "genre": "фэнтези"
+            }
+        ],
+        "rating": "8.4",
+        "ratingVoteCount": 218409,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/915196.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/915196.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 571335,
+        "nameRu": "Бесстыжие",
+        "nameEn": "Shameless",
+        "year": "2011-...",
+        "filmLength": "0:55",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "комедия"
+            }
+        ],
+        "rating": "8.6",
+        "ratingVoteCount": 140424,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/571335.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/571335.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 557806,
+        "nameRu": "Форс-мажоры",
+        "nameEn": "Suits",
+        "year": "2011-2019",
+        "filmLength": "0:43",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "комедия"
+            }
+        ],
+        "rating": "8.6",
+        "ratingVoteCount": 65387,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/557806.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/557806.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 821565,
+        "nameRu": "Нарко",
+        "nameEn": "Narcos",
+        "year": "2015-2017",
+        "filmLength": "0:49",
+        "countries": [
+            {
+                "country": "США"
+            },
+            {
+                "country": "Колумбия"
+            },
+            {
+                "country": "Мексика"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "криминал"
+            },
+            {
+                "genre": "драма"
+            }
+        ],
+        "rating": "8.4",
+        "ratingVoteCount": 45591,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/821565.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/821565.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 77269,
+        "nameRu": "Шерлок Холмс и доктор Ватсон: Знакомство",
+        "nameEn": "",
+        "year": "1979",
+        "filmLength": "1:08",
+        "countries": [
+            {
+                "country": "СССР"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "криминал"
+            },
+            {
+                "genre": "детектив"
+            }
+        ],
+        "rating": "8.6",
+        "ratingVoteCount": 119495,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/77269.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/77269.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 972889,
+        "nameRu": "BadComedian",
+        "nameEn": "",
+        "year": "2011-...",
+        "filmLength": "",
+        "countries": [
+            {
+                "country": "Россия"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "комедия"
+            }
+        ],
+        "rating": "9.2",
+        "ratingVoteCount": 29065,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/972889.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/972889.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 257386,
+        "nameRu": "Рим",
+        "nameEn": "Rome",
+        "year": "2005-2007",
+        "filmLength": "0:55",
+        "countries": [
+            {
+                "country": "Великобритания"
+            },
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "история"
+            },
+            {
+                "genre": "боевик"
+            }
+        ],
+        "rating": "8.3",
+        "ratingVoteCount": 33063,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/257386.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/257386.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 84358,
+        "nameRu": "Твин Пикс",
+        "nameEn": "Twin Peaks",
+        "year": "1990-1991",
+        "filmLength": "0:47",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "криминал"
+            }
+        ],
+        "rating": "8.5",
+        "ratingVoteCount": 84327,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/84358.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/84358.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 402955,
+        "nameRu": "Прослушка",
+        "nameEn": "The Wire",
+        "year": "2002-2008",
+        "filmLength": "1:00",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "криминал"
+            }
+        ],
+        "rating": "8.5",
+        "ratingVoteCount": 19149,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/402955.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/402955.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 716587,
+        "nameRu": "Острые козырьки",
+        "nameEn": "Peaky Blinders",
+        "year": "2013-...",
+        "filmLength": "1:00",
+        "countries": [
+            {
+                "country": "Великобритания"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "криминал"
+            }
+        ],
+        "rating": "8.4",
+        "ratingVoteCount": 129458,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/716587.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/716587.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 252089,
+        "nameRu": "Доктор Кто",
+        "nameEn": "Doctor Who",
+        "year": "2005-...",
+        "filmLength": "0:43",
+        "countries": [
+            {
+                "country": "Великобритания"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "фантастика"
+            },
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "комедия"
+            }
+        ],
+        "rating": "8.7",
+        "ratingVoteCount": 77099,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/252089.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/252089.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 469619,
+        "nameRu": "Спартак: Кровь и песок",
+        "nameEn": "Spartacus: Blood and Sand",
+        "year": "2010-2013",
+        "filmLength": "0:52",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "боевик"
+            },
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "мелодрама"
+            }
+        ],
+        "rating": "8.3",
+        "ratingVoteCount": 64026,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/469619.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/469619.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 77046,
+        "nameRu": "Секретные материалы",
+        "nameEn": "The X Files",
+        "year": "1993-2018",
+        "filmLength": "0:43",
+        "countries": [
+            {
+                "country": "Канада"
+            },
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "фантастика"
+            },
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "драма"
+            }
+        ],
+        "rating": "8.2",
+        "ratingVoteCount": 96715,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/77046.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/77046.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 262973,
+        "nameRu": "Близкие друзья",
+        "nameEn": "Queer as Folk",
+        "year": "2000-2005",
+        "filmLength": "0:45",
+        "countries": [
+            {
+                "country": "Канада"
+            },
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "мелодрама"
+            }
+        ],
+        "rating": "8.4",
+        "ratingVoteCount": 10800,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/262973.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/262973.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 682255,
+        "nameRu": "Викинги",
+        "nameEn": "Vikings",
+        "year": "2013-...",
+        "filmLength": "0:45",
+        "countries": [
+            {
+                "country": "Ирландия"
+            },
+            {
+                "country": "Канада"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "история"
+            },
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "боевик"
+            }
+        ],
+        "rating": "8.2",
+        "ratingVoteCount": 173307,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/682255.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/682255.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 195523,
+        "nameRu": "Мир Дикого Запада",
+        "nameEn": "Westworld",
+        "year": "2016-...",
+        "filmLength": "1:02",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "фантастика"
+            },
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "детектив"
+            }
+        ],
+        "rating": "8.0",
+        "ratingVoteCount": 106340,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/195523.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/195523.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 414973,
+        "nameRu": "Книжный магазин Блэка",
+        "nameEn": "Black Books",
+        "year": "2000-2004",
+        "filmLength": "0:25",
+        "countries": [
+            {
+                "country": "Великобритания"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "комедия"
+            }
+        ],
+        "rating": "8.2",
+        "ratingVoteCount": 34149,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/414973.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/414973.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 474779,
+        "nameRu": "Подпольная империя",
+        "nameEn": "Boardwalk Empire",
+        "year": "2010-2014",
+        "filmLength": "0:55",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "криминал"
+            }
+        ],
+        "rating": "8.1",
+        "ratingVoteCount": 33867,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/474779.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/474779.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 94730,
+        "nameRu": "Монти Пайтон: Летающий цирк",
+        "nameEn": "Monty Python's Flying Circus",
+        "year": "1969-1974",
+        "filmLength": "0:30",
+        "countries": [
+            {
+                "country": "Великобритания"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "комедия"
+            }
+        ],
+        "rating": "8.6",
+        "ratingVoteCount": 4854,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/94730.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/94730.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 104122,
+        "nameRu": "Остаться в живых",
+        "nameEn": "Lost",
+        "year": "2004-2010",
+        "filmLength": "0:43",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "фантастика"
+            },
+            {
+                "genre": "детектив"
+            },
+            {
+                "genre": "фэнтези"
+            }
+        ],
+        "rating": "8.1",
+        "ratingVoteCount": 190191,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/104122.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/104122.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 485542,
+        "nameRu": "Отбросы",
+        "nameEn": "Misfits",
+        "year": "2009-2013",
+        "filmLength": "0:43",
+        "countries": [
+            {
+                "country": "Великобритания"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "фантастика"
+            },
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "мелодрама"
+            }
+        ],
+        "rating": "8.1",
+        "ratingVoteCount": 135117,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/485542.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/485542.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 574688,
+        "nameRu": "Родина",
+        "nameEn": "Homeland",
+        "year": "2011-2020",
+        "filmLength": "0:55",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "криминал"
+            }
+        ],
+        "rating": "8.1",
+        "ratingVoteCount": 32501,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/574688.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/574688.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 178707,
+        "nameRu": "Сверхъестественное",
+        "nameEn": "Supernatural",
+        "year": "2005-2020",
+        "filmLength": "0:43",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "фэнтези"
+            },
+            {
+                "genre": "ужасы"
+            },
+            {
+                "genre": "триллер"
+            }
+        ],
+        "rating": "8.2",
+        "ratingVoteCount": 262442,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/178707.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/178707.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 574497,
+        "nameRu": "Мост",
+        "nameEn": "Bron/Broen",
+        "year": "2011-2018",
+        "filmLength": "0:57",
+        "countries": [
+            {
+                "country": "Швеция"
+            },
+            {
+                "country": "Дания"
+            },
+            {
+                "country": "Германия"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "криминал"
+            },
+            {
+                "genre": "детектив"
+            }
+        ],
+        "rating": "8.2",
+        "ratingVoteCount": 32273,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/574497.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/574497.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 77264,
+        "nameRu": "Шерлок Холмс и доктор Ватсон: Сокровища Агры",
+        "nameEn": "",
+        "year": "1983",
+        "filmLength": "2:31",
+        "countries": [
+            {
+                "country": "СССР"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "мелодрама"
+            },
+            {
+                "genre": "криминал"
+            },
+            {
+                "genre": "детектив"
+            }
+        ],
+        "rating": "8.3",
+        "ratingVoteCount": 78173,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/77264.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/77264.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 818708,
+        "nameRu": "Больница Никербокер",
+        "nameEn": "The Knick",
+        "year": "2014-2015",
+        "filmLength": "0:58",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            }
+        ],
+        "rating": "8.4",
+        "ratingVoteCount": 27351,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/818708.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/818708.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 428930,
+        "nameRu": "Обмани меня",
+        "nameEn": "Lie to Me",
+        "year": "2009-2011",
+        "filmLength": "0:43",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "криминал"
+            }
+        ],
+        "rating": "8.1",
+        "ratingVoteCount": 140166,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/428930.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/428930.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 472329,
+        "nameRu": "Американская семейка",
+        "nameEn": "Modern Family",
+        "year": "2009-2020",
+        "filmLength": "0:22",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "мелодрама"
+            },
+            {
+                "genre": "комедия"
+            }
+        ],
+        "rating": "8.1",
+        "ratingVoteCount": 20342,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/472329.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/472329.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 417846,
+        "nameRu": "Сыны анархии",
+        "nameEn": "Sons of Anarchy",
+        "year": "2008-2014",
+        "filmLength": "0:45",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "криминал"
+            }
+        ],
+        "rating": "8.2",
+        "ratingVoteCount": 31732,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/417846.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/417846.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 723959,
+        "nameRu": "Силиконовая долина",
+        "nameEn": "Silicon Valley",
+        "year": "2014-2019",
+        "filmLength": "0:28",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "комедия"
+            }
+        ],
+        "rating": "8.3",
+        "ratingVoteCount": 41895,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/723959.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/723959.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 796660,
+        "nameRu": "Лучше звоните Солу",
+        "nameEn": "Better Call Saul",
+        "year": "2015-...",
+        "filmLength": "0:46",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "криминал"
+            }
+        ],
+        "rating": "8.2",
+        "ratingVoteCount": 53141,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/796660.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/796660.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 85208,
+        "nameRu": "Пуаро",
+        "nameEn": "Poirot",
+        "year": "1989-2013",
+        "filmLength": "1:30",
+        "countries": [
+            {
+                "country": "Великобритания"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "детектив"
+            },
+            {
+                "genre": "драма"
+            }
+        ],
+        "rating": "8.2",
+        "ratingVoteCount": 36406,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/85208.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/85208.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 394375,
+        "nameRu": "Блудливая Калифорния",
+        "nameEn": "Californication",
+        "year": "2007-2014",
+        "filmLength": "0:28",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "комедия"
+            }
+        ],
+        "rating": "8.0",
+        "ratingVoteCount": 85898,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/394375.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/394375.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 453318,
+        "nameRu": "Один литр слёз",
+        "nameEn": "Ichi rittoru no namida",
+        "year": "2005",
+        "filmLength": "0:46",
+        "countries": [
+            {
+                "country": "Япония"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "мелодрама"
+            }
+        ],
+        "rating": "8.6",
+        "ratingVoteCount": 5735,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/453318.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/453318.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 277535,
+        "nameRu": "Анатомия страсти",
+        "nameEn": "Grey's Anatomy",
+        "year": "2005-...",
+        "filmLength": "0:43",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "мелодрама"
+            }
+        ],
+        "rating": "8.2",
+        "ratingVoteCount": 51901,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/277535.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/277535.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 471825,
+        "nameRu": "Сообщество",
+        "nameEn": "Community",
+        "year": "2009-2015",
+        "filmLength": "0:22",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "комедия"
+            }
+        ],
+        "rating": "8.0",
+        "ratingVoteCount": 22892,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/471825.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/471825.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 94222,
+        "nameRu": "Квантовый скачок",
+        "nameEn": "Quantum Leap",
+        "year": "1989-1993",
+        "filmLength": "0:45",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "фантастика"
+            },
+            {
+                "genre": "приключения"
+            },
+            {
+                "genre": "боевик"
+            }
+        ],
+        "rating": "8.1",
+        "ratingVoteCount": 16384,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/94222.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/94222.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 969141,
+        "nameRu": "Это мы",
+        "nameEn": "This Is Us",
+        "year": "2016-...",
+        "filmLength": "0:45",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "мелодрама"
+            },
+            {
+                "genre": "комедия"
+            }
+        ],
+        "rating": "8.4",
+        "ratingVoteCount": 15004,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/969141.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/969141.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 253245,
+        "nameRu": "Офис",
+        "nameEn": "The Office",
+        "year": "2005-2013",
+        "filmLength": "0:22",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "комедия"
+            }
+        ],
+        "rating": "8.2",
+        "ratingVoteCount": 50548,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/253245.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/253245.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 477405,
+        "nameRu": "Лютер",
+        "nameEn": "Luther",
+        "year": "2010-2019",
+        "filmLength": "1:00",
+        "countries": [
+            {
+                "country": "Великобритания"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "криминал"
+            }
+        ],
+        "rating": "8.0",
+        "ratingVoteCount": 30526,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/477405.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/477405.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 90206,
+        "nameRu": "Чёртова служба в госпитале Мэш",
+        "nameEn": "M*A*S*H",
+        "year": "1972-1983",
+        "filmLength": "0:22",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "драма"
+            },
+            {
+                "genre": "комедия"
+            },
+            {
+                "genre": "военный"
+            }
+        ],
+        "rating": "8.3",
+        "ratingVoteCount": 7240,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/90206.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/90206.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 455368,
+        "nameRu": "Парки и зоны отдыха",
+        "nameEn": "Parks and Recreation",
+        "year": "2009-2015",
+        "filmLength": "0:21",
+        "countries": [
+            {
+                "country": "США"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "комедия"
+            }
+        ],
+        "rating": "8.1",
+        "ratingVoteCount": 18586,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/455368.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/455368.jpg",
+        "ratingChange": 0
+    },
+    {
+        "filmId": 518075,
+        "nameRu": "Убийство",
+        "nameEn": "The Killing",
+        "year": "2011-2014",
+        "filmLength": "0:43",
+        "countries": [
+            {
+                "country": "США"
+            },
+            {
+                "country": "Канада"
+            }
+        ],
+        "genres": [
+            {
+                "genre": "триллер"
+            },
+            {
+                "genre": "детектив"
+            },
+            {
+                "genre": "драма"
+            }
+        ],
+        "rating": "8.1",
+        "ratingVoteCount": 26922,
+        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/518075.jpg",
+        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/518075.jpg",
+        "ratingChange": 0
+    }
+]
