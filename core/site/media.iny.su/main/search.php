@@ -11,7 +11,7 @@
     <div id="mediaWrapper" class="d-flex row align-items-center"></div>
 </div>
 <script>
-init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 128)
+init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 256)
 init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 8192)
 
 el_search = document.getElementById('search')

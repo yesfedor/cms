@@ -72,7 +72,7 @@ watchData = <?= $data ?>
 
 watchDataRecoms = <?= $watchDataRecoms ?>
 
-init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 128)
+init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 256)
 init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 8192)
 if (typeof watch == 'object') {
     watch.data = {}
