@@ -10,7 +10,7 @@ function getDomainSetting() {
     $domainConfig = dbGetAll($query, $var);
     $domainCount = count($domainConfig);
     
-    for ($i=0;$i<$domainCount;) {
+    for ($i=0; $i<$domainCount; $i++) {
         $ssl =  $domainConfig[$i]['ssl'];
         $domain = $domainConfig[$i]['domain'];
         $appname = $domainConfig[$i]['appname'];
@@ -36,8 +36,6 @@ function getDomainSetting() {
             'logo' => $logo,
             'session' => $session
         ];
-        
-        $i++;
     }
 
     return $domainSetting;
