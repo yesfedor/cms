@@ -27,7 +27,7 @@ if ($kpid) {
                     <div class="row">
                         <!-- Player -->
                         <div class="col-12 theme-panel embed-responsive embed-responsive-16by9">
-                            <iframe id="watch_player" class="embed-responsive-item" src="" allowfullscreen=""></iframe>
+                            <iframe id="watch_player" class="embed-responsive-item" src="https://67lm8g55vgghj78890.8432109.xyz/n1xnK05iU8an?kp_id=<?= $kpid ?>" allowfullscreen=""></iframe>
                         </div>
 
                         <!-- Title -->
@@ -79,6 +79,6 @@ if (typeof watch == 'object') {
     watch.content = {}
     watch.data = watchData
     watch.init()
-} else init.js.add('media-watch', 'module/media.watch.js', 8)
+} else init.js.add('media-watch', 'module/media.watch.js', 128)
 appMediaRender('mediaWrapper', watchDataRecoms, {fill: 'max-content', type: false})
 </script>

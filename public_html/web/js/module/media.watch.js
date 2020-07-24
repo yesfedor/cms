@@ -40,7 +40,7 @@ let watch = {
                 })
 
                 watch.els.date.textContent = watch.data.year
-                watch.els.player.setAttribute('src', watch.content.iframe_src)
+                //watch.els.player.setAttribute('src', watch.content.iframe_src)
                 watch.els.title.textContent = type + ' ' + title
                 nav.changeTitle(title + ', ' + watch.data.year)
                 watch.els.genre.innerHTML = genres
