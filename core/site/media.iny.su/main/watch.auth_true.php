@@ -15,7 +15,7 @@ if ($kpid) {
     curl_close($ch);
     $content = json_decode($data, true);
 
-    $watchDataRecoms = json_encode(array_slice(json_decode(file_get_contents('https://media.iny.su/api/0.1/media/mediaWatchRecoms.json')), 0, 5), JSON_UNESCAPED_UNICODE);
+    $watchDataRecoms = json_encode(array_slice(json_decode(file_get_contents('https://media.iny.su/api/0.1/media/mediaWatchRecoms.json')), 0, 7), JSON_UNESCAPED_UNICODE);
 } else $redirect = '/main';
 ?>
 <div class="container-fluid">
@@ -53,7 +53,7 @@ if ($kpid) {
                         </div>
                         <hr class="w-100 w-xl-75 theme-border-primary text-center my-3">
 
-                        <div class="col-12 text-center mt-5 mt-xl-0 px-0">
+                        <div class="col-12 text-center px-0">
                             <h6 class="theme-text my-0"><?= $content['data']['slogan'] ?></h6>
                         </div>
                         <hr class="w-100 w-xl-75 theme-border-primary text-center my-3">
@@ -66,7 +66,6 @@ if ($kpid) {
         </div>
     </div>
 </div>
-
 <script>
 watchData = <?= $data ?>
 
