@@ -100,7 +100,7 @@ if ($content['data']['filmId']) {
                         </div>
                         <div class="col-12 col-lg-6 px-0 text-center text-lg-right mt-3 mt-lg-0">
                             <a id="mediaWatchAuthorSupportMsg" data-toggle="tooltip" title="Поддержать разработчика" onclick="return nav.cc(this);" href="donate" class="d-none d-lg-inline-block btn btn-outline-blue btn-rounded my-0">Донат</a>
-                            <a id="watch_subs" data-toggle="tooltip" title="<?= $subscriptionCount ?>" data-status="<?= $isSubscription ?>" onclick="watchSubscription.toggle(this); return false;" href="#" class="btn btn-outline-red btn-rounded my-0">Подписаться</a>
+                            <a id="watch_subs" data-toggle="tooltip" title="<?= $subscriptionCount ?>" data-status="<?= $isSubscription ?>" onclick="watchSubscription.toggle(this); return false;" href="#" class="btn btn-outline-red btn-rounded theme-duration my-0">Подписаться</a>
                         </div>
 
                         <div class="col-12 px-0 mt-3">
