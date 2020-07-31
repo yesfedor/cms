@@ -51,7 +51,7 @@ $html_comment_block = '<!--'.PHP_EOL.' ADMIN: https://vk.com/yesfedor'.PHP_EOL.'
             cdn: ''
         }
         </script>
-        <script src="/web/js/core/init.js?version=278"></script>
+        <script src="/web/js/core/init.js?version=512"></script>
         <script src="/web/js/module/@offline.js"></script>
     </body>
 </html>
