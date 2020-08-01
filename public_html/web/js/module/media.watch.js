@@ -70,6 +70,13 @@ let watch = {
         }
     },
     init() {
+        let bgDefault = getComputedStyle(document.documentElement).getPropertyValue('--theme-header')
+        let bgScreen = bgDefault + '00'
+        document.documentElement.style.setProperty('--theme-header', bgScreen)
+        nav.onunload = () => {
+            document.documentElement.style.setProperty('--theme-header', bgDefault)
+        }
+
         watch.data = watch.data.data
 
         $(function () {

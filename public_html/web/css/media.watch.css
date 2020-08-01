@@ -1,0 +1,30 @@
+.bg-poster-image {
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(0.3) grayscale(0.7);
+    transition-duration: 0.5s;
+}
+.bg-poster-image:after {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    z-index: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #505050 75%)!important;
+}
+.border-white {
+    border-color: white!important;
+}

@@ -143,7 +143,7 @@ $mediaSerialsTop = file_get_contents('https://media.iny.su/api/0.1/media/mediaSe
 
 <script>
 init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 256)
-init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 8192)
+init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16384)
 
 films = <?= $mediaSerialsTop ?>
 

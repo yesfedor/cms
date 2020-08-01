@@ -1,5 +1,5 @@
 <?php
-$query_top10 = "SELECT * FROM media_content WHERE kpid != :kpid ORDER BY views DESC LIMIT 12";
+$query_top10 = "SELECT * FROM media_content WHERE kpid != :kpid ORDER BY views DESC LIMIT 10";
 $var_top10 = [
     ':kpid' => 0
 ];
@@ -19,7 +19,7 @@ for($i = 0; $i < count($top10); $i++) {
 </div>
 <script>
 init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 256)
-init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 8192)
+init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16384)
 
 topData = <?= json_encode($topData, JSON_UNESCAPED_UNICODE) ?>
 

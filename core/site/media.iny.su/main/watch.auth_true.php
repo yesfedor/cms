@@ -74,6 +74,7 @@ if ($content['data']['filmId']) {
 
 } else $redirect = '/main';
 ?>
+<div class="d-none d-lg-block bg-poster-image" style="background-image: url(https://kinopoiskapiunofficial.tech/images/posters/kp/<?= $kpid ?>.jpg);"></div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 col-md-10 offset-md-1">
@@ -99,7 +100,7 @@ if ($content['data']['filmId']) {
                             <h4 class="theme-text my-2">Описание к <span id="watch_desc_item" class="theme-text"></span></h4>
                         </div>
                         <div class="col-12 col-lg-6 px-0 text-center text-lg-right mt-3 mt-lg-0">
-                            <a id="mediaWatchAuthorSupportMsg" data-toggle="tooltip" title="Поддержать разработчика" onclick="return nav.cc(this);" href="donate" class="d-none d-lg-inline-block btn btn-outline-blue btn-rounded my-0">Донат</a>
+                            <a id="mediaWatchAuthorSupportMsg" data-toggle="tooltip" title="Поддержать разработчика" onclick="return nav.cc(this);" href="https://go.iny.su/donate" class="btn btn-outline-blue btn-rounded my-0">Донат</a>
                             <a id="watch_subs" data-toggle="tooltip" title="<?= $subscriptionCount ?>" data-status="<?= $isSubscription ?>" onclick="watchSubscription.toggle(this); return false;" href="#" class="btn btn-outline-red btn-rounded theme-duration my-0">Подписаться</a>
                         </div>
 
@@ -114,12 +115,12 @@ if ($content['data']['filmId']) {
                         <div class="col-12 text-center mt-5 mt-xl-0 px-0">
                             <h4 class="theme-title mb-2">Рекомендации</h4>
                         </div>
-                        <hr class="w-100 w-xl-75 theme-border-primary text-center my-3">
+                        <hr class="w-100 w-xl-75 border-white text-center my-3">
 
                         <div class="col-12 text-center px-0">
                             <h6 class="theme-text my-0"><?= $content['data']['slogan'] ?></h6>
                         </div>
-                        <hr class="w-100 w-xl-75 theme-border-primary text-center my-3">
+                        <hr class="w-100 w-xl-75 border-white text-center my-3">
                         <div class="col-12">
                             <div id="mediaWrapper" class="row"></div>
                         </div>
@@ -135,14 +136,15 @@ watchData = <?= $data ?>
 
 watchDataRecoms = <?= $watchDataRecoms ?>
 
+init.css.add('media-watch', 'media.watch.css', 1)
 init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 256)
-init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 8192)
+init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16384)
 if (typeof watch == 'object') {
     watch.data = {}
     watch.content = {}
     watch.data = watchData
     watch.init()
     watchSubscription.init()
-} else init.js.add('media-watch', 'module/media.watch.js', 2048)
+} else init.js.add('media-watch', 'module/media.watch.js', 4097)
 appMediaRender('mediaWrapper', watchDataRecoms, {fill: 'max-content', type: false})
 </script>

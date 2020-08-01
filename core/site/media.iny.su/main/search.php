@@ -12,7 +12,7 @@
 </div>
 <script>
 init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 256)
-init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 8192)
+init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16384)
 
 el_search = document.getElementById('search')
 nav.onsearch('change', '#search', '/search?query={%query%}', '/search', '{%query%}', () => {
