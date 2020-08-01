@@ -136,7 +136,7 @@ watchData = <?= $data ?>
 
 watchDataRecoms = <?= $watchDataRecoms ?>
 
-if (!fn.isMobile()) init.css.add('media-watch', 'media.watch.css', 1)
+if (!fn.isMobile()) init.css.add('media-watch', 'media.watch.css', 3)
 init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 256)
 init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16384)
 if (typeof watch == 'object') {
