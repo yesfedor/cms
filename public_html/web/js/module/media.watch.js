@@ -69,20 +69,24 @@ let watch = {
             }, 1000)
         }
     },
-    init() {
-        let bgDefault = getComputedStyle(document.documentElement).getPropertyValue('--theme-header')
-        let bgScreen = bgDefault + '00'
-        document.documentElement.style.setProperty('--theme-header', bgScreen)
-        nav.onunload = () => {
-            document.documentElement.style.setProperty('--theme-header', bgDefault)
+    bgImageSet() {
+        if (!fn.isMobile()) {
+            let bgDefault = getComputedStyle(document.documentElement).getPropertyValue('--theme-header')
+            let bgScreen = bgDefault + '00'
+            document.documentElement.style.setProperty('--theme-header', bgScreen)
+            nav.onunload = () => {
+                document.documentElement.style.setProperty('--theme-header', bgDefault)
+            }
         }
-
+    },
+    init() {
         watch.data = watch.data.data
 
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
 
+        this.bgImageSet()
         this.initEls()
         this.initPlayer()
         this.authorSupport()

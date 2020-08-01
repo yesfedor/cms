@@ -136,7 +136,7 @@ watchData = <?= $data ?>
 
 watchDataRecoms = <?= $watchDataRecoms ?>
 
-init.css.add('media-watch', 'media.watch.css', 1)
+if (!fn.isMobile()) init.css.add('media-watch', 'media.watch.css', 1)
 init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 256)
 init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16384)
 if (typeof watch == 'object') {
@@ -145,6 +145,6 @@ if (typeof watch == 'object') {
     watch.data = watchData
     watch.init()
     watchSubscription.init()
-} else init.js.add('media-watch', 'module/media.watch.js', 4097)
+} else init.js.add('media-watch', 'module/media.watch.js', 4098)
 appMediaRender('mediaWrapper', watchDataRecoms, {fill: 'max-content', type: false})
 </script>
