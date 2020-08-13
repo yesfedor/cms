@@ -17,8 +17,9 @@ $js_code = '0';
 
 //code
 $bigData['code'] = 0;
-$query = $_POST['query'];
-if ($query and mb_strlen($query) > 2) {
+$query = urldecode($_POST['query']);
+$bigData['query'] = $query;
+if ($query and mb_strlen($query) > 1) {
     $ch = curl_init();
     $headers = array('accept: application/json', 'x-api-key: 91d00358-6586-40e6-9d4e-9d9070547812');
 

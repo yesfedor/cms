@@ -25,7 +25,7 @@ nav.onsearch('change', '#search', '/search?query={%query%}', '/search', '{%query
         }
     }, 500);
 }, () => {
-    let value = el_search.value
+    let value = encodeURIComponent(el_search.value)
     if (value.length > 2) {
         $.ajax({
             type: "POST",
