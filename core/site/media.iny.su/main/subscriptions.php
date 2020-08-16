@@ -29,11 +29,10 @@ if ($select_ids[0]) {
 <div class="container-fluid my-5">
     <div class="row">
         <div class="col-12 text-center py-3 mb-5">
-            <h3 class="theme-title">Мои подписки</h3>
-            <hr class="w-25 border-primary my-3">
+            <h1 class="theme-title my-0">Мои подписки</h1>
         </div>
         <div id="subscriptionsIsNull" class="col-12 col-lg-6 offset-lg-3 text-center theme-panel py-3 rounded" style="display: none;">
-            <h4 class="theme-title mb-3">Как-то здесь пусто…</h4>
+            <h3 class="theme-title mb-3">Как-то здесь пусто…</h3>
             <a onclick="return nav.go(this);" href="/search" class="btn btn-large btn-outline-white btn-rounded">Найти любимые сериалы</a>
         </div>
     </div>
