@@ -17,26 +17,6 @@ switch($url_p1) {
         $landingsStatus = true;
         $landingsFile = 'yesfedor';
     break;
-    case 'tester-welcome':
-        $landingsStatus = true;
-        $landingsFile = 'tester-welcome';
-    break;
-    case 'for-all-mankind':
-        $landingsStatus = true;
-        $landingsFile = 'for-all-mankind';
-    break;
-    case 'fannalinur':
-        $landingsStatus = true;
-        $landingsFile = 'aliya';
-    break;
-    case 'vel0ur':
-        $landingsStatus = true;
-        $landingsFile = 'vel0ur';
-    break;
-    case 'administration-command':
-        $landingsStatus = true;
-        $landingsFile = 'administration-command';
-    break;
 }
 
 if ($landingsStatus) {
