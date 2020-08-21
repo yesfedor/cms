@@ -57,4 +57,6 @@ style.changeHeaderColor({
 })
 
 /* init Jarallax */
-$('.jarallax').jarallax();
+jarallax(document.querySelectorAll('.jarallax'), {
+    speed: 0
+})

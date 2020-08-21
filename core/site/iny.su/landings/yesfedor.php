@@ -109,4 +109,4 @@ function returnToMainPage(el) {
         Copyright © <?= date('Y') ?> INY. All rights reserved.
     </div>
 </footer>
-<script src="/web/js/landings/yesfedor.js?v=128"></script>
+<script src="/web/js/landings/yesfedor.js?v=129"></script>
