@@ -141,7 +141,7 @@ let studio = {
             baseClass: 'transparent'
         })
         jarallax(document.querySelectorAll('.jarallax'), {
-            speed: 0.2
+            speed: 0
         })
         this.pageAboutTitle()
     },
