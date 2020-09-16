@@ -20,7 +20,7 @@
                 <div class="col-12 col-md-6">
                     <span data-aos="fade-left" class="d-block h2 black-text-deep">Оставьте заявку</span>
                     <form id="contants" class="row my-0 py-2">
-                        <div class="col-12 col-lg-6 z-depth-2 purple darken-4">
+                        <div class="col-12 col-lg-6 z-depth-2 blue darken-4">
                             <div class="md-form col-12 text-center">
                                 <input type="text" id="contants_name" name="contants_name" class="form-control white-text">
                                 <label for="contants_name" class="white-text active pl-3">Ваше имя</label>
@@ -52,7 +52,7 @@
                             <h4 id="yesfedor-contact-callback" class="black-text my-0 py-2"></h4>
                         </div>
                         <div class="col-12 col-md-6 text-center my-1 py-1">
-                            <button type="button" onclick="appForms.go('contants', 'landings/yesfedor-contact');" class="btn btn-rounded purple darken-4 white-text">Отправить</button>
+                            <button type="button" onclick="appForms.go('contants', 'landings/yesfedor-contact');" class="btn btn-rounded blue darken-4 white-text">Отправить</button>
                         </div>
                     </form>
                 </div>
@@ -60,10 +60,10 @@
                     <span data-aos="fade-right" class="d-block h2 white-text-border">Связаться со мной (Фёдор Гаранин)</span>
                     <div class="row my-2">
                         <div class="col-12 col-md-6 text-center">
-                            <a href="https://go.iny.su/yf_vk" onclick="return nav.go(this);" class="btn btn-outline-secondary black-text-deep text-uppercase waves-effect w-100 w-lg-75">vkontakte</a>
+                            <a href="https://go.iny.su/yf_vk" onclick="return nav.go(this);" class="btn btn-outline-blue black-text-deep text-uppercase waves-effect w-100 w-lg-75">vkontakte</a>
                         </div>
                         <div class="col-12 col-md-6 text-center">
-                            <a href="https://go.iny.su/yf_tg" onclick="return nav.go(this);" class="btn btn-outline-secondary black-text-deep text-uppercase waves-effect w-100 w-lg-75">telegram</a>
+                            <a href="https://go.iny.su/yf_tg" onclick="return nav.go(this);" class="btn btn-outline-blue black-text-deep text-uppercase waves-effect w-100 w-lg-75">telegram</a>
                         </div>
                         <div class="col-12 text-center">
                             <a class="btn btn-link waves-effect black-text-deep text-uppercase w-100 w-lg-75" onclick="nav.away(this);" href="mailto:yesfedor.go@gmail.com">yesfedor.go@gmail.com</a>

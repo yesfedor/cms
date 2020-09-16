@@ -32,6 +32,12 @@ var nav = {
         }
     },
     pageMeta: {},
+    renderMainApp() {
+        $(init.data.appDefaultEl).html(init.data.appDefaultContent)
+        init.header()
+        init.footer()
+        return nav.go(nav.createLink('/'))
+    },
     navEmmetOnunload() {
         if (typeof this.onunload == 'function') {
             this.onunload()

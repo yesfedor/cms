@@ -17,6 +17,10 @@ switch($url_p1) {
         $landingsStatus = true;
         $landingsFile = 'yesfedor';
     break;
+    case 'yesfedor-new':
+        $landingsStatus = true;
+        $landingsFile = 'yesfedor-new';
+    break;
 }
 
 if ($landingsStatus) {

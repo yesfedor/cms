@@ -51,16 +51,18 @@ function appMediaRender(warpId, data, opt = {fill: 'default', type: false}) {
     let type = opt.type
     mediaWrapper = document.getElementById(warpId)
     data.forEach((obj)=>{
-        let guess = obj.year
-        if (guess.length == '4') guessType = 'movie'
-        if (guess.length > 4) guessType = 'serial'
+        if (obj !== null) {
+            let guess = obj.year
+            if (guess.length == '4') guessType = 'movie'
+            if (guess.length > 4) guessType = 'serial'
 
-        let el = document.createElement('media-card')
-        el.setAttribute('data-fill', (fill ? fill : 'default'))
-        el.setAttribute('data-type', (type ? type : guessType))
-        el.setAttribute('data-title', obj.nameRu)
-        el.setAttribute('data-year', obj.year)
-        el.setAttribute('data-kpid', obj.filmId)
-        mediaWrapper.append(el)
+            let el = document.createElement('media-card')
+            el.setAttribute('data-fill', (fill ? fill : 'default'))
+            el.setAttribute('data-type', (type ? type : guessType))
+            el.setAttribute('data-title', obj.nameRu)
+            el.setAttribute('data-year', obj.year)
+            el.setAttribute('data-kpid', obj.filmId)
+            mediaWrapper.append(el)
+        }   
     })
 }

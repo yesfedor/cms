@@ -64,19 +64,17 @@ if ($_SESSION['user']['uid']) {
                     </a>
                     ':'').'
                 </div>
-                <div id="app-mini-footer">
-                    <div class="row my-0 pt-3 pb-0">
-                        <div class="col-12 px-2 offset-1 text-left small">
-                            <a class="text-muted px-1" onclick="return nav.go(this);" href="/blog"><span data-lang="ui_menu_blog"></span></a>
-                            <a class="text-muted px-1" onclick="return nav.go(this);" href="/dev"><span data-lang="ui_menu_dev"></span></a><br>
-                            <a class="text-muted px-1" onclick="return nav.go(this);" href="/ads"><span data-lang="ui_menu_ads"></span></a>
-                            <div class="dropdown d-inline-block">
-                                <a class="nav-link dropdown-toggle px-1 not-select" type="button" id="ui_menu_more_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span data-lang="ui_menu_more"></span></a>
-                                <div class="dropdown-menu theme-header">
-                                    <h6 data-lang="ui_menu_more_language" class="dropdown-header theme-nav-link text-center"></h6>
-                                    <a data-lang-toggle="ru" class="dropdown-item theme-nav-link" onclick="language.chenge(\'ru\'); return false;" href="#">Русский</a>
-                                    <a data-lang-toggle="en" class="dropdown-item theme-nav-link" onclick="language.chenge(\'en\'); return false;" href="#">English</a>
-                                </div>
+                <div id="app-mini-footer" class="row my-0 pt-3 pb-0">
+                    <div class="col-12 px-2 offset-1 text-left small">
+                        <a class="text-muted px-1" onclick="return nav.go(this);" href="/blog"><span data-lang="ui_menu_blog"></span></a>
+                        <a class="text-muted px-1" onclick="return nav.go(this);" href="/dev"><span data-lang="ui_menu_dev"></span></a><br>
+                        <a class="text-muted px-1" onclick="return nav.go(this);" href="/ads"><span data-lang="ui_menu_ads"></span></a>
+                        <div class="dropdown d-inline-block">
+                            <a class="nav-link dropdown-toggle px-1 not-select" type="button" id="ui_menu_more_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span data-lang="ui_menu_more"></span></a>
+                            <div class="dropdown-menu theme-header">
+                                <h6 data-lang="ui_menu_more_language" class="dropdown-header theme-nav-link text-center"></h6>
+                                <a data-lang-toggle="ru" class="dropdown-item theme-nav-link" onclick="language.chenge(\'ru\'); return false;" href="#">Русский</a>
+                                <a data-lang-toggle="en" class="dropdown-item theme-nav-link" onclick="language.chenge(\'en\'); return false;" href="#">English</a>
                             </div>
                         </div>
                     </div>

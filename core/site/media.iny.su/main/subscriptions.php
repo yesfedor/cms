@@ -40,7 +40,7 @@ if ($select_ids[0]) {
 </div>
 <script>
 init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 256)
-init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16384)
+init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16385)
 
 subsData = <?= json_encode($subsData, JSON_UNESCAPED_UNICODE) ?>
 
