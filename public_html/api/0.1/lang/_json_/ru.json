@@ -89,5 +89,7 @@
 
     "noticeTypeWelcome":"благодарим за регистрацию!",
     "noticeTypeMail_verfy":"указанный вами адрес электронной почты был подтвержден",
-    "noticeTypeSocial_vk_add":"ваша страница ВКонтакте успешно связана"
+    "noticeTypeSocial_vk_add":"ваша страница ВКонтакте успешно связана",
+
+    "law_manager_title":""
 }

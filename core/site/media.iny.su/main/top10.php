@@ -15,10 +15,10 @@ for($i = 0; $i < count($top10); $i++) {
             <h1 class="theme-title my-0">Топ 10 <small class="d-block theme-text">самых просматриваемых фильмов и сериалов</small></h1>
         </div>
     </div>
-    <div id="mediaWrapper" class="d-flex row align-items-center"></div>
+    <div id="mediaWrapper" class="d-flex row align-items-center justify-content-center"></div>
 </div>
 <script>
-init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 256)
+init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 512)
 init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16384)
 
 topData = <?= json_encode($topData, JSON_UNESCAPED_UNICODE) ?>

@@ -101,6 +101,9 @@ function user_checker() {
         userApiLogout();
     }
     userApiActivityHistoryAuth();
+
+    // push online
+    if ($_SESSION['user']['uid']) userApiUpdateOnline();
 }
 // user check
 if ($_SESSION['check'] >= 60) {

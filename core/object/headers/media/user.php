@@ -11,6 +11,11 @@
                 <li class="nav-item"><?= url('/subscriptions', '<span class="theme-nav-link">Мои подписки</span>', false, 'nav-link', true) ?></li>
                 <li class="nav-item"><?= url('/search', '<span class="theme-nav-link">Поиск</span>', false, 'nav-link', true) ?></li>
             </ul>
+            <ul class="d-none d-lg-block navbar-nav ml-auto">
+                <li class="nav-item text-right">
+                    <a onclick="return nav.url.query('kpid') == null ? nav.go(this) : nav.away(this);" target="_blank" class="theme-nav-link nav-link" href="//<?= $domainBase['main'] ?>">Назад</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

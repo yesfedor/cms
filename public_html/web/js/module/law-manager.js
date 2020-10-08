@@ -1,4 +1,4 @@
-var law = {
+let law = {
     init() {
         noticeCookieModal = {
                 id: 'noticeCookieModal',

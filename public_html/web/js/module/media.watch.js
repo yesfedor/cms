@@ -40,7 +40,13 @@ let watch = {
                 })
 
                 watch.els.date.textContent = watch.data.year
-                //watch.els.player.setAttribute('src', watch.content.iframe_src)
+                watch.els.player.setAttribute('src', watch.content.iframe_src)
+
+                // other player init
+                watch.els.player.onerror = () => {
+                    watch.els.player.setAttribute('src', 'https://67lm8g55vgghj78890.8432109.xyz/n1xnK05iU8an?kp_id=' + kpid)
+                }
+
                 watch.els.title.textContent = type + ' ' + title
                 nav.changeTitle(title + ', ' + watch.data.year)
                 watch.els.genre.innerHTML = genres

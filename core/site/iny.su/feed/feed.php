@@ -59,12 +59,7 @@ function blogNewOption() {
 }
 function doPostAddMin() {
     global $_SESSION;
-    $html = '
-    <!-- Add post -->
-    <div id="do-post-add-min" onclick="" class="col-10 theme-panel border border-primary rounded offset-1 mt-0 mb-3 py-2 d-none">
-
-    </div>
-    ';
+    $html = '<div id="do-post-add-min" onclick="" class="col-10 theme-panel border border-primary rounded offset-1 mt-0 mb-3 py-2 d-none"></div>';
 
     return $html;
 }

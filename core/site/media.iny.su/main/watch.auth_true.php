@@ -84,7 +84,7 @@ if ($content['data']['filmId']) {
                     <div class="row">
                         <!-- Player -->
                         <div class="col-12 theme-panel embed-responsive embed-responsive-16by9">
-                            <iframe id="watch_player" class="embed-responsive-item" src="https://67lm8g55vgghj78890.8432109.xyz/n1xnK05iU8an?kp_id=<?= $kpid ?>" allowfullscreen=""></iframe>
+                            <iframe id="watch_player" class="embed-responsive-item" src="" allowfullscreen=""></iframe>
                         </div>
 
                         <!-- Title -->
@@ -137,7 +137,7 @@ watchData = <?= $data ?>
 watchDataRecoms = <?= $watchDataRecoms ?>
 
 if (!fn.isMobile()) init.css.add('media-watch', 'media.watch.css', 3)
-init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 256)
+init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 512)
 init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16384)
 if (typeof watch == 'object') {
     watch.data = {}
@@ -145,6 +145,6 @@ if (typeof watch == 'object') {
     watch.data = watchData
     watch.init()
     watchSubscription.init()
-} else init.js.add('media-watch', 'module/media.watch.js', 4098)
+} else init.js.add('media-watch', 'module/media.watch.js', 4101)
 appMediaRender('mediaWrapper', watchDataRecoms, {fill: 'max-content', type: false})
 </script>

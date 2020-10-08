@@ -8,10 +8,10 @@
             <label for="search" class="theme-panel rounded mx-3">Поиск</label>
         </div>
     </div>
-    <div id="mediaWrapper" class="d-flex row align-items-center"></div>
+    <div id="mediaWrapper" class="d-flex row align-items-center justify-content-center"></div>
 </div>
 <script>
-init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 256)
+init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 512)
 init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16384)
 
 el_search = document.getElementById('search')

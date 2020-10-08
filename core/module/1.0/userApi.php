@@ -426,4 +426,46 @@ function userApiLogoutAll() {
         dbAddOne($query_update, $var_update);
     }
 }
+function userApiUpdateOnline() {
+    global $_SESSION;
+    global $client_id;
+
+    $date_last = appDateGetInt(appDateGetStr());
+    $query = "UPDATE user SET date_last = :date_last WHERE uid = :uid";
+    $var = [
+        ':date_last' => $date_last,
+        ':uid' => $_SESSION['user']['uid']
+    ];
+    dbAddOne($query, $var);
+}
+function userApiGetOnline($uid = false) {
+    global $_SESSION;
+    global $client_id;
+
+    if (!$uid) $uid = $_SESSION['user']['uid'];
+    $query = "SELECT date_last FROM user WHERE uid = :uid";
+    $var = [
+        ':uid' => $uid
+    ];
+    $result = dbGetOne($query, $var);
+    return $result['date_last'];
+}
+function userApiGetOnlineStatus($uid = false) {
+    global $_SESSION;
+    global $client_id;
+
+    if (!$uid) $uid = $_SESSION['user']['uid'];
+
+    $date_now = appDateGetInt(appDateGetStr());
+    $date_last = userApiGetOnline($uid);
+
+    $status = [
+        'status' => 'online/offline',
+        'date' => 0
+    ];
+
+    if ($date_now - $date_last > 120) return ['status' => 'offline', 'date' => $date_last];
+    else return ['status' => 'online', 'date' => $date_last];
+}
+
 ?>

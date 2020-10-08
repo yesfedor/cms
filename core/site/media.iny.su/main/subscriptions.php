@@ -36,10 +36,10 @@ if ($select_ids[0]) {
             <a onclick="return nav.go(this);" href="/search" class="btn btn-large btn-outline-white btn-rounded">Найти любимые сериалы</a>
         </div>
     </div>
-    <div id="mediaWrapper" class="d-flex row align-items-center"></div>
+    <div id="mediaWrapper" class="d-flex row align-items-center justify-content-center"></div>
 </div>
 <script>
-init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 256)
+init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 512)
 init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16385)
 
 subsData = <?= json_encode($subsData, JSON_UNESCAPED_UNICODE) ?>

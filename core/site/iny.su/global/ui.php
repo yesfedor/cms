@@ -4,7 +4,7 @@ if ($_SESSION['user']['uid']) {
     <div class="container my-lg-5">
         <div class="row">
             <div class="d-none d-lg-block col-lg-3 col-xl-2 h-100">
-                <div class="nav flex-column nav-pills text-left" id="app-main-menu" aria-orientation="vertical">
+                <div class="nav flex-column nav-pills font-weight-normal text-left" id="app-main-menu" aria-orientation="vertical">
                     <a id="app-main-menu_profile" class="nav-link waves-effect text-truncate" href="'.$user_profile_href.'" onclick="return nav.go(this);">
                         <div class="row my-0 py-0">
                             <div class="col-3 text-right px-2">

@@ -8,6 +8,9 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
     .h90vhn {
         max-height: 90vh;
     }
+    .carousel-mask {
+        background-color: rgb(24, 24, 24, 0.6) !important;
+    }
 </style>
 <!-- Welcome Gallery -->
 <div id="gallery-intro" class="d-none d-md-block carousel slide carousel-fade z-depth-0" data-ride="carousel">
@@ -28,7 +31,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
         <div class="carousel-item h90vhn active">
             <div class="view">
                 <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/0d3c7dfc/e7ba80c1e8f.jpg" alt="Welcome Gallery">
-                <div class="mask rgba-black-strong"></div>
+                <div class="mask carousel-mask"></div>
             </div>
             <div class="carousel-caption">
                 <a onclick="return nav.go(this);" href="/watch?kpid=1264562">
@@ -42,7 +45,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
         <div class="carousel-item h90vhn">
             <div class="view">
                 <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/a2fefe48/c439fd2eafb.jpg" alt="Welcome Gallery">
-                <div class="mask rgba-black-strong"></div>
+                <div class="mask carousel-mask"></div>
             </div>
             <div class="carousel-caption">
                 <a onclick="return nav.go(this);" href="/watch?kpid=1040419">
@@ -56,7 +59,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
         <div class="carousel-item h90vhn">
             <div class="view">
                 <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/a768db9d/de68b9fe215.jpg" alt="Welcome Gallery">
-                <div class="mask rgba-black-strong"></div>
+                <div class="mask carousel-mask"></div>
             </div>
             <div class="carousel-caption">
                 <a onclick="return nav.go(this);" href="/watch?kpid=893621">
@@ -70,7 +73,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
         <div class="carousel-item h90vhn">
             <div class="view">
                 <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/703cb031/9694c859d89.jpg" alt="Welcome Gallery">
-                <div class="mask rgba-black-strong"></div>
+                <div class="mask carousel-mask"></div>
             </div>
             <div class="carousel-caption">
                 <a onclick="return nav.go(this);" href="/watch?kpid=1013917">
@@ -84,7 +87,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
         <div class="carousel-item h90vhn">
             <div class="view">
                 <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/2ef8dcfb/aa0fef85451.jpg" alt="Welcome Gallery">
-                <div class="mask rgba-black-strong"></div>
+                <div class="mask carousel-mask"></div>
             </div>
             <div class="carousel-caption">
                 <a onclick="return nav.go(this);" href="/watch?kpid=258048">
@@ -98,7 +101,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
         <div class="carousel-item h90vhn">
             <div class="view">
                 <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/c2bbb4f4/3b9172abb13.jpg" alt="Welcome Gallery">
-                <div class="mask rgba-black-strong"></div>
+                <div class="mask carousel-mask"></div>
             </div>
             <div class="carousel-caption">
                 <a onclick="return nav.go(this);" href="/watch?kpid=733493">
@@ -112,7 +115,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
         <div class="carousel-item h90vhn">
             <div class="view">
                 <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/922812e1/b03486c00eb.jpg" alt="Welcome Gallery">
-                <div class="mask rgba-black-strong"></div>
+                <div class="mask carousel-mask"></div>
             </div>
             <div class="carousel-caption">
                 <a onclick="return nav.go(this);" href="/watch?kpid=741231">
@@ -134,7 +137,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
 </div>
 <!-- Wrapper View -->
 <div class="container-fluid">
-    <div id="mediaWrapper" class="row">
+    <div id="mediaWrapper" class="d-flex row align-items-center justify-content-center">
         <div class="col-12 text-center">
             <h1 class="theme-title my-5">Закрытая медиатека от INY.SU</h1>
         </div>
@@ -142,7 +145,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
 </div>
 
 <script>
-init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 256)
+init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 512)
 init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16384)
 
 mediaMainList = <?= $mediaMainList ?>

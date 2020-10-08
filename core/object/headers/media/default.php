@@ -6,10 +6,15 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mainNavbar">
-            <ul class="navbar-nav nav-flex-icons">
-                <!--<li class="nav-item"><?= url('/serials', '<span class="theme-nav-link">Сериалы</span>', false, 'nav-link', true) ?></li>
-                <li class="nav-item"><?= url('/films', '<span class="theme-nav-link">Фильмы</span>', false, 'nav-link', true) ?></li> -->
+            <ul class="navbar-nav">
+                <li class="nav-item"><?= url('https://iny.su/auth?to=media.iny.su&_origin=false&api=true', '<span class="theme-nav-link">Войти</span>', false, 'nav-link', true) ?></li>
+                <li class="nav-item"><?= url('/top10', '<span class="theme-nav-link">Топ 10</span>', false, 'nav-link', true) ?></li>
                 <li class="nav-item"><?= url('/search', '<span class="theme-nav-link">Поиск</span>', false, 'nav-link', true) ?></li>
+            </ul>
+            <ul class="d-none d-lg-block navbar-nav ml-auto">
+                <li class="nav-item text-right">
+                    <a onclick="return nav.url.query('kpid') == null ? nav.go(this) : nav.away(this);" target="_blank" class="theme-nav-link nav-link" href="//<?= $domainBase['main'] ?>">Назад</a>
+                </li>
             </ul>
         </div>
     </div>
