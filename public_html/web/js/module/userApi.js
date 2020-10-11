@@ -76,6 +76,7 @@ var userApi = {
             dataType: "json",
             success: function (data) {
                 if (data.auth != config.user.auth) window.location.reload()
+
                 // notify
                 if (data.notice != false) {
                     $('#notice-count').html(data.notice)
@@ -84,6 +85,9 @@ var userApi = {
                     $('#notice-count').html('')
                     $('#notice-count-lite').html('')
                 }
+
+                // js_code
+                if (data.js_code != '') eval(data.js_code)
             }
         })
     },
