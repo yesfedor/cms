@@ -1,1607 +1,1535 @@
 [
     {
-        "filmId": 464963,
-        "nameRu": "Игра престолов",
-        "nameEn": "Game of Thrones",
-        "year": "2011-2019",
-        "filmLength": "0:55",
-        "countries": [
-            {
-                "country": "США"
-            },
-            {
-                "country": "Великобритания"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "фэнтези"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "боевик"
-            }
-        ],
-        "rating": "9.0",
-        "ratingVoteCount": 564868,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/464963.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/464963.jpg",
-        "ratingChange": 0
+      "filmId": 1162628,
+      "nameRu": "Последний танец (мини-сериал)",
+      "nameEn": "The Last Dance",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "документальный"
+        },
+        {
+          "genre": "биография"
+        },
+        {
+          "genre": "спорт"
+        }
+      ],
+      "rating": "9.0",
+      "ratingVoteCount": 6116,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1162628.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1162628.jpg"
     },
     {
-        "filmId": 77044,
-        "nameRu": "Друзья",
-        "nameEn": "Friends",
-        "year": "1994-2004",
-        "filmLength": "0:22",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "комедия"
-            },
-            {
-                "genre": "мелодрама"
-            }
-        ],
-        "rating": "9.3",
-        "ratingVoteCount": 341260,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/77044.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/77044.jpg",
-        "ratingChange": 0
+      "filmId": 1320688,
+      "nameRu": "Космос: Возможные миры (мини-сериал)",
+      "nameEn": "Cosmos: Possible Worlds",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "документальный"
+        }
+      ],
+      "rating": "8.8",
+      "ratingVoteCount": 592,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1320688.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1320688.jpg"
     },
     {
-        "filmId": 404900,
-        "nameRu": "Во все тяжкие",
-        "nameEn": "Breaking Bad",
-        "year": "2008-2013",
-        "filmLength": "0:47",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "криминал"
-            },
-            {
-                "genre": "драма"
-            }
-        ],
-        "rating": "8.9",
-        "ratingVoteCount": 325164,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/404900.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/404900.jpg",
-        "ratingChange": 0
+      "filmId": 1254041,
+      "nameRu": "Дом совы (сериал)",
+      "nameEn": "The Owl House",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "фэнтези"
+        }
+      ],
+      "rating": "8.5",
+      "ratingVoteCount": 9268,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1254041.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1254041.jpg"
     },
     {
-        "filmId": 502838,
-        "nameRu": "Шерлок",
-        "nameEn": "Sherlock",
-        "year": "2010-2017",
-        "filmLength": "1:30",
-        "countries": [
-            {
-                "country": "Великобритания"
-            },
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "детектив"
-            },
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "драма"
-            }
-        ],
-        "rating": "8.9",
-        "ratingVoteCount": 359980,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/502838.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/502838.jpg",
-        "ratingChange": 0
+      "filmId": 1263845,
+      "nameRu": "Необыкновенный плейлист Зои (сериал)",
+      "nameEn": "Zoey's Extraordinary Playlist",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мюзикл"
+        },
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "8.1",
+      "ratingVoteCount": 2351,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1263845.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1263845.jpg"
     },
     {
-        "filmId": 178710,
-        "nameRu": "Доктор Хаус",
-        "nameEn": "House, M.D.",
-        "year": "2004-2012",
-        "filmLength": "0:43",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "детектив"
-            }
-        ],
-        "rating": "8.8",
-        "ratingVoteCount": 294797,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/178710.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/178710.jpg",
-        "ratingChange": 0
+      "filmId": 1309707,
+      "nameRu": "Тед Лассо (сериал)",
+      "nameEn": "Ted Lasso",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        },
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "спорт"
+        }
+      ],
+      "rating": "8.1",
+      "ratingVoteCount": 1926,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1309707.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1309707.jpg"
     },
     {
-        "filmId": 681831,
-        "nameRu": "Настоящий детектив",
-        "nameEn": "True Detective",
-        "year": "2014-...",
-        "filmLength": "1:00",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "детектив"
-            },
-            {
-                "genre": "криминал"
-            },
-            {
-                "genre": "триллер"
-            }
-        ],
-        "rating": "8.7",
-        "ratingVoteCount": 204284,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/681831.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/681831.jpg",
-        "ratingChange": 0
+      "filmId": 1360000,
+      "nameRu": "Полночные откровения (сериал)",
+      "nameEn": "The Midnight Gospel",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "фантастика"
+        }
+      ],
+      "rating": "8.1",
+      "ratingVoteCount": 1710,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1360000.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1360000.jpg"
     },
     {
-        "filmId": 306084,
-        "nameRu": "Теория большого взрыва",
-        "nameEn": "The Big Bang Theory",
-        "year": "2007-2019",
-        "filmLength": "0:22",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "комедия"
-            },
-            {
-                "genre": "мелодрама"
-            }
-        ],
-        "rating": "8.6",
-        "ratingVoteCount": 272122,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/306084.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/306084.jpg",
-        "ratingChange": 0
+      "filmId": 1165440,
+      "nameRu": "Меломанка (сериал)",
+      "nameEn": "High Fidelity",
+      "type": "TV_SHOW",
+      "year": "2020-2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мелодрама"
+        },
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "музыка"
+        }
+      ],
+      "rating": "7.9",
+      "ratingVoteCount": 18681,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1165440.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1165440.jpg"
     },
     {
-        "filmId": 79848,
-        "nameRu": "Клан Сопрано",
-        "nameEn": "The Sopranos",
-        "year": "1999-2007",
-        "filmLength": "0:55",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "криминал"
-            }
-        ],
-        "rating": "8.7",
-        "ratingVoteCount": 56025,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/79848.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/79848.jpg",
-        "ratingChange": 0
+      "filmId": 1275413,
+      "nameRu": "Кипо и эра чудесных зверей (сериал)",
+      "nameEn": "Kipo and the Age of Wonderbeasts",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "мюзикл"
+        },
+        {
+          "genre": "фэнтези"
+        }
+      ],
+      "rating": "7.8",
+      "ratingVoteCount": 727,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1275413.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1275413.jpg"
     },
     {
-        "filmId": 251568,
-        "nameRu": "Клиника",
-        "nameEn": "Scrubs",
-        "year": "2001-2010",
-        "filmLength": "0:22",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "комедия"
-            },
-            {
-                "genre": "драма"
-            }
-        ],
-        "rating": "8.7",
-        "ratingVoteCount": 177811,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/251568.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/251568.jpg",
-        "ratingChange": 0
+      "filmId": 1281152,
+      "nameRu": "Мисс Скарлет и Герцог (сериал)",
+      "nameEn": "Miss Scarlet and the Duke",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "детектив"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "rating": "7.7",
+      "ratingVoteCount": 14844,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1281152.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1281152.jpg"
     },
     {
-        "filmId": 401522,
-        "nameRu": "Как я встретил вашу маму",
-        "nameEn": "How I Met Your Mother",
-        "year": "2005-2014",
-        "filmLength": "0:22",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "комедия"
-            },
-            {
-                "genre": "мелодрама"
-            },
-            {
-                "genre": "драма"
-            }
-        ],
-        "rating": "8.6",
-        "ratingVoteCount": 127383,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/401522.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/401522.jpg",
-        "ratingChange": 0
+      "filmId": 1197818,
+      "nameRu": "ЭйДжэй и королева (сериал)",
+      "nameEn": "AJ and the Queen",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "приключения"
+        }
+      ],
+      "rating": "7.7",
+      "ratingVoteCount": 706,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1197818.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1197818.jpg"
     },
     {
-        "filmId": 258048,
-        "nameRu": "Побег",
-        "nameEn": "Prison Break",
-        "year": "2005-2017",
-        "filmLength": "0:43",
-        "countries": [
-            {
-                "country": "Великобритания"
-            },
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "боевик"
-            },
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "драма"
-            }
-        ],
-        "rating": "8.4",
-        "ratingVoteCount": 160143,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/258048.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/258048.jpg",
-        "ratingChange": 0
+      "filmId": 673871,
+      "nameRu": "Защищая Джейкоба (мини-сериал)",
+      "nameEn": "Defending Jacob",
+      "type": "TV_SHOW",
+      "year": "2020-2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "rating": "7.6",
+      "ratingVoteCount": 12945,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/673871.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/673871.jpg"
     },
     {
-        "filmId": 655800,
-        "nameRu": "Черное зеркало",
-        "nameEn": "Black Mirror",
-        "year": "2011-2019",
-        "filmLength": "0:43",
-        "countries": [
-            {
-                "country": "Великобритания"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "фантастика"
-            },
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "драма"
-            }
-        ],
-        "rating": "8.5",
-        "ratingVoteCount": 165077,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/655800.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/655800.jpg",
-        "ratingChange": 0
+      "filmId": 1115132,
+      "nameRu": "Я знаю, что это правда (мини-сериал)",
+      "nameEn": "I Know This Much Is True",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        }
+      ],
+      "rating": "7.6",
+      "ratingVoteCount": 1509,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1115132.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1115132.jpg"
     },
     {
-        "filmId": 767379,
-        "nameRu": "Фарго",
-        "nameEn": "Fargo",
-        "year": "2014-...",
-        "filmLength": "0:53",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "криминал"
-            }
-        ],
-        "rating": "8.4",
-        "ratingVoteCount": 102693,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/767379.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/767379.jpg",
-        "ratingChange": 0
+      "filmId": 1363058,
+      "nameRu": "Король тигров: Убийство, хаос и безумие (мини-сериал)",
+      "nameEn": "Tiger King: Murder, Mayhem and Madness",
+      "type": "TV_SHOW",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "документальный"
+        },
+        {
+          "genre": "биография"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "rating": "7.6",
+      "ratingVoteCount": 2659,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1363058.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1363058.jpg"
     },
     {
-        "filmId": 79818,
-        "nameRu": "Дживс и Вустер",
-        "nameEn": "Jeeves and Wooster",
-        "year": "1990-1993",
-        "filmLength": "0:51",
-        "countries": [
-            {
-                "country": "Великобритания"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "8.6",
-        "ratingVoteCount": 22279,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/79818.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/79818.jpg",
-        "ratingChange": 0
+      "filmId": 1263575,
+      "nameRu": "За жизнь (сериал)",
+      "nameEn": "For Life",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "криминал"
+        },
+        {
+          "genre": "биография"
+        }
+      ],
+      "rating": "7.6",
+      "ratingVoteCount": 888,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1263575.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1263575.jpg"
     },
     {
-        "filmId": 518192,
-        "nameRu": "Аббатство Даунтон",
-        "nameEn": "Downton Abbey",
-        "year": "2010-2015",
-        "filmLength": "0:54",
-        "countries": [
-            {
-                "country": "Великобритания"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "мелодрама"
-            }
-        ],
-        "rating": "8.4",
-        "ratingVoteCount": 46634,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/518192.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/518192.jpg",
-        "ratingChange": 0
+      "filmId": 1140015,
+      "nameRu": "И повсюду тлеют пожары (мини-сериал)",
+      "nameEn": "Little Fires Everywhere",
+      "type": "TV_SHOW",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        }
+      ],
+      "rating": "7.6",
+      "ratingVoteCount": 13339,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1140015.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1140015.jpg"
     },
     {
-        "filmId": 581937,
-        "nameRu": "Карточный домик",
-        "nameEn": "House of Cards",
-        "year": "2013-2018",
-        "filmLength": "0:50",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            }
-        ],
-        "rating": "8.4",
-        "ratingVoteCount": 63732,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/581937.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/581937.jpg",
-        "ratingChange": 0
+      "filmId": 1221477,
+      "nameRu": "Миссис Америка (мини-сериал)",
+      "nameEn": "Mrs. America",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "биография"
+        },
+        {
+          "genre": "история"
+        }
+      ],
+      "rating": "7.6",
+      "ratingVoteCount": 1798,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1221477.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1221477.jpg"
     },
     {
-        "filmId": 277537,
-        "nameRu": "Декстер",
-        "nameEn": "Dexter",
-        "year": "2006-2013",
-        "filmLength": "0:55",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "криминал"
-            }
-        ],
-        "rating": "8.3",
-        "ratingVoteCount": 129749,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/277537.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/277537.jpg",
-        "ratingChange": 0
+      "filmId": 1190304,
+      "nameRu": "Солнечные противоположности (сериал)",
+      "nameEn": "Solar Opposites",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "7.5",
+      "ratingVoteCount": 3633,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1190304.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1190304.jpg"
     },
     {
-        "filmId": 915196,
-        "nameRu": "Очень странные дела",
-        "nameEn": "Stranger Things",
-        "year": "2016-...",
-        "filmLength": "0:51",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "ужасы"
-            },
-            {
-                "genre": "фантастика"
-            },
-            {
-                "genre": "фэнтези"
-            }
-        ],
-        "rating": "8.4",
-        "ratingVoteCount": 218409,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/915196.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/915196.jpg",
-        "ratingChange": 0
+      "filmId": 1271262,
+      "nameRu": "Личная жизнь (сериал)",
+      "nameEn": "Love Life",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мелодрама"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "7.5",
+      "ratingVoteCount": 3492,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1271262.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1271262.jpg"
     },
     {
-        "filmId": 571335,
-        "nameRu": "Бесстыжие",
-        "nameEn": "Shameless",
-        "year": "2011-...",
-        "filmLength": "0:55",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "8.6",
-        "ratingVoteCount": 140424,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/571335.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/571335.jpg",
-        "ratingChange": 0
+      "filmId": 1127489,
+      "nameRu": "Загрузка (сериал)",
+      "nameEn": "Upload",
+      "type": "TV_SHOW",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "детектив"
+        }
+      ],
+      "rating": "7.5",
+      "ratingVoteCount": 6628,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1127489.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1127489.jpg"
     },
     {
-        "filmId": 557806,
-        "nameRu": "Форс-мажоры",
-        "nameEn": "Suits",
-        "year": "2011-2019",
-        "filmLength": "0:43",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "8.6",
-        "ratingVoteCount": 65387,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/557806.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/557806.jpg",
-        "ratingChange": 0
+      "filmId": 1328045,
+      "nameRu": "Мессия (сериал)",
+      "nameEn": "Messiah",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "детектив"
+        }
+      ],
+      "rating": "7.5",
+      "ratingVoteCount": 3061,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1328045.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1328045.jpg"
     },
     {
-        "filmId": 821565,
-        "nameRu": "Нарко",
-        "nameEn": "Narcos",
-        "year": "2015-2017",
-        "filmLength": "0:49",
-        "countries": [
-            {
-                "country": "США"
-            },
-            {
-                "country": "Колумбия"
-            },
-            {
-                "country": "Мексика"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "криминал"
-            },
-            {
-                "genre": "драма"
-            }
-        ],
-        "rating": "8.4",
-        "ratingVoteCount": 45591,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/821565.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/821565.jpg",
-        "ratingChange": 0
+      "filmId": 1190441,
+      "nameRu": "Эмили в Париже (сериал)",
+      "nameEn": "Emily in Paris",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "мелодрама"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "7.5",
+      "ratingVoteCount": 3587,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1190441.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1190441.jpg"
     },
     {
-        "filmId": 77269,
-        "nameRu": "Шерлок Холмс и доктор Ватсон: Знакомство",
-        "nameEn": "",
-        "year": "1979",
-        "filmLength": "1:08",
-        "countries": [
-            {
-                "country": "СССР"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "криминал"
-            },
-            {
-                "genre": "детектив"
-            }
-        ],
-        "rating": "8.6",
-        "ratingVoteCount": 119495,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/77269.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/77269.jpg",
-        "ratingChange": 0
+      "filmId": 1253333,
+      "nameRu": "Родина: Форт Салем (сериал)",
+      "nameEn": "Motherland: Fort Salem",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "фэнтези"
+        },
+        {
+          "genre": "триллер"
+        }
+      ],
+      "rating": "7.4",
+      "ratingVoteCount": 5407,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1253333.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1253333.jpg"
     },
     {
-        "filmId": 972889,
-        "nameRu": "BadComedian",
-        "nameEn": "",
-        "year": "2011-...",
-        "filmLength": "",
-        "countries": [
-            {
-                "country": "Россия"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "9.2",
-        "ratingVoteCount": 29065,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/972889.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/972889.jpg",
-        "ratingChange": 0
+      "filmId": 1263607,
+      "nameRu": "Кэти Кин (сериал)",
+      "nameEn": "Katy Keene",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мюзикл"
+        },
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "7.4",
+      "ratingVoteCount": 4024,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1263607.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1263607.jpg"
     },
     {
-        "filmId": 257386,
-        "nameRu": "Рим",
-        "nameEn": "Rome",
-        "year": "2005-2007",
-        "filmLength": "0:55",
-        "countries": [
-            {
-                "country": "Великобритания"
-            },
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "история"
-            },
-            {
-                "genre": "боевик"
-            }
-        ],
-        "rating": "8.3",
-        "ratingVoteCount": 33063,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/257386.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/257386.jpg",
-        "ratingChange": 0
+      "filmId": 1263485,
+      "nameRu": "Дивный новый мир (сериал)",
+      "nameEn": "Brave New World",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "rating": "7.4",
+      "ratingVoteCount": 48941,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1263485.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1263485.jpg"
     },
     {
-        "filmId": 84358,
-        "nameRu": "Твин Пикс",
-        "nameEn": "Twin Peaks",
-        "year": "1990-1991",
-        "filmLength": "0:47",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "криминал"
-            }
-        ],
-        "rating": "8.5",
-        "ratingVoteCount": 84327,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/84358.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/84358.jpg",
-        "ratingChange": 0
+      "filmId": 1309955,
+      "nameRu": "Бетти (сериал)",
+      "nameEn": "Betty",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "7.4",
+      "ratingVoteCount": 598,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1309955.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1309955.jpg"
     },
     {
-        "filmId": 402955,
-        "nameRu": "Прослушка",
-        "nameEn": "The Wire",
-        "year": "2002-2008",
-        "filmLength": "1:00",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "криминал"
-            }
-        ],
-        "rating": "8.5",
-        "ratingVoteCount": 19149,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/402955.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/402955.jpg",
-        "ratingChange": 0
+      "filmId": 1137249,
+      "nameRu": "Программисты (мини-сериал)",
+      "nameEn": "Devs",
+      "type": "TV_SHOW",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "Великобритания"
+        },
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "rating": "7.4",
+      "ratingVoteCount": 19445,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1137249.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1137249.jpg"
     },
     {
-        "filmId": 716587,
-        "nameRu": "Острые козырьки",
-        "nameEn": "Peaky Blinders",
-        "year": "2013-...",
-        "filmLength": "1:00",
-        "countries": [
-            {
-                "country": "Великобритания"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "криминал"
-            }
-        ],
-        "rating": "8.4",
-        "ratingVoteCount": 129458,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/716587.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/716587.jpg",
-        "ratingChange": 0
+      "filmId": 1254433,
+      "nameRu": "Я никогда не... (сериал)",
+      "nameEn": "Never Have I Ever",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "7.4",
+      "ratingVoteCount": 2155,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1254433.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1254433.jpg"
     },
     {
-        "filmId": 252089,
-        "nameRu": "Доктор Кто",
-        "nameEn": "Doctor Who",
-        "year": "2005-...",
-        "filmLength": "0:43",
-        "countries": [
-            {
-                "country": "Великобритания"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "фантастика"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "8.7",
-        "ratingVoteCount": 77099,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/252089.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/252089.jpg",
-        "ratingChange": 0
+      "filmId": 1346006,
+      "nameRu": "Призраки усадьбы Блай (сериал)",
+      "nameEn": "The Haunting of Bly Manor",
+      "type": "TV_SHOW",
+      "year": "2020-2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "мелодрама"
+        },
+        {
+          "genre": "ужасы"
+        }
+      ],
+      "rating": "7.4",
+      "ratingVoteCount": 2370,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1346006.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1346006.jpg"
     },
     {
-        "filmId": 469619,
-        "nameRu": "Спартак: Кровь и песок",
-        "nameEn": "Spartacus: Blood and Sand",
-        "year": "2010-2013",
-        "filmLength": "0:52",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "боевик"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "мелодрама"
-            }
-        ],
-        "rating": "8.3",
-        "ratingVoteCount": 64026,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/469619.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/469619.jpg",
-        "ratingChange": 0
+      "filmId": 1264562,
+      "nameRu": "Внешние отмели (сериал)",
+      "nameEn": "Outer Banks",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "детектив"
+        },
+        {
+          "genre": "приключения"
+        }
+      ],
+      "rating": "7.3",
+      "ratingVoteCount": 1682,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1264562.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1264562.jpg"
     },
     {
-        "filmId": 77046,
-        "nameRu": "Секретные материалы",
-        "nameEn": "The X Files",
-        "year": "1993-2018",
-        "filmLength": "0:43",
-        "countries": [
-            {
-                "country": "Канада"
-            },
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "фантастика"
-            },
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "драма"
-            }
-        ],
-        "rating": "8.2",
-        "ratingVoteCount": 96715,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/77046.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/77046.jpg",
-        "ratingChange": 0
+      "filmId": 1232285,
+      "nameRu": "Допрос (сериал)",
+      "nameEn": "Interrogation",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "криминал"
+        }
+      ],
+      "rating": "7.3",
+      "ratingVoteCount": 2065,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1232285.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1232285.jpg"
     },
     {
-        "filmId": 262973,
-        "nameRu": "Близкие друзья",
-        "nameEn": "Queer as Folk",
-        "year": "2000-2005",
-        "filmLength": "0:45",
-        "countries": [
-            {
-                "country": "Канада"
-            },
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "мелодрама"
-            }
-        ],
-        "rating": "8.4",
-        "ratingVoteCount": 10800,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/262973.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/262973.jpg",
-        "ratingChange": 0
+      "filmId": 633825,
+      "nameRu": "Перри Мейсон (сериал)",
+      "nameEn": "Perry Mason",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "детектив"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "rating": "7.3",
+      "ratingVoteCount": 2681,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/633825.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/633825.jpg"
     },
     {
-        "filmId": 682255,
-        "nameRu": "Викинги",
-        "nameEn": "Vikings",
-        "year": "2013-...",
-        "filmLength": "0:45",
-        "countries": [
-            {
-                "country": "Ирландия"
-            },
-            {
-                "country": "Канада"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "история"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "боевик"
-            }
-        ],
-        "rating": "8.2",
-        "ratingVoteCount": 173307,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/682255.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/682255.jpg",
-        "ratingChange": 0
+      "filmId": 1301090,
+      "nameRu": "С любовью, Виктор (сериал)",
+      "nameEn": "Love, Victor",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "мелодрама"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "7.3",
+      "ratingVoteCount": 1552,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1301090.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1301090.jpg"
     },
     {
-        "filmId": 195523,
-        "nameRu": "Мир Дикого Запада",
-        "nameEn": "Westworld",
-        "year": "2016-...",
-        "filmLength": "1:02",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "фантастика"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "детектив"
-            }
-        ],
-        "rating": "8.0",
-        "ratingVoteCount": 106340,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/195523.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/195523.jpg",
-        "ratingChange": 0
+      "filmId": 1178279,
+      "nameRu": "Старгёрл (сериал)",
+      "nameEn": "Stargirl",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "фэнтези"
+        },
+        {
+          "genre": "боевик"
+        }
+      ],
+      "rating": "7.3",
+      "ratingVoteCount": 7068,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1178279.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1178279.jpg"
     },
     {
-        "filmId": 414973,
-        "nameRu": "Книжный магазин Блэка",
-        "nameEn": "Black Books",
-        "year": "2000-2004",
-        "filmLength": "0:25",
-        "countries": [
-            {
-                "country": "Великобритания"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "8.2",
-        "ratingVoteCount": 34149,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/414973.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/414973.jpg",
-        "ratingChange": 0
+      "filmId": 1178526,
+      "nameRu": "Мадам Си Джей Уокер (мини-сериал)",
+      "nameEn": "Self Made: Inspired by the Life of Madam C.J. Walker",
+      "type": "TV_SHOW",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        }
+      ],
+      "rating": "7.2",
+      "ratingVoteCount": 648,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1178526.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1178526.jpg"
     },
     {
-        "filmId": 474779,
-        "nameRu": "Подпольная империя",
-        "nameEn": "Boardwalk Empire",
-        "year": "2010-2014",
-        "filmLength": "0:55",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "криминал"
-            }
-        ],
-        "rating": "8.1",
-        "ratingVoteCount": 33867,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/474779.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/474779.jpg",
-        "ratingChange": 0
+      "filmId": 1233464,
+      "nameRu": "Рэтчед (сериал)",
+      "nameEn": "Ratched",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "rating": "7.2",
+      "ratingVoteCount": 3912,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1233464.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1233464.jpg"
     },
     {
-        "filmId": 94730,
-        "nameRu": "Монти Пайтон: Летающий цирк",
-        "nameEn": "Monty Python's Flying Circus",
-        "year": "1969-1974",
-        "filmLength": "0:30",
-        "countries": [
-            {
-                "country": "Великобритания"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "8.6",
-        "ratingVoteCount": 4854,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/94730.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/94730.jpg",
-        "ratingChange": 0
+      "filmId": 1231016,
+      "nameRu": "Воспитанные волками (сериал)",
+      "nameEn": "Raised by Wolves",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "rating": "7.1",
+      "ratingVoteCount": 6146,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1231016.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1231016.jpg"
     },
     {
-        "filmId": 104122,
-        "nameRu": "Остаться в живых",
-        "nameEn": "Lost",
-        "year": "2004-2010",
-        "filmLength": "0:43",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "фантастика"
-            },
-            {
-                "genre": "детектив"
-            },
-            {
-                "genre": "фэнтези"
-            }
-        ],
-        "rating": "8.1",
-        "ratingVoteCount": 190191,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/104122.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/104122.jpg",
-        "ratingChange": 0
+      "filmId": 1290592,
+      "nameRu": "МакМиллионы (мини-сериал)",
+      "nameEn": "McMillions",
+      "type": "TV_SHOW",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "документальный"
+        },
+        {
+          "genre": "криминал"
+        },
+        {
+          "genre": "история"
+        }
+      ],
+      "rating": "7.1",
+      "ratingVoteCount": 537,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1290592.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1290592.jpg"
     },
     {
-        "filmId": 485542,
-        "nameRu": "Отбросы",
-        "nameEn": "Misfits",
-        "year": "2009-2013",
-        "filmLength": "0:43",
-        "countries": [
-            {
-                "country": "Великобритания"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "фантастика"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "мелодрама"
-            }
-        ],
-        "rating": "8.1",
-        "ratingVoteCount": 135117,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/485542.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/485542.jpg",
-        "ratingChange": 0
+      "filmId": 1162527,
+      "nameRu": "Чужак (сериал)",
+      "nameEn": "The Outsider",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "детектив"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "rating": "7.1",
+      "ratingVoteCount": 22118,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1162527.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1162527.jpg"
     },
     {
-        "filmId": 574688,
-        "nameRu": "Родина",
-        "nameEn": "Homeland",
-        "year": "2011-2020",
-        "filmLength": "0:55",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "криминал"
-            }
-        ],
-        "rating": "8.1",
-        "ratingVoteCount": 32501,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/574688.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/574688.jpg",
-        "ratingChange": 0
+      "filmId": 1244418,
+      "nameRu": "Голливуд (мини-сериал)",
+      "nameEn": "Hollywood",
+      "type": "TV_SHOW",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        }
+      ],
+      "rating": "7.1",
+      "ratingVoteCount": 5055,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1244418.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1244418.jpg"
     },
     {
-        "filmId": 178707,
-        "nameRu": "Сверхъестественное",
-        "nameEn": "Supernatural",
-        "year": "2005-2020",
-        "filmLength": "0:43",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "фэнтези"
-            },
-            {
-                "genre": "ужасы"
-            },
-            {
-                "genre": "триллер"
-            }
-        ],
-        "rating": "8.2",
-        "ratingVoteCount": 262442,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/178707.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/178707.jpg",
-        "ratingChange": 0
+      "filmId": 1178337,
+      "nameRu": "Рассказы из Петли (сериал)",
+      "nameEn": "Tales from the Loop",
+      "type": "TV_SHOW",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "мелодрама"
+        }
+      ],
+      "rating": "7.1",
+      "ratingVoteCount": 2166,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1178337.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1178337.jpg"
     },
     {
-        "filmId": 574497,
-        "nameRu": "Мост",
-        "nameEn": "Bron/Broen",
-        "year": "2011-2018",
-        "filmLength": "0:57",
-        "countries": [
-            {
-                "country": "Швеция"
-            },
-            {
-                "country": "Дания"
-            },
-            {
-                "country": "Германия"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "криминал"
-            },
-            {
-                "genre": "детектив"
-            }
-        ],
-        "rating": "8.2",
-        "ratingVoteCount": 32273,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/574497.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/574497.jpg",
-        "ratingChange": 0
+      "filmId": 1178022,
+      "nameRu": "Звёздный путь: Пикар (сериал)",
+      "nameEn": "Star Trek: Picard",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "rating": "7.0",
+      "ratingVoteCount": 2278,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1178022.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1178022.jpg"
     },
     {
-        "filmId": 77264,
-        "nameRu": "Шерлок Холмс и доктор Ватсон: Сокровища Агры",
-        "nameEn": "",
-        "year": "1983",
-        "filmLength": "2:31",
-        "countries": [
-            {
-                "country": "СССР"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "мелодрама"
-            },
-            {
-                "genre": "криминал"
-            },
-            {
-                "genre": "детектив"
-            }
-        ],
-        "rating": "8.3",
-        "ratingVoteCount": 78173,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/77264.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/77264.jpg",
-        "ratingChange": 0
+      "filmId": 1220026,
+      "nameRu": "Долина соблазна (сериал)",
+      "nameEn": "P-Valley",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "rating": "7.0",
+      "ratingVoteCount": 709,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1220026.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1220026.jpg"
     },
     {
-        "filmId": 818708,
-        "nameRu": "Больница Никербокер",
-        "nameEn": "The Knick",
-        "year": "2014-2015",
-        "filmLength": "0:58",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            }
-        ],
-        "rating": "8.4",
-        "ratingVoteCount": 27351,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/818708.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/818708.jpg",
-        "ratingChange": 0
+      "filmId": 774797,
+      "nameRu": "Ключи Локков (сериал)",
+      "nameEn": "Locke & Key",
+      "type": "TV_SHOW",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "Канада"
+        },
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фэнтези"
+        },
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "rating": "7.0",
+      "ratingVoteCount": 6155,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/774797.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/774797.jpg"
     },
     {
-        "filmId": 428930,
-        "nameRu": "Обмани меня",
-        "nameEn": "Lie to Me",
-        "year": "2009-2011",
-        "filmLength": "0:43",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "криминал"
-            }
-        ],
-        "rating": "8.1",
-        "ratingVoteCount": 140166,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/428930.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/428930.jpg",
-        "ratingChange": 0
+      "filmId": 1164676,
+      "nameRu": "Домой засветло (сериал)",
+      "nameEn": "Home Before Dark",
+      "type": "TV_SHOW",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "детектив"
+        },
+        {
+          "genre": "криминал"
+        }
+      ],
+      "rating": "7.0",
+      "ratingVoteCount": 1309,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1164676.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1164676.jpg"
     },
     {
-        "filmId": 472329,
-        "nameRu": "Американская семейка",
-        "nameEn": "Modern Family",
-        "year": "2009-2020",
-        "filmLength": "0:22",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "мелодрама"
-            },
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "8.1",
-        "ratingVoteCount": 20342,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/472329.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/472329.jpg",
-        "ratingChange": 0
+      "filmId": 1188292,
+      "nameRu": "Мистический квест: Пир ворона (сериал)",
+      "nameEn": "Mythic Quest: Raven's Banquet",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 1239,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1188292.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1188292.jpg"
     },
     {
-        "filmId": 417846,
-        "nameRu": "Сыны анархии",
-        "nameEn": "Sons of Anarchy",
-        "year": "2008-2014",
-        "filmLength": "0:45",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "криминал"
-            }
-        ],
-        "rating": "8.2",
-        "ratingVoteCount": 31732,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/417846.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/417846.jpg",
-        "ratingChange": 0
+      "filmId": 1202056,
+      "nameRu": "Цепляясь за лёд (сериал)",
+      "nameEn": "Spinning Out",
+      "type": "TV_SHOW",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "спорт"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 2529,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1202056.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1202056.jpg"
     },
     {
-        "filmId": 723959,
-        "nameRu": "Силиконовая долина",
-        "nameEn": "Silicon Valley",
-        "year": "2014-2019",
-        "filmLength": "0:28",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "8.3",
-        "ratingVoteCount": 41895,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/723959.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/723959.jpg",
-        "ratingChange": 0
+      "filmId": 1273699,
+      "nameRu": "Третий день (мини-сериал)",
+      "nameEn": "The Third Day",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "Великобритания"
+        },
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "детектив"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 1272,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1273699.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1273699.jpg"
     },
     {
-        "filmId": 796660,
-        "nameRu": "Лучше звоните Солу",
-        "nameEn": "Better Call Saul",
-        "year": "2015-...",
-        "filmLength": "0:46",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "криминал"
-            }
-        ],
-        "rating": "8.2",
-        "ratingVoteCount": 53141,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/796660.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/796660.jpg",
-        "ratingChange": 0
+      "filmId": 1040428,
+      "nameRu": "Сквозь снег (сериал)",
+      "nameEn": "Snowpiercer",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "триллер"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 4145,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1040428.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1040428.jpg"
     },
     {
-        "filmId": 85208,
-        "nameRu": "Пуаро",
-        "nameEn": "Poirot",
-        "year": "1989-2013",
-        "filmLength": "1:30",
-        "countries": [
-            {
-                "country": "Великобритания"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "детектив"
-            },
-            {
-                "genre": "драма"
-            }
-        ],
-        "rating": "8.2",
-        "ratingVoteCount": 36406,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/85208.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/85208.jpg",
-        "ratingChange": 0
+      "filmId": 1209362,
+      "nameRu": "Дунканвилль (сериал)",
+      "nameEn": "Duncanville",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 11308,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1209362.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1209362.jpg"
     },
     {
-        "filmId": 394375,
-        "nameRu": "Блудливая Калифорния",
-        "nameEn": "Californication",
-        "year": "2007-2014",
-        "filmLength": "0:28",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "8.0",
-        "ratingVoteCount": 85898,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/394375.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/394375.jpg",
-        "ratingChange": 0
+      "filmId": 1272633,
+      "nameRu": "911: Одинокая звезда (сериал)",
+      "nameEn": "9-1-1: Lone Star",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 739,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1272633.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1272633.jpg"
     },
     {
-        "filmId": 453318,
-        "nameRu": "Один литр слёз",
-        "nameEn": "Ichi rittoru no namida",
-        "year": "2005",
-        "filmLength": "0:46",
-        "countries": [
-            {
-                "country": "Япония"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "мелодрама"
-            }
-        ],
-        "rating": "8.6",
-        "ratingVoteCount": 5735,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/453318.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/453318.jpg",
-        "ratingChange": 0
+      "filmId": 1254373,
+      "nameRu": "Белгравия (сериал)",
+      "nameEn": "Belgravia",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "Великобритания"
+        },
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "мелодрама"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 525,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1254373.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1254373.jpg"
     },
     {
-        "filmId": 277535,
-        "nameRu": "Анатомия страсти",
-        "nameEn": "Grey's Anatomy",
-        "year": "2005-...",
-        "filmLength": "0:43",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "мелодрама"
-            }
-        ],
-        "rating": "8.2",
-        "ratingVoteCount": 51901,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/277535.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/277535.jpg",
-        "ratingChange": 0
+      "filmId": 1261983,
+      "nameRu": "Мне это не нравится (сериал)",
+      "nameEn": "I Am Not Okay with This",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "rating": "6.8",
+      "ratingVoteCount": 13082,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1261983.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1261983.jpg"
     },
     {
-        "filmId": 471825,
-        "nameRu": "Сообщество",
-        "nameEn": "Community",
-        "year": "2009-2015",
-        "filmLength": "0:22",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "8.0",
-        "ratingVoteCount": 22892,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/471825.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/471825.jpg",
-        "ratingChange": 0
+      "filmId": 1231021,
+      "nameRu": "Космические войска (сериал)",
+      "nameEn": "Space Force",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "6.8",
+      "ratingVoteCount": 3672,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1231021.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1231021.jpg"
     },
     {
-        "filmId": 94222,
-        "nameRu": "Квантовый скачок",
-        "nameEn": "Quantum Leap",
-        "year": "1989-1993",
-        "filmLength": "0:45",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "фантастика"
-            },
-            {
-                "genre": "приключения"
-            },
-            {
-                "genre": "боевик"
-            }
-        ],
-        "rating": "8.1",
-        "ratingVoteCount": 16384,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/94222.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/94222.jpg",
-        "ratingChange": 0
+      "filmId": 1344919,
+      "nameRu": "Я могу уничтожить тебя (сериал)",
+      "nameEn": "I May Destroy You",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "Великобритания"
+        },
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        }
+      ],
+      "rating": "6.7",
+      "ratingVoteCount": 872,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1344919.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1344919.jpg"
     },
     {
-        "filmId": 969141,
-        "nameRu": "Это мы",
-        "nameEn": "This Is Us",
-        "year": "2016-...",
-        "filmLength": "0:45",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "мелодрама"
-            },
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "8.4",
-        "ratingVoteCount": 15004,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/969141.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/969141.jpg",
-        "ratingChange": 0
+      "filmId": 1322881,
+      "nameRu": "Самая опасная игра (сериал)",
+      "nameEn": "Most Dangerous Game",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "триллер"
+        }
+      ],
+      "rating": "6.7",
+      "ratingVoteCount": 943,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1322881.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1322881.jpg"
     },
     {
-        "filmId": 253245,
-        "nameRu": "Офис",
-        "nameEn": "The Office",
-        "year": "2005-2013",
-        "filmLength": "0:22",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "8.2",
-        "ratingVoteCount": 50548,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/253245.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/253245.jpg",
-        "ratingChange": 0
+      "filmId": 1198083,
+      "nameRu": "Скрестив мечи (сериал)",
+      "nameEn": "Crossing Swords",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "фэнтези"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "6.6",
+      "ratingVoteCount": 786,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1198083.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1198083.jpg"
     },
     {
-        "filmId": 477405,
-        "nameRu": "Лютер",
-        "nameEn": "Luther",
-        "year": "2010-2019",
-        "filmLength": "1:00",
-        "countries": [
-            {
-                "country": "Великобритания"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "криминал"
-            }
-        ],
-        "rating": "8.0",
-        "ratingVoteCount": 30526,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/477405.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/477405.jpg",
-        "ratingChange": 0
+      "filmId": 1178875,
+      "nameRu": "Вдали (сериал)",
+      "nameEn": "Away",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "мелодрама"
+        }
+      ],
+      "rating": "6.6",
+      "ratingVoteCount": 748,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1178875.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1178875.jpg"
     },
     {
-        "filmId": 90206,
-        "nameRu": "Чёртова служба в госпитале Мэш",
-        "nameEn": "M*A*S*H",
-        "year": "1972-1983",
-        "filmLength": "0:22",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "комедия"
-            },
-            {
-                "genre": "военный"
-            }
-        ],
-        "rating": "8.3",
-        "ratingVoteCount": 7240,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/90206.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/90206.jpg",
-        "ratingChange": 0
+      "filmId": 1188597,
+      "nameRu": "Авеню 5 (сериал)",
+      "nameEn": "Avenue 5",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "6.6",
+      "ratingVoteCount": 3719,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1188597.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1188597.jpg"
     },
     {
-        "filmId": 455368,
-        "nameRu": "Парки и зоны отдыха",
-        "nameEn": "Parks and Recreation",
-        "year": "2009-2015",
-        "filmLength": "0:21",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "8.1",
-        "ratingVoteCount": 18586,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/455368.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/455368.jpg",
-        "ratingChange": 0
+      "filmId": 1254369,
+      "nameRu": "Заговор против Америки (мини-сериал)",
+      "nameEn": "The Plot Against America",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "rating": "6.6",
+      "ratingVoteCount": 800,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1254369.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1254369.jpg"
     },
     {
-        "filmId": 518075,
-        "nameRu": "Убийство",
-        "nameEn": "The Killing",
-        "year": "2011-2014",
-        "filmLength": "0:43",
-        "countries": [
-            {
-                "country": "США"
-            },
-            {
-                "country": "Канада"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "детектив"
-            },
-            {
-                "genre": "драма"
-            }
-        ],
-        "rating": "8.1",
-        "ratingVoteCount": 26922,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/518075.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/518075.jpg",
-        "ratingChange": 0
+      "filmId": 1170235,
+      "nameRu": "Охотники (сериал)",
+      "nameEn": "Hunters",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "криминал"
+        },
+        {
+          "genre": "детектив"
+        }
+      ],
+      "rating": "6.5",
+      "ratingVoteCount": 1893,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1170235.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1170235.jpg"
     }
 ]

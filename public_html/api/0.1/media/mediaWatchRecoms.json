@@ -1,571 +1,218 @@
 [
     {
-        "filmId": 991632,
-        "nameRu": "Тайная жизнь",
-        "nameEn": "A Hidden Life",
-        "year": "2019",
-        "filmLength": "2:54",
-        "countries": [
-            {
-                "country": "США"
-            },
-            {
-                "country": "Великобритания"
-            },
-            {
-                "country": "Германия"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "военный"
-            },
-            {
-                "genre": "биография"
-            }
-        ],
-        "rating": "19 марта 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/991632.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/991632.jpg",
-        "ratingChange": 0
+      "filmId": 1231016,
+      "nameRu": "Воспитанные волками (сериал)",
+      "nameEn": "Raised by Wolves",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "rating": "7.1",
+      "ratingVoteCount": 6146,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1231016.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1231016.jpg"
     },
     {
-        "filmId": 1234939,
-        "nameRu": "Счастье в конверте",
-        "nameEn": "",
-        "year": "2019",
-        "filmLength": "1:43",
-        "countries": [
-            {
-                "country": "Россия"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "семейный"
-            },
-            {
-                "genre": "мелодрама"
-            }
-        ],
-        "rating": "12 марта 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1234939.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1234939.jpg",
-        "ratingChange": 0
+      "filmId": 1345846,
+      "nameRu": "Гамильтон",
+      "nameEn": "Hamilton",
+      "type": "FILM",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мюзикл"
+        },
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "биография"
+        }
+      ],
+      "rating": "8.5",
+      "ratingVoteCount": 849,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1345846.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1345846.jpg"
     },
     {
-        "filmId": 1043758,
-        "nameRu": "Паразиты",
-        "nameEn": "Gisaengchung",
-        "year": "2019",
-        "filmLength": "2:11",
-        "countries": [
-            {
-                "country": "Корея Южная"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "8 марта 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1043758.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1043758.jpg",
-        "ratingChange": 0
+      "filmId": 1055194,
+      "nameRu": "Грейхаунд",
+      "nameEn": "Greyhound",
+      "type": "FILM",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        },
+        {
+          "country": "Китай"
+        },
+        {
+          "country": "Канада"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "военный"
+        },
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "история"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 11257,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1055194.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1055194.jpg"
     },
     {
-        "filmId": 1080513,
-        "nameRu": "Вперёд",
-        "nameEn": "Onward",
-        "year": "2019",
-        "filmLength": "1:42",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "мультфильм"
-            },
-            {
-                "genre": "фэнтези"
-            },
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "5 марта 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1080513.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1080513.jpg",
-        "ratingChange": 0
+      "filmId": 1202056,
+      "nameRu": "Цепляясь за лёд (сериал)",
+      "nameEn": "Spinning Out",
+      "type": "TV_SHOW",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "спорт"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 2529,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1202056.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1202056.jpg"
     },
     {
-        "filmId": 1313568,
-        "nameRu": "Прощание со Сталиным",
-        "nameEn": "State Funeral",
-        "year": "2019",
-        "filmLength": "2:15",
-        "countries": [
-            {
-                "country": "Нидерланды"
-            },
-            {
-                "country": "Литва"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "документальный"
-            },
-            {
-                "genre": "история"
-            }
-        ],
-        "rating": "5 марта 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1313568.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1313568.jpg",
-        "ratingChange": 0
+      "filmId": 1273699,
+      "nameRu": "Третий день (мини-сериал)",
+      "nameEn": "The Third Day",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "Великобритания"
+        },
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "детектив"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 1270,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1273699.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1273699.jpg"
     },
     {
-        "filmId": 1172326,
-        "nameRu": "Невидимая жизнь Эвридики",
-        "nameEn": "A Vida Invisível",
-        "year": "2019",
-        "filmLength": "2:19",
-        "countries": [
-            {
-                "country": "Бразилия"
-            },
-            {
-                "country": "Германия"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "мелодрама"
-            }
-        ],
-        "rating": "5 марта 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1172326.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1172326.jpg",
-        "ratingChange": 0
+      "filmId": 1040428,
+      "nameRu": "Сквозь снег (сериал)",
+      "nameEn": "Snowpiercer",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "триллер"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 4143,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1040428.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1040428.jpg"
     },
     {
-        "filmId": 1108556,
-        "nameRu": "Просто помиловать",
-        "nameEn": "Just Mercy",
-        "year": "2019",
-        "filmLength": "2:17",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "криминал"
-            },
-            {
-                "genre": "биография"
-            }
-        ],
-        "rating": "27 февраля 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1108556.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1108556.jpg",
-        "ratingChange": 0
+      "filmId": 1209362,
+      "nameRu": "Дунканвилль (сериал)",
+      "nameEn": "Duncanville",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 11308,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1209362.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1209362.jpg"
     },
     {
-        "filmId": 1338313,
-        "nameRu": "Русские грузины. Фильм первый",
-        "nameEn": "",
-        "year": "2020",
-        "filmLength": "1:55",
-        "countries": [
-            {
-                "country": "Россия"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "документальный"
-            },
-            {
-                "genre": "история"
-            }
-        ],
-        "rating": "20 февраля 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1338313.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1338313.jpg",
-        "ratingChange": 0
-    },
-    {
-        "filmId": 1188248,
-        "nameRu": "Калашников",
-        "nameEn": "",
-        "year": "2020",
-        "filmLength": "1:50",
-        "countries": [
-            {
-                "country": "Россия"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "биография"
-            },
-            {
-                "genre": "история"
-            }
-        ],
-        "rating": "20 февраля 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1188248.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1188248.jpg",
-        "ratingChange": 0
-    },
-    {
-        "filmId": 1060511,
-        "nameRu": "Зов предков",
-        "nameEn": "The Call of the Wild",
-        "year": "2020",
-        "filmLength": "1:40",
-        "countries": [
-            {
-                "country": "США"
-            },
-            {
-                "country": "Канада"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "приключения"
-            },
-            {
-                "genre": "семейный"
-            }
-        ],
-        "rating": "20 февраля 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1060511.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1060511.jpg",
-        "ratingChange": 0
-    },
-    {
-        "filmId": 1143242,
-        "nameRu": "Джентльмены",
-        "nameEn": "The Gentlemen",
-        "year": "2019",
-        "filmLength": "1:53",
-        "countries": [
-            {
-                "country": "Великобритания"
-            },
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "боевик"
-            },
-            {
-                "genre": "комедия"
-            },
-            {
-                "genre": "криминал"
-            }
-        ],
-        "rating": "13 февраля 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1143242.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1143242.jpg",
-        "ratingChange": 0
-    },
-    {
-        "filmId": 1228069,
-        "nameRu": "Темные воды",
-        "nameEn": "Dark Waters",
-        "year": "2019",
-        "filmLength": "2:06",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "биография"
-            }
-        ],
-        "rating": "6 февраля 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1228069.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1228069.jpg",
-        "ratingChange": 0
-    },
-    {
-        "filmId": 885072,
-        "nameRu": "Однажды... Тарантино",
-        "nameEn": "21 Years: Quentin Tarantino",
-        "year": "2019",
-        "filmLength": "1:43",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "документальный"
-            },
-            {
-                "genre": "биография"
-            }
-        ],
-        "rating": "6 февраля 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/885072.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/885072.jpg",
-        "ratingChange": 0
-    },
-    {
-        "filmId": 680149,
-        "nameRu": "Офицер и шпион",
-        "nameEn": "J'accuse",
-        "year": "2019",
-        "filmLength": "2:12",
-        "countries": [
-            {
-                "country": "Франция"
-            },
-            {
-                "country": "Италия"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "триллер"
-            },
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "история"
-            }
-        ],
-        "rating": "6 февраля 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/680149.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/680149.jpg",
-        "ratingChange": 0
-    },
-    {
-        "filmId": 1171976,
-        "nameRu": "1917",
-        "nameEn": "1917",
-        "year": "2019",
-        "filmLength": "1:59",
-        "countries": [
-            {
-                "country": "США"
-            },
-            {
-                "country": "Великобритания"
-            },
-            {
-                "country": "Индия"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "военный"
-            },
-            {
-                "genre": "боевик"
-            },
-            {
-                "genre": "драма"
-            }
-        ],
-        "rating": "30 января 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1171976.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1171976.jpg",
-        "ratingChange": 0
-    },
-    {
-        "filmId": 807339,
-        "nameRu": "Маленькие женщины",
-        "nameEn": "Little Women",
-        "year": "2019",
-        "filmLength": "2:15",
-        "countries": [
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "мелодрама"
-            }
-        ],
-        "rating": "30 января 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/807339.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/807339.jpg",
-        "ratingChange": 0
-    },
-    {
-        "filmId": 1256482,
-        "nameRu": "Расправь крылья",
-        "nameEn": "Donne-moi des ailes",
-        "year": "2019",
-        "filmLength": "1:53",
-        "countries": [
-            {
-                "country": "Франция"
-            },
-            {
-                "country": "Норвегия"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "приключения"
-            },
-            {
-                "genre": "семейный"
-            }
-        ],
-        "rating": "23 января 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1256482.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1256482.jpg",
-        "ratingChange": 0
-    },
-    {
-        "filmId": 1022373,
-        "nameRu": "Барашек Шон: Фермагеддон",
-        "nameEn": "A Shaun the Sheep Movie: Farmageddon",
-        "year": "2019",
-        "filmLength": "1:26",
-        "countries": [
-            {
-                "country": "Великобритания"
-            },
-            {
-                "country": "Франция"
-            },
-            {
-                "country": "США"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "мультфильм"
-            },
-            {
-                "genre": "фантастика"
-            },
-            {
-                "genre": "фэнтези"
-            }
-        ],
-        "rating": "23 января 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1022373.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1022373.jpg",
-        "ratingChange": 0
-    },
-    {
-        "filmId": 914862,
-        "nameRu": "Шахматист",
-        "nameEn": "Fahim",
-        "year": "2019",
-        "filmLength": "1:47",
-        "countries": [
-            {
-                "country": "Франция"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "комедия"
-            },
-            {
-                "genre": "биография"
-            }
-        ],
-        "rating": "23 января 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/914862.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/914862.jpg",
-        "ratingChange": 0
-    },
-    {
-        "filmId": 1170315,
-        "nameRu": "Особенные",
-        "nameEn": "Hors normes",
-        "year": "2019",
-        "filmLength": "1:54",
-        "countries": [
-            {
-                "country": "Франция"
-            },
-            {
-                "country": "Бельгия"
-            }
-        ],
-        "genres": [
-            {
-                "genre": "драма"
-            },
-            {
-                "genre": "комедия"
-            }
-        ],
-        "rating": "16 января 2020",
-        "ratingVoteCount": 0,
-        "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1170315.jpg",
-        "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1170315.jpg",
-        "ratingChange": 0
+      "filmId": 1236644,
+      "nameRu": "Король Стейтен-Айленда",
+      "nameEn": "The King of Staten Island",
+      "type": "FILM",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 2934,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1236644.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1236644.jpg"
     }
 ]

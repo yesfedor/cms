@@ -2,18 +2,18 @@
 $ui = false;
 $warp = "warp";
 
-$mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMainList.json')
+$mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMainList.json');
 ?>
 <style>
-    .h90vhn {
-        max-height: 90vh;
+    .h87vhn {
+        max-height: 87vh;
     }
     .carousel-mask {
         background-color: rgb(24, 24, 24, 0.6) !important;
     }
 </style>
 <!-- Welcome Gallery -->
-<div id="gallery-intro" class="d-none d-md-block carousel slide carousel-fade z-depth-0" data-ride="carousel">
+<div id="gallery-intro" class="carousel slide carousel-fade z-depth-0" data-ride="carousel">
     <!--Indicators-->
     <ol class="carousel-indicators">
         <li data-target="#gallery-intro" data-slide-to="0" class="active"></li>
@@ -28,7 +28,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
     <!--Slides-->
     <div class="carousel-inner" role="listbox">
         <!-- item -->
-        <div class="carousel-item h90vhn active">
+        <div class="carousel-item h87vhn active">
             <div class="view">
                 <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/0d3c7dfc/e7ba80c1e8f.jpg" alt="Welcome Gallery">
                 <div class="mask carousel-mask"></div>
@@ -42,7 +42,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
         </div>
 
         <!-- item -->
-        <div class="carousel-item h90vhn">
+        <div class="carousel-item h87vhn">
             <div class="view">
                 <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/a2fefe48/c439fd2eafb.jpg" alt="Welcome Gallery">
                 <div class="mask carousel-mask"></div>
@@ -56,7 +56,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
         </div>
 
         <!-- item -->
-        <div class="carousel-item h90vhn">
+        <div class="carousel-item h87vhn">
             <div class="view">
                 <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/a768db9d/de68b9fe215.jpg" alt="Welcome Gallery">
                 <div class="mask carousel-mask"></div>
@@ -70,7 +70,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
         </div>
 
         <!-- item -->
-        <div class="carousel-item h90vhn">
+        <div class="carousel-item h87vhn">
             <div class="view">
                 <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/703cb031/9694c859d89.jpg" alt="Welcome Gallery">
                 <div class="mask carousel-mask"></div>
@@ -84,7 +84,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
         </div>
 
         <!-- item -->
-        <div class="carousel-item h90vhn">
+        <div class="carousel-item h87vhn">
             <div class="view">
                 <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/2ef8dcfb/aa0fef85451.jpg" alt="Welcome Gallery">
                 <div class="mask carousel-mask"></div>
@@ -98,7 +98,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
         </div>
 
         <!-- item -->
-        <div class="carousel-item h90vhn">
+        <div class="carousel-item h87vhn">
             <div class="view">
                 <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/c2bbb4f4/3b9172abb13.jpg" alt="Welcome Gallery">
                 <div class="mask carousel-mask"></div>
@@ -112,7 +112,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
         </div>
 
         <!-- item -->
-        <div class="carousel-item h90vhn">
+        <div class="carousel-item h87vhn">
             <div class="view">
                 <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/922812e1/b03486c00eb.jpg" alt="Welcome Gallery">
                 <div class="mask carousel-mask"></div>
@@ -135,6 +135,7 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
         <span class="sr-only">Next</span>
     </a>
 </div>
+
 <!-- Wrapper View -->
 <div class="container-fluid">
     <div id="mediaWrapper" class="d-flex row align-items-center justify-content-center">
