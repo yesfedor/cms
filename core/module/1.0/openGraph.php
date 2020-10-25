@@ -40,6 +40,22 @@ function openGraph($site_name='') {
         <meta name="msapplication-TileImage" content="/web/file/favicon/'.$faviconSitePath.'/mstile-144x144.png?option=with_brain_v2">
         <meta name="msapplication-config" content="/web/file/favicon/'.$faviconSitePath.'/browserconfig.xml?option=with_brain_v2">
         <meta id="header-app-theme-color" name="theme-color" content="#ffffff">
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(68637091, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+        });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/68637091" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
     ';
 
     return $data;

@@ -10,7 +10,7 @@ for($i = 0; $i < count($top10); $i++) {
 }
 ?>
 <div class="container-fluid my-5">
-    <div class="row">
+    <div class="row animated fadeIn">
         <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 text-center py-3 mb-5">
             <h1 class="theme-title my-0">Топ 10 <small class="d-block theme-text">самых просматриваемых фильмов и сериалов</small></h1>
         </div>

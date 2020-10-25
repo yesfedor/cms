@@ -62,7 +62,7 @@ var nav = {
     router(url=false, element=false, module='') {
         if (init.data.modal.status == 'show') $('#'+init.data.modal.id).modal('hide')
         if (url && element) {
-            element = 'go'
+            if (module == '') module = element
             link = nav.createLink(url)
             if (link.hostname != window.location.hostname) window.location.href = link.href
         } else {
@@ -73,7 +73,9 @@ var nav = {
         data_query = link.search
         data_hash = link.hash
 
-        switch(element) {
+        console.log(url, element, module)
+        
+        switch(module) {
             case 'start':
                 nav.data.restart = true
                 history.pushState({
@@ -209,7 +211,7 @@ var nav = {
         if (urlCheckAway.test(url)) {
             nav.cc(element)
         } else {
-            nav.router(url, 'go', module)
+            nav.router(url, true, (module == '' ? 'go':module))
         }
 
         this.navEmmetOnunload();
@@ -273,8 +275,9 @@ var nav = {
     }
 }
 
-window.addEventListener("popstate", function() {
-    nav.router(window.location.href, 'go')
+window.addEventListener("popstate", function(e) {
+    console.log(e)
+    nav.go(nav.createLink(window.location.href), 'go')
 }, false);
 
 nav.router(window.location.href, 'start')

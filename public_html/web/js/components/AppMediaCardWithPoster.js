@@ -24,7 +24,7 @@ class AppMediaCardWithPoster extends HTMLElement {
         let year = el.getAttribute('data-year')
         let kpid = el.getAttribute('data-kpid')
         let html = `
-            <div class="row justify-content-center align-items-center card-poster px-1 ${fillClass}" style="background-image: url(https://kinopoiskapiunofficial.tech/images/posters/kp/${kpid}.jpg);">
+            <div class="row justify-content-center align-items-center card-poster px-1 animated fadeIn ${fillClass}" style="background-image: url(https://kinopoiskapiunofficial.tech/images/posters/kp/${kpid}.jpg);">
                 <div class="col-12 text-center">
                     <h5 class="white-text my-2">${type}</h5>
                     <h5 class="white-text my-2">${title}</h5>

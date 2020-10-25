@@ -74,9 +74,9 @@ if ($content['data']['filmId']) {
 
 } else $redirect = '/main';
 ?>
-<div class="d-none d-lg-block bg-poster-image" style="background-image: url(https://kinopoiskapiunofficial.tech/images/posters/kp/<?= $kpid ?>.jpg);"></div>
+<div class="d-none d-lg-block bg-poster-image animated fadeIn" style="background-image: url(https://kinopoiskapiunofficial.tech/images/posters/kp/<?= $kpid ?>.jpg);"></div>
 <div class="container-fluid">
-    <div class="row">
+    <div class="row animated fadeIn">
         <div class="col-12 col-md-10 offset-md-1">
             <!-- Wrapper -->
             <div class="row my-3">
@@ -136,7 +136,7 @@ watchData = <?= $data ?>
 
 watchDataRecoms = <?= $watchDataRecoms ?>
 
-if (!fn.isMobile()) init.css.add('media-watch', 'media.watch.css', 3)
+if (!fn.isMobile()) init.css.add('media-watch', 'media.watch.css', 7)
 init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 512)
 init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16384)
 if (typeof watch == 'object') {

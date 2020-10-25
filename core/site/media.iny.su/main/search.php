@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="row">
+    <div class="row animated fadeIn">
         <div class="col-12 text-center mt-5">
             <h1 class="theme-title">Поиск фильмов и сериалов</h1>
         </div>
@@ -35,7 +35,7 @@ nav.onsearch('change', '#search', '/search?query={%query%}', '/search', '{%query
             success: function (obj) {
                 $('#mediaWrapper').html('')
                 if (obj.code == 404) 
-                    $('#mediaWrapper').html('<div class="col-12 text-center"><h4 class="theme-text my-5">Ничего не найдено</h4></div>')
+                    $('#mediaWrapper').html('<div class="col-12 text-center animated fadeIn"><h4 class="theme-text my-5">Ничего не найдено</h4></div>')
                 if (obj.code == 200) 
                     appMediaRender('mediaWrapper', obj.content, {fill: 'default', type: false})
             }

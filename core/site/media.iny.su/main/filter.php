@@ -5,7 +5,7 @@ if ($query = 'search') {
 }
 ?>
 <div class="container-fluid">
-    <div class="row">
+    <div class="row animated fadeIn">
         <div class="col-12 text-center mt-5">
             <h1 class="theme-title">Поиск по фильтрам</h1>
         </div>

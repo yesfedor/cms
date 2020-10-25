@@ -1,8 +1,58 @@
 <?php
+function galleryIntroRender($data) {
+    $active_class = '';
+    $slides_score = 0;
+    $indicators = '';
+    $slides = '';
+    $result;
+    foreach($data as $kpid => $content) {
+        if ($slides_score == 0) $active_class = 'active';
+        else $active_class = '';
+
+        $indicators .= '<li data-target="#gallery-intro" data-slide-to="'.$slides_score.'" class="'.$active_class.'"></li>';
+        $slides .= '
+        <div class="carousel-item h87vhn '.$active_class.'">
+            <div class="view">
+                <img class="d-block w-100" src="'.$content['img_src'].'" alt="Gallery Item">
+                <div class="mask carousel-mask"></div>
+            </div>
+            <div class="carousel-caption">
+                <a onclick="return nav.go(this);" href="/watch?kpid='.$kpid.'">
+                    <h3 class="h3-responsive">'.$content['title'].'</h3>
+                    <p class="white-text">Смотреть</p>
+                </a>
+            </div>
+        </div>
+        ';
+
+        $slides_score++;
+    }
+    $result['indicators'] = $indicators;
+    $result['slides'] = $slides;
+    return $result;
+}
+
 $ui = false;
 $warp = "warp";
 
 $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMainList.json');
+
+$galleryIntroData = [
+    '1231016' => [
+        'title' => 'Воспитанные волками',
+        'img_src' => 'https://go.iny.su/uc/cc4ca42/v6f7584/061c60f5/0b387a36eb5.jpg'
+    ],
+    '673871' => [
+        'title' => 'Защищая Джейкоба',
+        'img_src' => 'https://go.iny.su/uc/cc4ca42/v6f7584/ade51ff9/9b63f12b8f5.jpg'
+    ],
+    '1254433' => [
+        'title' => 'Я никогда не…',
+        'img_src' => 'https://go.iny.su/uc/cc4ca42/v6f7584/932f3e9e/d791a6b60f0.jpg'
+    ]
+];
+
+$galleryIntroContent = galleryIntroRender($galleryIntroData);
 ?>
 <style>
     .h87vhn {
@@ -12,137 +62,27 @@ $mediaMainList = file_get_contents('https://media.iny.su/api/0.1/media/mediaMain
         background-color: rgb(24, 24, 24, 0.6) !important;
     }
 </style>
-<!-- Welcome Gallery -->
-<div id="gallery-intro" class="carousel slide carousel-fade z-depth-0" data-ride="carousel">
-    <!--Indicators-->
-    <ol class="carousel-indicators">
-        <li data-target="#gallery-intro" data-slide-to="0" class="active"></li>
-        <li data-target="#gallery-intro" data-slide-to="1"></li>
-        <li data-target="#gallery-intro" data-slide-to="2"></li>
-        <li data-target="#gallery-intro" data-slide-to="3"></li>
-        <li data-target="#gallery-intro" data-slide-to="4"></li>
-        <li data-target="#gallery-intro" data-slide-to="5"></li>
-        <li data-target="#gallery-intro" data-slide-to="6"></li>
-    </ol>
-
-    <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-        <!-- item -->
-        <div class="carousel-item h87vhn active">
-            <div class="view">
-                <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/0d3c7dfc/e7ba80c1e8f.jpg" alt="Welcome Gallery">
-                <div class="mask carousel-mask"></div>
-            </div>
-            <div class="carousel-caption">
-                <a onclick="return nav.go(this);" href="/watch?kpid=1264562">
-                    <h3 class="h3-responsive">Внешние отмели</h3>
-                    <p class="white-text">Смотреть</p>
-                </a>
-            </div>
-        </div>
-
-        <!-- item -->
-        <div class="carousel-item h87vhn">
-            <div class="view">
-                <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/a2fefe48/c439fd2eafb.jpg" alt="Welcome Gallery">
-                <div class="mask carousel-mask"></div>
-            </div>
-            <div class="carousel-caption">
-                <a onclick="return nav.go(this);" href="/watch?kpid=1040419">
-                    <h3 class="h3-responsive">Детство Шелдона</h3>
-                    <p class="white-text">Смотреть</p>
-                </a>
-            </div>
-        </div>
-
-        <!-- item -->
-        <div class="carousel-item h87vhn">
-            <div class="view">
-                <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/a768db9d/de68b9fe215.jpg" alt="Welcome Gallery">
-                <div class="mask carousel-mask"></div>
-            </div>
-            <div class="carousel-caption">
-                <a onclick="return nav.go(this);" href="/watch?kpid=893621">
-                    <h3 class="h3-responsive">Люцифер</h3>
-                    <p class="white-text">Смотреть</p>
-                </a>
-            </div>
-        </div>
-
-        <!-- item -->
-        <div class="carousel-item h87vhn">
-            <div class="view">
-                <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/703cb031/9694c859d89.jpg" alt="Welcome Gallery">
-                <div class="mask carousel-mask"></div>
-            </div>
-            <div class="carousel-caption">
-                <a onclick="return nav.go(this);" href="/watch?kpid=1013917">
-                    <h3 class="h3-responsive">Резидент</h3>
-                    <p class="white-text">Смотреть</p>
-                </a>
-            </div>
-        </div>
-
-        <!-- item -->
-        <div class="carousel-item h87vhn">
-            <div class="view">
-                <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/2ef8dcfb/aa0fef85451.jpg" alt="Welcome Gallery">
-                <div class="mask carousel-mask"></div>
-            </div>
-            <div class="carousel-caption">
-                <a onclick="return nav.go(this);" href="/watch?kpid=258048">
-                    <h3 class="h3-responsive">Побег</h3>
-                    <p class="white-text">Смотреть</p>
-                </a>
-            </div>
-        </div>
-
-        <!-- item -->
-        <div class="carousel-item h87vhn">
-            <div class="view">
-                <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/c2bbb4f4/3b9172abb13.jpg" alt="Welcome Gallery">
-                <div class="mask carousel-mask"></div>
-            </div>
-            <div class="carousel-caption">
-                <a onclick="return nav.go(this);" href="/watch?kpid=733493">
-                    <h3 class="h3-responsive">Сотня</h3>
-                    <p class="white-text">Смотреть</p>
-                </a>
-            </div>
-        </div>
-
-        <!-- item -->
-        <div class="carousel-item h87vhn">
-            <div class="view">
-                <img class="d-block w-100" src="https://go.iny.su/uc/cc4ca42/v6f7584/922812e1/b03486c00eb.jpg" alt="Welcome Gallery">
-                <div class="mask carousel-mask"></div>
-            </div>
-            <div class="carousel-caption">
-                <a onclick="return nav.go(this);" href="/watch?kpid=741231">
-                    <h3 class="h3-responsive">Чёрный список</h3>
-                    <p class="white-text">Смотреть</p>
-                </a>
-            </div>
-        </div>
-
-    </div>
+<div id="gallery-intro" class="carousel slide carousel-fade z-depth-0 animated fadeIn" data-ride="carousel">
+    <ol class="carousel-indicators"><?= $galleryIntroContent['indicators'] ?></ol>
+    <div class="carousel-inner" role="listbox"><?= $galleryIntroContent['slides'] ?></div>
     <a class="carousel-control-prev" href="#gallery-intro" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only">Назад</span>
     </a>
     <a class="carousel-control-next" href="#gallery-intro" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+        <span class="sr-only">Вперед</span>
     </a>
 </div>
-
-<!-- Wrapper View -->
-<div class="container-fluid">
-    <div id="mediaWrapper" class="d-flex row align-items-center justify-content-center">
-        <div class="col-12 text-center">
-            <h1 class="theme-title my-5">Закрытая медиатека от INY.SU</h1>
+<div class="container animated fadeIn">
+    <div class="row">
+        <div class="col-12 theme-panel rounded text-center my-3 py-5">
+            <h1 class="theme-title mb-1">INY Media -  <small>Полная коллекция впечатлений, эмоций и ощущений</small></h1>
         </div>
     </div>
+</div>
+<div class="container-fluid animated fadeIn">
+    <div id="mediaWrapper" class="row align-items-center justify-content-center"></div>
 </div>
 
 <script>

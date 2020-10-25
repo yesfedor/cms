@@ -27,7 +27,7 @@ if ($select_ids[0]) {
 
 ?>
 <div class="container-fluid my-5">
-    <div class="row">
+    <div class="row animated fadeIn">
         <div class="col-12 text-center py-3 mb-5">
             <h1 class="theme-title my-0">Мои подписки</h1>
         </div>
