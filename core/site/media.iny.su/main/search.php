@@ -13,6 +13,7 @@
 <script>
 init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 512)
 init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16384)
+if (!fn.isMobile()) init.css.add('media-watch', 'media.watch.css', 7)
 
 el_search = document.getElementById('search')
 nav.onsearch('change', '#search', '/search?query={%query%}', '/search', '{%query%}', () => {

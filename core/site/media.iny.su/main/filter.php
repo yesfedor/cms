@@ -19,6 +19,7 @@ if ($query = 'search') {
 <script>
 init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 512)
 init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16384)
+if (!fn.isMobile()) init.css.add('media-watch', 'media.watch.css', 7)
 
 filterConent = <?= $filterConent ?>
 if 

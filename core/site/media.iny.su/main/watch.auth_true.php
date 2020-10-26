@@ -2,6 +2,41 @@
 $ui = false;
 $warp = "warp";
 
+// watch
+function getDataRecoms($uid) {
+
+}
+
+function addView($uid, $kpid) {
+    // получаем последний просмотр, отнимаем время просмотра от текущего, больше двух часов (7200) - добавляем
+    $dateNow = appDateGetInt(appDateGetStr());
+    $dateRegarding = 7200;
+    $flagAddView = false;
+
+    $query_last_view = "SELECT * FROM media_views WHERE kpid = :kpid and uid = :uid ORDER BY date DESC";
+    $var_last_view = [
+        ':kpid' => $kpid,
+        ':uid' => $uid
+    ];
+    $last_view = dbGetOne($query_last_view, $var_last_view);
+
+    if ($last_view['id']) {
+        if (($dateNow - $last_view['date']) >= $dateRegarding) $flagAddView = true;
+    } else $flagAddView = true;
+
+    if ($flagAddView) {
+        // добавляем
+        $query_view_add = "INSERT INTO `media_views` (`id`, `kpid`, `uid`, `date`) VALUES (NULL, :kpid, :uid, :date_now)";
+        $var_view_add = [
+            ':kpid' => $kpid,
+            ':uid' => $uid,
+            ':date_now' => $dateNow
+        ];
+        $view_add = dbAddOne($query_view_add, $var_view_add);
+        return true;
+    } else return false;
+}
+
 // Api powered on https://kinopoiskapiunofficial.tech
 $kpid = $_GET['kpid'];
 if ($kpid) {
@@ -27,11 +62,10 @@ if ($content['data']['filmId']) {
     $select = dbGetOne($query_select, $var_select);
 
     if (!$select['kpid']) {
-        $query_add = "INSERT INTO `media_content` (`kpid`, `json`, `views`) VALUES (:kpid, :json, :views)";
+        $query_add = "INSERT INTO `media_content` (`kpid`, `json`) VALUES (:kpid, :json)";
         $var_add = [
             ':kpid' => $content['data']['filmId'],
-            ':json' => json_encode($content['data'], JSON_UNESCAPED_UNICODE),
-            ':views' => 1
+            ':json' => json_encode($content['data'], JSON_UNESCAPED_UNICODE)
         ];
         dbAddOne($query_add, $var_add);
     }
@@ -56,21 +90,7 @@ if ($content['data']['filmId']) {
     $subscriptionCount = $subscriptionCount.' '.RusEnding($subscriptionCount, 'подписчик', 'подписчика', 'подписчиков');
 
     // Добавляем просмотр
-    function addView($kpid) {
-        $query = "UPDATE media_content SET views = views + 1 WHERE kpid = :kpid";
-        $var = [
-            ':kpid' => $kpid
-        ];
-
-        return dbAddOne($query, $var);
-    }
-    $watchViewsLastTime = $_SESSION['product']['media']['watch'][$kpid];
-    if (appDateGetInt(appDateGetStr()) - $watchViewsLastTime > 3600) {
-        addView($kpid);
-        $_SESSION['product']['media']['watch'][$kpid] = appDateGetInt(appDateGetStr());
-    } else {
-        $_SESSION['product']['media']['watch'][$kpid] = appDateGetInt(appDateGetStr());
-    }
+    addView($_SESSION['user']['uid'], $kpid);
 
 } else $redirect = '/main';
 ?>

@@ -41,6 +41,7 @@ if ($select_ids[0]) {
 <script>
 init.css.add('AppMediaCardWithPoster', 'AppMediaCardWithPoster.css', 512)
 init.js.add('AppMediaCardWithPoster', 'wc:AppMediaCardWithPoster', 16385)
+if (!fn.isMobile()) init.css.add('media-watch', 'media.watch.css', 7)
 
 subsData = <?= json_encode($subsData, JSON_UNESCAPED_UNICODE) ?>
 
