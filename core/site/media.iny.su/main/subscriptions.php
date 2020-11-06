@@ -1,4 +1,17 @@
 <?php
+/* Востановление подписок */
+function restoreMediaSubs() {
+    $q_restore = "SELECT kpid FROM media_subs WHERE status = :status";
+    $v_restore = [
+        ':status' => 'subscribe'
+    ];
+    $restore = dbGetAll($q_restore, $v_restore);
+    foreach($restore as $key) {
+        $kpid = $key['kpid'];
+        echo '<script>window.open(\'https://media.iny.su/watch?kpid='.$kpid.'\')</script>';
+    }
+}
+#restoreMediaSubs();
 // достать подписки
 $query_select_ids = "SELECT kpid FROM media_subs WHERE uid = :uid and status = :status";
 $var_select_ids = [

@@ -5,22 +5,23 @@ $var_top10 = [
 ];
 $top10 = dbGetAll($query_top10, $var_top10);
 
-$top_kpid_list = [];
-for($i = 0; $i < count($top10); $i++) {
-    $top_kpid_list[] = $top10[$i]['kpid'];
-}
+if ($top10) {
+    $top_kpid_list = [];
+    for($i = 0; $i < count($top10); $i++) {
+        $top_kpid_list[] = $top10[$i]['kpid'];
+    }
 
-// top10 get all data
-$query_top10_data = "SELECT * FROM media_content WHERE kpid != :kpid and kpid IN (".implode(',', $top_kpid_list).")";
-$var_top10_data = [
-    ':kpid' => 0
-];
-$top10Data = dbGetAll($query_top10_data, $var_top10_data);
-
-$topData = [];
-for($i = 0; $i < count($top10Data); $i++) {
-    $topData[] = json_decode($top10Data[$i]['json'], true);
-}
+    // top10 get all data
+    $query_top10_data = "SELECT * FROM media_content WHERE kpid != :kpid and kpid IN (".implode(',', $top_kpid_list).")";
+    $var_top10_data = [
+        ':kpid' => 0
+    ];
+    $top10Data = dbGetAll($query_top10_data, $var_top10_data);
+    $topData = [];
+    for($i = 0; $i < count($top10Data); $i++) {
+        $topData[$i] = json_decode($top10Data[$i]['json'], true);
+    }
+} else $topData = [];
 ?>
 <div class="container-fluid my-5">
     <div class="row animated fadeIn">

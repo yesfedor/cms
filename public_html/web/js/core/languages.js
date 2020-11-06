@@ -27,7 +27,7 @@ var language = {
     },
     chenge(new_lang) {
         language.data.chenged = false
-        init.preload.go(3000)
+        //init.preload.go(500)
 
         $.ajax({
             type: "GET",
@@ -46,6 +46,7 @@ var language = {
                         $(el).attr('data-lang-success', 'false')
                     })
                     language.data.chenged = true
+                    language.render()
                 }, 500);
             }
         });

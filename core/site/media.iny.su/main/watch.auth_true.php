@@ -2,6 +2,14 @@
 $ui = false;
 $warp = "warp";
 
+// prepare add media content gen
+function prepareAddMediaFactory($data) {
+    if ($data['facts']) unset($data['facts']);
+    if ($data['seasons']) unset($data['seasons']);
+    
+    return $data;
+}
+
 // watch
 function getDataRecoms($uid) {
 
@@ -65,7 +73,7 @@ if ($content['data']['filmId']) {
         $query_add = "INSERT INTO `media_content` (`kpid`, `json`) VALUES (:kpid, :json)";
         $var_add = [
             ':kpid' => $content['data']['filmId'],
-            ':json' => json_encode($content['data'], JSON_UNESCAPED_UNICODE)
+            ':json' => json_encode(prepareAddMediaFactory($content['data']), JSON_UNESCAPED_UNICODE)
         ];
         dbAddOne($query_add, $var_add);
     }
