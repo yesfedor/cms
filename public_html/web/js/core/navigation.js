@@ -72,8 +72,6 @@ var nav = {
         data_pathname = link.pathname
         data_query = link.search
         data_hash = link.hash
-
-        console.log(url, element, module)
         
         switch(module) {
             case 'start':

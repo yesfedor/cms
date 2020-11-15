@@ -40,11 +40,13 @@ let watch = {
                 })
 
                 watch.els.date.textContent = watch.data.year
-                watch.els.player.setAttribute('src', watch.content.iframe_src)
+
+                // watch.content.iframe_src
+                watch.els.player.setAttribute('src', 'https://dud.allohalive.com/?kp=' + kpid + '&amp;token=10b16a40f5793e2d02d06265c13912')
 
                 // other player init
                 watch.els.player.onerror = () => {
-                    watch.els.player.setAttribute('src', 'https://67lm8g55vgghj78890.8432109.xyz/n1xnK05iU8an?kp_id=' + kpid)
+                    watch.els.player.setAttribute('src', 'https://dud.allohalive.com/?kp=' + kpid + '&amp;token=10b16a40f5793e2d02d06265c13912')
                 }
 
                 watch.els.title.textContent = type + ' ' + title

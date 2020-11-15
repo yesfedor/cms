@@ -89,3 +89,4 @@ let blogBoard = {
         }
     }
 }
+log

@@ -173,6 +173,6 @@ if (typeof watch == 'object') {
     watch.data = watchData
     watch.init()
     watchSubscription.init()
-} else init.js.add('media-watch', 'module/media.watch.js', 4101)
+} else init.js.add('media-watch', 'module/media.watch.js', 4104)
 appMediaRender('mediaWrapper', watchDataRecoms, {fill: 'max-content', type: false})
 </script>

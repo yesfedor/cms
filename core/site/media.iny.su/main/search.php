@@ -27,6 +27,7 @@ nav.onsearch('change', '#search', '/search?query={%query%}', '/search', '{%query
     }, 500);
 }, () => {
     let value = encodeURIComponent(el_search.value)
+    let html_404 = '<div class="col-12 text-center animated fadeIn"><h4 class="theme-text my-5">Ничего не найдено</h4></div>'
     if (value.length > 2) {
         $.ajax({
             type: "POST",
@@ -42,5 +43,6 @@ nav.onsearch('change', '#search', '/search?query={%query%}', '/search', '{%query
             }
         });
     }
+    if (el_search.value == '') $('#mediaWrapper').html('<div class="col-12 text-center animated fadeIn"><h4 class="theme-text my-5">Начните искать..</h4></div>')
 }, urlState='go')
 </script>
