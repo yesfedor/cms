@@ -18,6 +18,6 @@ if ($url_page == 'watch') {
     $content = $content['data'];
     
     $title = $content['nameRu'].', '.$content['year'].' | INY Media';
-    $description = $content['slogan'];
+    $description = $content['description'];
 }
 ?>

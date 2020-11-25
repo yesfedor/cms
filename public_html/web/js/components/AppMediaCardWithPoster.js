@@ -49,8 +49,8 @@ customElements.define('media-card', AppMediaCardWithPoster);
 function appMediaRender(warpId, data, opt = {fill: 'default', type: false}) {
     let fill = opt.fill
     let type = opt.type
-    mediaWrapper = document.getElementById(warpId)
-    data.forEach((obj)=>{
+    let mediaWrapper = document.getElementById(warpId)
+    data.forEach((obj) => {
         if (obj !== null) {
             let guess = obj.year
             if (guess.length == '4') guessType = 'movie'
@@ -63,6 +63,6 @@ function appMediaRender(warpId, data, opt = {fill: 'default', type: false}) {
             el.setAttribute('data-year', obj.year)
             el.setAttribute('data-kpid', obj.filmId)
             mediaWrapper.append(el)
-        }   
+        }
     })
 }

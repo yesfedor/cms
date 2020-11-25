@@ -51,12 +51,63 @@ if ($kpid) {
     $ch = curl_init();
     $headers = array('accept: application/json', 'x-api-key: 91d00358-6586-40e6-9d4e-9d9070547812');
 
-    curl_setopt($ch, CURLOPT_URL, 'https://kinopoiskapiunofficial.tech/api/v2.1/films/'.$kpid); # URL to post to
+    curl_setopt($ch, CURLOPT_URL, 'https://kinopoiskapiunofficial.tech/api/v2.1/films/'.$kpid.'?append_to_response=REVIEW'); # URL to post to
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); # return into a variable
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers); # custom headers, see above
     $data = curl_exec($ch); # run!
     curl_close($ch);
     $content = json_decode($data, true);
+
+    for ($i = 0; $i < count($content['data']['countries']); $i++) {
+        $tmp_countries[] = $content['data']['countries'][$i]['country'];
+    }
+    $content['data']['countries'] = $tmp_countries;
+
+    for ($i = 0; $i < count($content['data']['genres']); $i++) {
+        $tmp_genres[] = '<a itemprop="genre" class="theme-text" onclick="return false;" href="#">'.$content['data']['genres'][$i]['genre'].'</a>';
+    }
+    $content['data']['genres'] = $tmp_genres;
+
+    function facts($data) {
+        $html = '';
+        if (count($data) >= 1) {
+            for($i = 0; $i < count($data);$i++) {
+                $html .= '
+                <div class="col-12 col-md-10 offset-md-1 text-left py-1 mb-3">
+                    <h5 class="theme-text my-0 px-2 px-md-0"><span class="theme-title">#'.($i+1).'</span> '.$data[$i].'</h5>
+                </div>
+                ';
+            }
+        } else $html = '<div class="col-12 text-center py-1 mb-3"><h5 class="theme-title">К данному фильму факты еще не подобраны</h5></div>';
+        return $html;
+    }
+
+    /* reviews */
+    /*
+    $ch = curl_init();
+    $headers = array('accept: application/json', 'x-api-key: 91d00358-6586-40e6-9d4e-9d9070547812');
+
+    curl_setopt($ch, CURLOPT_URL, 'https://kinopoiskapiunofficial.tech/api/v1/reviews?filmId='.$kpid); # URL to post to
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); # return into a variable
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers); # custom headers, see above
+    $data = curl_exec($ch); # run!
+    curl_close($ch);
+    $reviews = json_decode($data, true);
+
+    function renderReviews($data) {
+        $html = '';
+        $reviews = $data['reviews'];
+        if (count($reviews) >= 1) {
+            for($i = 0; $i < count($reviews); $i++) {
+                $reviewData = $reviews[$i];
+                $review = '
+                
+                ';
+            }
+        }
+        return $html;
+    }
+    */
 
     $watchDataRecoms = json_encode(array_slice(json_decode(file_get_contents('https://media.iny.su/api/0.1/media/mediaWatchRecoms.json')), 0, 7), JSON_UNESCAPED_UNICODE);
 } else $redirect = '/main';
@@ -102,6 +153,18 @@ if ($content['data']['filmId']) {
 
 } else $redirect = '/main';
 ?>
+<style>
+.list-group-item {
+    background-color: #00000000 !important;
+    border: none;
+}
+.md-accordion .card {
+    border-bottom: 1px solid #333333 !important;
+}
+.theme-background {
+    background: #181818 !important;
+}
+</style>
 <div class="d-none d-lg-block bg-poster-image animated fadeIn" style="background-image: url(https://kinopoiskapiunofficial.tech/images/posters/kp/<?= $kpid ?>.jpg);"></div>
 <div class="container-fluid">
     <div class="row animated fadeIn">
@@ -117,15 +180,15 @@ if ($content['data']['filmId']) {
 
                         <!-- Title -->
                         <div class="col-12 px-0">
-                            <h6 id="watch_genre" class="mt-2"></h6>
-                            <h4 id="watch_title" class="w-50 text-left theme-title text-capitalize my-0 float-left"></h4>
-                            <h4 id="watch_date" class="w-50 text-right text-muted my-0 float-left"></h4>
+                            <h4 id="watch_title" class="w-50 text-left theme-title text-capitalize mt-3 mb-0 float-left"></h4>
+                            <h4 class="w-50 text-right text-muted mt-3 mb-0 float-left">16+</h4>
+                            <h4 id="watch_date" class="w-50 text-right text-muted my-0 float-left d-none"></h4>
                         </div>
 
                         <hr class="w-100 theme-border-primary mt-2 mb-3">
                         <!-- Description -->
                         <div class="col-12 col-lg-6 px-0 text-center text-lg-left">
-                            <h4 class="theme-text my-2">Описание к <span id="watch_desc_item" class="theme-text"></span></h4>
+                            <h4 class="theme-text my-2">Информация к <span id="watch_desc_item" class="theme-text"></span></h4>
                         </div>
                         <div class="col-12 col-lg-6 px-0 text-center text-lg-right mt-3 mt-lg-0">
                             <a id="mediaWatchAuthorSupportMsg" data-toggle="tooltip" title="Поддержать разработчика" onclick="return nav.cc(this);" href="https://go.iny.su/donate" class="btn btn-outline-blue btn-rounded my-0">Донат</a>
@@ -133,7 +196,67 @@ if ($content['data']['filmId']) {
                         </div>
 
                         <div class="col-12 px-0 mt-3">
-                            <h5 id="watch_desc" class="theme-text"></h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item theme-panel theme-text">
+                                    <span class="float-left w-50 text-left theme-title">Год производства</span> 
+                                    <span itemprop="dateCreated" class="float-left w-50 text-left"><?= $content['data']['year'] ?></span>
+                                </li>
+                                <li class="list-group-item theme-panel theme-text">
+                                    <span class="float-left w-50 text-left theme-title">Страна</span> 
+                                    <span class="float-left w-50 text-left"><?= implode(', ', $content['data']['countries']) ?></span>
+                                </li>
+                                <li class="list-group-item theme-panel theme-text">
+                                    <span class="float-left w-50 text-left theme-title">Жанр</span> 
+                                    <span id="watch_genre" class="float-left w-50 text-left"><?= implode(', ', $content['data']['genres']) ?></span>
+                                </li>
+                                <li  class="list-group-item theme-panel theme-text">
+                                    <span class="float-left w-50 text-left theme-title">Слоган</span> 
+                                    <span class="float-left w-50 text-left"><?= ($content['data']['slogan'] != '' ? $content['data']['slogan'] : '-') ?></span>
+                                </li>
+                                <li class="list-group-item theme-panel theme-text">
+                                    <span class="float-left w-50 text-left theme-title">Время</span> 
+                                    <span itemprop="duration" class="float-left w-50 text-left"><?= $content['data']['filmLength'] ?></span>
+                                </li>
+                                <li class="list-group-item theme-panel theme-text">
+                                    <span itemprop="description" class="float-left text-left theme-title">Описание:<br><?= $content['data']['description'] ?></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 accordion md-accordion my-3 px-0" id="reviewsPanel" role="tablist" aria-multiselectable="true">
+                            <!-- Accordion card -->
+                            <div class="card">
+                                <div class="card-header theme-background" role="tab" id="reviewsPanelGreen">
+                                    <a data-toggle="collapse" data-parent="#reviewsPanel" href="#reviewsPanelGreenContent" aria-expanded="true" aria-controls="reviewsPanelGreenContent">
+                                        <h5 class="mb-0 theme-title">Рецензия №1<i class="fas fa-angle-down rotate-icon theme-icon"></i></h5>
+                                    </a>
+                                </div>
+                                <div id="reviewsPanelGreenContent" class="collapse show" role="tabpanel" aria-labelledby="reviewsPanelGreen" data-parent="#reviewsPanel">
+                                    <div class="card-body theme-background">
+                                        <h5 class="theme-text my-0">reviewsPanelGreen</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion card -->
+
+                            <!-- Accordion card -->
+                            <div class="card">
+                                <div class="card-header theme-background" role="tab" id="reviewsPanelRed">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#reviewsPanel" href="#reviewsPanelRedContent" aria-expanded="false" aria-controls="reviewsPanelRedContent">
+                                        <h5 class="mb-0 theme-title">Рецензия №2<i class="fas fa-angle-down rotate-icon theme-icon"></i></h5>
+                                    </a>
+                                </div>
+                                <div id="reviewsPanelRedContent" class="collapse" role="tabpanel" aria-labelledby="reviewsPanelRed" data-parent="#reviewsPanel">
+                                    <div class="card-body theme-background theme-text">
+                                        <h5 class="theme-text my-0">reviewsPanelRed</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 theme-panel rounded text-center py-3 my-3">
+                            <h4 class="text-center text-center theme-title py-3 mb-3">Факты</h4>
+                            <div class="row">
+                                <?= facts($content['data']['facts']) ?>
+                            </div>
                         </div>
                     </div>
                 </div>
