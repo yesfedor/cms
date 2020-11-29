@@ -166,20 +166,20 @@ if ($_SESSION['user']['relationship'] and $_SESSION['user']['relationship_partne
                 <div class="col-12">
                     <?= $ns_check_html ? $ns_check_html : '' ?>
                     <form id="form-edit" class="row">
-                        <?= genEdit('text', 'editUserName', 'edit-user-name', $lang['ival-ui_edit_base_name'], $_SESSION['user']['name']) ?>
-                        <?= genEdit('text', 'editUserSurname', 'edit-user-surname', $lang['ival-ui_edit_base_surname'], $_SESSION['user']['surname']) ?>
-                        <?= genEdit('text', 'editUserBirthday', 'edit-user-birthday', $lang['ival-ui_edit_base_birthday'], $edit_birthday) ?>
-                        <?= genEdit('select', 'editUserGender', 'edit-user-gender', $lang['ival-ui_edit_base_gender'], $edit_gender_arr) ?>
-                        <?= genEdit('select', 'editUserRelationship', 'edit-user-relationship', $lang['ival-ui_edit_base_relationship'], $edit_relationship_arr) ?>
-                        <?= genEdit('text', 'editUserPartner', 'edit-user-relationship_partner', $lang['ival-ui_edit_base_relationship_partner'], $edit_relationship_partner, 'display: none;', $edit_relationship_js) ?>
+                        <?= genEdit('text', 'editUserName', 'edit-user-name', '<span data-lang="ival-ui_edit_base_name"></span>', $_SESSION['user']['name']) ?>
+                        <?= genEdit('text', 'editUserSurname', 'edit-user-surname', '<span data-lang="ival-ui_edit_base_surname"></span>', $_SESSION['user']['surname']) ?>
+                        <?= genEdit('text', 'editUserBirthday', 'edit-user-birthday', '<span data-lang="ival-ui_edit_base_birthday"></span>', $edit_birthday) ?>
+                        <?= genEdit('select', 'editUserGender', 'edit-user-gender', '<span data-lang="ival-ui_edit_base_gender"></span>', $edit_gender_arr) ?>
+                        <?= genEdit('select', 'editUserRelationship', 'edit-user-relationship', '<span data-lang="ival-ui_edit_base_relationship"></span>', $edit_relationship_arr) ?>
+                        <?= genEdit('text', 'editUserPartner', 'edit-user-relationship_partner', '<span data-lang="ival-ui_edit_base_relationship_partner"></span>', $edit_relationship_partner, 'display: none;', $edit_relationship_js) ?>
                         <div id="edit_view_partner" class="col-10 offset-1 md-form mt-0 pt-0 pb-1 mb-1" style="display:none;">
-                            <h6><span class="black-text" data-lang="ival-ui_edit_base_relationship_partner"></span> <a id="edit_view_partner_profile" onclick="return nav.go(this);" href="/id0" target="_blank"></a></h6>
+                            <h6><span class="theme-titile" data-lang="ival-ui_edit_base_relationship_partner"></span> <a id="edit_view_partner_profile" onclick="return nav.go(this);" href="/id0" target="_blank"></a></h6>
                             <div class="row px-3 mb-3">
                                 <hr class="w-100 my-1 py-1">
                             </div>
                         </div>
-                        <?= genEdit('text', 'editUserHometown', 'edit-user-hometown', $lang['ival-ui_edit_base_hometown'], $_SESSION['user']['hometown']) ?>
-                        <?= genEdit('multiselect', 'editUserLanguages', 'edit-user-languages', $lang['ival-ui_edit_base_languages'], $edit_languages) ?>
+                        <?= genEdit('text', 'editUserHometown', 'edit-user-hometown', '<span data-lang="ival-ui_edit_base_hometown"></span>', $_SESSION['user']['hometown']) ?>
+                        <?= genEdit('multiselect', 'editUserLanguages', 'edit-user-languages', '<span data-lang="ival-ui_edit_base_languages"></span>', $edit_languages) ?>
 
                         <div class="col-10 offset-1 my-1 py-1">
                             <button class="mx-0 btn btn-rounded btn-outline-primary waves-effect" onclick="appForms.go('form-edit', 'user/edit-main'); return false;"><span data-lang="btn_save">Save</span></button>

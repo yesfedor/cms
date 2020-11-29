@@ -13,7 +13,7 @@
             </ul>
             <ul class="d-none d-lg-block navbar-nav ml-auto">
                 <li class="nav-item text-right">
-                    <a onclick="return nav.url.query('kpid') == null ? nav.go(this) : nav.away(this);" target="_blank" class="theme-nav-link nav-link" href="//<?= $domainBase['main'] ?>">Назад</a>
+                    <a onclick="return nav.away(this);" target="_blank" class="theme-nav-link nav-link" href="//<?= $domainBase['main'] ?>">Назад</a>
                 </li>
             </ul>
         </div>

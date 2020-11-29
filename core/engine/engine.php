@@ -106,7 +106,7 @@ function user_checker() {
     if ($_SESSION['user']['uid']) userApiUpdateOnline();
 }
 // user check
-if ($_SESSION['check'] >= 60) {
+if ($_SESSION['check'] >= 12) {
     if ($_SESSION['user']) {
         user_checker();
     }

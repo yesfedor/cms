@@ -18,7 +18,3 @@ $pageActive['msg'] = 'active';
         </div>
     </div>
 </div>
-
-<script>
-toastr.info(language.data.locale.string_not_found)
-</script>

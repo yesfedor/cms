@@ -298,8 +298,8 @@ function userApiNoticeCount() {
     return $count;
 }
 function getUserPassword($user_password) {
-    $ip = getIP();
-    $geo_password = md5($user_password.'/?ip='.$ip);
+    global $client_id;
+    $geo_password = md5($user_password.'/?client_id='.$client_id);
     
     return $geo_password;
 }
@@ -330,11 +330,10 @@ function userApiActivityHistoryLogin() {
 
     $ah_select = userApiActivityHistoryCheck($uid, $client_id, $client_ip);
     if ($ah_select['id']) {
-        $query_update = "UPDATE activity_history SET status = :status WHERE uid = :uid and client_id = :client_id and client_ip = :client_ip";
+        $query_update = "UPDATE activity_history SET status = :status WHERE uid = :uid and client_id = :client_id";
         $var_update = [
             ':uid' => $uid,
             ':client_id' => $client_id,
-            ':client_ip' => $client_ip,
             ':status' => 'allow'
         ];
         dbAddOne($query_update, $var_update);
@@ -350,11 +349,10 @@ function userApiActivityHistoryLogin() {
     }
 }
 function userApiActivityHistoryCheck($uid, $client_id, $client_ip) {
-    $query_check = "SELECT * FROM activity_history WHERE uid = :uid and client_id = :client_id and client_ip = :client_ip";
+    $query_check = "SELECT * FROM activity_history WHERE uid = :uid and client_id = :client_id";
     $var_check = [
         ':uid' => $uid,
-        ':client_id' => $client_id,
-        ':client_ip' => $client_ip
+        ':client_id' => $client_id
     ];
     $result = dbGetOne($query_check, $var_check);
     return $result;
@@ -400,11 +398,10 @@ function userApiActivityHistoryLogout() {
 
     $ah_select = userApiActivityHistoryCheck($uid, $client_id, $client_ip);
     if ($ah_select['id']) {
-        $query_update = "UPDATE activity_history SET status = :status WHERE uid = :uid and client_id = :client_id and client_ip = :client_ip";
+        $query_update = "UPDATE activity_history SET status = :status WHERE uid = :uid and client_id = :client_id";
         $var_update = [
             ':uid' => $uid,
             ':client_id' => $client_id,
-            ':client_ip' => $client_ip,
             ':status' => 'disallow'
         ];
         dbAddOne($query_update, $var_update);
