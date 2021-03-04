@@ -1,0 +1,9 @@
+AddDefaultCharset WINDOWS-1251
+
+RewriteEngine On
+ 
+RewriteCond %{THE_REQUEST} \s(\S+)\.htm
+RewriteRule ^ %1 [R=301,L]
+ 
+RewriteCond %{REQUEST_FILENAME}.htm -f
+RewriteRule (.*) $1.htm [L]

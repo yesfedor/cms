@@ -1,0 +1,29 @@
+# основные опции
+Options All +ExecCGI -Indexes +Includes +FollowSymLinks
+
+# индекс файл
+DirectoryIndex main.php
+# время
+<IfModule mod_setenvif.c>
+	SetEnv TZ Europe/Moscow
+</IfModule>
+ServerSignature Off
+AddDefaultCharset UTF-8
+
+RewriteEngine on
+RewriteBase /api/
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.xml -f
+RewriteRule ^(.*)$ $1.xml
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.mp4 -f
+RewriteRule ^(.*)$ $1.mp4
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.mp3 -f
+RewriteRule ^(.*)$ $1.mp3

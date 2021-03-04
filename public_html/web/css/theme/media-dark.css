@@ -1,0 +1,32 @@
+:root {
+    /* Main pallet */
+    --theme-primary: #242424;
+    --theme-primary-plus: #161616;
+    --theme-background: #181818;
+    --theme-base-color: white;
+    --theme-muted: #c0c0c0;
+    --theme-title: #fafafa;
+    --theme-text: #d4d4d4;
+    --theme-link: #007bff;
+    --theme-link-hover: #3F729B;
+    --theme-panel: #242424;
+    --theme-panel-dark: white;
+    --theme-panel-primary: #4285F4;
+    
+    /* Menu pallet */
+    --theme-logo: white;
+    --theme-nav-link: white;
+    --theme-icon: white;
+    --theme-header: #24242400;
+    --theme-footer: #242424;
+
+    /* Step pallet */
+    --theme-white: white;
+    --theme-black: black;
+
+    /* Do pallet */
+    --theme-danger: #CC0000;
+    --theme-warning: #FF8800;
+    --theme-success: #007E33;
+    --theme-info: #0099CC;
+}

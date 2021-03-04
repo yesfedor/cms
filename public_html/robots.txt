@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /web
+Disallow: /uc
+Disallow: /url.php
+Disallow /sitemap

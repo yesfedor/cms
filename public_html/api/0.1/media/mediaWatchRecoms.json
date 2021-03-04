@@ -1,0 +1,218 @@
+[
+    {
+      "filmId": 1231016,
+      "nameRu": "Воспитанные волками (сериал)",
+      "nameEn": "Raised by Wolves",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "rating": "7.1",
+      "ratingVoteCount": 6146,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1231016.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1231016.jpg"
+    },
+    {
+      "filmId": 1345846,
+      "nameRu": "Гамильтон",
+      "nameEn": "Hamilton",
+      "type": "FILM",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мюзикл"
+        },
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "биография"
+        }
+      ],
+      "rating": "8.5",
+      "ratingVoteCount": 849,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1345846.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1345846.jpg"
+    },
+    {
+      "filmId": 1055194,
+      "nameRu": "Грейхаунд",
+      "nameEn": "Greyhound",
+      "type": "FILM",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        },
+        {
+          "country": "Китай"
+        },
+        {
+          "country": "Канада"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "военный"
+        },
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "история"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 11257,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1055194.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1055194.jpg"
+    },
+    {
+      "filmId": 1202056,
+      "nameRu": "Цепляясь за лёд (сериал)",
+      "nameEn": "Spinning Out",
+      "type": "TV_SHOW",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "спорт"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 2529,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1202056.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1202056.jpg"
+    },
+    {
+      "filmId": 1273699,
+      "nameRu": "Третий день (мини-сериал)",
+      "nameEn": "The Third Day",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "Великобритания"
+        },
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "детектив"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 1270,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1273699.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1273699.jpg"
+    },
+    {
+      "filmId": 1040428,
+      "nameRu": "Сквозь снег (сериал)",
+      "nameEn": "Snowpiercer",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "триллер"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 4143,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1040428.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1040428.jpg"
+    },
+    {
+      "filmId": 1209362,
+      "nameRu": "Дунканвилль (сериал)",
+      "nameEn": "Duncanville",
+      "type": "TV_SHOW",
+      "year": "2020-...",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 11308,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1209362.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1209362.jpg"
+    },
+    {
+      "filmId": 1236644,
+      "nameRu": "Король Стейтен-Айленда",
+      "nameEn": "The King of Staten Island",
+      "type": "FILM",
+      "year": "2020",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "rating": "6.9",
+      "ratingVoteCount": 2934,
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1236644.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1236644.jpg"
+    }
+]

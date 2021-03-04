@@ -1,0 +1,60 @@
+.card-border {
+    border-color: white!important;
+}
+.card-poster {
+    /* height: 70vh; */
+    filter: grayscale(1);
+    background-color: #242424aa;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: overlay;
+    transition: background-color, filter;
+    transition-duration: 0.5s;
+}
+.card-poster:hover {
+    filter: grayscale(0);
+    background-color: #00000066;
+}
+
+.card-poster_view-default {
+    height: 60vh;
+}
+.card-poster_view-max-content {
+    height: 30vh;
+}
+@media (min-width: 576px) {
+    .card-poster_view-default {
+        height: 60vh;
+    }
+    .card-poster_view-max-content {
+        height: 30vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-poster_view-default {
+        height: 60vh;
+    }
+    .card-poster_view-max-content {
+        height: 40vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-poster_view-default {
+        height: 60vh;
+    }
+    .card-poster_view-max-content {
+        height: 40vh;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-poster_view-default {
+        height: 60vh;
+    }
+    .card-poster_view-max-content {
+        height: 30vh;
+    }
+}
