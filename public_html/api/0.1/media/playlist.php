@@ -40,7 +40,13 @@ function get_playlist($alias) {
     $var = [
         ':kpid' => 0
     ];
-    $playlist['content'] = dbGetAll($query, $var);
+    $media_content = dbGetAll($query, $var);
+    $content = [];
+    for($i = 0; $i < count($media_content); $i++) {
+        $content[$i] = json_decode($media_content[$i]['json'], true);
+    }
+    
+    $playlist['content'] = $content;
 
     return $playlist;
 }
