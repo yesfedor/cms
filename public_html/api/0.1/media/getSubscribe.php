@@ -22,7 +22,7 @@ if (jwt_is_valid($jwt)) {
     $user_uid = $jwt['data']['uid'];
 } else die('{"error":"404"}');
 
-$query_select_ids = "SELECT kpid FROM media_subs WHERE uid = :uid and status = :status";
+$query_select_ids = "SELECT kpid FROM media_subs WHERE uid = :uid and status = :status ORDER BY id DESC";
 $var_select_ids = [
     ':uid' => $user_uid,
     ':status' => 'subscribe'
@@ -36,7 +36,7 @@ if ($select_ids[0]) {
         $kpids[] = $select_ids[$i]['kpid'];
     }
     $kpids = implode(',', $kpids);
-    $query_select = "SELECT json FROM media_content WHERE kpid IN ($kpids) and kpid != :kpid";
+    $query_select = "SELECT json FROM media_content WHERE kpid IN ($kpids) and kpid != :kpid ORDER BY FIELD(kpid, $kpids)";
     $var_select = [
         ':kpid' => 0
     ];

@@ -144,14 +144,14 @@ if ($kpid) {
 
 if ($content['data']['filmId']) {
     // init new media_content
-    $query_select = "SELECT * FROM media_content WHERE kpid = :kpid";
+    $query_select = "SELECT * FROM media_content WHERE kpid = :query or uri = :query";
     $var_select = [
         ':kpid' => $content['data']['filmId']
     ];
     $select = dbGetOne($query_select, $var_select);
 
     if (!$select['kpid']) {
-        $query_add = "INSERT INTO `media_content` (`kpid`, `json`) VALUES (:kpid, :json)";
+        $query_add = "INSERT INTO `media_content` (`kpid`, `uri`, `json`) VALUES (:kpid, NULL, :json)";
         $var_add = [
             ':kpid' => $content['data']['filmId'],
             ':json' => json_encode(prepareAddMediaFactory($content['data']), JSON_UNESCAPED_UNICODE)
@@ -182,9 +182,11 @@ if ($content['data']['filmId']) {
     addView($user_uid, $kpid);
 
 } else $bigData['redirect'] = '/main';
- $watchDataRecoms = json_encode(json_decode(file_get_contents('https://media.iny.su/api/0.1/media/mediaWatchRecoms.json')), JSON_UNESCAPED_UNICODE);
+
+// $watchDataRecoms = json_encode(json_decode(file_get_contents('https://media.iny.su/api/0.1/media/mediaWatchRecoms.json')), JSON_UNESCAPED_UNICODE);
+// $bigData['watchDataRecoms'] = json_decode($watchDataRecoms, true);
+
 $bigData['watchData'] = json_decode($data, true);
-$bigData['watchDataRecoms'] = json_decode($watchDataRecoms, true);
 $bigData['is_subscription'] = $isSubscription;
 $bigData['subscriptionCount'] = $subscriptionCount;
 
