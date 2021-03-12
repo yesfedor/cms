@@ -15,53 +15,17 @@ $html_code = '0';
 $js_use = '0';
 $js_code = '0';
 
-//code
+//code getDialogToView($dialog, $currentUserUid)
+if (!$_SESSION['user']['uid']) die('{"error":"401"}');
+
+$dialogs_generated = [];
+$dialogs = getDialogsByUid($_SESSION['user']['uid']);
+for ($i = 0; $i < count($dialogs); $i++) {
+    $dialogs_generated[$i] = getDialogToView($dialogs[$i], $_SESSION['user']['uid']);
+}
+
 $sort = (string) $_POST['sort'];
-
-/*
-    dialog => personal
-        uid: dialog.uid,
-        name: dialog.name,
-        surname: dialog.surname,
-        unreadCount: dialog.unreadCount,
-        dateCreate: dialog.dateCreate,
-        dateLast: dialog.dateLast,
-        msgPreview: dialog.msgPreview
-
-    dialog => conversation
-        cid: dialog.cid,
-        title: dialog.title,
-        unreadCount: dialog.unreadCount,
-        dateCreate: dialog.dateCreate,
-        dateLast: dialog.dateLast,
-        msgPreview: dialog.msgPreview   
-
-    dialog => channel
-
-*/
-
-$bigData['dialogs'] = [
-    0 => [
-        'type' => 'personal',
-        'uid' => 2,
-        'name' => 'Администрация',
-        'surname' => 'Сайта',
-        'unreadCount' => 0,
-        'dateCreate' => 1612635937,
-        'dateLast' => 1612635937,
-        'is_delited' => 0,
-        'token' => 'qweewqqweewqqwe',
-        'msgPreview' => [
-            'msg_id' => 1,
-            'uid' => 2,
-            'name' => 'Администрация',
-            'surname' => 'Сайта',
-            'text' => 'Что',
-            'date' => 1612635937
-        ]
-    ]
-];
-
+$bigData['dialogs'] = $dialogs_generated;
 $bigData['count'] = count($bigData['dialogs']);
  
 //return
