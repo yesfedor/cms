@@ -24,7 +24,6 @@ for ($i = 0; $i < count($dialogs); $i++) {
     $dialogs_generated[$i] = getDialogToView($dialogs[$i], $_SESSION['user']['uid']);
 }
 
-$sort = (string) $_POST['sort'];
 $bigData['dialogs'] = $dialogs_generated;
 $bigData['count'] = count($bigData['dialogs']);
  

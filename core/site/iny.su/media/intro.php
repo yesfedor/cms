@@ -100,7 +100,7 @@ setTimeout(() => {
 
 toastr.info('Переключение на новую версию медиатеки, ожидайте')
 mediaTimeOut = setTimeout(() => {
-    document.location.href = '//media.iny.su'
+    //document.location.href = '//media.iny.su'
 }, 3000)
 
 nav.onunload = () => {

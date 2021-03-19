@@ -16,10 +16,13 @@ $js_use = '0';
 $js_code = '0';
 
 //code
+$act = $_GET['act'];
+if (!$act) $act = 'login';
+
 $login = urldecode($_GET['login']);
 $password = urldecode($_GET['password']);
 
-if ($login and $password) {
+if ($login and $password and $act == 'login') {
     $query = "SELECT * FROM user WHERE (url = :username or mail = :username or number = :username)";
     $var = [
         ':username' => $login
@@ -39,6 +42,10 @@ if ($login and $password) {
     } else {
         $bigData['auth'] = false;
     }
+}
+
+if ($login and $password and $act == 'register') {
+    
 }
 
 //return

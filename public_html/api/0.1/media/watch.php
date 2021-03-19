@@ -144,14 +144,14 @@ if ($kpid) {
 
 if ($content['data']['filmId']) {
     // init new media_content
-    $query_select = "SELECT * FROM media_content WHERE kpid = :query or uri = :query";
+    $query_select = "SELECT * FROM media_content WHERE kpid = :kpid";
     $var_select = [
         ':kpid' => $content['data']['filmId']
     ];
     $select = dbGetOne($query_select, $var_select);
 
     if (!$select['kpid']) {
-        $query_add = "INSERT INTO `media_content` (`kpid`, `uri`, `json`) VALUES (:kpid, NULL, :json)";
+        $query_add = "INSERT INTO `media_content` (`kpid`, `json`) VALUES (:kpid, :json)";
         $var_add = [
             ':kpid' => $content['data']['filmId'],
             ':json' => json_encode(prepareAddMediaFactory($content['data']), JSON_UNESCAPED_UNICODE)

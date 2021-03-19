@@ -16,6 +16,11 @@ $js_use = '0';
 $js_code = '0';
 
 //code
+$preDefinedAlias = [
+    'recently-watched',
+    'recommendations'
+];
+
 function create_playlist($url='', $owner_uid=2, $type='collection', $title='', $description='', $content='') {
     $query = "INSERT INTO media_playlist (`id`, `url`, `owner_uid`, `type`, `title`, `description`, `content`) VALUES (NULL, :url, :owner_uid, :type, :title, :description, :content);";
     $var = [
@@ -71,6 +76,12 @@ switch($act) {
         break;
     case 'get':
         $alias = $_GET['alias'];
+        // recently watched
+        // pre-defined alias
+        if (in_array($alias, $preDefinedAlias)) {
+            //
+        }
+
         $bigData['playlist'] = get_playlist($alias);
         break;
 }

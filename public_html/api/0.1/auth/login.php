@@ -35,6 +35,11 @@ if (!$_SESSION['user']['uid'] and $_POST['login-username'] and $_POST['login-pas
             $js_code = "window.location.reload();";
             $_SESSION['user'] = userApiLogin($user);
             $_SESSION['user']['geo_password'] = getUserPassword($_SESSION['user']['password']);
+
+            if (!$user['vk_uid']) {
+                // предложить добавить ВК
+                userApiNoticeAdd('add_link_vk', ['name' => $user['name']]);
+            }
         }
         else {
             $html_use = '1';

@@ -16,42 +16,22 @@ $js_use = '0';
 $js_code = '0';
 
 //code
+if (!$_SESSION['user']['uid']) die('{"error":"401"}');
 
-
-// msgContainer
-$var[4] = [
-    'cid' => 1,
-    'type' => 'personal',
-    'uid' => 1,
-    'name' => 'Фёдор',
-    'surname' => 'Гаранин',
-    'unreadCount' => 0,
-    'dateCreate' => 1612635937,
-    'dateLast' => 1612635937,
-    'is_delited' => 0,
-    'token' => 'qweewqqweewqqwe',
-    'msgContainer' => [
-        [
-            'type' => 'text',
-            'uid' => 1,
-            'name' => 'Фёдор',
-            'surname' => 'Гаранин',
-            'is_read' => false,
-            'is_favorite' => false,
-            'is_spam' => false,
-            'is_delited' => 0,
-            'is_edited' => 0,
-            'token' => 'qweewqqweewqqwe',
-            'date' => 1612635937,
-            'content' => 'Нужно запомнить - это бред!'
-        ]
-    ]
-];
-
-$sort = (string) $_POST['sort'];
 $self = (int) $_POST['self'];
 
-$bigData['chat'] = $var[$self];
+$dialog = getDialogsByPersonal($_SESSION['user']['uid'], $self);
+if (!$dialog['cid']) {
+  setNewDialogs($_SESSION['user']['uid'], $self, 'personal');
+  $dialog = getDialogsByPersonal($_SESSION['user']['uid'], $self);
+  if ($dialog['cid']) {
+    setChatByCid($dialog['cid'], $_SESSION['user']['uid'], $self, 'text', '0a4f3fd1b2fde627447ed4db324e6065');
+  }
+}
+
+$dialogs_generated = getChatToView($dialog, $_SESSION['user']['uid']);
+
+$bigData['chat'] = $dialogs_generated;
 $bigData['count'] = count($bigData['chat']['msgContainer']); // All massage count
 
 //return
