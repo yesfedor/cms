@@ -56,6 +56,17 @@ function get_playlist($alias) {
     return $playlist;
 }
 
+function get_playlist_by_uid(int $owner_uid) {
+    $query = "SELECT id FROM media_playlist WHERE owner_uid = :owner_uid";
+    $var = [
+        ':owner_uid' => $owner_uid
+    ];
+
+    $playlists = dbGetAll($query, $var);
+
+    return $playlists;
+}
+
 $act = $_GET['act'];
 switch($act) {
     case 'create':
@@ -84,6 +95,9 @@ switch($act) {
 
         $bigData['playlist'] = get_playlist($alias);
         break;
+    case 'getByUid':
+        $owner_uid = $_GET['owner_uid'];
+        $bigData['playlists'] = get_playlist_by_uid($owner_uid);
 }
 
 //return
