@@ -54,7 +54,7 @@ if ($get_hash == md5($config['vkapp']['app_id'].$get_uid.$config['vkapp']['secre
         } else {
             $get_html = '
             <meta http-equiv="refresh" content="20; url=/">
-            <h4 align="center" style="color:red;">Аккаунт не привязн</h4><br>
+            <h4 align="center" style="color:red;">Аккаунт не привязан</h4><br>
             ';
         }
     }
@@ -78,7 +78,6 @@ if ($get_hash == md5($config['vkapp']['app_id'].$get_uid.$config['vkapp']['secre
             <div id="block">
                 <div id="with_vk"></div>
                 <br><h5 align="center"><?= ($get_html ? $get_html:'<a href="/">На главную</a>')  ?></h5>
-                
             </div>
         </div>
         <script type="text/javascript">

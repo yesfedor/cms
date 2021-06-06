@@ -1,0 +1,40 @@
+{
+  "1": {
+    "object":"playlist",
+    "type":"video",
+    "title":"Весь контент Netflix, Apple Originals, HBO и других студий",
+    "src":"https://iny.su/uc/cc4ca42/v6f7584/6533dc52/7ba28039fd9.jpg"
+  },
+  "306084": {
+    "object":"kpid",
+    "type":"img",
+    "title":"Теория Большого Взрыва",
+    "src":"https://iny.su/uc/cc4ca42/v6f7584/0349a97a/37e1c5d5743.jpg"
+  },
+  "716587": {
+    "object":"kpid",
+    "type":"img",
+    "title":"Острые козырьки",
+    "src":"https://iny.su/uc/cc4ca42/v6f7584/51506a19/dc162113bd0.jpg"
+  },"741231": {
+    "object":"kpid",
+    "type":"img",
+    "title":"Чёрный список",
+    "src":"https://iny.su/uc/cc4ca42/v6f7584/7881d5e4/bd3b5d06e0d.jpg"
+  },"893621": {
+    "object":"kpid",
+    "type":"img",
+    "title":"Люцифер",
+    "src":"https://iny.su/uc/cc4ca42/v6f7584/ac2f241b/31a5d9fd655.jpg"
+  },"1231016": {
+    "object":"kpid",
+    "type":"img",
+    "title":"Воспитанные волками",
+    "src":"https://iny.su/uc/cc4ca42/v6f7584/061c60f5/0b387a36eb5.jpg"
+  },"1312668": {
+    "object":"kpid",
+    "type":"img",
+    "title":"Облака (2020)",
+    "src":"https://iny.su/uc/cc4ca42/v6f7584/6533dc52/7ba28039fd9.jpg"
+  }
+}
