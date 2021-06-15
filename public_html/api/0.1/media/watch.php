@@ -30,6 +30,7 @@ function getDataRecoms($uid) {
 }
 
 function addView($uid, $kpid) {
+    if ($uid == 48) return true;
     // получаем последний просмотр, отнимаем время просмотра от текущего, больше двух часов (7200) - добавляем
     $dateNow = appDateGetInt(appDateGetStr());
     $dateRegarding = 7200;
