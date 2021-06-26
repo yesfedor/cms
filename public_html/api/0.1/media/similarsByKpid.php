@@ -16,12 +16,6 @@ $js_use = '0';
 $js_code = '0';
 
 //code
-function shuffle_assoc($array) { 
-   $keys = array_keys($array); 
-   shuffle($keys); 
-   return array_merge(array_flip($keys), $array); 
-}
-
 function get_similars($kpid) {
   $ch = curl_init();
   $headers = array('accept: application/json', 'x-api-key: 91d00358-6586-40e6-9d4e-9d9070547812');
@@ -32,7 +26,7 @@ function get_similars($kpid) {
   $data = curl_exec($ch); # run!
   curl_close($ch);
   $content = json_decode($data, true);
-  if (count($content['items']) > 12) return array_slice($content['items'], 0, 12);
+  if (count($content['items']) > 16) return array_slice($content['items'], 0, 16);
   else return $content['items'];
   return $content;
 }
@@ -47,7 +41,7 @@ function get_sequels_and_prequels($kpid) {
   $data = curl_exec($ch); # run!
   curl_close($ch);
   $content = json_decode($data, true);
-  if (count($content) > 12) return array_slice($content, 0, 12);
+  if (count($content) > 16) return array_slice($content, 0, 16);
   else return $content;
   return $content;
 }
@@ -60,9 +54,19 @@ $sequels_and_prequels_content = get_sequels_and_prequels($kpid);
 $default_content = json_decode(file_get_contents('https://iny.su/api/0.1/media/mediaWatchRecoms.json'), true);
 
 if (count($similars_content) < 1) {
-  $bigData = array_merge($sequels_and_prequels_content, $default_content);
+  $payload = array_merge($sequels_and_prequels_content, $default_content);
 } else {
-  $bigData = array_merge($sequels_and_prequels_content, $similars_content);
+  $payload = array_merge($sequels_and_prequels_content, $similars_content);
+}
+
+// убираем одинаковые
+$payload_includes = [];
+for ($i = 0; $i < count($payload); $i++) {
+  $kpid = $payload[$i]['filmId'];
+  if (!in_array($kpid, $payload_includes)) {
+    $bigData[] = $payload[$i];
+    array_push($payload_includes, $kpid);
+  }
 }
 
 //return
