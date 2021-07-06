@@ -70,8 +70,8 @@ $_GET = array_merge($getQuery, $_GET);
 
 $templatePath = $private.'/core/template/';
 $sitePath = $private.'/core/site/';
-$thisSitePath = $private.'/core/site/'.appGetDomain().'/';
-$sitePrepareFile = $private.'/core/site/'.appGetDomain().'/global/prepare.php';
+$thisSitePath = $private.'/core/site/'.currentAppName().'/';
+$sitePrepareFile = $private.'/core/site/'.currentAppName().'/global/prepare.php';
 $objectPath = $private.'/core/object/';
 
 $err403 = $thisSitePath.'global/error/403.php';

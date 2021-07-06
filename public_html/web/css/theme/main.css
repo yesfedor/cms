@@ -14,11 +14,11 @@
     --theme-panel-primary: #4285F4;
 
     /* Menu pallet */
-    --theme-logo: white;
-    --theme-nav-link: white;
+    --theme-logo: black;
+    --theme-nav-link: #818c99;
     --theme-icon: #4285F4;
-    --theme-header: #4285F4;
-    --theme-footer: #4285F4;
+    --theme-header: white;
+    --theme-footer: white;
 
     /* Step pallet */
     --theme-white: white;

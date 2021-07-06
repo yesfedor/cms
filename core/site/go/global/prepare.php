@@ -10,11 +10,11 @@ function mainLocation() {
 }
 
 if ($_GET['s'] or $_GET['source']) {
-    $sourceBoot = $private.'/core/site/'.appGetDomain().'/global/sourceLoader.php';
+    $sourceBoot = $private.'/core/site/'.currentAppName().'/global/sourceLoader.php';
     include_once($sourceBoot);
 }
 
-$siteUIFile = $private.'/core/site/'.appGetDomain().'/global/ui.php';
+$siteUIFile = $private.'/core/site/'.currentAppName().'/global/ui.php';
 if ($_SESSION['user']['uid']) {
     $status = true;
     $ui = false;

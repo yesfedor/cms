@@ -25,7 +25,7 @@ $module = [
 
 $apiFileList = myscandir($module['1.0']);
 
-for($apiFileListNum=0;$apiFileListNum<count($apiFileList);) {
+for ($apiFileListNum=0; $apiFileListNum < count($apiFileList);) {
     if (array_key_exists($apiFileListNum, $apiFileList)) {
         $apiFileListFilePath = $module['1.0'].$apiFileList[$apiFileListNum];
         include_once($module['1.0'].$apiFileList[$apiFileListNum]);

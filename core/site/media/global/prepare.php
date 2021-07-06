@@ -17,8 +17,8 @@ if (userApiIsBlock()) {
     $userApiBlocked = false;
 }
 
-$siteUIFile = $private.'/core/site/'.appGetDomain().'/global/ui.php';
-$siteACTFile = $private.'/core/site/'.appGetDomain().'/global/acts.php';
+$siteUIFile = $private.'/core/site/'.currentAppName().'/global/ui.php';
+$siteACTFile = $private.'/core/site/'.currentAppName().'/global/acts.php';
 include_once($siteACTFile);
 
 if ($_SESSION['user']['uid'] or true) {
@@ -35,7 +35,7 @@ if ($_SESSION['user']['uid'] or true) {
     }
 
 if ($_GET['s'] or $_GET['source'] and !$userApiBlocked) {
-    $sourceBoot = $private.'/core/site/'.appGetDomain().'/global/sourceLoader.php';
+    $sourceBoot = $private.'/core/site/'.currentAppName().'/global/sourceLoader.php';
     include_once($sourceBoot);
 }
 ?>

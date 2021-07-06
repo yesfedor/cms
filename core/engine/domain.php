@@ -1,5 +1,5 @@
 <?php
-function getDomainSetting() {
+function getDomainSetting () {
     $domainSetting = [];
 
     $query = "SELECT * FROM site WHERE id != :id";
@@ -42,6 +42,12 @@ function getDomainSetting() {
 
     return $domainSetting;
 }
+
+function currentAppName () {
+    $domainSetting = getDomainSetting();
+    return $domainSetting['info'][appGetDomain()]['appname'];
+}
+
 $domainSetting = getDomainSetting();
 $domainBase = $domainSetting['base'];
 $domainInfo = $domainSetting['info'];

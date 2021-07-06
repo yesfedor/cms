@@ -23,7 +23,7 @@ $html_comment_block = '<!--'.PHP_EOL.' ADMIN: https://vk.com/yesfedor'.PHP_EOL.'
         <meta name="keywords" content="<?= $keywords ?>">
         <?= openGraph() ?>
         
-        <link id="app-css-theme-data" rel="stylesheet" href="/web/css/theme/<?= $domainBase[appGetDomain()].$_SESSION['theme'] ?>.css?version=8192">
+        <link id="app-css-theme-data" rel="stylesheet" href="/web/css/theme/<?= $domainBase[appGetDomain()].$_SESSION['theme'] ?>.css?version=9000">
         <link rel="stylesheet" href="/web/css/themes.css?version=8192">
         <link rel="stylesheet" href="/web/css/@offline.css?version=8192">
         <style>
@@ -49,7 +49,7 @@ $html_comment_block = '<!--'.PHP_EOL.' ADMIN: https://vk.com/yesfedor'.PHP_EOL.'
             info: <?= json_encode($domainInfo[appGetDomain()], JSON_UNESCAPED_UNICODE) ?>,
             user: {auth: <?= ($_SESSION['user']['uid'] ? 'true':'false') ?>,  uid: '<?= $_SESSION['user']['uid'] ?>', url: '<?= $_SESSION['user']['url'] ?>', name: '<?= $_SESSION['user']['name'] ?>', surname: '<?= $_SESSION['user']['surname'] ?>', gender: '<?= $_SESSION['user']['gender'] ?>', access: '<?= $_SESSION['user']['access'] ?>', mail_verfy: '<?= $_SESSION['user']['mail_verfy'] ?>', number_verfy: '<?= $_SESSION['user']['number_verfy'] ?>'},
             hash: {appRoot:'<?= getAppRootHash() ?>', logout: '<?= $hash['logout'] ?>'},
-            themeVersion: {light: 8200, dark: 8192}
+            themeVersion: {light: 9000, dark: 9000}
         }
         let servers = {
             api: '',

@@ -19,8 +19,8 @@ if (userApiIsBlock()) {
 /* Main prepare */
 $user_profile_href = '/'.($_SESSION['user']['url'] ? $_SESSION['user']['url'] : 'id'.$_SESSION['user']['uid']);
 
-$siteUIFile = $private.'/core/site/'.appGetDomain().'/global/ui.php';
-$siteACTFile = $private.'/core/site/'.appGetDomain().'/global/acts.php';
+$siteUIFile = $private.'/core/site/'.currentAppName().'/global/ui.php';
+$siteACTFile = $private.'/core/site/'.currentAppName().'/global/acts.php';
 include_once($siteACTFile);
 
 if ($userApiBlocked == false) {
@@ -30,7 +30,7 @@ if ($userApiBlocked == false) {
 
 /* Inject source block */
 if ($_GET['s'] or $_GET['source'] and !$userApiBlocked) {
-    $sourceBoot = $private.'/core/site/'.appGetDomain().'/global/sourceLoader.php';
+    $sourceBoot = $private.'/core/site/'.currentAppName().'/global/sourceLoader.php';
     include_once($sourceBoot);
 }
 ?>
